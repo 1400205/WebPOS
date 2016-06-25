@@ -1,8 +1,15 @@
 <?php
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'WebPOS');
-define('DB_PASSWORD', 'pass');
-define('DB_DATABASE', 'WebPOS');
+//define('DB_SERVER', 'localhost');
+//define('DB_USERNAME', 'WebPOS');
+//define('DB_PASSWORD', 'pass');
+//define('DB_DATABASE', 'WebPOS');
+
+define('DB_SERVER', 'ap-cdbr-azure-east-c.cloudapp.net');
+define('DB_USERNAME', 'ba3dcb56418003');
+define('DB_PASSWORD', '5055d853');
+define('DB_DATABASE', 'BJTS');
+
+
 //include ("myglobal.php");
 
 //$error="Error: Check your your permissions";
