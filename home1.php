@@ -45,32 +45,32 @@
                     <span class="text">Dashboard</span>
                 </a></li>
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/customers" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-user"></i>
                     <span class="text">Customers</span>
                 </a>
             </li>
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/items" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-harddrive"></i>
                     <span class="text">Items</span>
                 </a>
             </li>
 
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/suppliers" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-download"></i>
                     <span class="text">Suppliers</span>
                 </a>
             </li>
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/reports" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-bar-chart"></i>
                     <span class="text">Reports</span>
                 </a>
             </li>
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/receivings" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-cloud-down"></i>
                     <span class="text">Receivings</span>
                 </a>
@@ -82,7 +82,7 @@
                 </a>
             </li>
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/expenses" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-money"></i>
                     <span class="text">Expenses</span>
                 </a>
@@ -97,13 +97,13 @@
             </li>
 
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/config" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-settings"></i>
                     <span class="text">Store Config</span>
                 </a>
             </li>
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/locations" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-home"></i>
                     <span class="text">Locations</span>
                 </a>
@@ -127,7 +127,7 @@
             <nav class="navbar navbar-default top-bar">
                 <div class="menu-bar-mobile" id="open-left"><i class="ti-menu"></i></div>
                 <div class="nav navbar-nav top-elements navbar-breadcrumb hidden-xs">
-                    <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/home">Dashboard</a>					</div>
+                    <a tabindex="-1" href="home1.php">Dashboard</a>					</div>
 
                 <ul class="nav navbar-nav navbar-right top-elements">
 
@@ -140,21 +140,21 @@
 
 
                             <li class="bottom-links">
-                                <a href="https://demo.phppointofsale.com/index.php/messages/sent_messages" class="last_info">View Sent Messages</a>
+                                <a href="#" class="last_info">View Sent Messages</a>
                             </li>
 
                             <li class="bottom-links">
-                                <a href="https://demo.phppointofsale.com/index.php/messages/send_message" class="last_info">Send Message</a>
+                                <a href="#" class="last_info">Send Message</a>
                             </li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Default <span class="drop-icon"><i class="ion ion-chevron-down"></i></span></a>
                         <ul style="visibility: visible; animation-duration: 1500ms; animation-name: fadeInUp;" class="dropdown-menu animated fadeInUp wow locations-drop locations-drop neat_drop animated" data-wow-duration="1500ms" role="menu">
-                            <li><a class="set_employee_current_location_id" data-location-id="1" href="https://demo.phppointofsale.com/index.php/home/set_employee_current_location_id/1"><span class="badge" style="background-color:">&nbsp;</span> Default </a></li>
-                            <li><a class="set_employee_current_location_id" data-location-id="2" href="https://demo.phppointofsale.com/index.php/home/set_employee_current_location_id/2"><span class="badge" style="background-color:">&nbsp;</span> nowhere </a></li>
-                            <li><a class="set_employee_current_location_id" data-location-id="3" href="https://demo.phppointofsale.com/index.php/home/set_employee_current_location_id/3"><span class="badge" style="background-color:">&nbsp;</span> asd </a></li>
-                            <li><a class="set_employee_current_location_id" data-location-id="4" href="https://demo.phppointofsale.com/index.php/home/set_employee_current_location_id/4"><span class="badge" style="background-color:#e0bd04">&nbsp;</span> India </a></li>
+                            <li><a class="set_employee_current_location_id" data-location-id="1" href="#"><span class="badge" style="background-color:">&nbsp;</span> Default </a></li>
+                            <li><a class="set_employee_current_location_id" data-location-id="2" href="#"><span class="badge" style="background-color:">&nbsp;</span> nowhere </a></li>
+                            <li><a class="set_employee_current_location_id" data-location-id="3" href="#"><span class="badge" style="background-color:">&nbsp;</span> asd </a></li>
+                            <li><a class="set_employee_current_location_id" data-location-id="4" href="#"><span class="badge" style="background-color:#e0bd04">&nbsp;</span> India </a></li>
                         </ul>
                     </li>
 
