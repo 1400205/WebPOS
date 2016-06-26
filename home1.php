@@ -170,17 +170,17 @@
                             <span class="avatar_info hidden-sm">John Doe</span></a>
                         <ul style="visibility: visible; animation-duration: 1500ms; animation-name: fadeInUp;" class="dropdown-menu user-dropdown animated fadeInUp wow avatar_drop neat_drop animated" data-wow-duration="1500ms" role="menu">
 
-                            <li><a href="https://demo.phppointofsale.com/index.php/config" tabindex="-1"><i class="ion-android-settings"></i><span class="text">Settings</span></a></li>
+                            <li><a href="#" tabindex="-1"><i class="ion-android-settings"></i><span class="text">Settings</span></a></li>
 
                             <li>
-                                <a tabindex="-1" id="switch_user" href="https://demo.phppointofsale.com/index.php/login/switch_user/1" data-toggle="modal" data-target="#myModalDisableClose"><i class="ion-ios-toggle-outline"></i><span class="text">Switch User</span></a>
+                                <a tabindex="-1" id="switch_user" href="#" data-toggle="modal" data-target="#myModalDisableClose"><i class="ion-ios-toggle-outline"></i><span class="text">Switch User</span></a>
                             </li>
                             <li>
-                                <a tabindex="-1" title="" href="https://demo.phppointofsale.com/index.php/login/edit_profile" data-toggle="modal" data-target="#myModal"><i class="ion-edit"></i><span class="text">Edit profile</span></a>
+                                <a tabindex="-1" title="" href="#" data-toggle="modal" data-target="#myModal"><i class="ion-edit"></i><span class="text">Edit profile</span></a>
                             </li>
 
                             <li>
-                                <a href="https://demo.phppointofsale.com/index.php/home/logout" class="logout_button" tabindex="-1"><i class="ion-power"></i><span class="text">Logout</span></a>								</li>
+                                <a href="#" class="logout_button" tabindex="-1"><i class="ion-power"></i><span class="text">Logout</span></a>								</li>
                         </ul>
                     </li>
                 </ul>
@@ -258,32 +258,32 @@
 
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="list-group">
-                        <a class="list-group-item" href="https://demo.phppointofsale.com/index.php/reports/closeout/2016-06-20/0"> <i class="ion-clock"></i> Today's closeout report</a>
+                        <a class="list-group-item" href="#"> <i class="ion-clock"></i> Today's closeout report</a>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="list-group">
-                        <a class="list-group-item" href="https://demo.phppointofsale.com/index.php/reports/detailed_sales/2016-06-20%2000:00:00/2016-06-20%2023:59:59/all/0"> <i class="ion-stats-bars"></i> Today's detailed sales report</a>
+                        <a class="list-group-item" href="#"> <i class="ion-stats-bars"></i> Today's detailed sales report</a>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="list-group">
-                        <a class="list-group-item" href="https://demo.phppointofsale.com/index.php/reports/summary_items/2016-06-20%2000:00:00/2016-06-20%2023:59:59/0/0/0/-1/-1/all/0"> <i class="ion-clipboard"></i> Today's summary items report</a>
+                        <a class="list-group-item" href="https:#"> <i class="ion-clipboard"></i> Today's summary items report</a>
                     </div>
                 </div>
 
 
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="list-group">
-                        <a class="list-group-item" href="https://demo.phppointofsale.com/index.php/receivings"> <i class="icon ti-cloud-down"></i> Start a New Receiving</a>
+                        <a class="list-group-item" href="#"> <i class="icon ti-cloud-down"></i> Start a New Receiving</a>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="list-group">
-                        <a class="list-group-item" href="https://demo.phppointofsale.com/index.php/sales"> <i class="icon ti-shopping-cart"></i> Start a New Sale</a>
+                        <a class="list-group-item" href="#"> <i class="icon ti-shopping-cart"></i> Start a New Sale</a>
                     </div>
                 </div>
 
