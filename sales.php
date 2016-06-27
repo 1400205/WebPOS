@@ -140,94 +140,85 @@
 
         <ul class="list-unstyled menu-parent" id="mainMenu">
 
-
-            <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/home" class="waves-effect waves-light">
+            <li class="active">
+                <a tabindex="-1" href="home1.php" class="waves-effect waves-light">
                     <i class="icon ti-dashboard"></i>
                     <span class="text">Dashboard</span>
                 </a></li>
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/customers" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-user"></i>
                     <span class="text">Customers</span>
                 </a>
             </li>
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/items" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-harddrive"></i>
                     <span class="text">Items</span>
                 </a>
             </li>
+
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/item_kits" class="waves-effect waves-light">
-                    <i class="icon ti-harddrives"></i>
-                    <span class="text">Item Kits</span>
-                </a>
-            </li>
-            <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/suppliers" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-download"></i>
                     <span class="text">Suppliers</span>
                 </a>
             </li>
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/reports" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-bar-chart"></i>
                     <span class="text">Reports</span>
                 </a>
             </li>
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/receivings" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-cloud-down"></i>
                     <span class="text">Receivings</span>
                 </a>
             </li>
-            <li class="active">
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/sales" class="waves-effect waves-light">
+            <li>
+                <a tabindex="-1" href="sales.php" class="waves-effect waves-light">
                     <i class="icon ti-shopping-cart"></i>
                     <span class="text">Sales</span>
                 </a>
             </li>
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/expenses" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-money"></i>
                     <span class="text">Expenses</span>
                 </a>
             </li>
+
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/employees" class="waves-effect waves-light">
+                <a tabindex="-1" href="allPersons.html" class="waves-effect waves-light">
                     <i class="icon ti-id-badge"></i>
-                    <span class="text">Employees</span>
+                    <span class="text">Add All Persons</span>
                 </a>
+
             </li>
+
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/giftcards" class="waves-effect waves-light">
-                    <i class="icon ti-credit-card"></i>
-                    <span class="text">Gift Cards</span>
-                </a>
-            </li>
-            <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/config" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-settings"></i>
                     <span class="text">Store Config</span>
                 </a>
             </li>
             <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/locations" class="waves-effect waves-light">
+                <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-home"></i>
                     <span class="text">Locations</span>
                 </a>
             </li>
-            <li>
-                <a tabindex="-1" href="https://demo.phppointofsale.com/index.php/messages" class="waves-effect waves-light">
-                    <i class="icon ti-email"></i>
-                    <span class="text">Messages</span>
-                </a>
-            </li>
 
-            <li>
-                <a href="https://demo.phppointofsale.com/index.php/sales/closeregister?continue=logout" tabindex="-1"><i class="icon ti-power-off"></i><span class="text">Logout</span></a>
-            </li>
+
+
+            <li class="active">
+                <a tabindex="-1" href="logout.php" class="waves-effect waves-light">
+                    <i class="icon ti-dashboard"></i>
+                    <span class="text">Logout</span>
+                </a></li>
+
+            
         </ul>
     </div>
     <!-- left-bar -->
