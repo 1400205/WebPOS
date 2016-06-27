@@ -14,7 +14,7 @@ include ("searchPersonToAddEmployee.php");
 <html>
 <head>
     <meta charset="utf-8">
-    <title> Login</title>
+    <title> Potential Employees</title>
 
 
     <link rel="stylesheet" href="css/style-forms.css">

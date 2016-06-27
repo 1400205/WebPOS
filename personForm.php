@@ -14,7 +14,7 @@ include ("clsPerson.php");
 <html>
 <head>
     <meta charset="utf-8">
-    <title> Login</title>
+    <title> Add person</title>
 
 
     <link rel="stylesheet" href="css/style-forms.css">
