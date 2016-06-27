@@ -132,7 +132,7 @@
     <div tabindex="0" style="overflow: hidden;" class="left-bar hidden-print">
         <div class="admin-logo" style="">
             <div class="logo-holder pull-left">
-                <img src="Demo%20-%20PHP%20Point%20Of%20Sale%20_%20Easy%20to%20use%20Online%20POS%20Software_files/header_logo.png" class="hidden-print logo" id="header-logo" alt="">				</div>
+                <img src="img/header_logo.png" class="hidden-print logo" id="header-logo" alt=""></div>
             <!-- logo-holder -->
 
         </div>
