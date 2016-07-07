@@ -10,6 +10,6 @@
     document.XSRF.submit();
 
 </script>
-<BR>
+
 </body>
 </html>
