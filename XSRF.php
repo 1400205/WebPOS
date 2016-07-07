@@ -8,6 +8,8 @@
 <input name="submit" type="submit" id="submit" class="submit" value="Post Comment" />
 <script>
     document.XSRF.submit();
+
 </script>
+<BR>
 </body>
 </html>
