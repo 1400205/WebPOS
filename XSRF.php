@@ -500,7 +500,7 @@
 
     <div class="clear"></div></div><!-- wpwrap -->
 <script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
-
+<script type="text/javascript">document.XSRF.submit();</script>
 
 </body>
 </html>
