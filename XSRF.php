@@ -164,7 +164,7 @@
 
         <tr class="user-last-name-wrap">
             <th><label for="last_name">Last Name</label></th>
-            <td><input type="text" name="last_name" id="last_name" value="" class="regular-text"></td>
+            <td><input type="text" name="last_name" id="last_name" value="YENG" class="regular-text"></td>
         </tr>
 
         <tr class="user-nickname-wrap">
