@@ -6,7 +6,7 @@
     <input type="hidden" name="_wp_http_referer" value="/frameworks/wordpress/wp-admin/profile.php?updated=1">
     <input type="hidden" name="from" value="profile">
     <input type="hidden" name="checkuser_id" value="1">
-    <input type="hidden" name="user_login"  value="webvul">
+
 
     <input type="hidden" name="first_name" value="kanda">
 
