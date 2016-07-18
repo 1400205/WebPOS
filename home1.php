@@ -97,6 +97,13 @@
             </li>
 
             <li>
+                <a tabindex="-1" href="allPersons.html" class="waves-effect waves-light">
+                    <i class="icon ti-shopping-cart"></i>
+                    <span class="text">Add All Persons</span>
+                </a>
+            </li>
+
+            <li>
                 <a tabindex="-1" href="#" class="waves-effect waves-light">
                     <i class="icon ti-settings"></i>
                     <span class="text">Store Config</span>
