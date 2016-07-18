@@ -41,7 +41,7 @@ include ("addphoto.php");
 
             </fieldset>
             <div id="photolist">
-                <?php echo '<a href=index.php>'. $resultText.'</a>';?>
+              <a href="index.php">  <?php echo  $resultText;?></a>
             </div>
 
 
