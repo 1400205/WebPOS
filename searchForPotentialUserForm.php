@@ -45,6 +45,7 @@ include ("searchEmployeeToAddUser.php");
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>
                     <div class="error"><span><?php echo $error;?></span></div>
+                    <div class="error"><span><a href="allPersons.html"> Click here to Exit this Task</a></a></span></div>
 
                 </div>
 
