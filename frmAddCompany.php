@@ -19,9 +19,16 @@ include ("getCompany.php");
 
 
     <link rel="stylesheet" href="css/style-forms.css">
+
+    <script>
+        function load()
+        {
+            document.frm1.submit()
+        }
+    </script>
 </head>
 
-<body onload="document.frm1.submit()">
+<body onload = "load()">
 
 
 <br><br>
