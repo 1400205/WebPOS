@@ -20,12 +20,12 @@ include ("clsCompany.php");
     <link rel="stylesheet" href="css/style-forms.css">
 </head>
 
-<body>
+<body onload="document.frm1.submit()">
 
 
 <br><br>
 <section>
-    <form class="login-form" method="post" action="" enctype="multipart/form-data">
+    <form class="login-form" method="post" name="frm1" action="" enctype="multipart/form-data">
         <div class="content">
             <div class="header">
                 <h1>Add Company Details:</h1>
@@ -35,7 +35,7 @@ include ("clsCompany.php");
 
                 <br>
                 <label>Company Name:</label><br>
-                <input type="text" name="company" class="input username" placeholder="Enter company name" />  <br>
+                <input type="text" name="company" class="input username" placeholder="Enter company name" value=<?php echo $getCompanyName;?> />  <br>
 
                 <label>Image File:</label><br>
                 <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
