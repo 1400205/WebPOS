@@ -54,6 +54,7 @@ include ("getCompany.php");
 
                 <?php echo $resultText;?><br>
                 <?php echo $resultTextPhoto;?><br>
+                <?php echo $getlogo;?><br>
 
             </div>
 

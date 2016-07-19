@@ -78,7 +78,7 @@ if(isset($_POST["submit"]))
 				   if( $stmt->execute()){
                        $msg = "Thank You! The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded. click <a href='searchPersonForm.php'>here</a> to go back";
                     }
-                else{$msg= "Execute failed: (" . $mysqli->errno . ") " . $mysqli->error;}
+                else{$msg= "Execute failed: Duplicate Entry is Not Allowed";}
 				
                 }
             }
