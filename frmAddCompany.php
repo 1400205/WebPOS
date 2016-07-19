@@ -44,7 +44,7 @@ include ("clsCompany.php");
 
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>
-                    <div class="error"><span><?php echo $error;?></span></div>
+                    <div class="error"><span><?php echo $msg;?></span></div>
 
                 </div>
 
@@ -58,7 +58,7 @@ include ("clsCompany.php");
 
         </div>
     </form>
-    <div class="msg"><?php echo $msg;?></div>
+
 </section>
 </div>
 
