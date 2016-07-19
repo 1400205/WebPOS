@@ -69,7 +69,7 @@ if(isset($_POST["submit"]))
                 }
 
                 //call procedure
-                if (!( $stmt=$mysqli->prepare("UPDATE company SET companyName=? AND logo=?) WHERE companyID=1"))) {
+                if (!( $stmt=$mysqli->prepare("UPDATE company SET companyName=?, logo=? WHERE companyID=1"))) {
                     $msg = "prepared statemet problem! Duplicate Entry is Not Permitted";
                 } else {
 
