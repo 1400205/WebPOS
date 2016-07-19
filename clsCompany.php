@@ -21,7 +21,7 @@ if(isset($_POST["submit"]))
 
 
     $url = "test";
-    $companyName="";
+    $companyName= $_POST['company'];
     //clean input title
     //clean usser input person id
 
