@@ -70,7 +70,7 @@ if(isset($_POST["submit"]))
 
                 //call procedure
                 if (!( $stmt=$mysqli->prepare("INSERT INTO company(companyName,logo,userID) VALUES (?,?,?)"))) {
-                    $msg = "prepared statemet problem";
+                    $msg = "prepared statemet problem! Duplicate Entry is Not Permitted";
                 } else {
 
                     $stmt->bind_param('ssi',$companyName, $target_file, $userid);

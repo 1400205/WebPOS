@@ -20,15 +20,10 @@ include ("getCompany.php");
 
     <link rel="stylesheet" href="css/style-forms.css">
 
-    <script>
-        function load()
-        {
-            document.frm1.submit()
-        }
-    </script>
+  
 </head>
 
-<body onload = "load()">
+<body>
 
 
 <br><br>
@@ -43,7 +38,7 @@ include ("getCompany.php");
 
                 <br>
                 <label>Company Name:</label><br>
-                <input type="text" name="company" class="input username" value=<?php echo $getCompanyName;?> >  <br>
+                <input type="text" name="company" class="input username" placeholder="Enter Company Name"/>  <br>
 
                 <label>Image File:</label><br>
                 <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
@@ -61,7 +56,6 @@ include ("getCompany.php");
 
                 <?php echo $resultText;?><br>
                 <?php echo $resultTextPhoto;?><br>
-                <?php echo $getlogo;?><br>
 
             </div>
 
