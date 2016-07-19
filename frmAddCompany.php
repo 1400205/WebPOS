@@ -5,7 +5,7 @@
 //session_start();
 include ("myglobal.php");
 include ("clsCompany.php");
-include ("getCompany.php");
+
 //include ("clsTitle.php");
 
 ?>
@@ -28,7 +28,7 @@ include ("getCompany.php");
 
 <br><br>
 <section>
-    <form class="login-form" method="post" name="frm1" action="" enctype="multipart/form-data">
+    <form class="login-form" method="post" action="" enctype="multipart/form-data">
         <div class="content">
             <div class="header">
                 <h1>Add Company Details:</h1>
