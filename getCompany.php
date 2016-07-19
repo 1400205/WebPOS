@@ -41,6 +41,14 @@ if ($userid>0) {
             $mylogo = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
             $getlogo = $getlogo.$mylogo;
 
+            $line = "<p><a href='frmUpdateCompanyDetails.php?id=" . $row[0] . "'>". "Click Here To Update Company ". $row[1]
+                . "</a></p>"."<br>";
+
+            $linePhoto = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
+
+            $resultText =$resultText.$line;
+            $resultTextPhoto =$resultTextPhoto.$linePhoto;
+
         }
 
 
