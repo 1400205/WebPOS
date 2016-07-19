@@ -1,50 +1,66 @@
-
 <?php
+
+//start session
+
 //session_start();
-
-include("clsCompany.php");
-
-
-//include ("secureSessionID.php");//verify user session
-//include ("inactiveTimeOut.php");//check user idle time
-
-//check session highjacking
+include ("myglobal.php");
+include ("clsCompany.php");
+//include ("clsTitle.php");
 
 ?>
+
 
 <!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Add Photo</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Add Company Details</title>
+
+
+    <link rel="stylesheet" href="css/style-forms.css">
 </head>
 
 <body>
 
-<div class="main">
 
-    <div class="formbox">
-        <form method="post" action="" enctype="multipart/form-data">
-            <div class="content">
-                <div class="header">
-                    <h1>Add Company Details:</h1>
-                    <span>This page is used to add company details</span>
-                </div>
-                <fieldset>
-                    <legend> Company Details</legend>
-
-                    <label>Image File:</label><br>
-                    <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
-
-                    <div class="footer">
-                        <input type="submit" name="submit" value="Submit" />
-                    </div>
-                </fieldset>
+<br><br>
+<section>
+    <form class="login-form" method="post" action="" enctype="multipart/form-data">
+        <div class="content">
+            <div class="header">
+                <h1>Add Company Details:</h1>
+                <span>Enter company name and upload logo</span>
             </div>
-        </form>
-        <div class="msg"><?php echo $msg;?></div>
-    </div>
+            <fieldset>
+
+                <br>
+                <label>Company Name:</label><br>
+                <input type="text" name="company" class="input username" placeholder="Enter company name" />  <br>
+
+                <label>Image File:</label><br>
+                <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
+
+                <br>
+
+                <div class="footer">
+                    <input type="submit" class="button" name="submit" value="Submit" /><br>
+                    <div class="error"><span><?php echo $error;?></span></div>
+
+                </div>
+
+            </fieldset>
+            <div id="photolist">
+
+                <?php echo $resultText;?><br>
+                <?php echo $resultTextPhoto;?><br>
+
+            </div>
+
+        </div>
+    </form>
+
+</section>
 </div>
+
 </body>
 </html>
