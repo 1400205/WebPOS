@@ -43,7 +43,7 @@ if ($userid>0) {
 
     }
 }else{
-    $msg = "Please login before proceeding";
+    $msg = "<a href='index.php'>"."Please login before proceeding". "</a>";
 }
 ?>
 
