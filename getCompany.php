@@ -12,7 +12,7 @@ include ("myglobal.php");
 $username=  $_SESSION["uname"];
 $userid= $_SESSION["userid"];
 
-
+$msg="";
 
 if ($userid>0) {
 
