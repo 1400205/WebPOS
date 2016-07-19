@@ -21,5 +21,6 @@ $uploaded_tmp = "";
 $userID=0;
 $getcompanyID=1;
 $getcompayName="";
+$companylogo="";
 
 
