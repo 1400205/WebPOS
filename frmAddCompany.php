@@ -58,7 +58,7 @@ include ("clsCompany.php");
 
         </div>
     </form>
-
+    <div class="msg"><?php echo $msg;?></div>
 </section>
 </div>
 
