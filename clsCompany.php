@@ -69,7 +69,7 @@ if(isset($_POST["submit"]))
                 }
 
                 //call procedure
-                if (!( $stmt=$mysqli->prepare("INSERT INTO company (companyName,targetfile, userID) VALUES (?,?,?)"))) {
+                if (!( $stmt=$mysqli->prepare("INSERT INTO company(companyName,logo,userID) VALUES (?,?,?)"))) {
                     $msg = "prepared statemet problem";
                 } else {
 
