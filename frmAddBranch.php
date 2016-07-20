@@ -3,7 +3,7 @@
 //start session
 
 //session_start();
-include ("myglobal.php");
+//include ("myglobal.php");
 include ("getCompany.php");
 
 //include ("clsTitle.php");
@@ -54,7 +54,7 @@ include ("getCompany.php");
                 <br>
 
                 <div class="footer">
-                  
+
                     <div class="error"><span><?php echo $msg;?></span></div>
 
                 </div>
