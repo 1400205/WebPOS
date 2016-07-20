@@ -37,7 +37,7 @@ if(isset($_POST['submit']))
     $email = $_POST["emailAddress"];
     $branchAddress=$_POST["branchAddress"];
 
-   // $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+    $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
 
     if($companyID<1)//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
@@ -113,7 +113,6 @@ if(isset($_POST['submit']))
         $branchAddress=mysqli_real_escape_string($db,$branchAddress);
         $branchAddress = htmlspecialchars($branchAddress);
         $branchAddress = trim($branchAddress);
-
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO branch (companyID,branchName, branchAddress,emailAddress,telephoneNo,mobilePhoneNo,userID) VALUES (?,?,?,?,?,?)"))){
             //bind parameter
