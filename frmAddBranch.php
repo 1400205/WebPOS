@@ -23,12 +23,12 @@ include ("getCompany.php");
 
 </head>
 
-<body>
+<body onload="">
 
 
 <br><br>
 <section>
-    <form class="login-form" method="post" action="" enctype="multipart/form-data">
+    <form class="login-form" name="frm1" method="post" action="" enctype="multipart/form-data">
         <div class="content">
             <div class="header">
                 <h1>Add Company Details:</h1>
