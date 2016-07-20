@@ -15,7 +15,7 @@ include ("getCompany.php");
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Add Company Details</title>
+    <title>Get Company Details</title>
 
 
     <link rel="stylesheet" href="css/style-forms.css">
