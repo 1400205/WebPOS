@@ -23,12 +23,12 @@ include ("getCompany.php");
 
 </head>
 
-<body onload="document.frm1.submit()">
+<body>
 
 
 <br><br>
 <section>
-    <form class="login-form" name="frm1" method="post" action="" enctype="multipart/form-data">
+    <form class="login-form" method="post" action="" enctype="multipart/form-data">
         <div class="content">
             <div class="header">
                 <h1>Add Company Details:</h1>
@@ -38,7 +38,7 @@ include ("getCompany.php");
 
                 <br>
                 <label>   <?php echo $resultText;?><br></label><br>
-                <input type="hidden" name="company" class="input username" placeholder="Enter Company Name"/>  <br>
+                <input type="text" name="company" class="input username" placeholder="Enter Company Name"/>  <br>
 
                 <label>Image File:</label><br>
                 <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
@@ -46,7 +46,7 @@ include ("getCompany.php");
                 <br>
 
                 <div class="footer">
-
+                    <input type="submit" class="button" name="submit" value="Submit" /><br>
                     <div class="error"><span><?php echo $msg;?></span></div>
 
                 </div>
@@ -54,7 +54,7 @@ include ("getCompany.php");
             </fieldset>
             <div id="photolist">
 
-
+                <?php echo $resultText;?><br>
                 <?php echo $resultTextPhoto;?><br>
 
             </div>
