@@ -30,7 +30,7 @@ include ("getCompany.php");
 
 </head>
 
-<body>
+<body onload="load()">
 
 
 <br><br>
@@ -45,7 +45,7 @@ include ("getCompany.php");
 
                 <br>
                 <label>   <?php echo $resultText;?><br></label><br>
-                <input type="text" name="company" class="input username" value= <?php echo $resultText;?><br>/>  <br>
+                <input type="text" name="company" class="input username" value= <?php echo $resultText;?>>  <br>
 
                 <label>Image File:</label><br>
                 <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
