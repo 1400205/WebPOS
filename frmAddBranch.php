@@ -42,7 +42,7 @@ include ("getCompany.php");
 
 <section>
 
-    <form class="login-form" method="POST" action="" name="frm1">
+
         <div class="content">
             <div class="header">
                 <h1>Add Company Details:</h1>
@@ -54,8 +54,7 @@ include ("getCompany.php");
                 <?php echo $resultText;?><br>
                 <?php echo $resultTextPhoto;?><br>
                 <br>
-                <input type="hidden" name="company" class="input username" placeholder="Enter Company Name"/>  <br>
-
+              
                 <div class="footer">
 
                     <div class="error"><span><?php echo $msg;?></span></div>
@@ -66,7 +65,7 @@ include ("getCompany.php");
 
 
         </div>
-    </form>
+
 
 </section>
 </div>
