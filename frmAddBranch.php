@@ -15,7 +15,7 @@ include ("getCompany.php");
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Add Branch Details of <?php echo $getCompanyName;?></title>
+    <title>Add Branch Details></title>
 
 
     <link rel="stylesheet" href="css/style-forms.css">
@@ -31,8 +31,8 @@ include ("getCompany.php");
     <form class="login-form" method="post" action="" enctype="multipart/form-data">
         <div class="content">
             <div class="header">
-                <h1>Add Company Details:</h1>
-                <span>Enter Branch Details of </span>
+                <h1>Add Branch Details:</h1>
+                <span>Enter Branch Details of  <?php echo $getCompanyName;?> </span>
             </div>
             <fieldset>
 
