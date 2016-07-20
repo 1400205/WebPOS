@@ -35,7 +35,7 @@ if(isset($_POST['submit']))
 
     $mobile = $_POST["mobilephoneNo"];
     $email = $_POST["emailAddress"];
-    $branchAddress=$_POST["branchAddressAddress"];
+    $branchAddress=$_POST["branchAddress"];
 
    // $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
