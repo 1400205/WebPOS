@@ -31,17 +31,17 @@ if ($userid>0) {
         }
 
         while ($row = $result->fetch_row()) {
-            $mycompanyID = $row[0];
-            $mycompanyName = $row[1];
+          //  $mycompanyID = $row[0];
+           // $mycompanyName = $row[1];
            // $mylogo = $row[2];
-            $getcompnayID = $getcompanyID . $mycompanyID;
-            $getCompanyName = $getCompanyName . $mycompanyName;
+           // $getcompnayID = $getcompanyID . $mycompanyID;
+           // $getCompanyName = $getCompanyName . $mycompanyName;
            // $getlogo = $getlogo . $mylogo;
 
-            $mylogo = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
-            $getlogo = $getlogo.$mylogo;
+          //  $mylogo = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
+           // $getlogo = $getlogo.$mylogo;
 
-            $line = "<p><a href='frmUpdateCompanyDetails.php?id=" . $row[0] . "'>". "Click Here To Update Company ". $row[1]
+            $line = "<p><a href='frmAddBranch.php?id=" . $row[0] . "'>". "Click Here To Add Company Branch Details ". $row[1]
                 . "</a></p>"."<br>";
 
             $linePhoto = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
