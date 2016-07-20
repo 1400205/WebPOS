@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: prosper
- * Date: 20/07/2016
- * Time: 22:02
- */
 
 //start session
 
 //session_start();
-include ("myglobal.php");
+//include ("myglobal.php");
 include ("getCompany.php");
 
 //include ("clsTitle.php");
@@ -31,18 +25,37 @@ include ("getCompany.php");
 
 <body>
 
-<div id="photolist">
 
-
-
-</div>
 <br><br>
-
-
 <section>
-    <?php echo $resultText;?><br>
-    <?php echo $resultTextPhoto;?><br>
+    <form class="login-form" method="post" action="" enctype="multipart/form-data">
+        <div class="content">
+            <div class="header">
+                <h1>Add Company Details:</h1>
+                <span>Enter company name and upload logo</span>
+            </div>
+            <fieldset>
 
+                <br>
+                <?php echo $resultText;?><br>
+                <?php echo $resultTextPhoto;?><br>
+                <br>
+
+                <div class="footer">
+                    <input type="submit" class="button" name="submit" value="Submit" /><br>
+                    <div class="error"><span><?php echo $msg;?></span></div>
+
+                </div>
+
+            </fieldset>
+            <div id="photolist">
+
+
+
+            </div>
+
+        </div>
+    </form>
 
 </section>
 </div>
