@@ -40,6 +40,7 @@ include ("getCompany.php");
             <div class="header">
                 <h1>Add Company Details:</h1>
                 <span>Enter company name and upload logo</span>
+                <?php echo $resultText;?>
             </div>
             <fieldset>
 
