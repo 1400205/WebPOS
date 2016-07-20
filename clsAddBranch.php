@@ -7,7 +7,7 @@
  */
 
 // Start the session
-//session_start();
+session_start();
 ?>
 <?php
 
@@ -36,7 +36,7 @@ if(isset($_POST['submit']))
     $email = $_POST["emailAddress"];
     $branchAddress=$_POST["branchAddressAddress"];
 
-    $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+   // $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
 
     if($companyID<1)//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
