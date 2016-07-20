@@ -6,7 +6,7 @@ session_start();
 
 
 <?php
-//include ("connect.php");
+include ("connect.php");
 include ("myglobal.php");
 //get user session name and id
 $username=  $_SESSION["uname"];

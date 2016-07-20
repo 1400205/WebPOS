@@ -4,7 +4,7 @@
 
 //session_start();
 include ("clsAddBranch.php");
-include ("getCompany.php");
+//include ("getCompany.php");
 
 //include ("clsTitle.php");
 
