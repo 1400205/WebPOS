@@ -40,9 +40,7 @@ include ("getCompany.php");
                 <label>Company Name:</label><br>
                 <input type="text" name="company" class="input username" placeholder="Enter Company Name"/>  <br>
 
-                <label>Image File:</label><br>
-                <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
-
+               
                 <br>
 
                 <div class="footer">
@@ -52,12 +50,7 @@ include ("getCompany.php");
                 </div>
 
             </fieldset>
-            <div id="photolist">
 
-                <?php echo $resultText;?><br>
-                <?php echo $resultTextPhoto;?><br>
-
-            </div>
 
         </div>
     </form>
