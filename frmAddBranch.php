@@ -54,6 +54,7 @@ include ("getCompany.php");
                 <?php echo $resultText;?><br>
                 <?php echo $resultTextPhoto;?><br>
                 <br>
+                <input type="hidden" name="company" class="input username" placeholder="Enter Company Name"/>  <br>
 
                 <div class="footer">
 
