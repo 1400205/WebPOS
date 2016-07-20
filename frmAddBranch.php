@@ -32,7 +32,7 @@ include ("myglobal.php");
         <div class="content">
             <div class="header">
                 <h1>Add Branch Details:</h1>
-                <span>Enter Branch Details:> </span>
+                <span>Enter Branch Details: </span>
             </div>
             <fieldset>
 
