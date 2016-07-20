@@ -41,9 +41,8 @@ include ("getCompany.php");
 
 
 <section>
-    <?php echo $resultText;?><br>
-    <?php echo $resultTextPhoto;?><br>
-    <form class="login-form" method="post" action="" enctype="multipart/form-data">
+
+    <form class="login-form" method="GET" action="" enctype="multipart/form-data">
         <div class="content">
             <div class="header">
                 <h1>Add Company Details:</h1>
@@ -67,7 +66,8 @@ include ("getCompany.php");
                 </div>
 
             </fieldset>
-
+            <?php echo $resultText;?><br>
+            <?php echo $resultTextPhoto;?><br>
 
         </div>
     </form>
