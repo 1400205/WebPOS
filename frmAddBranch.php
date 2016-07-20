@@ -38,7 +38,7 @@ include ("getCompany.php");
 
                 <br>
                 <label>Company Name:</label><br>
-                <input type="text" name="company" class="input username" placeholder="Enter Company Name"/>  <br>
+                <input type="text" name="branch" class="input username" placeholder="Enter Branch Name"/>  <br>
                 <label> Telephone Number:</label><br>
                 <input type="tel" name="tel" class="input username" placeholder="Telephone Number" />  <br>
 
@@ -47,7 +47,7 @@ include ("getCompany.php");
                 <label>EmailAddress:</label><br>
                 <input type="email" name="emailAddress" class="input username" placeholder="Email Address" />  <br>
                 <label>Branch Address:</label><br>
-                <textarea name="Address" class="input username" placeholder="Company Address" col="30"rows="4"> </textarea> <br>
+                <textarea name="branchAddress" class="input username" placeholder="Company Address" col="30"rows="4"> </textarea> <br>
 
 
                 <div class="footer">
