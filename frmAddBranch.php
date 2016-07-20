@@ -47,7 +47,7 @@ include ("getCompany.php");
                 <label>EmailAddress:</label><br>
                 <input type="email" name="emailAddress" class="input username" placeholder="Email Address" />  <br>
                 <label>Branch Address:</label><br>
-                <textarea name="Address" class="input username" placeholder="Company Address" col="30"rows="4">  <br>
+                <textarea name="Address" class="input username"  col="30"rows="4">  <br>
 
 
                 <div class="footer">
