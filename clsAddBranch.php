@@ -65,14 +65,14 @@ if(isset($_POST['submit']))
         $error = "Either telephone number or mobile phone number of company is Required.";
         exit;}
 
-    elseif ( empty($_POST["branchAddress"])){
-        echo "<script>alert('Please Enter Branch Address.');window.history.go(-1);</script>";
-        $error = "Branch Address is required  is Required.";
-        exit;
-    }
+
     elseif ( empty($_POST["emailAddress"])){
         echo "<script>alert('Please enter Email Address of Branch.');window.history.go(-1);</script>";
         $error = "Email Address is Required.";
+        exit;}
+    elseif ( empty($_POST["branchAddress"])){
+        echo "<script>alert('Please enter Email Address of Branch.');window.history.go(-1);</script>";
+        $error = "Branch Address is Required.";
         exit;}
 
     else{
