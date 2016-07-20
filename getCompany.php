@@ -50,8 +50,6 @@ if ($userid>0) {
             $resultTextPhoto =$resultTextPhoto.$linePhoto;
 
         }
-
-
     }
 }else{
     $msg = "<a href='index.php'>"."Please login before proceeding". "</a>";

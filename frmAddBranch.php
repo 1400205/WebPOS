@@ -32,8 +32,15 @@ include ("getCompany.php");
 
 <body>
 
+<div id="photolist">
 
+    <?php echo $resultText;?><br>
+    <?php echo $resultTextPhoto;?><br>
+
+</div>
 <br><br>
+
+
 <section>
     <form class="login-form" method="post" action="" enctype="multipart/form-data">
         <div class="content">
@@ -59,12 +66,7 @@ include ("getCompany.php");
                 </div>
 
             </fieldset>
-            <div id="photolist">
 
-                <?php echo $resultText;?><br>
-                <?php echo $resultTextPhoto;?><br>
-
-            </div>
 
         </div>
     </form>
