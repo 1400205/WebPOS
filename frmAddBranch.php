@@ -32,7 +32,7 @@ include ("myglobal.php");
         <div class="content">
             <div class="header">
                 <h1>Add Branch Details:</h1>
-                <span>Enter Branch Details of  <?php echo $getCompanyName;?> </span>
+                <span>Enter Branch Details:> </span>
             </div>
             <fieldset>
 
@@ -52,7 +52,7 @@ include ("myglobal.php");
 
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>
-                    <div class="error"><span><?php echo $msg;?></span></div>
+                    <div class="error"><span><?php echo $error;?></span></div>
 
                 </div>
 
