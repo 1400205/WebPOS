@@ -48,11 +48,7 @@ include ("getCompany.php");
                 <input type="email" name="emailAddress" class="input username" placeholder="Email Address" />  <br>
                 <label>Branch Address:</label><br>
                 <textarea name="Address" class="input username" placeholder="Company Address" col="30"rows="4" />  <br>
-                <br>
-               
 
-
-                <br>
 
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>
