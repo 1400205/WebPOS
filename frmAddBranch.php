@@ -37,8 +37,8 @@ include ("getCompany.php");
             <fieldset>
 
                 <br>
-                <label>Company Name:</label><br>
-                <input type="text" name="company" class="input username" placeholder="Enter Company Name"/>  <br>
+                <label>   <?php echo $resultText;?><br></label><br>
+                <input type="hidden" name="company" class="input username" placeholder="Enter Company Name"/>  <br>
 
                 <label>Image File:</label><br>
                 <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
@@ -54,7 +54,7 @@ include ("getCompany.php");
             </fieldset>
             <div id="photolist">
 
-                <?php echo $resultText;?><br>
+
                 <?php echo $resultTextPhoto;?><br>
 
             </div>
