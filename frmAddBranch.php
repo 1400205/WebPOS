@@ -40,11 +40,10 @@ include ("getCompany.php");
                 <label>Company Name:</label><br>
                 <input type="text" name="company" class="input username" placeholder="Enter Company Name"/>  <br>
 
-               
+
                 <br>
 
                 <div class="footer">
-                    <input type="submit" class="button" name="submit" value="Submit" /><br>
                     <div class="error"><span><?php echo $msg;?></span></div>
 
                 </div>
