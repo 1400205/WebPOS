@@ -42,7 +42,10 @@ include ("getCompany.php");
 
 <section>
 
+    <?php echo $resultText;?><br>
+    <?php echo $resultTextPhoto;?><br>
 
+    
         <div class="content">
             <div class="header">
                 <h1>Add Company Details:</h1>
@@ -54,7 +57,7 @@ include ("getCompany.php");
                 <?php echo $resultText;?><br>
                 <?php echo $resultTextPhoto;?><br>
                 <br>
-              
+
                 <div class="footer">
 
                     <div class="error"><span><?php echo $msg;?></span></div>
