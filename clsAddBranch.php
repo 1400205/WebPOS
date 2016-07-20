@@ -8,6 +8,9 @@
 
 // Start the session
 session_start();
+//get user session name and id
+$username= $_SESSION["uname"];
+$userid= $_SESSION["userid"];
 ?>
 <?php
 
@@ -19,9 +22,7 @@ error_reporting(E_ALL);
 include ("connect.php");
 //get global variable file
 include ("myglobal.php");
-//get user session name and id
-$username= $_SESSION["uname"];
-$userid= $_SESSION["userid"];
+
 //get connection
 if(isset($_POST['submit']))
 {
