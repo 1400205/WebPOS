@@ -42,7 +42,6 @@ include ("getCompany.php");
                 <br>
 
                 <div class="footer">
-                    <input type="submit" class="button" name="submit" value="Submit" /><br>
                     <div class="error"><span><?php echo $msg;?></span></div>
 
                 </div>
