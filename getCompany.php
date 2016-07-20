@@ -32,10 +32,10 @@ if ($userid>0) {
 
         while ($row = $result->fetch_row()) {
           //  $mycompanyID = $row[0];
-           // $mycompanyName = $row[1];
+            $mycompanyName = $row[1];
            // $mylogo = $row[2];
            // $getcompnayID = $getcompanyID . $mycompanyID;
-           // $getCompanyName = $getCompanyName . $mycompanyName;
+            $getCompanyName = $getCompanyName . $mycompanyName;
            // $getlogo = $getlogo . $mylogo;
 
           //  $mylogo = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";

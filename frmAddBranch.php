@@ -15,7 +15,7 @@ include ("getCompany.php");
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Add Company Details</title>
+    <title>Add Branch Details of <?php echo $getCompanyName;?></title>
 
 
     <link rel="stylesheet" href="css/style-forms.css">
@@ -32,7 +32,7 @@ include ("getCompany.php");
         <div class="content">
             <div class="header">
                 <h1>Add Company Details:</h1>
-                <span>Enter company name and upload logo</span>
+                <span>Enter Branch Details of </span>
             </div>
             <fieldset>
 
