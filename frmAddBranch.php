@@ -4,7 +4,7 @@
 
 //session_start();
 include ("myglobal.php");
-include ("clsCompany.php");
+include ("getCompany.php");
 
 //include ("clsTitle.php");
 
