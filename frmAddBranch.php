@@ -34,14 +34,15 @@ include ("getCompany.php");
 
 <div id="photolist">
 
-    <?php echo $resultText;?><br>
-    <?php echo $resultTextPhoto;?><br>
+
 
 </div>
 <br><br>
 
 
 <section>
+    <?php echo $resultText;?><br>
+    <?php echo $resultTextPhoto;?><br>
     <form class="login-form" method="post" action="" enctype="multipart/form-data">
         <div class="content">
             <div class="header">
