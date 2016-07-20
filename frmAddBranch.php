@@ -47,7 +47,7 @@ include ("myglobal.php");
                 <label>EmailAddress:</label><br>
                 <input type="email" name="emailAddress" class="input username" placeholder="Email Address" />  <br>
                 <label>Branch Address:</label><br>
-                <textarea name="branchAddress" class="input username" placeholder="Company Address" col="30"rows="4"> </textarea> <br>
+                <input type="text" name="branchAddress" class="input username" placeholder="Company Address" col="30"rows="4"> </input> <br>
 
 
                 <div class="footer">
