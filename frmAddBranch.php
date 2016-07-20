@@ -49,8 +49,9 @@ include ("getCompany.php");
                 <label>Branch Address:</label><br>
                 <textarea name="Address" class="input username" placeholder="Company Address" col="30"rows="4" />  <br>
                 <br>
-
                
+
+
                 <br>
 
                 <div class="footer">
