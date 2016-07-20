@@ -7,7 +7,7 @@
  */
 
 // Start the session
-session_start();
+//session_start();
 ?>
 <?php
 
