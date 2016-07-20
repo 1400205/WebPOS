@@ -16,7 +16,7 @@ $msg="";
 
 if ($userid>0) {
 
-    if (isset($_POST["submit"])) {
+   // if (isset($_POST["submit"])) {
 
         $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
@@ -50,7 +50,7 @@ if ($userid>0) {
             $resultTextPhoto =$resultTextPhoto.$linePhoto;
 
         }
-    }
+  //  }
 }else{
     $msg = "<a href='index.php'>"."Please login before proceeding". "</a>";
 }
