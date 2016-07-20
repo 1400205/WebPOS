@@ -23,7 +23,7 @@ include ("getCompany.php");
 
 </head>
 
-<body onload="">
+<body onload="document.frm1.submit()">
 
 
 <br><br>
@@ -46,7 +46,7 @@ include ("getCompany.php");
                 <br>
 
                 <div class="footer">
-                    <input type="submit" class="button" name="submit" value="Submit" /><br>
+
                     <div class="error"><span><?php echo $msg;?></span></div>
 
                 </div>
