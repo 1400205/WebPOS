@@ -3,7 +3,7 @@
 //start session
 
 //session_start();
-include ("clsAddBranch.php");
+//include ("clsAddBranch.php");
 include ("myglobal.php");
 
 //include ("clsTitle.php");
