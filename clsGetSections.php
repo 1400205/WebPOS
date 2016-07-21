@@ -30,7 +30,7 @@ if ($userid>0) {
 
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT sectionID,sectionhName,sectionType FROM section")) {
+    if ($stmt = $sqlcon->prepare("SELECT sectionID,sectionName,sectionType FROM section")) {
         // $stmt->bind_param('ss', $firstname,$surname);
 
         $stmt->execute();
