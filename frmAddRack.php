@@ -12,7 +12,7 @@
 //include ("clsAddBranch.php");
 include ("myglobal.php");
 
-include ("cls");
+include ("clsAddRack.php");
 
 ?>
 
