@@ -88,9 +88,9 @@ if(isset($_POST['submit']))
         $companyID = trim($companyID);
 
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO branch (branchname,branchAddress, telephoneNo, mobilePhoneNo,companyID,userid) VALUES (?,?,?,?,?,?,?)"))){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO branch (branchname,branchAddress, telephoneNo, mobilePhoneNo,companyID,userid) VALUES (?,?,?,?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('ssssssi',$title, $firstname, $surname,$othernames,$gender,$dob,$userid);
+            $stmt->bind_param('ssssii',$branch, $branchAddress, $ctel,$mobile,$companyID,$userid);
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
             }else{
