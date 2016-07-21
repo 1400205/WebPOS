@@ -114,7 +114,7 @@ if(isset($_POST['submit']))
         $branchAddress = htmlspecialchars($branchAddress);
         $branchAddress = trim($branchAddress);
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO branch (companyID,branchName, branchAddress,emailAddress,telephoneNo,mobilePhoneNo,userID) VALUES (?,?,?,?,?,?,?)"))){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO branc (companyID,branchName, branchAddress,emailAddress,telephoneNo,mobilePhoneNo,userID) VALUES (?,?,?,?,?,?,?)"))){
             //bind parameter
             $stmt->bind_param('isssssi',$companyID, $branchname, $branchAddress,$email,$tel,$mobile, $userid);
             if( $stmt->execute()){
