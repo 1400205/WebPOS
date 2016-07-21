@@ -38,12 +38,12 @@ include ("myglobal.php");
 
                 <br>
                 <label>Company Name:</label><br>
-                <input type="text" name="branch" class="input username" placeholder="Enter Branch Name"/>  <br>
+                <input type="text" name="cbranch" class="input username" placeholder="Enter Branch Name"/>  <br>
                 <label> Telephone Number:</label><br>
-                <input type="tel" name="tel" class="input username" placeholder="Telephone Number" />  <br>
+                <input type="text" name="ctel" class="input username" placeholder="Telephone Number" />  <br>
 
                 <label>Mobile Phone Number:</label><br>
-                <input type="tel" name="mobilephoneNo" class="input username" placeholder="Mobile Phone Number" /><br>
+                <input type="text" name="mobilephoneNo" class="input username" placeholder="Mobile Phone Number" /><br>
                 <label>EmailAddress:</label><br>
                 <input type="email" name="emailAddress" class="input username" placeholder="Email Address" />  <br>
                 <label>Branch Address:</label><br>
