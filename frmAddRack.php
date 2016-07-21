@@ -51,10 +51,10 @@ include ("clsAddRack.php");
 
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>
-                  <p>  <div class="error"><span><?php echo $error;?></span></div></p>
-
+                 
 
                 </div>
+                    <p>  <div class="error"><span><?php echo $error;?></span></div></p>
 
             </fieldset>
 

@@ -80,10 +80,10 @@ include ("clsAddSection.php");
 
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>
-                    <div class="error"><span><?php echo $error;?></span></div>
-
+                   
 
                 </div>
+                <div class="error"><span><?php echo $error;?></span></div>
 
             </fieldset>
 
