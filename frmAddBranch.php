@@ -28,7 +28,7 @@ include ("myglobal.php");
 
 <br><br>
 <section>
-    <form class="login-form" method="post" action="" enctype="multipart/form-data">
+    <form class="login-form" method="post" action="">
         <div class="content">
             <div class="header">
                 <h1>Add Branch Details:</h1>
