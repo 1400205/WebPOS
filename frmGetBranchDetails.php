@@ -15,7 +15,7 @@ include ("clsgetBranchDetails.php");
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Get Company Details</title>
+    <title>Get Branch Details</title>
 
 
     <link rel="stylesheet" href="css/style-forms.css">
@@ -31,8 +31,8 @@ include ("clsgetBranchDetails.php");
     <form class="login-form" method="post" action="" enctype="multipart/form-data">
         <div class="content">
             <div class="header">
-                <h1>Get Company Details:</h1>
-                <span>Get company details and Add Branch</span>
+                <h1>Get Branch Details:</h1>
+                <span>Get Branch details and Add Areas</span>
             </div>
             <fieldset>
 
