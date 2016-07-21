@@ -60,13 +60,13 @@ include ("clsBranch.php");
                 {
 
                     $section=$row['0'];
-                    $sectionID=$row['1'];
+                   // $sectionID=$row['1'];
 
 
                     echo '<option value="'.$section.'">'.$section.'</option>';
 
                 }
-                echo '<input type="text" value="'.$sectionID.'">';
+               // echo '<input type="text" value="'.$sectionID.'">';
 
 
                 echo '</select>';
