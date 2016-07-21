@@ -6,7 +6,7 @@
 //include ("clsAddBranch.php");
 include ("myglobal.php");
 
-//include ("clsTitle.php");
+include ("clsBranch.php");
 
 ?>
 
