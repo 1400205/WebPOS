@@ -45,8 +45,8 @@ include ("cls");
                 <br>
                 <label>Rack Name:</label><br>
                 <input type="text" name="rack" class="input username" placeholder="Enter Rack Name"/>  <br>
-                <label> Number of Shelf:</label><br>
-                <input type="number" name="NofShelves" class="input username" placeholder="Enter Number of Shelves" />  <br>
+                <label> Number of Shelves:</label><br>
+                <input type="number" name="shelveNo" class="input username" placeholder="Enter Number of Shelves" />  <br>
                 
 
                 <div class="footer">
