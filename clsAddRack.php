@@ -79,7 +79,7 @@ if(isset($_POST['submit']))
             }else{
                 $error="FAILURE! "."Record Did Not Add. System Does Not Allow Duplicate Records";
             }
-        }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}
+        }else{$error= "CALL Record Addition Failed: Contact Admin";}
 
     }
 
