@@ -46,7 +46,7 @@ include ("clsBranch.php");
                 // echo '<select name="title">'; // Open your drop down box
 
                 //prepare statement
-                if($stmt=$sqlcon->prepare("SELECT sectionName FROM section ORDER BY sectionName")){
+                if($stmt=$sqlcon->prepare("SELECT locationName FROM locationDetails ORDER BY locationName")){
 
                     $stmt->execute();
                     //get result
@@ -70,13 +70,6 @@ include ("clsBranch.php");
 
                 ?>
                 <br>
-
-                <label>Mobile Phone Number:</label><br>
-                <input type="text" name="mobilephoneNo" class="input username" placeholder="Mobile Phone Number" /><br>
-                <label>EmailAddress:</label><br>
-                <input type="email" name="emailAddress" class="input username" placeholder="Email Address" />  <br>
-                <label>Branch Address:</label><br>
-                <input type="text" name="branchAddress" class="input username" placeholder="Company Address" /> <br>
 
 
                 <div class="footer">
