@@ -73,13 +73,13 @@ if(isset($_POST['submit']))
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO rack (rackName, numberOfShelves, sectionID,userid) VALUES (?,?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('ssii',$rackName, $shelveNo, $sectionID,$userid);
+            $stmt->bind_param('siii',$rackName, $shelveNo, $sectionID,$userid);
             if( $stmt->execute()){
                 $error="SUCCESS! "."Record Added Successfully.";
             }else{
                 $error="FAILURE! "."Record Did Not Add. System Does Not Allow Duplicate Records";
             }
-        }else{$error= "CALL failed:";}
+        }else{$error= "INSERT failed:";}
 
     }
 
