@@ -36,6 +36,8 @@ if ($userid>0) {
         $stmt->execute();
         //get result
         $result = $stmt->get_result();
+    }else{
+        $msg = "SELECTION FAIL: Contact System Admin";
     }
 
     while ($row = $result->fetch_row()) {

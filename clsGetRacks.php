@@ -29,12 +29,14 @@ if ($userid>0) {
 
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT rackID,rackName,numberOfShalves FROM rack")) {
+    if ($stmt = $sqlcon->prepare("SELECT rackID,rackName,numberOfShelves FROM rack")) {
         // $stmt->bind_param('ss', $firstname,$surname);
 
         $stmt->execute();
         //get result
         $result = $stmt->get_result();
+    }else{
+        $msg = "SELECTION FAIL: Contact System Admin";
     }
 
     while ($row = $result->fetch_row()) {
