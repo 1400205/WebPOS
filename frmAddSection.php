@@ -46,7 +46,7 @@ include ("clsBranch.php");
                 // echo '<select name="title">'; // Open your drop down box
 
                 //prepare statement
-                if($stmt=$sqlcon->prepare("SELECT locationName FROM locationDetails ORDER BY locationName")){
+                if($stmt=$sqlcon->prepare("SELECT locationName,locationID FROM locationDetails ORDER BY locationName")){
 
                     $stmt->execute();
                     //get result
@@ -60,6 +60,7 @@ include ("clsBranch.php");
                 {
 
                     $section=$row['0'];
+                    $sectionID=$row['1'];
 
 
                     echo '<option value="'.$section.'">'.$section.'</option>';
@@ -67,6 +68,9 @@ include ("clsBranch.php");
                 }
 
                 echo '</select>';
+
+                echo '<br>';
+
 
                 ?>
                 <br>
