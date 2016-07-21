@@ -64,9 +64,9 @@ include ("clsBranch.php");
 
 
                     echo '<option value="'.$section.'">'.$section.'</option>';
-                    echo '<input type="text" value="'.$sectionID.'">';
 
                 }
+                echo '<input type="text" value="'.$sectionID.'">';
 
 
                 echo '</select>';
