@@ -53,7 +53,7 @@ include ("clsBranch.php");
                     $result = $stmt->get_result();
                 }
                 // echo "<select name='title'>";
-                echo  "<select name='Section' class='input username'>";
+                echo  "<select name='clocation' class='input username'>";
                 //$placeholdergender='Choose Gender';
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
                 while($row=$result->fetch_row())
