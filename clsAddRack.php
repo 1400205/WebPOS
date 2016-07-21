@@ -35,16 +35,16 @@ if(isset($_POST['submit']))
     $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
 
-    if( empty($_POST["cSection"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
+    if( empty($_POST["rack"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
-        echo "<script>alert('Please enter Section Name.');window.history.go(-1);</script>";
-        $error = "Section Name is Required.";
+        echo "<script>alert('Please enter Rack Name.');window.history.go(-1);</script>";
+        $error = "Rack Name is Required.";
         exit;
     }
 
-    elseif ( empty($_POST["clocation"])){
-        echo "<script>alert('Please enter Location.');window.history.go(-1);</script>";
-        $error = "Location is Required.";
+    elseif ( empty($_POST["shelveNo"])){
+        echo "<script>alert('Please enter Number of Shelves.');window.history.go(-1);</script>";
+        $error = "Number of Shelves is Required.";
         exit;
     }
 
