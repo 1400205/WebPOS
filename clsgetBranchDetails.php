@@ -22,7 +22,7 @@ if ($userid>0) {
 
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT branchID,branchName FROM branch WHERE branchID=1")) {
+    if ($stmt = $sqlcon->prepare("SELECT branchID,branchName FROM branch WHERE branchID= SELECT MAX (branchID FROM branch)")) {
         // $stmt->bind_param('ss', $firstname,$surname);
 
         $stmt->execute();
