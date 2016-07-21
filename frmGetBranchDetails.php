@@ -3,7 +3,7 @@
 //start session
 
 //session_start();
-//include ("myglobal.php");
+include ("myglobal.php");
 include ("clsgetBranchDetails.php");
 
 //include ("clsTitle.php");
@@ -38,7 +38,7 @@ include ("clsgetBranchDetails.php");
 
                 <br>
                 <?php echo $resultText;?><br>
-               
+
                 <br>
 
                 <div class="footer">
