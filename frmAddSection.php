@@ -32,7 +32,7 @@ include ("clsAddSection.php");
         <div class="content">
             <div class="header">
                 <h1>Add Section Details:</h1>
-                <span>Enter Branch Details: </span>
+                <span>This is to Enter Section Details: </span>
             </div>
             <fieldset>
 
