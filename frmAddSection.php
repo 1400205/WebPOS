@@ -76,12 +76,12 @@ include ("clsAddSection.php");
                // echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
                 while($row=$result->fetch_row())
                 {
-
+                 //   echo '<option value="'.$sectionID.'">'.$sectionID . ($sectionId == $defaultSectionId ? ' selected' : '')</option>';
                    // $section=$row['0'];
                      $sectionID=$row['1'];
 
 
-                    echo '<option value="'.$sectionID.'">'.$sectionID.'</option>';
+                    echo '<option value="'.$sectionID.'">'.$sectionID.($sectionId == $defaultSectionId ? ' selected' : '')."</option>";
 
                 }
                 // echo '<input type="text" value="'.$sectionID.'">';
