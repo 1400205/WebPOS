@@ -112,7 +112,7 @@ include ("clsProducts.php");
                 <br>
 
                 <label>Part Position:</label><br>
-                <label>Country:</label><br>
+               
                 <?php
 
                 // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
