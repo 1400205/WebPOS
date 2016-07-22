@@ -20,7 +20,7 @@
 //include ("clsAddBranch.php");
 include ("myglobal.php");
 
-include ("clsAddShelf.php");
+include ("clsAddSupplier.php");
 
 ?>
 
@@ -29,7 +29,7 @@ include ("clsAddShelf.php");
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Add Shelf Details></title>
+    <title>Add Supplier Details></title>
 
 
     <link rel="stylesheet" href="css/style-forms.css">
@@ -45,8 +45,8 @@ include ("clsAddShelf.php");
     <form class="login-form" method="post" action="">
         <div class="content">
             <div class="header">
-                <h1>Add Shelf Details:</h1>
-                <span>Enter Shelf Details: </span>
+                <h1>Add Supplier Details:</h1>
+                <span>Enter Suuplier Details: </span>
             </div>
             <fieldset>
 
