@@ -10,7 +10,7 @@
 
 //session_start();
 include ("myglobal.php");
-include ("frmGetPersonForSupplier.php");
+include ("clsGetPersonForSupplier.php");
 //include ("clsTitle.php");
 
 ?>
