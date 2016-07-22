@@ -41,7 +41,6 @@ include ("clsPruductType.php");
 
 <body>
 
-
 <br><br>
 <section>
     <form class="login-form" method="post" action="">
@@ -59,13 +58,11 @@ include ("clsPruductType.php");
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>
 
-
                 </div>
                 <p>  <div class="error"><span><?php echo $error;?></span></div></p>
 
             </fieldset>
 
-`
         </div>
     </form>
 
