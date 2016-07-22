@@ -57,7 +57,7 @@ if(isset($_POST['submit']))
         $productType = trim($productType);
 
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO position (proType,userid) VALUES (?,?)"))){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO productType (proType,userid) VALUES (?,?)"))){
             //bind parameter
             $stmt->bind_param('si',$productType,$userid);
             if( $stmt->execute()){
