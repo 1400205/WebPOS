@@ -53,7 +53,7 @@ include ("searchPerson.php");
 
                 <?php echo $resultText;?><br>
                 <?php echo $resultTextPhoto;?><br>
-                <a href="home1.php">Click to Exit this Task</a>
+                <a href="allPersons.html">Click to Exit this Task</a>
 
             </div>
 
