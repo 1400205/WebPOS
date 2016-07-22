@@ -44,7 +44,9 @@ include ("clsGetShelf.php");
             <fieldset>
 
                 <br>
-                <?php echo $resultText;?><br>
+                <ol>
+               <li> <?php echo $resultText;?></li><br>
+                </ol>
 
                 <br>
 
