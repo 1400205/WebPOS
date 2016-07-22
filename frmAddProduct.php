@@ -7,7 +7,7 @@
  */
 include ("myglobal.php");
 
-include ("clsAddSection.php");
+include ("clsProducts.php");
 
 ?>
 
