@@ -83,14 +83,14 @@ include ("clsAddSection.php");
                     // $section=$row['0'];
                     $sectionID=$row1['0'];
 
-
+                    echo  "<input type='text' name='locationID' value=$sectionID class='input username'>"."<br>";
 
 
                 }
 
                 echo '</select>'."<br>";
 
-                echo  "<input type='text' name='locationID' value=$sectionID class='input username'>"."<br>";
+
 
 
 
