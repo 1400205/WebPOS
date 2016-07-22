@@ -145,7 +145,7 @@ include ("clsProducts.php");
                 <br>
 
                 <label>Product Description:</label><br>
-                <textarea cols="56" rows="3" name="proDiscription" class="input username" placeholder="Enter Product Description"/>  <br>
+                <textarea cols="56" rows="3" name="proDiscription" class="input username" placeholder="Enter Product Description"/>  </textarea><br>
 
 
                 <div class="footer">
