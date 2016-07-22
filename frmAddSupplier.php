@@ -52,7 +52,7 @@ include ("clsAddSupplier.php");
 
                 <br>
                 <label>Shelf Name:</label><br>
-                <input type="text" name="shelf" class="input username" placeholder="Enter Rack Name"/>  <br>
+                <input type="text" name="supplier" class="input username" placeholder="Enter Supplier Name"/>  <br>
 
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>
