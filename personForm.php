@@ -113,7 +113,7 @@ include ("clsPerson.php");
 
             </fieldset>
             <div class="error"><span><?php echo $error;?></span></div>
-            <div class="error"><span><a href="home1.php">Click to Exit this Task</a></a></span></div>
+            <div class="error"><span><a href="allPersons.html">Click to Exit this Task</a></a></span></div>
 
         </div>
     </form>
