@@ -76,28 +76,29 @@ include ("clsAddSection.php");
                     $result = $stmt->get_result();
                 }
 
-                echo '</select>'."<br>";
-
-
-
-
-
-               // echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
-                if($row=$result->fetch_row())
+                // echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
+                if($row1=$result->fetch_row())
                 {
-                 //   echo '<option value="'.$sectionID.'">'.$sectionID . ($sectionId == $defaultSectionId ? ' selected' : '')</option>';
-                   // $section=$row['0'];
-                     $sectionID=$row['0'];
+                    //   echo '<option value="'.$sectionID.'">'.$sectionID . ($sectionId == $defaultSectionId ? ' selected' : '')</option>';
+                    // $section=$row['0'];
+                    $sectionID=$row1['0'];
 
 
-                    echo  "<input type='text' name='locationID' value=$sectionID class='input username'>"."<br>";
+
 
                 }
+
+                echo '</select>'."<br>";
+
+                echo  "<input type='text' name='locationID' value=$sectionID class='input username'>"."<br>";
+
+
+
+
                 // echo '<input type="text" value="'.$sectionID.'">';
 
 
 
-                echo '</select>';
 
                 echo '<br>';
 
