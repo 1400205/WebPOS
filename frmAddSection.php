@@ -53,7 +53,7 @@ include ("clsAddSection.php");
                     $result = $stmt->get_result();
                 }
 
-                echo  "<select name='clocation' class='input username'>";
+                echo  "<select name='clocation' class='input username'>"."<br>";
 
 
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
@@ -81,7 +81,7 @@ include ("clsAddSection.php");
                      $sectionID=$row['1'];
 
 
-                    echo '<option value="'.$sectionID.'">'.$sectionID.($sectionId == $defaultSectionId ? ' selected' : '')."</option>";
+                    echo '<option value="'.$sectionID.'">'.$sectionID.'</option>';
 
                 }
                 // echo '<input type="text" value="'.$sectionID.'">';
