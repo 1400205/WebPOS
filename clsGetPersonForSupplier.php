@@ -35,6 +35,8 @@ if(isset($_POST["submit"])) {
         $stmt->execute();
         //get result
         $result = $stmt->get_result();
+    }else{
+        $msg = "SELECTION FAIL: Contact System Admin";
     }
 
     while ($row = $result->fetch_row()) {
@@ -46,7 +48,9 @@ if(isset($_POST["submit"])) {
         $resultText =$resultText.$line;
         $resultTextPhoto =$resultTextPhoto.$linePhoto;
     }
-
+if($row<1){
+    $msg = "Record Not Found";
+}
 
 }
 ?>
