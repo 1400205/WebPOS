@@ -52,9 +52,10 @@ include ("clsAddSection.php");
                     //get result
                     $result = $stmt->get_result();
                 }
-                // echo "<select name='title'>";
+
                 echo  "<select name='clocation' class='input username'>";
-                //$placeholdergender='Choose Gender';
+
+
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
                 while($row=$result->fetch_row())
                 {
@@ -67,6 +68,22 @@ include ("clsAddSection.php");
 
                 }
                // echo '<input type="text" value="'.$sectionID.'">';
+
+                echo  "<select name='cID' class='input username'>";
+
+                echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
+                while($row=$result->fetch_row())
+                {
+
+                   // $section=$row['0'];
+                     $sectionID=$row['1'];
+
+
+                    echo '<option value="'.$sectionID.'">'.$sectionID.'</option>';
+
+                }
+                // echo '<input type="text" value="'.$sectionID.'">';
+
 
 
                 echo '</select>';
