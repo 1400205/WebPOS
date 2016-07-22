@@ -53,7 +53,7 @@ include ("clsAddSection.php");
                     $result = $stmt->get_result();
                 }
 
-               
+                echo  "<select name='clocation' class='input username'>"."<br>";
 
 
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
