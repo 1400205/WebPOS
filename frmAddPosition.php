@@ -22,7 +22,7 @@
 //include ("clsAddBranch.php");
 include ("myglobal.php");
 
-include ("clsAddSupplier.php");
+include ("clsAddPosition.php");
 
 ?>
 
