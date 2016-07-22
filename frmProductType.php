@@ -54,7 +54,7 @@ include ("clsPruductType.php");
 
                 <br>
                 <label>Product Type:</label><br>
-                <input type="text" name="prodcuctType" class="input username" placeholder="Enter Supplier Name"/>  <br>
+                <input type="text" name="prodcuctType" class="input username" placeholder="Enter Part Type"/>  <br>
 
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>
