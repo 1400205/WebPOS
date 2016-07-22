@@ -46,7 +46,9 @@ if(isset($_POST["submit"])) {
         $resultText =$resultText.$line;
         $resultTextPhoto =$resultTextPhoto.$linePhoto;
     }
-
+    if(empty($row)){
+        $msg = "Record Not Found";
+    }
 
 }
 ?>
