@@ -54,7 +54,7 @@ if(isset($_POST['submit']))
         $productType = stripslashes( $productType );
         $productType=mysqli_real_escape_string($db,$productType);
         $productType = htmlspecialchars($productType);
-        $productType = trim($partPosition);
+        $productType = trim($productType);
 
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO position (proType,userid) VALUES (?,?)"))){
