@@ -33,7 +33,7 @@ if(isset($_POST['submit']))
     $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
 
-    if( empty($_POST["shelf"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
+    if( empty($_POST["partPosition"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
         echo "<script>alert('Please enter Part Position.');window.history.go(-1);</script>";
         $error = "Part Position is Required.";
