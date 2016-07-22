@@ -29,7 +29,7 @@ if(isset($_POST['submit']))
     //get user inputs
     $branchID=$_GET["id"];
     $sectionName = $_POST["cSection"];
-    $location = $_POST["clocation"];
+    $location = $_POST["locationID"];
 
 
     $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);

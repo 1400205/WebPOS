@@ -44,7 +44,7 @@ include ("clsAddSection.php");
 
                 // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
                 // echo '<select name="title">'; // Open your drop down box
-                $sectionID=0;
+                $locationID=0;
 
                 //prepare statement
                 if($stmt=$sqlcon->prepare("SELECT locationName,locationID FROM locationDetails ORDER BY locationName")){
@@ -62,10 +62,27 @@ include ("clsAddSection.php");
                 {
 
                     $section=$row['0'];
-                   $sectionID=$row['1'];
+                   //$sectionID=$row['1'];
 
 
                     echo '<option value="'.$section.'">'.$section.'</option>';
+
+                }
+
+
+                if($stmt=$sqlcon->prepare("SELECT locationID FROM locationDetails WHERE locationID=".$_POST['clocation'])){
+
+                    $stmt->execute();
+                    //get result
+                    $result = $stmt->get_result();
+                }
+                IF ($row1=$result->fetch_row())
+                {
+                    $locationID=$row1['0'];
+
+
+                    echo  "<input type='text' name='locationID' value=$locationID class='input username'>"."<br>";
+                    
 
                 }
 

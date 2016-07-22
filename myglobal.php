@@ -23,6 +23,6 @@ $getcompanyID=1;
 $getcompayName="";
 $companylogo="";
 
-$sectionID=0;
+$locationID=0;
 
 
