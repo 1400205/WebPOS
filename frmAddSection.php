@@ -68,10 +68,12 @@ include ("clsAddSection.php");
 
                 }
                // echo '<input type="text" value="'.$sectionID.'">';
+                echo '</select>';
+                echo '<select>';
 
                 echo  "<select name='cID' class='input username'>";
 
-                echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
+               // echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
                 while($row=$result->fetch_row())
                 {
 
