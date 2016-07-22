@@ -55,7 +55,7 @@ if(isset($_POST['submit']))
         $partPosition = trim($partPosition);
 
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO position (partPosition,userid) VALUES (?,?)"))){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO positions (partPosition,userid) VALUES (?,?)"))){
             //bind parameter
             $stmt->bind_param('si',$partPosition,$userid);
             if( $stmt->execute()){
