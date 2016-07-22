@@ -55,13 +55,13 @@ WHERE r.numberOfShelves >0")) {
         //  $mylogo = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
         // $getlogo = $getlogo.$mylogo;
 
-        $line = "<ol>"."<li>"."<p><a href='frmStockProduct.php?id=" . $row[0] . "'>". "Click Here To Stock Product in Shelf: ".$row[5]." ON ". $row[1]." of type ".$row[2]." In Rack: ".$row[3]." Remaining Number of Shelves: ".$row[4]
-            . "</a></p>"."<br>"."</li>"."</ol>";
+        $line = "<p><a href='frmStockProduct.php?id=" . $row[0] . "'>". "Click Here To Stock Product in Shelf: ".$row[5]." ON ". $row[1]." of type ".$row[2]." In Rack: ".$row[3]." Remaining Number of Shelves: ".$row[4]
+            . "</a></p>"."<br>";
 
         // $linePhoto = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
         
 
-        $resultText =$resultText.$line;
+        $resultText ="<ol>"."<li>".$resultText.$line."</li>"."</ol>";
         // $resultTextPhoto =$resultTextPhoto.$linePhoto;
 
     }
