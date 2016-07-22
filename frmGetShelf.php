@@ -11,7 +11,7 @@
 
 //session_start();
 include ("myglobal.php");
-include ("clsGetRacks.php");
+include ("clsGetShelf.php");
 
 //include ("clsTitle.php");
 
