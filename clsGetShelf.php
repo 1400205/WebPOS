@@ -61,7 +61,7 @@ WHERE r.numberOfShelves >0")) {
         // $linePhoto = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
         
 
-        $resultText =$resultText."<ol>"."<li>".$line."</li>"."</ol>";
+        $resultText =$resultText."<ul>"."<li>".$line."</li>"."</ul>";
         // $resultTextPhoto =$resultTextPhoto.$linePhoto;
 
     }
