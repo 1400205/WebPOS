@@ -68,7 +68,6 @@ include ("clsAddSection.php");
 
                 }
                // echo '<input type="text" value="'.$sectionID.'">';
-                echo '</select>'."<br>";
 
                 if($stmt=$sqlcon->prepare("SELECT locationID FROM locationDetails WHERE locationName=".$_POST['clocation'])){
 
@@ -76,6 +75,10 @@ include ("clsAddSection.php");
                     //get result
                     $result = $stmt->get_result();
                 }
+
+                echo '</select>'."<br>";
+
+
 
 
 
