@@ -57,7 +57,7 @@ include ("clsProducts.php");
                     $result = $stmt->get_result();
                 }
                 // echo "<select name='title'>";
-                echo  "<select name='productType' class='input username'>";
+                echo  "<select name='prodcuctType' class='input username'>";
                 //$placeholdergender='Choose Gender';
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
                 while($row=$result->fetch_row())
@@ -112,7 +112,7 @@ include ("clsProducts.php");
                 <br>
 
                 <label>Part Position:</label><br>
-               
+
                 <?php
 
                 // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
