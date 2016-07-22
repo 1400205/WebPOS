@@ -68,7 +68,15 @@ include ("clsAddSection.php");
 
                 }
                // echo '<input type="text" value="'.$sectionID.'">';
-                echo '</select>';
+                echo '</select>'."<br>";
+
+                if($stmt=$sqlcon->prepare("SELECT locationName,locationID FROM locationDetails ORDER BY locationName")){
+
+                    $stmt->execute();
+                    //get result
+                    $result = $stmt->get_result();
+                }
+
                 echo '<select>';
 
                 echo  "<select name='cID' class='input username'>";
