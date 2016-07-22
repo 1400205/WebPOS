@@ -47,6 +47,10 @@ if(isset($_POST['submit']))
         $error = "Location is Required.";
         exit;
     }
+    elseif ($userid<1){
+
+        $error = "<a href='index.php'>"."Please login before proceeding". "</a>";
+    }
 
     else{
 
