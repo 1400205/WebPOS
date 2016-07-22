@@ -38,7 +38,7 @@ if(isset($_POST["submit"])) {
     }
 
     while ($row = $result->fetch_row()) {
-        $line = "<p><a href='addEmployeeForm.php?id=" . $row[0] . "'>". "Click Here To Add Supplier Of ". $row[1]
+        $line = "<p><a href='frmAddSupplier.php?id=" . $row[0] . "'>". "Click Here To Add Supplier Of ". $row[1]
             . " " . $row[3] . "," . $row[2] ." "."Born on ".$row[7]. "</a></p>"."<br>";
 
         $linePhoto = "<p><img src='".$row[14]."' style='width:100px;height:100px;'></p>";
