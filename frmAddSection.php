@@ -67,40 +67,11 @@ include ("clsAddSection.php");
                     echo '<option value="'.$section.'">'.$section.'</option>';
 
                 }
-               // echo '<input type="text" value="'.$sectionID.'">';
 
-                if($stmt=$sqlcon->prepare("SELECT locationID FROM locationDetails WHERE locationName=".$_POST['clocation'])){
-
-                    $stmt->execute();
-                    //get result
-                    $result = $stmt->get_result();
-                }
-
-                // echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
-                if($row1=$result->fetch_row())
-                {
-                    //   echo '<option value="'.$sectionID.'">'.$sectionID . ($sectionId == $defaultSectionId ? ' selected' : '')</option>';
-                    // $section=$row['0'];
-                    $sectionID=$row1['0'];
-
-                    echo  "<input type='text' name='locationID' value=$sectionID class='input username'>"."<br>";
-
-
-                }
 
                 echo '</select>'."<br>";
 
 
-
-
-
-
-                // echo '<input type="text" value="'.$sectionID.'">';
-
-
-
-
-                echo '<br>';
 
 
                 ?>
