@@ -43,14 +43,14 @@ include ("clsGetShelf.php");
             </div>
             <fieldset>
 
-                <br>
+
                 <ol>
                <li>
                    <?php echo $resultText;?>
                </li>
                 </ol>
 
-                <br>
+                
 
                 <div class="footer">
                     <div class="error"><span><?php echo $msg;?></span></div>
