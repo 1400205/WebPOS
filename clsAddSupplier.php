@@ -50,7 +50,7 @@ if(isset($_POST['submit']))
 
         //clean input user title
         $personID = stripslashes( $personID );
-        $personID=mysqli_real_escape_string($db,$rackID);
+        $personID=mysqli_real_escape_string($db,$personID);
         $personID = htmlspecialchars($personID);
         $personID = trim($personID);
         //clean input user first name
