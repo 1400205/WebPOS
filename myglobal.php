@@ -23,4 +23,6 @@ $getcompanyID=1;
 $getcompayName="";
 $companylogo="";
 
+echo  "<select name='clocation' class='input username'>"."<br>";
+
 
