@@ -74,7 +74,7 @@ include ("clsAddSection.php");
 
 
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
-              echo " <pre>.<option value='base'>.'Please choose from above'.</option>. </pre>";
+              echo " <pre>.<option value='base'>Please choose from above</option>. </pre>";
 
 
 
