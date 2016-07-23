@@ -70,21 +70,7 @@ include ("clsAddSection.php");
                 }
 
 
-                if($stmt=$sqlcon->prepare("SELECT locationID FROM locationDetails WHERE locationID=".$_POST['clocation'])){
-
-                    $stmt->execute();
-                    //get result
-                    $result = $stmt->get_result();
-                }
-                IF ($row1=$result->fetch_row())
-                {
-                    $locationID=$row1['0'];
-
-
-                    echo  "<input type='text' name='locationID' value=$locationID class='input username'>"."<br>";
-                    
-
-                }
+               
 
 
                 echo '</select>'."<br>";
