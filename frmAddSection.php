@@ -26,8 +26,12 @@ include ("clsAddSection.php");
         $(document).ready(function(){
 
 
-            $("#first-choice").change(function() {
-                $("#second-choice").load("clsGetLocationID.php?choice=" + $("#first-choice").val());
+            //$("#first-choice").change(function() {
+                //$("#second-choice").load("clsGetLocationID.php?choice=" + $("#first-choice").val());
+           // });
+
+            $("#first-choice").click(function(){
+                $(this).hide();
             });
         });
     </script>
