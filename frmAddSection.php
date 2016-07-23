@@ -19,7 +19,7 @@ include ("clsAddSection.php");
 
 
     <link rel="stylesheet" href="css/style-forms.css">
-    <script src="jq/jquery-3.1.0.js"></script>
+
 
 </head>
 
@@ -46,16 +46,8 @@ include ("clsAddSection.php");
                 // echo '<select name="title">'; // Open your drop down box
                 $locationID=0;
 
-                $choice = ($_GET['choice']);
-                $choice = stripslashes( $choice );
-                $choice=mysqli_real_escape_string($db,$choice);
-                $choice = htmlspecialchars($choice);
-                $choice = trim($choice);
-
                 //prepare statement
-                if($stmt=$sqlcon->prepare("SELECT locationName,locationID FROM locationDetails WHERE locationName=$choice ")){
-
-
+                if($stmt=$sqlcon->prepare("SELECT locationName,locationID FROM locationDetails ORDER BY locationName")){
 
                     $stmt->execute();
                     //get result
@@ -74,10 +66,10 @@ include ("clsAddSection.php");
 
 
                     echo '<option value="'.$section.'">'.$section.'</option>';
-                   // echo "<option>" . $row{'dd_val'} . "</option>";
 
                 }
 
+                
 
                 echo '</select>'."<br>";
 
