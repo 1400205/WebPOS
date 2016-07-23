@@ -54,7 +54,7 @@ include ("clsAddSection.php");
                     $result = $stmt->get_result();
                 }
 
-                echo  "<select name='clocation' class='input username'>"."<br>";
+                echo  "<select name='clocation' id='first-choice' class='input username'>"."<br>";
 
 
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
@@ -79,7 +79,7 @@ include ("clsAddSection.php");
                 <br>
                 <label>Location ID:</label><br>
 
-                <Select>
+                <Select name="locationID"id="second-choice" class="input username">
 
                 <option value="#"></option>
 
