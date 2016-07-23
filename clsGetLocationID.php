@@ -55,13 +55,14 @@ $msg="";
 
         //  $mylogo = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
         // $getlogo = $getlogo.$mylogo;
+        echo "<option>" . $row[0] . "</option>";
 
-        $line = "<p><a href='frmAddShelf.php?id=" . $row[0] . "'>". "Click Here To Add Shelf to a Rack ". $row[1]." of Capacity ".$row[2]
-            . "</a></p>"."<br>";
+       // $line = "<p><a href='frmAddShelf.php?id=" . $row[0] . "'>". "Click Here To Add Shelf to a Rack ". $row[1]." of Capacity ".$row[2]
+           // . "</a></p>"."<br>";
 
         // $linePhoto = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
 
-        $resultText =$resultText.$line;
+       // $resultText =$resultText.$line;
         // $resultTextPhoto =$resultTextPhoto.$linePhoto;
 
     }
