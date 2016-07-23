@@ -35,7 +35,7 @@ $msg="";
 
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT locationID FROM locationDetails where locationName =".$choice)) {
+    if ($stmt = $sqlcon->prepare("SELECT locationID FROM locationDetails where locationName ='$choice'")) {
         // $stmt->bind_param('ss', $firstname,$surname);
 
         $stmt->execute();
