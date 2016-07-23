@@ -81,7 +81,7 @@ include ("clsAddSection.php");
                    //$sectionID=$row['1'];
 
 
-                    echo '<option value="'.$section.'">'.$section.'</option>';
+                    echo '<option value="'.$section.'">'.trim($section).'</option>';
 
                 }
 
