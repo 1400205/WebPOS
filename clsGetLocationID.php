@@ -45,7 +45,7 @@ $msg="";
         $msg = "SELECTION FAIL: Contact System Admin";
     }
 
-    while ($row = $result->fetch_row()) {
+    if ($row = $result->fetch_row()) {
         //  $mycompanyID = $row[0];
         //$mycompanyName = $row[1];
         // $mylogo = $row[2];
