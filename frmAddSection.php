@@ -31,7 +31,7 @@ include ("clsAddSection.php");
            // });
 
             $("#first-choice").change(function(){
-                $("#second-choice").hide();
+                $("#second-choice").value=+ $("#first-choice").val());
             });
         });
     </script>
