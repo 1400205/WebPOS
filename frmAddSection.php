@@ -78,7 +78,12 @@ include ("clsAddSection.php");
 
                 <br>
                 <label>Location ID:</label><br>
+
+                <Select>
+
                 <option value="#"></option>
+
+                </Select>
                 <br>
 
 
