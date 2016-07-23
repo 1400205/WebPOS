@@ -69,14 +69,16 @@ include ("clsAddSection.php");
 
                 }
 
-                
+
 
                 echo '</select>'."<br>";
 
 
-
-
                 ?>
+
+                <br>
+                <label>Location ID:</label><br>
+                <option value="#"></option>
                 <br>
 
 
