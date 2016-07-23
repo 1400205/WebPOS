@@ -19,7 +19,7 @@ include ("clsAddSection.php");
 
 
     <link rel="stylesheet" href="css/style-forms.css">
-    <script src="\jq\jquery-3.1.0.js"></script>
+    <script src="jq/jquery-3.1.0.js"></script>
 
 </head>
 
