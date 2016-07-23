@@ -74,7 +74,16 @@ include ("clsAddSection.php");
 
 
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
-              echo " <pre>.<option value='base'>Please choose from above</option>. </pre>";
+                while($row=$result->fetch_row())
+                {
+
+                    $section=$row['0'];
+                   //$sectionID=$row['1'];
+
+
+                    echo '<option value="'.$section.'">'.$section.'</option>';
+
+                }
 
 
 
