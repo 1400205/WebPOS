@@ -63,7 +63,7 @@ include ("clsAddSection.php");
                 $locationID=0;
 
                 //prepare statement
-                if($stmt=$sqlcon->prepare("SELECT locationName,locationID FROM locationDetails ORDER BY locationName")){
+                if($stmt=$sqlcon->prepare("SELECT locationName,locationID FROM locationDetails")){
 
                     $stmt->execute();
                     //get result
