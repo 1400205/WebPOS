@@ -21,7 +21,7 @@ include ("clsAddSection.php");
     <link rel="stylesheet" href="css/style-forms.css">
 
 
-    <script src="jq/jquery-3.1.0.min.js"></script>
+    <script src="jquery-3.1.0.min.js"></script>
     <script>
         $(document).ready(function(){
 
