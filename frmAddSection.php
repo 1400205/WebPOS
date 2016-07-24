@@ -30,11 +30,7 @@ include ("clsAddSection.php");
                $("#second-choice").load("clsGetLocationID.php?choice=" + $("#first-choice").val());
 
            });
-            $('#second-choice').on('mousedown', function(e) {
-                e.preventDefault();
-                this.blur();
-                window.focus();
-            }
+           
 
           //  $("#first-choice").change(function(){
               //  $("#second-choice").value=+ $("#first-choice").val());
