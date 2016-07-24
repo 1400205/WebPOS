@@ -77,7 +77,7 @@ if(isset($_POST['submit']))
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO section (sectionName, sectionType, branchID,userid) VALUES (?,?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('ssii',$sectionName, $location, $branchID,$userid);
+            $stmt->bind_param('siii',$sectionName, $location, $branchID,$userid);
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
             }else{
