@@ -21,7 +21,7 @@ include ("clsAddSection.php");
     <link rel="stylesheet" href="css/style-forms.css">
 
 
-    <script src="jquery-3.1.0.min.js"></script>
+    <script src="C:\xampp\htdocs\WebPOS\jq\jquery-3.1.0.js"></script>
     <script>
         $(document).ready(function(){
 
@@ -30,7 +30,7 @@ include ("clsAddSection.php");
                $("#second-choice").load("clsGetLocationID.php?choice=" + $("#first-choice").val());
            });
 
-          // / $("#first-choice").change(function(){
+          //  $("#first-choice").change(function(){
               //  $("#second-choice").value=+ $("#first-choice").val());
            // });
         });
