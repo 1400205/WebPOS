@@ -21,7 +21,7 @@ include ("clsAddSection.php");
     <link rel="stylesheet" href="css/style-forms.css">
 
 
-    <script src="C:\xampp\htdocs\WebPOS\jq\jquery-3.1.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
 
