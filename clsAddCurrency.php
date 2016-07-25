@@ -63,7 +63,7 @@ if(isset($_POST['submit']))
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO tradeCurrencey (currency,userid) VALUES (?,?)"))){
             //bind parameter
-            $stmt->bind_param('sii',$currency,$userid);
+            $stmt->bind_param('si',$currency,$userid);
             if( $stmt->execute()){
                 $error="SUCCESS! "."Record Added Successfully.";
             }else{
