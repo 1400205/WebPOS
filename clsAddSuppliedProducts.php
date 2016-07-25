@@ -118,7 +118,7 @@ if(isset($_POST['submit']))
 
 
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO suppliedProduct (suppliedID, productID, currencyID,costPrice,qty,supliedDate,userid) VALUES (?,?,?,?,?,?,?)"))){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO suppliedProduct (supplierID, productID, currencyID,costPrice,qty,supliedDate,userid) VALUES (?,?,?,?,?,?,?)"))){
             //bind parameter
             $stmt->bind_param('iiidisi',$supplierID, $productID, $currencyID,$costPrice,$qty,$suppliedDate, $userid);
             if( $stmt->execute()){
