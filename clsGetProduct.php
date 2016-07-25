@@ -28,7 +28,7 @@ include ("myglobal.php");
 $userid= $_SESSION["userid"];
 
 if (isset($_POST['submit'])) {
-    $productName = "%{$_POST['productName']}%";
+    $productName = $_POST['productName'];
 
     $msg = "";
 
@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
 
 
 //prepare statement
-        if ($stmt = $sqlcon->prepare("SELECT productID,productName,partNumber,partPostion,OEM FROM product WHERE productName LIKE ?")) {
+        if ($stmt = $sqlcon->prepare("SELECT productID,productName,partNumber,partPostion,OEM FROM product WHERE productName = ?")) {
             $stmt->bind_param("s", $productName);
 
             $stmt->execute();
