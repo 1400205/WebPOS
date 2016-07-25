@@ -69,7 +69,8 @@ if(isset($_POST['submit']))
             }else{
                 $error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
-        }else{$error= "CALL Record Addition Failed: Contact Admin";}
+        }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
+        }
 
     }
 
