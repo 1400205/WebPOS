@@ -81,7 +81,7 @@ include ("clsAddSection.php");
     <form class="login-form" method="post" action="">
         <div class="content">
             <div class="header">
-                <h1>Add Product Details for: <?php echo $resultText;?></h1>
+                <h1>Add Supplied Details for Product: <?php echo $resultText;?></h1>
                 <span>This is to Enter Products Supplied: </span>
             </div>
             <fieldset>
@@ -138,9 +138,41 @@ include ("clsAddSection.php");
                 <label>Quantity:</label><br>
                 <input type="number" name="qty" class="input username" placeholder="Enter Quantity"/>  <br>
                 <label>Unit Cost Price:</label><br>
-                <input type="number" name="costPrice" class="input username" placeholder="Enter Cost Price"/>  <br>
+                <input type="number" name="costPrice" class="input username" placeholder="Enter Unit Cost Price"/>  <br>
                 <label>Currency:</label><br>
-                <input type="text" name="currency" class="input username" placeholder="Enter Supplied Currency"/>  <br>
+                <br>
+                <section>
+
+                    <?php
+
+                    // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+                    // echo '<select name="title">'; // Open your drop down box
+                    $productID=$_GET['id'];
+
+                    //prepare statement
+                    if($stmt=$sqlcon->prepare("SELECT partName FROM product WHERE productID=?")){
+                        //bind parameter
+                        $stmt->bind_param('i',$productID);
+
+                        $stmt->execute();
+                        //get result
+                        $result = $stmt->get_result();
+                    }
+
+                    If($row=$result->fetch_row())
+                    {
+
+                        $resultText=$row['0'];
+                        //$sectionID=$row['1'];
+
+                    }
+
+
+
+                    echo '</select>'."<br>";
+
+
+                    ?>
                 <label>Date Supplied:</label><br>
                 <input type="date" name="dateSupplied" class="input username" placeholder="Enter Date Supplied"/>  <br>
 
