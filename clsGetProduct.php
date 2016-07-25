@@ -24,8 +24,10 @@ session_start();
 include ("connect.php");
 include ("myglobal.php");
 //get user session name and id
-$productName= "%{$_POST['productName']}%";
+
 $userid= $_SESSION["userid"];
+
+$productName= $_POST['productName'];
 
 $msg="";
 
