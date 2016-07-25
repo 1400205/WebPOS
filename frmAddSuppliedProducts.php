@@ -175,6 +175,7 @@ include ("clsAddSection.php");
 
 
                 ?>
+                <br>
                 <label>Date Supplied:</label><br>
                 <input type="date" name="dateSupplied" class="input username" placeholder="Enter Date Supplied"/>  <br>
 
