@@ -30,7 +30,7 @@ include ("clsAddSection.php");
                 $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
             });
-
+            $("#second-choice").hide();
 
             //  $("#first-choice").change(function(){
             //  $("#second-choice").value=+ $("#first-choice").val());
