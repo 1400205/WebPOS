@@ -45,10 +45,10 @@ include ("clsAddTax.php");
 
                 <br>
                 <label>Tax Name:</label><br>
-                <input type="text" name="taxName" class="input username" placeholder="Enter Section Name"/>  <br>
+                <input type="text" name="taxName" class="input username" placeholder="Enter Tax Name"/>  <br>
                 <br>
                 <label>Tax Rate:</label><br>
-                <input type="number" min="0" step="any"  name="taxRate" class="input username" placeholder="Enter Section Name"/>  <br>
+                <input type="number" min="0" step="any"  name="taxRate" class="input username" placeholder="Enter Tax Rate"/>  <br>
 
 
 

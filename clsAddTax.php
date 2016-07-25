@@ -27,7 +27,7 @@ if(isset($_POST['submit']))
 {
     //get user inputs
 
-    $taxName = $_POST["taxname"];
+    $taxName = $_POST["taxName"];
     $taxRate = $_POST["taxRate"];
 
 
