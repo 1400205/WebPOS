@@ -7,7 +7,7 @@ include ("myglobal.php");
 if(isset($_POST["submit"])) {
 
    // $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-    $productName=$_POST["pName"];
+    $productName="%{$_POST["pName"]}%";
     //$surname=$_POST["surname"];
 
 
@@ -15,7 +15,7 @@ if(isset($_POST["submit"])) {
 // echo '<select name="title">'; // Open your drop down box
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT productID,partName FROM product WHERE partName=?")) {
+    if ($stmt = $sqlcon->prepare("SELECT productID,partName FROM product WHERE partName LIKE ?")) {
         $stmt->bind_param('s', $productName);
 
         $stmt->execute();
