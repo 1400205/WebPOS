@@ -57,7 +57,7 @@ include ("myglobal.php");
 
                 <br>
                 <label>First Name:</label><br>
-                <input type="text" name="pName" id="first-choice" class="input username" placeholder="Enter first name to search" />  <br>
+                <input type="text" name="pName" id="first-choice" class="input username" placeholder="Enter Product To search" />  <br>
 
 
 
