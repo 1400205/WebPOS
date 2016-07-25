@@ -67,9 +67,9 @@ if(isset($_POST['submit']))
             if( $stmt->execute()){
                 $error="SUCCESS! "."Record Added Successfully.";
             }else{
-                $error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
+                $error= "CALL failed: Contact System Admin" ;
             }
-        }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
+        }else{$error= "CALL failed: Contact System Admin";
         }
 
     }
