@@ -24,5 +24,6 @@ $getcompayName="";
 $companylogo="";
 
 $locationID=0;
+$productName="";
 
 

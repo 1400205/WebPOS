@@ -47,10 +47,41 @@ include ("clsAddSection.php");
 
 <br><br>
 <section>
+
+    <?php
+
+    // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+    // echo '<select name="title">'; // Open your drop down box
+    $productID=$_GET['id'];
+
+    //prepare statement
+    if($stmt=$sqlcon->prepare("SELECT partName FROM product WHERE productID=?")){
+        //bind parameter
+        $stmt->bind_param('i',$productID);
+
+        $stmt->execute();
+        //get result
+        $result = $stmt->get_result();
+    }
+    
+    If($row=$result->fetch_row())
+    {
+
+        $productName=$row['0'];
+        //$sectionID=$row['1'];
+        
+    }
+
+
+
+    echo '</select>'."<br>";
+
+
+    ?>
     <form class="login-form" method="post" action="">
         <div class="content">
             <div class="header">
-                <h1>Add Section Details:</h1>
+                <h1>Add Product Details for: <?php $productName?></h1>
                 <span>This is to Enter Section Details: </span>
             </div>
             <fieldset>
