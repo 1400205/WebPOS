@@ -139,6 +139,10 @@ include ("clsAddSection.php");
                 <input type="number" name="qty" class="input username" placeholder="Enter Quantity"/>  <br>
                 <label>Unit Cost Price:</label><br>
                 <input type="number" name="costPrice" class="input username" placeholder="Enter Cost Price"/>  <br>
+                <label>Currency:</label><br>
+                <input type="text" name="currency" class="input username" placeholder="Enter Supplied Currency"/>  <br>
+                <label>Date Supplied:</label><br>
+                <input type="date" name="dateSupplied" class="input username" placeholder="Enter Date Supplied"/>  <br>
 
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>
