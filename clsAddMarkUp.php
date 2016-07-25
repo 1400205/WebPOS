@@ -76,7 +76,7 @@ if(isset($_POST['submit']))
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
             }else{
-                $error="FAILURE!"."Record Did Not Add. System Does Not Allow Duplicate Records";
+                $error="FAILURE!"."Record Did Not Add. Contact System Admin";
             }
         }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}
 
