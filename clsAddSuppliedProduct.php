@@ -113,9 +113,9 @@ if(isset($_POST['submit']))
 
 
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO section (sectionName, sectionType, branchID,userid) VALUES (?,?,?,?)"))){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO suppliedProduct (supplierID, productID, costPrice,currencyID,qty,suppliedDate,userid) VALUES (?,?,?,?,?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('siii',$sectionName, $location, $branchID,$userid);
+            $stmt->bind_param('iidiisi',$suppierID, $productID, $costPrice,$currencyID,$qty,$suppliedDate,$userid);
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
             }else{
