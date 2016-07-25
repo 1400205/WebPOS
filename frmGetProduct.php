@@ -30,7 +30,7 @@ include ("myglobal.php");
         $(document).ready(function(){
 
 
-            $("#first-choice").val().change(function() {
+            $("#first-choice").text().change(function() {
                 $("#first-choice").load("clsproductintel.php?pName=" + $("#first-choice").val());
 
             });
