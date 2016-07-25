@@ -17,7 +17,7 @@ if(isset($_POST["submit"])) {
 
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT productID,productName,partNumber,partPostion,OEM FROM product WHERE productName=?")) {
+    if ($stmt = $sqlcon->prepare("SELECT productID,productName FROM product WHERE productName=?")) {
         $stmt->bind_param('s', $productName);
 
         $stmt->execute();
