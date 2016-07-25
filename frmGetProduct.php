@@ -50,8 +50,8 @@ include ("clsGetProduct.php");
     <form class="login-form" method="post" action="">
         <div class="content">
             <div class="header">
-                <h1>Search for Contact Person of Supplier:</h1>
-                <span>Enter both First Name and Surname to search for Contact Person of Supplier.</span>
+                <h1>Search for Product and Add Supplies:</h1>
+                <span>Enter Product  Name  to search and Add Supplies.</span>
             </div>
             <fieldset>
 
