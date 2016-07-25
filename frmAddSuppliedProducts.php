@@ -27,7 +27,7 @@ include ("clsAddSection.php");
 
 
             $("#first-choice").change(function() {
-                $("#second-choice").load("clsGetLocationID.php?choice=" + $("#first-choice").val());
+                $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
             });
 
