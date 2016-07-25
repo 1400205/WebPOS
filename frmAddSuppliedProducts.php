@@ -86,10 +86,8 @@ include ("clsAddSection.php");
             </div>
             <fieldset>
 
-                <br>
-                <label>Section Name:</label><br>
-                <input type="text" name="cSection" class="input username" placeholder="Enter Section Name"/>  <br>
-                <label> Section Location:</label><br>
+
+                <label> Supplier Name:</label><br>
                 <?php
 
                 // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
@@ -136,7 +134,11 @@ include ("clsAddSection.php");
 
                 </Select>
                 <br>
-
+                <br>
+                <label>Quantity:</label><br>
+                <input type="number" name="qty" class="input username" placeholder="Enter Quantity"/>  <br>
+                <label>Unit Cost Price:</label><br>
+                <input type="number" name="costPrice" class="input username" placeholder="Enter Cost Price"/>  <br>
 
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>
