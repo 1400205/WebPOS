@@ -83,27 +83,44 @@ if(isset($_POST['submit']))
         //clean usser input
 
         //clean input user title
-        $branchID = stripslashes( $branchID );
-        $branchID=mysqli_real_escape_string($db,$branchID);
-        $branchID = htmlspecialchars($branchID);
-        $branchID = trim($branchID);
+        $productID = stripslashes( $productID );
+        $productID=mysqli_real_escape_string($db,$productID);
+        $productID = htmlspecialchars($productID);
+        $productID = trim($productID);
         //clean input user first name
-        $sectionName = stripslashes( $sectionName );
-        $sectionName=mysqli_real_escape_string($db,$sectionName);
-        $sectionName = htmlspecialchars($sectionName);
-        $sectionName = trim($sectionName);
+        $currencyID = stripslashes( $currencyID );
+        $currencyID=mysqli_real_escape_string($db,$currencyID);
+        $currencyID = htmlspecialchars($currencyID);
+        $currencyID = trim($currencyID);
 
         //clean input user surname
-        $location = stripslashes( $location );
-        $location=mysqli_real_escape_string($db,$location);
-        $location = htmlspecialchars($location);
-        $location = trim($location);
+        $supplierID = stripslashes( $supplierID );
+        $supplierID=mysqli_real_escape_string($db,$supplierID);
+        $supplierID = htmlspecialchars($supplierID);
+        $supplierID = trim($supplierID);
+
+        //clean input user title
+        $costPrice = stripslashes( $costPrice );
+        $costPrice=mysqli_real_escape_string($db,$costPrice);
+        $costPrice = htmlspecialchars($costPrice);
+        $costPrice = trim($costPrice);
+        //clean input user first name
+        $qty = stripslashes( $qty );
+        $qty=mysqli_real_escape_string($db,$qty);
+        $qty = htmlspecialchars($qty);
+        $qty = trim($qty);
+
+        //clean input user surname
+        $suppliedDate = stripslashes( $suppliedDate );
+        $suppliedDate=mysqli_real_escape_string($db,$suppliedDate);
+        $suppliedDate = htmlspecialchars($suppliedDate);
+        $suppliedDate = trim($suppliedDate);
 
 
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO section (sectionName, sectionType, branchID,userid) VALUES (?,?,?,?)"))){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO suppliedProduct (suppliedID, productID, currencyID,costPrice,qty,supliedDate,userid) VALUES (?,?,?,?,?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('siii',$sectionName, $location, $branchID,$userid);
+            $stmt->bind_param('iiidisi',$supplierID, $productID, $currencyID,$costPrice,$qty,$suppliedDate, $userid);
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
             }else{
