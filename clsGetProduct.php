@@ -10,22 +10,12 @@ if(isset($_POST["submit"])) {
     $productName=$_POST["pName"];
     //$surname=$_POST["surname"];
 
-    //clean input user first name
-    $firstname = stripslashes( $firstname );
-    $firstname=mysqli_real_escape_string($db,$firstname);
-    $firstname = htmlspecialchars($firstname);
-    $firstname = trim($firstname);
 
-    //clean input user surname
-    $surname = stripslashes( $surname );
-    $surname=mysqli_real_escape_string($db,$surname);
-    $surname = htmlspecialchars($surname);
-    $surname = trim($surname);
 
 // echo '<select name="title">'; // Open your drop down box
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT productID,productName FROM product WHERE productName=?")) {
+    if ($stmt = $sqlcon->prepare("SELECT productID,partName FROM product WHERE partName=?")) {
         $stmt->bind_param('s', $productName);
 
         $stmt->execute();
