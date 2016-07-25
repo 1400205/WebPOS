@@ -10,7 +10,7 @@
 //include ("clsAddBranch.php");
 include ("myglobal.php");
 
-include ("classAddDiscount.php");
+include ("clsAddDiscount.php");
 
 ?>
 
@@ -45,7 +45,7 @@ include ("classAddDiscount.php");
 
                 <br>
                 <label>Percentage Discount:</label><br>
-                <input type="number" min="0" step="any" class="input username" placeholder="Enter Percent Discount"/>  <br>
+                <input type="number" min="0" step="any"name="percentDiscount" class="input username" placeholder="Enter Percent Discount"/>  <br>
                 <br>
                 <label>Amount Discount:</label><br>
                 <input type="number" min="0" step="any"  name="amountDiscount" class="input username" placeholder="Enter Amount Discount"/>  <br>
