@@ -30,7 +30,7 @@ session_start();
 include ("connect.php");
 include ("myglobal.php");
 
-$choice=$_GET['choice'];
+$choice="%{$_GET['choice']}%";
 
 $choice = stripslashes( $choice );
 $choice=mysqli_real_escape_string($db,$choice);
@@ -42,7 +42,7 @@ $msg="";
 
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT supplierID FROM supplier where supplierName ='$choice'")) {
+    if ($stmt = $sqlcon->prepare("SELECT supplierID FROM supplier where supplierName LIKE '$choice'")) {
         // $stmt->bind_param('ss', $firstname,$surname);
 
         $stmt->execute();
