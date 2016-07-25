@@ -25,11 +25,11 @@ if(isset($_POST["submit"])) {
 // echo '<select name="title">'; // Open your drop down box
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT p.personID,p.title,p.firstName,p.surname,p.othername,p.Gender,p.Gender,p.DOB,
+    if ($stmt = $sqlcon->prepare("SELECT personID,title,firstName,surname,othername,Gender,DOB,
                                 
-                                FROM person p 
+                                FROM person 
                                 
-                                WHERE  p.firstName=? AND p.surname=?")) {
+                                WHERE  firstName=? AND surname=?")) {
         $stmt->bind_param('ss', $firstname,$surname);
 
         $stmt->execute();
@@ -41,7 +41,7 @@ if(isset($_POST["submit"])) {
 
     while ($row = $result->fetch_row()) {
         $line = "<p><a href='frmAddSupplier.php?id=" . $row[0] . "'>". "Click Here To Add Supplier Of ". $row[1]
-            . " " . $row[3] . "," . $row[2] ." "."Born on ".$row[7]. "</a></p>"."<br>";
+            . " " . $row[3] . "," . $row[2] . "</a></p>"."<br>";
 
        // $linePhoto = "<p><img src='".$row[14]."' style='width:100px;height:100px;'></p>";
 
