@@ -25,7 +25,7 @@ if(isset($_POST["submit"])) {
 // echo '<select name="title">'; // Open your drop down box
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT personID,title,firstName,surname,othername,Gender,DOB,
+    if ($stmt = $sqlcon->prepare("SELECT personID,title,firstName,surname,othername,Gender,DOB
                                 
                                 FROM person 
                                 
