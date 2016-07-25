@@ -126,10 +126,9 @@ include ("clsAddSection.php");
 
                 ?>
 
-                <br>
-                <label>Location ID:</label><br>
 
-                <Select name="locationID"id="second-choice" class="input username">
+
+                <Select name="locationID"id="second-choice" >
 
                 <pre>
              <option value="base">Please choose from above</option>
