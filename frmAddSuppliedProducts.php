@@ -147,7 +147,7 @@ include ("clsAddSection.php");
                 $locationID=0;
 
                 //prepare statement
-                if($stmt=$sqlcon->prepare("SELECT supplierName FROM supplier")){
+                if($stmt=$sqlcon->prepare("SELECT currency FROM TradeCurrency WHERE  status=1")){
 
                     $stmt->execute();
                     //get result
