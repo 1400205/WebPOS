@@ -47,7 +47,6 @@ include ("clsGetProduct.php");
 
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>
-                    <div class="error"><span><?php echo $error;?></span></div>
 
                 </div>
 
@@ -55,10 +54,11 @@ include ("clsGetProduct.php");
             <div id="photolist">
 
                 <?php echo $resultText;?><br>
-                <?php echo $resultTextPhoto;?><br>
+
                 <div class="error"><span><a href="allPersons.html"> Click here to Exit this Task</a></a></span></div>
 
             </div>
+            <div class="error"><span><?php echo $error;?></span></div>
 
         </div>
     </form>
