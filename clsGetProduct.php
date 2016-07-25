@@ -15,7 +15,7 @@ if(isset($_POST["submit"])) {
 // echo '<select name="title">'; // Open your drop down box
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT productID,partName FROM product WHERE partName LIKE ?")) {
+    if ($stmt = $sqlcon->prepare("SELECT productID,partName,partNumber FROM product WHERE partName LIKE ?")) {
         $stmt->bind_param('s', $productName);
 
         $stmt->execute();
@@ -26,7 +26,7 @@ if(isset($_POST["submit"])) {
     }
 
     while ($row = $result->fetch_row()) {
-        $line = "<p><a href='frmAddSupplier.php?id=" . $row[0] . "'>". "Click Here To Add Supplier Of ". $row[1]
+        $line = "<p><a href='frmAddSupplier.php?id=" . $row[0] . "'>".$row[0]. " ". $row[1]." Part Number, ".$row[2]
            . "</a></p>"."<br>";
 
        // $linePhoto = "<p><img src='".$row[14]."' style='width:100px;height:100px;'></p>";
@@ -34,7 +34,7 @@ if(isset($_POST["submit"])) {
         $resultText =$resultText.$line;
        // $resultTextPhoto =$resultTextPhoto.$linePhoto;
     }
-    if(empty($row)){
+    if(empty($resultText)){
         $error = "Record Not Found";
     }
 
