@@ -140,39 +140,41 @@ include ("clsAddSection.php");
                 <label>Unit Cost Price:</label><br>
                 <input type="number" name="costPrice" class="input username" placeholder="Enter Unit Cost Price"/>  <br>
                 <label>Currency:</label><br>
-                <br>
-                <section>
+                <?php
 
-                    <?php
+                // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+                // echo '<select name="title">'; // Open your drop down box
+                $locationID=0;
 
-                    // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-                    // echo '<select name="title">'; // Open your drop down box
-                    $productID=$_GET['id'];
+                //prepare statement
+                if($stmt=$sqlcon->prepare("SELECT supplierName FROM supplier")){
 
-                    //prepare statement
-                    if($stmt=$sqlcon->prepare("SELECT partName FROM product WHERE productID=?")){
-                        //bind parameter
-                        $stmt->bind_param('i',$productID);
+                    $stmt->execute();
+                    //get result
+                    $result = $stmt->get_result();
+                }
 
-                        $stmt->execute();
-                        //get result
-                        $result = $stmt->get_result();
-                    }
-
-                    If($row=$result->fetch_row())
-                    {
-
-                        $resultText=$row['0'];
-                        //$sectionID=$row['1'];
-
-                    }
+                echo  "<select name='clocation' id='first-choice' class='input username'>"."<br>";
 
 
+                echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
+                while($row=$result->fetch_row())
+                {
 
-                    echo '</select>'."<br>";
+                    $section=$row['0'];
+                    //$sectionID=$row['1'];
 
 
-                    ?>
+                    echo '<option value="'.$section.'">'.trim($section).'</option>';
+
+                }
+
+
+
+                echo '</select>'
+
+
+                ?>
                 <label>Date Supplied:</label><br>
                 <input type="date" name="dateSupplied" class="input username" placeholder="Enter Date Supplied"/>  <br>
 
