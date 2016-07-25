@@ -25,7 +25,7 @@ if(isset($_POST["submit"])) {
 // echo '<select name="title">'; // Open your drop down box
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT produtID,productName FROM product 
+    if ($stmt = $sqlcon->prepare("SELECT productID,productName FROM product 
                                 
                                 WHERE productName=?")) {
         $stmt->bind_param('s', $productName);
