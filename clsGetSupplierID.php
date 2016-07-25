@@ -42,7 +42,7 @@ $msg="";
 
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT supplierID FROM supplier where locationName ='$choice'")) {
+    if ($stmt = $sqlcon->prepare("SELECT supplierID FROM supplier where supplierName ='$choice'")) {
         // $stmt->bind_param('ss', $firstname,$surname);
 
         $stmt->execute();
