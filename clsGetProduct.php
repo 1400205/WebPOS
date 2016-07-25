@@ -6,7 +6,7 @@ include ("myglobal.php");
 
 if(isset($_POST["submit"])) {
 
-    $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+   // $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
     $productName=$_POST["pName"];
     //$surname=$_POST["surname"];
 
