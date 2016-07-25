@@ -7,7 +7,7 @@ include ("myglobal.php");
 if(isset($_POST["submit"])) {
 
     $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-    $productName=$_POST["productName"];
+    $productName=$_POST["pName"];
     //$surname=$_POST["surname"];
 
     //clean input user first name
@@ -25,9 +25,7 @@ if(isset($_POST["submit"])) {
 // echo '<select name="title">'; // Open your drop down box
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT productID,productName FROM product 
-                                
-                                WHERE productName=?")) {
+    if ($stmt = $sqlcon->prepare("SELECT productID,productName FROM product WHERE productName=?")) {
         $stmt->bind_param('s', $productName);
 
         $stmt->execute();

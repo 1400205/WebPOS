@@ -41,7 +41,7 @@ include ("clsGetProduct.php");
 
                 <br>
                 <label>First Name:</label><br>
-                <input type="text" name="productName" class="input username" placeholder="Enter first name to search" />  <br>
+                <input type="text" name="pName" class="input username" placeholder="Enter first name to search" />  <br>
 
 
 
