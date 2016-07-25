@@ -40,7 +40,7 @@ include ("clsAddSection.php");
                 $("#second-choice1").load("clsGetCurrencyID.php?choice=" + $("#first-choice1").val());
 
             });
-            $("#second-choice1").hide();
+           // $("#second-choice1").hide();
 
         });
     </script>
