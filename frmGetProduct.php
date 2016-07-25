@@ -10,8 +10,8 @@
 
 //session_start();
 include ("myglobal.php");
-//include ("clsGetProduct.php");
-//include ("clsTitle.php");
+include ("clsGetProduct.php");
+
 
 ?>
 
@@ -29,8 +29,8 @@ include ("myglobal.php");
     <script>
         $(document).ready(function(){
 
-            $('#first-choice').bind('input',function(){
-                $("#first-choice").load("clsproductintel.php?pName=" + $("#first-choice").val());
+           // $('#first-choice').bind('input',function(){
+              //  $("#first-choice").load("clsproductintel.php?pName=" + $("#first-choice").val());
 
             });
 
