@@ -26,9 +26,9 @@ if(isset($_POST["submit"])) {
 
 //prepare statement
     if ($stmt = $sqlcon->prepare("SELECT p.personID,p.title,p.firstName,p.surname,p.othername,p.Gender,p.Gender,p.DOB,
-                                r.addressline1,r.addressline2,r.postBox,r.town,r.region,r.country,pp.targetfile 
+                                
                                 FROM person p 
-                                INNER JOIN personaddress r on p.personID=r.personID INNER JOIN personphoto pp on p.personID=pp.personID
+                                
                                 WHERE  p.firstName=? AND p.surname=?")) {
         $stmt->bind_param('ss', $firstname,$surname);
 
