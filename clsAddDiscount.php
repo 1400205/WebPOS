@@ -69,7 +69,7 @@ if(isset($_POST['submit']))
 
 
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO discount (percentDiscountRate, amountDiscounRatet,userid) VALUES (?,?,?)"))){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO discount (percentDiscountRate, amountDiscountRate,userid) VALUES (?,?,?)"))){
             //bind parameter
             $stmt->bind_param('sdi',$percentDiscount, $amountDicount,$userid);
             if( $stmt->execute()){
