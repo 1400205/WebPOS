@@ -132,7 +132,7 @@ include ("clsAddSection.php");
 
 
 
-                <Select name="locationID"id="second-choice" >
+                <Select name="suppliedID"id="second-choice" >
 
                 <pre>
              <option value="base">Please choose from above</option>
