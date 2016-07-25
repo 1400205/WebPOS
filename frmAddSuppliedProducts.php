@@ -5,7 +5,7 @@
 //session_start();
 //include ("clsAddBranch.php");
 include ("myglobal.php");
-
+include ("clsGetProduct.php");
 include ("clsAddSection.php");
 
 ?>
