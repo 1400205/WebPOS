@@ -121,7 +121,7 @@ include ("clsAddSection.php");
 
 
 
-                echo '</select>'."<br>";
+                echo '</select>'
 
 
                 ?>
