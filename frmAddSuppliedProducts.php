@@ -175,6 +175,10 @@ include ("clsAddSection.php");
 
 
                 ?>
+                <Select name="currencyID"id="third-choice" >
+
+
+                </Select>
                 <br>
                 <label>Date Supplied:</label><br>
                 <input type="date" name="dateSupplied" class="input username" placeholder="Enter Date Supplied"/>  <br>
