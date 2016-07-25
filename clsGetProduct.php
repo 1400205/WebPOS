@@ -43,10 +43,10 @@ if(isset($_POST["submit"])) {
         $line = "<p><a href='frmAddSupplier.php?id=" . $row[0] . "'>". "Click Here To Add Supplier Of ". $row[1]
             . " " . $row[3] . "," . $row[2] ." "."Born on ".$row[7]. "</a></p>"."<br>";
 
-        $linePhoto = "<p><img src='".$row[14]."' style='width:100px;height:100px;'></p>";
+       // $linePhoto = "<p><img src='".$row[14]."' style='width:100px;height:100px;'></p>";
 
         $resultText =$resultText.$line;
-        $resultTextPhoto =$resultTextPhoto.$linePhoto;
+       // $resultTextPhoto =$resultTextPhoto.$linePhoto;
     }
     if(empty($row)){
         $msg = "Record Not Found";
