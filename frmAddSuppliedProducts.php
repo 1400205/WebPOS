@@ -30,7 +30,7 @@ include ("clsAddSuppliedProducts.php");
                 $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
             });
-           // $("#second-choice").hide();
+            $("#second-choice").hide();
 
             //  $("#first-choice").change(function(){
             //  $("#second-choice").value=+ $("#first-choice").val());
@@ -40,7 +40,7 @@ include ("clsAddSuppliedProducts.php");
                 $("#second-choice1").load("clsGetCurrencyID.php?choice=" + $("#first-choice1").val());
 
             });
-           // $("#second-choice1").hide();
+            $("#second-choice1").hide();
 
         });
     </script>
@@ -144,7 +144,7 @@ include ("clsAddSuppliedProducts.php");
                 <label>Quantity:</label><br>
                 <input type="number" name="qty" class="input username" placeholder="Enter Quantity"/>  <br>
                 <label>Unit Cost Price:</label><br>
-                <input type="number" name="costPrice" class="input username" placeholder="Enter Unit Cost Price"/>  <br>
+                <input type="number" min="0" step="any" name="costPrice" class="input username" placeholder="Enter Unit Cost Price"/>  <br>
                 <label>Currency:</label><br>
                 <?php
 
