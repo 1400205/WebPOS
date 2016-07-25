@@ -10,7 +10,7 @@
 //include ("clsAddBranch.php");
 include ("myglobal.php");
 
-include ("clsAddTax.php");
+include ("classAddDiscount.php");
 
 ?>
 
