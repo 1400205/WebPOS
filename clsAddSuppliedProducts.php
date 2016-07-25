@@ -120,7 +120,7 @@ if(isset($_POST['submit']))
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO suppliedProduct (supplierID, productID, currencyID,costPrice,qty,suppliedDate,userid) VALUES (?,?,?,?,?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('iiidisi',$supplierID, $productID, $currencyID,$costPrice,$qty,$suppliedDate, $userid);
+            $stmt->bind_param('iiiddsi',$supplierID, $productID, $currencyID,$costPrice,$qty,$suppliedDate, $userid);
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
             }else{

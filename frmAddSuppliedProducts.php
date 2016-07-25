@@ -142,7 +142,7 @@ include ("clsAddSuppliedProducts.php");
                 <br>
                 <br>
                 <label>Quantity:</label><br>
-                <input type="number" name="qty" class="input username" placeholder="Enter Quantity"/>  <br>
+                <input type="number" name="qty"  min="0" step="any" class="input username" placeholder="Enter Quantity"/>  <br>
                 <label>Unit Cost Price:</label><br>
                 <input type="number" min="0" step="any" name="costPrice" class="input username" placeholder="Enter Unit Cost Price"/>  <br>
                 <label>Currency:</label><br>
