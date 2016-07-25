@@ -67,7 +67,7 @@ include ("clsAddSection.php");
     If($row=$result->fetch_row())
     {
 
-        $productName=$row['0'];
+        $resultText=$row['0'];
         //$sectionID=$row['1'];
         
     }
@@ -81,7 +81,7 @@ include ("clsAddSection.php");
     <form class="login-form" method="post" action="">
         <div class="content">
             <div class="header">
-                <h1>Add Product Details for: <?php $productName?></h1>
+                <h1>Add Product Details for: <?php echo $resultText;?>></h1>
                 <span>This is to Enter Section Details: </span>
             </div>
             <fieldset>
