@@ -61,7 +61,7 @@ if(isset($_POST['submit']))
         $currency = trim($currency);
         //clean input user first name
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO tradeCurrencey (currency,userid) VALUES (?,?)"))){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO TradeCurrency(currency,userid) VALUES (?,?)"))){
             //bind parameter
             $stmt->bind_param('si',$currency,$userid);
             if( $stmt->execute()){
