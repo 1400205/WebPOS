@@ -82,7 +82,7 @@ include ("clsAddSection.php");
         <div class="content">
             <div class="header">
                 <h1>Add Product Details for: <?php echo $resultText;?></h1>
-                <span>This is to Enter Section Details: </span>
+                <span>This is to Enter Products Supplied: </span>
             </div>
             <fieldset>
 
@@ -97,7 +97,7 @@ include ("clsAddSection.php");
                 $locationID=0;
 
                 //prepare statement
-                if($stmt=$sqlcon->prepare("SELECT locationName,locationID FROM locationDetails")){
+                if($stmt=$sqlcon->prepare("SELECT supplierName FROM supplier")){
 
                     $stmt->execute();
                     //get result
