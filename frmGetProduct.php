@@ -41,12 +41,9 @@ include ("clsGetProduct.php");
 
                 <br>
                 <label>First Name:</label><br>
-                <input type="text" name="firstname" class="input username" placeholder="Enter first name to search" />  <br>
+                <input type="text" name="productName" class="input username" placeholder="Enter first name to search" />  <br>
 
-                <label>Surname:</label><br>
-                <input type="text" name="surname" class="input username" placeholder="Enter Surname to Search" /><br>
 
-                <br>
 
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>

@@ -7,8 +7,8 @@ include ("myglobal.php");
 if(isset($_POST["submit"])) {
 
     $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-    $firstname=$_POST["firstname"];
-    $surname=$_POST["surname"];
+    $productName=$_POST["productName"];
+    //$surname=$_POST["surname"];
 
     //clean input user first name
     $firstname = stripslashes( $firstname );
@@ -25,12 +25,10 @@ if(isset($_POST["submit"])) {
 // echo '<select name="title">'; // Open your drop down box
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT personID,title,firstName,surname,othername,Gender,DOB
+    if ($stmt = $sqlcon->prepare("SELECT produtID,productName FROM product 
                                 
-                                FROM person 
-                                
-                                WHERE  firstName=? AND surname=?")) {
-        $stmt->bind_param('ss', $firstname,$surname);
+                                WHERE productName=?")) {
+        $stmt->bind_param('s', $productName);
 
         $stmt->execute();
         //get result
@@ -41,7 +39,7 @@ if(isset($_POST["submit"])) {
 
     while ($row = $result->fetch_row()) {
         $line = "<p><a href='frmAddSupplier.php?id=" . $row[0] . "'>". "Click Here To Add Supplier Of ". $row[1]
-            . " " . $row[3] . "," . $row[2] . "</a></p>"."<br>";
+           . "</a></p>"."<br>";
 
        // $linePhoto = "<p><img src='".$row[14]."' style='width:100px;height:100px;'></p>";
 
