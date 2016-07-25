@@ -42,8 +42,8 @@ $msg="";
 
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT supplierID FROM supplier where supplierName LIKE '$choice'")) {
-        // $stmt->bind_param('ss', $firstname,$surname);
+    if ($stmt = $sqlcon->prepare("SELECT supplierID FROM supplier where supplierName LIKE ?")) {
+        $stmt->bind_param('s', $choice);
 
         $stmt->execute();
         //get result
