@@ -36,6 +36,12 @@ include ("clsAddSection.php");
             //  $("#second-choice").value=+ $("#first-choice").val());
             // });
 
+            $("#first-choice1").change(function() {
+                $("#second-choice1").load("clsGetCurrencyID.php?choice=" + $("#first-choice1").val());
+
+            });
+            $("#second-choice1").hide();
+
         });
     </script>
 
@@ -154,7 +160,7 @@ include ("clsAddSection.php");
                     $result = $stmt->get_result();
                 }
 
-                echo  "<select name='clocation' id='first-choice' class='input username'>"."<br>";
+                echo  "<select name='currencyID1' id='first-choice1' class='input username'>"."<br>";
 
 
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
@@ -175,7 +181,7 @@ include ("clsAddSection.php");
 
 
                 ?>
-                <Select name="currencyID"id="third-choice" >
+                <Select name="currencyID2"id="second-choice1" >
 
 
                 </Select>
