@@ -29,12 +29,9 @@ include ("myglobal.php");
     <script>
         $(document).ready(function(){
 
-
-            $("#first-choice").text().change(function() {
+            $('#first-choice').bind('input',function(){
                 $("#first-choice").load("clsproductintel.php?pName=" + $("#first-choice").val());
-
             });
-
 
             //  $("#first-choice").change(function(){
             //  $("#second-choice").value=+ $("#first-choice").val());
