@@ -1,82 +1,56 @@
-<?php
-/**
- * Created by IntelliJ IDEA.
- * User: prosper
- * Date: 25/07/2016
- * Time: 01:13
- */
-
-/**
- * Created by IntelliJ IDEA.
- * User: prosper
- * Date: 22/07/2016
- * Time: 02:05
- */
-
-
-session_start();
-//include ("secureSessionID.php");//verify user session
-//include ("inactiveTimeOut.php");//check user idle time
-?>
-
 
 <?php
 include ("connect.php");
 include ("myglobal.php");
-//get user session name and id
 
-$userid= $_SESSION["userid"];
 
-if (isset($_POST['submit'])) {
-    $productName = $_POST['productName'];
+if(isset($_POST["submit"])) {
 
-    $msg = "";
+    $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+    $firstname=$_POST["firstname"];
+    $surname=$_POST["surname"];
 
-    if ($userid > 0) {
+    //clean input user first name
+    $firstname = stripslashes( $firstname );
+    $firstname=mysqli_real_escape_string($db,$firstname);
+    $firstname = htmlspecialchars($firstname);
+    $firstname = trim($firstname);
 
-        // if (isset($_POST["submit"])) {
+    //clean input user surname
+    $surname = stripslashes( $surname );
+    $surname=mysqli_real_escape_string($db,$surname);
+    $surname = htmlspecialchars($surname);
+    $surname = trim($surname);
 
-        //  $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-
+// echo '<select name="title">'; // Open your drop down box
 
 //prepare statement
-        if ($stmt = $sqlcon->prepare("SELECT productID,productName,partNumber,partPostion,OEM FROM product WHERE productName = ?")) {
-            $stmt->bind_param("s", $productName);
+    if ($stmt = $sqlcon->prepare("SELECT p.personID,p.title,p.firstName,p.surname,p.othername,p.Gender,p.Gender,p.DOB,
+                                r.addressline1,r.addressline2,r.postBox,r.town,r.region,r.country,pp.targetfile 
+                                FROM person p 
+                                INNER JOIN personaddress r on p.personID=r.personID INNER JOIN personphoto pp on p.personID=pp.personID
+                                WHERE p.personID NOT IN (SELECT personID FROM employee) AND p.personID NOT IN (SELECT personID FROM supplier) AND p.firstName=? AND p.surname=?")) {
+        $stmt->bind_param('ss', $firstname,$surname);
 
-            $stmt->execute();
-            //get resul
-            $result = $stmt->get_result();
-        } else {
-            $msg = "SELECTION FAIL: Contact System Admin";
-        }
+        $stmt->execute();
+        //get result
+        $result = $stmt->get_result();
+    }else{
+        $msg = "SELECTION FAIL: Contact System Admin";
+    }
 
-        while ($row = $result->fetch_row()) {
-            //  $mycompanyID = $row[0];
-            //$mycompanyName = $row[1];
-            // $mylogo = $row[2];
-            // $getcompnayID = $getcompanyID . $mycompanyID;
-            //  $getCompanyName = $getCompanyName . $mycompanyName;
-            // $getlogo = $getlogo . $mylogo;
+    while ($row = $result->fetch_row()) {
+        $line = "<p><a href='frmAddSupplier.php?id=" . $row[0] . "'>". "Click Here To Add Supplier Of ". $row[1]
+            . " " . $row[3] . "," . $row[2] ." "."Born on ".$row[7]. "</a></p>"."<br>";
 
-            //  $mylogo = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
-            // $getlogo = $getlogo.$mylogo;
+        $linePhoto = "<p><img src='".$row[14]."' style='width:100px;height:100px;'></p>";
 
-            $line = "<p><a href='frmAddSupply?id=" . $row[0] . "'>" . "Add Supply of Product: " . $row[1] . " ON " . $row[1] . "</a></p>" . "<br>";
-
-            // $linePhoto = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
-
-
-            $resultText = $resultText . "<ul>" . "<li>" . $line . "</li>" . "</ul>";
-            // $resultTextPhoto =$resultTextPhoto.$linePhoto;
-
-        }
-        //  }
-    } else {
-        $msg = "<a href='index.php'>" . "Please login before proceeding" . "</a>";
+        $resultText =$resultText.$line;
+        $resultTextPhoto =$resultTextPhoto.$linePhoto;
+    }
+    if(empty($row)){
+        $msg = "Record Not Found";
     }
 
 }
 ?>
-
-
-

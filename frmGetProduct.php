@@ -10,7 +10,7 @@
 
 //session_start();
 include ("myglobal.php");
-include ("clsGetProduct.php");
+include ("clsGetPersonForSupplier.php");
 //include ("clsTitle.php");
 
 ?>
@@ -20,7 +20,7 @@ include ("clsGetProduct.php");
 <html>
 <head>
     <meta charset="utf-8">
-    <title> Get Product For Supplier</title>
+    <title> Get Person For Supplier</title>
 
 
     <link rel="stylesheet" href="css/style-forms.css">
@@ -34,14 +34,17 @@ include ("clsGetProduct.php");
     <form class="login-form" method="post" action="">
         <div class="content">
             <div class="header">
-                <h1>Search for Product for Supplier:</h1>
-                <span>Search for Product for Supplier.</span>
+                <h1>Search for Contact Person of Supplier:</h1>
+                <span>Enter both First Name and Surname to search for Contact Person of Supplier.</span>
             </div>
             <fieldset>
 
                 <br>
-                <label>Product Name:</label><br>
-                <input type="text" name="productName" class="input username" placeholder="Enter product name to search" />  <br>
+                <label>First Name:</label><br>
+                <input type="text" name="firstname" class="input username" placeholder="Enter first name to search" />  <br>
+
+                <label>Surname:</label><br>
+                <input type="text" name="surname" class="input username" placeholder="Enter Surname to Search" /><br>
 
                 <br>
 
@@ -55,6 +58,7 @@ include ("clsGetProduct.php");
             <div id="photolist">
 
                 <?php echo $resultText;?><br>
+                <?php echo $resultTextPhoto;?><br>
                 <div class="error"><span><a href="allPersons.html"> Click here to Exit this Task</a></a></span></div>
 
             </div>
