@@ -30,7 +30,7 @@ session_start();
 include ("connect.php");
 include ("myglobal.php");
 
-$choice="%{$_GET['choice']}%";
+$choice=$_GET['choice'];
 
 $choice = stripslashes( $choice );
 $choice=mysqli_real_escape_string($db,$choice);
@@ -42,7 +42,7 @@ $msg="";
 
 
 //prepare statement
-if ($stmt = $sqlcon->prepare("SELECT proClass FROM proClassification where proClass LIKE ?")) {
+if ($stmt = $sqlcon->prepare("SELECT proTypeID FROM proClassification where proTypeID = ?")) {
     $stmt->bind_param('s', $choice);
 
     $stmt->execute();

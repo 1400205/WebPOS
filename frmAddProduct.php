@@ -32,8 +32,8 @@ include ("clsProducts.php");
             });
            // $("#ptID").hide();
 
-            $("#pt").change(function() {
-                $("#pc").load("clsGetProductClass.php?choice=" + $("#pt").val());
+            $("#ptID").change(function() {
+                $("#pc").load("clsGetProductClass.php?choice=" + $("#ptID").val());
 
             });
 
