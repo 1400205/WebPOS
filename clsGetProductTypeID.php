@@ -42,7 +42,7 @@ $msg="";
 
 
 //prepare statement
-if ($stmt = $sqlcon->prepare("SELECT proTypeID FROM productType where proType LIKE ?")) {
+if ($stmt = $sqlcon->prepare("SELECT productTypeID FROM productType where proType LIKE ?")) {
     $stmt->bind_param('s', $choice);
 
     $stmt->execute();
