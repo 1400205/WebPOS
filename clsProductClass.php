@@ -29,6 +29,7 @@ if(isset($_POST['submit']))
     //get user inputs
 
     $proClass = $_POST["proClass"];
+    $proTypeID = $_POST["proTypeID"];
 
 
 
@@ -39,6 +40,12 @@ if(isset($_POST['submit']))
     {
         echo "<script>alert('Please enter Product Class.');window.history.go(-1);</script>";
         $error = " Product Class is Required.";
+        exit;
+    }
+    elseif ( empty($_POST["proTypeID"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
+    {
+        echo "<script>alert('Please Select Product Type.');window.history.go(-1);</script>";
+        $error = " Product Type is Required.";
         exit;
     }
 
@@ -57,9 +64,14 @@ if(isset($_POST['submit']))
         $proClass = htmlspecialchars($proClass);
         $proClass = trim($proClass);
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO proClassification (proClass,userid) VALUES (?,?)"))){
+        $proTypeID = stripslashes( $proTypeID );
+        $proTypeID=mysqli_real_escape_string($db,$proTypeID);
+        $proTypeID = htmlspecialchars($proTypeID);
+        $proTypeID = trim($proTypeID);
+
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO proClassification (proClass,proTypeID,userid) VALUES (?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('si',$proClass, $userid);
+            $stmt->bind_param('sii',$proClass,$proTypeID, $userid);
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
             }else{

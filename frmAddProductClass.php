@@ -38,7 +38,34 @@ include ("clsProductClass.php");
                 <span>Enter Product Class Details: </span>
             </div>
             <fieldset>
+                <br>
+                <label> Product Type:</label><br>
+                <?php
 
+                // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+                // echo '<select name="title">'; // Open your drop down box
+
+                //prepare statement
+                if($stmt=$sqlcon->prepare("SELECT proType FROM productType ORDER BY proType")){
+
+                    $stmt->execute();
+                    //get result
+                    $result = $stmt->get_result();
+                }
+                // echo "<select name='title'>";
+                echo  "<select name='prodcuctType' class='input username'>";
+                //$placeholdergender='Choose Gender';
+                echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
+                while($row=$result->fetch_row())
+                {
+                    $productType=$row['0'];
+                    echo '<option value="'.$productType.'">'.$productType.'</option>';
+                }
+
+                echo '</select>';
+
+                ?>
+                <br>
                 <br>
                 <label>Product Class:</label><br>
                 <input type="text" name="proClass" class="input username" placeholder="Enter Product Class"/>  <br>
