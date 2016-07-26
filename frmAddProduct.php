@@ -70,7 +70,7 @@ include ("clsProducts.php");
 
                 <br>
 
-                <label> Product Type:</label><br>
+                <label> Product Class:</label><br>
 
                 <?php
 
