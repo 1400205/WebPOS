@@ -30,8 +30,12 @@ include ("clsProducts.php");
                 $("#ptID").load("clsGetProductTypeID.php?choice=" + $("#pt").val());
 
             });
-            //$("#second-choice").hide();
+           // $("#ptID").hide();
 
+            $("#pt").change(function() {
+                $("#pc").load("clsGetProductClass.php?choice=" + $("#pt").val());
+
+            });
 
         });
     </script>
@@ -88,32 +92,8 @@ include ("clsProducts.php");
                 <br>
 
                 <label> Product Class:</label><br>
+                <Select name="proClass"id="pc" class="input username"> </Select>
 
-                <?php
-
-                // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-                // echo '<select name="title">'; // Open your drop down box
-
-                //prepare statement
-                if($stmt=$sqlcon->prepare("SELECT proClass FROM proClassification")){
-
-                    $stmt->execute();
-                    //get result
-                    $result = $stmt->get_result();
-                }
-                // echo "<select name='title'>";
-                echo  "<select name='proClass' class='input username'>";
-                //$placeholdergender='Choose Gender';
-                echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
-                while($row=$result->fetch_row())
-                {
-                    $productClass=$row['0'];
-                    echo '<option value="'.$productClass.'">'.$productClass.'</option>';
-                }
-
-                echo '</select>';
-
-                ?>
                 <br>
 
                 <label>Part Number:</label><br>
