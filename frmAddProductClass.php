@@ -32,7 +32,7 @@ include ("clsProductClass.php");
                 $("#second-choice").load("clsGetProductTypeID.php?choice=" + $("#first-choice").val());
 
             });
-            $("#second-choice").hide();
+            //$("#second-choice").hide();
 
            
         });
