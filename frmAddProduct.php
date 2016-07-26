@@ -32,10 +32,10 @@ include ("clsProducts.php");
             });
            // $("#ptID").hide();
 
-            $("#pt").change(function() {
-                $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
+           // $("#pt").change(function() {
+             //   $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
 
-            });
+           // });
 
         });
     </script>
