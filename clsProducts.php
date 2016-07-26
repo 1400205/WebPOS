@@ -36,6 +36,8 @@ if(isset($_POST['submit']))
     $origin=$_POST["origin"];
     $position=$_POST["partPosition"];
     $discription=$_POST["proDiscription"];
+    $proClass=$_POST["proClass"];
+    $remark=$_POST["remark"];
 
     $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
@@ -119,16 +121,26 @@ if(isset($_POST['submit']))
         $discription = htmlspecialchars($discription);
         $discription = trim($discription);
 
+        $proClass = stripslashes( $proClass );
+        $proClass=mysqli_real_escape_string($db,$proClass);
+        $proClass = htmlspecialchars($proClass);
+        $proClass = trim($proClass);
+
+        $remark = stripslashes( $remark );
+        $remark=mysqli_real_escape_string($db,$remark);
+        $remark = htmlspecialchars($remark);
+        $remark = trim($remark);
 
 
 
 
 
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO product (partNumber, partName,proType,barcode,OEM,origin,partPosition,proDescription,userid)
+
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO product (partNumber, partName,proType,barcode,OEM,origin,partPosition,proDescription,proClass,remark,userid)
                                       VALUES (?,?,?,?,?,?,?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('ssssssssi',$partnumber,$partname,$productType,$barcode,$OEM,$origin,$position,$discription,$userid);
+            $stmt->bind_param('ssssssssssi',$partnumber,$partname,$productType,$barcode,$OEM,$origin,$position,$discription,$proClass,$remark,$userid);
             if( $stmt->execute()){
                 $error="SUCCESS! "."Record Added Successfully.";
             }else{
