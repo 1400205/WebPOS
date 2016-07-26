@@ -27,13 +27,13 @@ include ("clsProducts.php");
 
 
             $("#pt").change(function() {
-                $("#ptID").load("clsGetProductTypeID.php?choice=" + $("#pt").val());
+                $("#ptID").load("clsGetProductTypeID.php?id=" + $("#pt").val());
 
             });
            // $("#ptID").hide();
 
-            $("#ptID").change(function() {
-                $("#pc").load("clsGetProductClass.php?choice=" + $("#ptID").val());
+            $("#pt").change(function() {
+                $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
 
             });
 

@@ -30,7 +30,7 @@ session_start();
 include ("connect.php");
 include ("myglobal.php");
 
-$choice=$_GET['choice'];
+$choice=$_GET['id'];
 
 $choice = stripslashes( $choice );
 $choice=mysqli_real_escape_string($db,$choice);
