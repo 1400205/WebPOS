@@ -23,6 +23,21 @@ include ("clsProductClass.php");
 
     <link rel="stylesheet" href="css/style-forms.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+
+            $("#first-choice").change(function() {
+                $("#second-choice").load("clsGetProductTypeID.php?choice=" + $("#first-choice").val());
+
+            });
+            $("#second-choice").hide();
+
+           
+        });
+    </script>
+
 
 </head>
 
@@ -54,7 +69,7 @@ include ("clsProductClass.php");
                     $result = $stmt->get_result();
                 }
 
-                echo  "<select name='currencyID1' id='first-choice1' class='input username'>"."<br>";
+                echo  "<select name='proType' id='first-choice' class='input username'>"."<br>";
 
 
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
@@ -75,7 +90,7 @@ include ("clsProductClass.php");
 
 
                 ?>
-                <Select name="currencyID2"id="second-choice1" > </Select>
+                <Select name="proTypeID"id="second-choice" > </Select>
 
 
                 <br>
