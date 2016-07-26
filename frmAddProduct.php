@@ -38,7 +38,7 @@ include ("clsProducts.php");
             <fieldset>
 
                 <br>
-
+                <label> Product Type:</label><br>
                 <?php
 
                 // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
@@ -70,6 +70,8 @@ include ("clsProducts.php");
 
                 <br>
 
+                <label> Product Type:</label><br>
+
                 <?php
 
                 // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
@@ -99,7 +101,7 @@ include ("clsProducts.php");
 
                 <label>Part Number:</label><br>
                 <input type="text" name="partNumber" class="input username" placeholder="Enter Part Number"/>  <br>
-                <label> Product Type:</label><br>
+
                 <label>BarCode:</label><br>
                 <input type="text" name="barcode" class="input username" placeholder="Scan Barcode"/>  <br>
 
