@@ -37,7 +37,7 @@ include ("clsBranch.php");
             <fieldset>
 
                 <br>
-                <label>Company Name:</label><br>
+                <label>Branch Name:</label><br>
                 <input type="text" name="cbranch" class="input username" placeholder="Enter Branch Name"/>  <br>
                 <label> Telephone Number:</label><br>
                 <input type="text" name="ctel" class="input username" placeholder="Telephone Number" />  <br>
