@@ -42,7 +42,7 @@ $msg="";
 
 
 //prepare statement
-if ($stmt = $sqlcon->prepare("SELECT productTypeID FROM productType where proType = ?")) {
+if ($stmt = $sqlcon->prepare("SELECT productTypeID FROM productType where proType=?")) {
     $stmt->bind_param('s', $choice);
 
     $stmt->execute();

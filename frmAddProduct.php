@@ -27,7 +27,7 @@ include ("clsProducts.php");
 
 
             $("#pt").change(function() {
-                $("#ptID").load("clsGetProductTypeID.php?id=" + $("#pt").val());
+                $("#ptID").load("clsGetProductTypeID.php?choice=" + $("#pt").val());
 
             });
            // $("#ptID").hide();
