@@ -65,8 +65,37 @@ include ("clsProducts.php");
 
                 ?>
                 <br>
-                <label>Part Name:</label><br>
+                <label>Product Name:</label><br>
                 <input type="text" name="partName" class="input username" placeholder="Enter Part Name"/>  <br>
+
+                <br>
+
+                <?php
+
+                // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+                // echo '<select name="title">'; // Open your drop down box
+
+                //prepare statement
+                if($stmt=$sqlcon->prepare("SELECT proClass FROM proClassification")){
+
+                    $stmt->execute();
+                    //get result
+                    $result = $stmt->get_result();
+                }
+                // echo "<select name='title'>";
+                echo  "<select name='proClass' class='input username'>";
+                //$placeholdergender='Choose Gender';
+                echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
+                while($row=$result->fetch_row())
+                {
+                    $productClass=$row['0'];
+                    echo '<option value="'.$productClass.'">'.$productClass.'</option>';
+                }
+
+                echo '</select>';
+
+                ?>
+                <br>
 
                 <label>Part Number:</label><br>
                 <input type="text" name="partNumber" class="input username" placeholder="Enter Part Number"/>  <br>
