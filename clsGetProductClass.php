@@ -52,7 +52,7 @@ if ($stmt = $sqlcon->prepare("SELECT proClass FROM proClassification where proTy
     $msg = "SELECTION FAIL: Contact System Admin";
 }
 
-while ($row = $result->fetch_row()) {
+while ($row1 = $result->fetch_row()) {
     //  $mycompanyID = $row[0];
     //$mycompanyName = $row[1];
     // $mylogo = $row[2];
@@ -62,7 +62,7 @@ while ($row = $result->fetch_row()) {
 
     //  $mylogo = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
     // $getlogo = $getlogo.$mylogo;
-    echo "<option>" . $row[0] . "</option>";
+    echo "<option>" . $row1[0] . "</option>";
 
     // $line = "<p><a href='frmAddShelf.php?id=" . $row[0] . "'>". "Click Here To Add Shelf to a Rack ". $row[1]." of Capacity ".$row[2]
     // . "</a></p>"."<br>";
