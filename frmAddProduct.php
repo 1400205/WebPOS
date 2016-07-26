@@ -32,7 +32,7 @@ include ("clsProducts.php");
             });
            // $("#ptID").hide();
 
-            $("#pt").change(function() {
+            $("#ptID").change(function() {
                 $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
 
             });
