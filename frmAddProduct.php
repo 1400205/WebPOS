@@ -21,6 +21,22 @@ include ("clsProducts.php");
 
     <link rel="stylesheet" href="css/style-forms.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+
+            $("#pt").change(function() {
+                $("#ptID").load("clsGetProductTypeID.php?choice=" + $("#pt").val());
+
+            });
+            //$("#second-choice").hide();
+
+
+        });
+    </script>
+
+
 
 </head>
 
@@ -52,7 +68,7 @@ include ("clsProducts.php");
                     $result = $stmt->get_result();
                 }
                 // echo "<select name='title'>";
-                echo  "<select name='prodcuctType' class='input username'>";
+                echo  "<select name='prodcuctType'id='pt' class='input username'>";
                 //$placeholdergender='Choose Gender';
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
                 while($row=$result->fetch_row())
@@ -64,6 +80,7 @@ include ("clsProducts.php");
                 echo '</select>';
 
                 ?>
+                <Select name="proTypeID"id="ptID" > </Select>
                 <br>
                 <label>Product Name:</label><br>
                 <input type="text" name="partName" class="input username" placeholder="Enter Part Name"/>  <br>
