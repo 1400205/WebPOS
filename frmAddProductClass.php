@@ -44,28 +44,40 @@ include ("clsProductClass.php");
 
                 // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
                 // echo '<select name="title">'; // Open your drop down box
+                $locationID=0;
 
                 //prepare statement
-                if($stmt=$sqlcon->prepare("SELECT proType FROM productType ORDER BY proType")){
+                if($stmt=$sqlcon->prepare("SELECT proType FROM productType WHERE  status=1")){
 
                     $stmt->execute();
                     //get result
                     $result = $stmt->get_result();
                 }
-                // echo "<select name='title'>";
-                echo  "<select name='prodcuctType' class='input username'>";
-                //$placeholdergender='Choose Gender';
+
+                echo  "<select name='currencyID1' id='first-choice1' class='input username'>"."<br>";
+
+
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
                 while($row=$result->fetch_row())
                 {
-                    $productType=$row['0'];
-                    echo '<option value="'.$productType.'">'.$productType.'</option>';
+
+                    $section=$row['0'];
+                    //$sectionID=$row['1'];
+
+
+                    echo '<option value="'.$section.'">'.trim($section).'</option>';
+
                 }
 
-                echo '</select>';
+
+
+                echo '</select>'
+
 
                 ?>
-                <br>
+                <Select name="currencyID2"id="second-choice1" > </Select>
+
+
                 <br>
                 <label>Product Class:</label><br>
                 <input type="text" name="proClass" class="input username" placeholder="Enter Product Class"/>  <br>
