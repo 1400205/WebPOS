@@ -51,8 +51,7 @@ if ($userid>0) {
         //  $mylogo = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
         // $getlogo = $getlogo.$mylogo;
 
-        $line = "<p><a href='frmAddRack.php?id=" . $row[0] . "'>". "Click Here To Add Racks to Shop Section ". $row[1]." Located in: ".$row[2]
-            . "</a></p>"."<br>";
+        $line = "<p><a href='frmAddRack.php?id=" . $row[0] . "'>". "Click Here To Add Racks to Shop Section ". $row[1]." Located in: " . "</a></p>"."<br>";
 
         // $linePhoto = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
 
