@@ -37,7 +37,7 @@ include ("clsLocation.php");
             <fieldset>
 
                 <br>
-                <label>Company Name:</label><br>
+                <label>Location Name:</label><br>
                 <input type="text" name="clocation" class="input username" placeholder="Enter Location Name"/>  <br>
 
                 <div class="footer">
