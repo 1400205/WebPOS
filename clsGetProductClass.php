@@ -52,7 +52,7 @@ if ($stmt = $sqlcon->prepare("SELECT proTypeID FROM proClassification where proT
     $msg = "SELECTION FAIL: Contact System Admin";
 }
 
-if ($row = $result->fetch_row()) {
+while ($row = $result->fetch_row()) {
     //  $mycompanyID = $row[0];
     //$mycompanyName = $row[1];
     // $mylogo = $row[2];
