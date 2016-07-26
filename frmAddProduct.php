@@ -97,7 +97,11 @@ include ("clsProducts.php");
                 <br>
 
                 <label> Product Class:</label><br>
-                <Select name="proClass"id="pc" class="input username"> </Select>
+                <Select name="proClass"id="pc" class="input username">
+
+                    <?php echo '<option value="'.$row.'">'.$row.'</option>';?>
+
+                </Select>
 
                 <br>
 
