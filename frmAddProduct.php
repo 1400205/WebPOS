@@ -148,7 +148,7 @@ include ("clsProducts.php");
                 <br>
 
                 <label>Remark:</label><br>
-                <textarea cols="56" rows="3" name="proDiscription" class="input username" placeholder="Enter Any Remark eg. other Part Numbers">  </textarea><br>
+                <textarea cols="56" rows="3" name="remark" class="input username" placeholder="Enter Any Remark eg. other Part Numbers">  </textarea><br>
 
 
                 <div class="footer">
