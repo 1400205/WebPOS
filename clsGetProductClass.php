@@ -42,8 +42,8 @@ $msg="";
 
 
 //prepare statement
-if ($stmt = $sqlcon->prepare("SELECT proTypeID FROM proClassification where proTypeID = ?")) {
-    $stmt->bind_param('s', $choice);
+if ($stmt = $sqlcon->prepare("SELECT proClass FROM proClassification where proTypeID = ?")) {
+    $stmt->bind_param('i', $choice);
 
     $stmt->execute();
     //get result
