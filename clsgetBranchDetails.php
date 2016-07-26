@@ -41,7 +41,7 @@ if ($userid>0) {
         //  $mylogo = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
         // $getlogo = $getlogo.$mylogo;
 
-        $line = "<p><a href='frmAddSection.php?id=" . $row[0] . "'>". "Click Here To Add Section ". $row[1]
+        $line = "<p><a href='frmAddSection.php?id=" . $row[0] . "'>". "Click Here To Add Section To ". $row[1]." Branch "
             . "</a></p>"."<br>";
 
        // $linePhoto = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
