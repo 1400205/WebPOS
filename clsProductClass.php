@@ -59,7 +59,7 @@ if(isset($_POST['submit']))
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO proClassification (proClass,userid) VALUES (?,?)"))){
             //bind parameter
-            $stmt->bind_param('sdi',$proClass, $userid);
+            $stmt->bind_param('si',$proClass, $userid);
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
             }else{
