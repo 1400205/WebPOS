@@ -37,8 +37,9 @@ include ("clsProducts.php");
 
            // });
 
-            $("#pc").click(function() {
+            $("#pc").change(function() {
                 $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
+
 
             });
 
