@@ -38,14 +38,8 @@ include ("clsProducts.php");
 
            // });
 
-          //  $("#pc").enter(function() {
-           //     $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
 
-             // $("#pc").load("textdata/" + $(this).val() + ".txt");
-
-
-          //  });
-            $("#pc").change(function() {
+            $("#pc").click(function() {
                 $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
 
                 //$("#pc").load("textdata/" + $(this).val() + ".txt");
