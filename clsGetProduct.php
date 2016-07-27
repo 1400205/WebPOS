@@ -26,7 +26,7 @@ if(isset($_POST["submit"])) {
     }
 
     while ($row = $result->fetch_row()) {
-        $line = "<p><a href='frmAddSuppliedProducts.php?id=" . $row[0] . "'>".$row[0]. " ". $row[1]." Part Number, ".$row[2]
+        $line = "<p><a href='frmAddStuck.php?id=" . $row[0] . "'>".$row[0]. " ". $row[1]." Part Number, ".$row[2]
            . "</a></p>"."<br>";
 
        // $linePhoto = "<p><img src='".$row[14]."' style='width:100px;height:100px;'></p>";
