@@ -58,7 +58,7 @@ include ("clsProducts.php");
             });
 
             $("#partPosition").change(function() {
-                $("#positionID").load("frmGetPositionID.php?country=" + $("#partPosition").val());
+                $("#positionID").load("clsGetPositionID.php?position=" + $("#partPosition").val());
 
             });
 
