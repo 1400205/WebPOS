@@ -60,11 +60,6 @@ include ("clsAddSuppliedStuck.php");
             });
             // $("#taxID2").hide();
 
-            $("#discount").change(function() {
-                $("#discountID").load("clsGetDiscountID.php?discountVal=" + $("#discount").val());
-
-            });
-            // $("#taxID2").hide();
 
         });
     </script>
@@ -304,7 +299,7 @@ include ("clsAddSuppliedStuck.php");
                 <?php
 
                 //prepare statement
-                if($stmt=$sqlcon->prepare("SELECT MAX(percentDiscountRate) FROM discount WHERE  status=1")){
+                if($stmt=$sqlcon->prepare("SELECT percentDiscountRate FROM discount WHERE  status=1")){
 
                     $stmt->execute();
                     //get result
@@ -321,22 +316,47 @@ include ("clsAddSuppliedStuck.php");
                     $section=$row['0'];
                     //$sectionID=$row['1'];
 
+                    echo '<option value="'.$section.'">'.trim($section).'</option>';
+
+                }
+
+                echo '</select>'
+                ?>
+
+
+                <br>
+
+                <br>
+                <label>Mark Up:</label><br>
+                <?php
+
+                //prepare statement
+                if($stmt=$sqlcon->prepare("SELECT percentMarkup FROM markup WHERE  status=1")){
+
+                    $stmt->execute();
+                    //get result
+                    $result = $stmt->get_result();
+                }
+
+                echo  "<select name='markup' id='markup' class='input username'>"."<br>";
+
+
+                echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
+                while($row=$result->fetch_row())
+                {
+
+                    $section=$row['0'];
+                    //$sectionID=$row['1'];
 
                     echo '<option value="'.$section.'">'.trim($section).'</option>';
 
                 }
 
-
-
                 echo '</select>'
-
-
                 ?>
-                <Select name="discountID"id="discountID" >
 
-
-                </Select>
                 <br>
+
                 <label>Date Supplied:</label><br>
                 <input type="date" name="dateSupplied" class="input username" placeholder="Enter Date Supplied"/>  <br>
 
