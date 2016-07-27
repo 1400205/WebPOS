@@ -30,20 +30,20 @@ session_start();
 include ("connect.php");
 include ("myglobal.php");
 
-$shelfID="%{$_GET['shelfName']}%";
+$shelfName="%{$_GET['shelfName']}%";
 
-$shelfID = stripslashes( $shelfID );
-$shelfID=mysqli_real_escape_string($db,$shelfID);
-$shelfID = htmlspecialchars($shelfID);
-$shelfID = trim($shelfID);
+$shelfName = stripslashes( $shelfName );
+$shelfName=mysqli_real_escape_string($db,$shelfName);
+$shelfName = htmlspecialchars($shelfName);
+$shelfName = trim($shelfName);
 
 $msg="";
 
 
 
 //prepare statement
-if ($stmt = $sqlcon->prepare("SELECT shleveID FROM shelve where shelveName LIKE ?")) {
-    $stmt->bind_param('s', $shelfID);
+if ($stmt = $sqlcon->prepare("SELECT shelveID FROM shelve where shelveName LIKE ?")) {
+    $stmt->bind_param('s', $shelfName);
 
     $stmt->execute();
     //get result
