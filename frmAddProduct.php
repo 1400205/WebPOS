@@ -107,11 +107,24 @@ include ("clsProducts.php");
                 <br>
 
                 <label> Product Class:</label><br>
-                <Select name="proClass"id="pc" class="input username">
+                <?php
 
-                    <?php echo '<option value="'.$row1.'">'.$row1.'</option>';?>
+                // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+                // echo '<select name="title">'; // Open your drop down box
 
-                </Select>
+                //prepare statement
+               
+                echo  "<select name='proClass'id='pc' class='input username'>";
+                //$placeholdergender='Choose Gender';
+                echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
+
+
+                    echo '<option value="'.$resultText.'">'.$resultText.'</option>';
+
+
+                echo '</select>';
+
+                ?>
 
                 <Select name="proClassID"id="pcID" class="input username">
 
