@@ -28,7 +28,7 @@ if(isset($_POST['submit']))
 {
     //get user inputs
    // $productID=$_GET["id"];
-    $productType = $_POST["prodcuctType"];
+    $productType = $_POST["proTypeID"];
     $partname=$_POST["partName"];
     $partnumber=$_POST["partNumber"];
     $barcode=$_POST["barcode"];
@@ -42,7 +42,7 @@ if(isset($_POST['submit']))
     $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
 
-    if( empty($_POST["prodcuctType"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
+    if( empty($_POST["proTypeID"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
         echo "<script>alert('Please enter Type of Product.');window.history.go(-1);</script>";
         $error = "Type Of Product is Required.";
