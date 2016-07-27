@@ -122,10 +122,10 @@ if(isset($_POST['submit']))
         $discription = htmlspecialchars($discription);
         $discription = trim($discription);
 
-        $proClass = stripslashes( $proClass );
-        $proClass=mysqli_real_escape_string($db,$proClass);
-        $proClass = htmlspecialchars($proClass);
-        $proClass = trim($proClass);
+        $proClassID = stripslashes( $proClassID );
+        $proClassID=mysqli_real_escape_string($db,$proClassID);
+        $proClassID = htmlspecialchars($proClassID);
+        $proClassID = trim($proClassID);
 
         $remark = stripslashes( $remark );
         $remark=mysqli_real_escape_string($db,$remark);
@@ -141,7 +141,7 @@ if(isset($_POST['submit']))
         if ( ( $stmt=$mysqli->prepare("INSERT INTO product (partNumber, partName,proType,barcode,OEM,origin,partPosition,proDescription,proClass,remark,userid)
                                       VALUES (?,?,?,?,?,?,?,?,?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('ssissiisisi',$partnumber,$partname,$productType,$barcode,$OEM,$origin,$position,$discription,$proClass,$remark,$userid);
+            $stmt->bind_param('ssissiisisi',$partnumber,$partname,$productType,$barcode,$OEM,$origin,$position,$discription,$proClassID,$remark,$userid);
             if( $stmt->execute()){
                 $error="SUCCESS! "."Record Added Successfully.";
             }else{
