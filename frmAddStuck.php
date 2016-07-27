@@ -54,6 +54,12 @@ include ("clsAddSuppliedStuck.php");
             });
             // $("#taxID1").hide();
 
+            $("#taxName2").change(function() {
+                $("#taxID2").load("clsGetTaxID.php?tax1=" + $("#taxName2").val());
+
+            });
+            // $("#taxID2").hide();
+
         });
     </script>
 
@@ -241,6 +247,46 @@ include ("clsAddSuppliedStuck.php");
 
 
                 <Select name="taxID1"id="taxID1" >
+
+                <pre>
+             <option value="base">Please choose from above</option>
+                </pre>
+
+                </Select>
+                <br>
+
+                <br>
+                <label> Tax #2:</label><br>
+                <?php
+
+                //prepare statement
+                if($stmt=$sqlcon->prepare("SELECT taxName FROM Tax")){
+
+                    $stmt->execute();
+                    //get result
+                    $result = $stmt->get_result();
+                }
+
+                echo  "<select name='taxName2' id='taxName2' class='input username'>"."<br>";
+
+
+                echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
+                while($row=$result->fetch_row())
+                {
+
+                    $section=$row['0'];
+
+                    echo '<option value="'.$section.'">'.trim($section).'</option>';
+                }
+
+                echo '</select>'
+
+
+                ?>
+
+
+
+                <Select name="taxID2"id="taxID2" >
 
                 <pre>
              <option value="base">Please choose from above</option>
