@@ -35,7 +35,7 @@ if(isset($_POST['submit']))
     $barcode=$_POST["barcode"];
     $OEM=$_POST["OEM"];
     $origin=$_POST["originID"];
-    $position=$_POST["PositionID"];
+    $position=$_POST["positionID"];
     $discription=$_POST["proDescription"];
 
     $remark=$_POST["remark"];
@@ -141,7 +141,7 @@ if(isset($_POST['submit']))
         if ( ( $stmt=$mysqli->prepare("INSERT INTO product (partNumber, partName,proType,barcode,OEM,origin,partPosition,proDescription,proClass,remark,userid)
                                       VALUES (?,?,?,?,?,?,?,?,?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('ssssssssssi',$partnumber,$partname,$productType,$barcode,$OEM,$origin,$position,$discription,$proClass,$remark,$userid);
+            $stmt->bind_param('ssissiisisi',$partnumber,$partname,$productType,$barcode,$OEM,$origin,$position,$discription,$proClass,$remark,$userid);
             if( $stmt->execute()){
                 $error="SUCCESS! "."Record Added Successfully.";
             }else{

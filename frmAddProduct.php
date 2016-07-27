@@ -217,7 +217,7 @@ include ("clsProducts.php");
                 echo '</select>';
 
                 ?>
-                <Select name="positionID"id="positionID" > </select>
+                <Select name="positionID" id="positionID" > </select>
                 <br>
 
                 <label>Product Description:</label><br>
