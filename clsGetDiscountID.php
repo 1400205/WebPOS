@@ -27,7 +27,7 @@ $msg="";
 
 //prepare statement
 if ($stmt = $sqlcon->prepare("SELECT discountID FROM discount where percentDiscountRate LIKE ?")) {
-    $stmt->bind_param('d', $discount);
+    $stmt->bind_param('i', $discount);
 
     $stmt->execute();
     //get result
