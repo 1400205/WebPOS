@@ -6,23 +6,7 @@
  * Time: 14:06
  */
 
-/**
- * Created by IntelliJ IDEA.
- * User: prosper
- * Date: 23/07/2016
- * Time: 20:55
- */
-
-/**
- * Created by IntelliJ IDEA.
- * User: prosper
- * Date: 21/07/2016
- * Time: 17:16
- */
-
 session_start();
-//include ("secureSessionID.php");//verify user session
-//include ("inactiveTimeOut.php");//check user idle time
 ?>
 
 
@@ -30,7 +14,7 @@ session_start();
 include ("connect.php");
 include ("myglobal.php");
 
-$discount="%{$_GET['discount']}%";
+$discount=$_GET['discountVal'];
 
 $discount = stripslashes( $discount );
 $discount=mysqli_real_escape_string($db,$discount);

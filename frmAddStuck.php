@@ -61,7 +61,7 @@ include ("clsAddSuppliedStuck.php");
             // $("#taxID2").hide();
 
             $("#discount").change(function() {
-                $("#discountID").load("clsGetDiscountID.php?discount=" + $("#discount").val());
+                $("#discountID").load("clsGetDiscountID.php?discountVal=" + $("#discount").val());
 
             });
             // $("#taxID2").hide();
