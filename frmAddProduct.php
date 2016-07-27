@@ -53,7 +53,7 @@ include ("clsProducts.php");
             });
 
             $("#origin1").change(function() {
-                $("#originID").load("clsGetCountryID.php?country=" + $("#origin1").val());
+                $("#originID").load("getCountryID.php?country=" + $("#origin1").val());
 
             });
 
