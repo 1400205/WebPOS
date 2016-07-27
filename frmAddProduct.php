@@ -57,8 +57,8 @@ include ("clsProducts.php");
 
     <script>
         function someFunc(){
-            //var myindex  = dropdown.selectedIndex;// This prints correctly
-            alert("Index : "+document.getElementById("pc").selectedIndex);// This is always 0 no metter what selects
+            var myindex  = dropdown.selectedIndex;// This prints correctly
+            alert("Index : "+document.getElementById("pc").myindex);// This is always 0 no metter what selects
         }
     </script>
 
