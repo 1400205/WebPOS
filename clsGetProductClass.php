@@ -63,9 +63,9 @@ while ($row1 = $result->fetch_row()) {
     //  $mylogo = "<p><img src='".$row[2]."' style='width:100px;height:100px;'></p>";
     // $getlogo = $getlogo.$mylogo;
 
-    $line=$row1[0];
+    $resultText=$row1[0];
 
-    $resultText =$resultText.$line;
+
     echo "<option>" . $resultText . "</option>";
 
     // $line = "<p><a href='frmAddShelf.php?id=" . $row[0] . "'>". "Click Here To Add Shelf to a Rack ". $row[1]." of Capacity ".$row[2]
