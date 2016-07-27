@@ -41,7 +41,7 @@ include ("clsProducts.php");
             $("#pc").enter(function() {
                 $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
 
-              $("#pc").load("textdata/" + $(this).val() + ".txt");
+             // $("#pc").load("textdata/" + $(this).val() + ".txt");
 
 
             });
