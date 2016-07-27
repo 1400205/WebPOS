@@ -73,7 +73,7 @@ include ("clsProducts.php");
                 // echo '<select name="title">'; // Open your drop down box
 
                 //prepare statement
-                if($stmt=$sqlcon->prepare("SELECT proType FROM productType ORDER BY proType")){
+                if($stmt=$sqlcon->prepare("SELECT proType FROM productType")){
 
                     $stmt->execute();
                     //get result
