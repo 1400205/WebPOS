@@ -30,13 +30,14 @@ if(isset($_POST['submit']))
    // $productID=$_GET["id"];
     $productType = $_POST["proTypeID"];
     $partname=$_POST["partName"];
+    $proClassID=$_POST["pcID"];
     $partnumber=$_POST["partNumber"];
     $barcode=$_POST["barcode"];
     $OEM=$_POST["OEM"];
     $origin=$_POST["origin"];
     $position=$_POST["partPosition"];
     $discription=$_POST["proDiscription"];
-    $proClass=$_POST["proClass"];
+
     $remark=$_POST["remark"];
 
     $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);

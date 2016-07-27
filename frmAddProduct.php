@@ -52,14 +52,19 @@ include ("clsProducts.php");
 
             });
 
+            $("#origin1").change(function() {
+                $("#originID").load("clsGetCountryID.php?country=" + $("#origin1").val());
+
+            });
+
         });
     </script>
 
     <script>
-        function someFunc(){
-            var myindex  = dropdown.selectedIndex;// This prints correctly
-            alert("Index : "+document.getElementById("pc").myindex);// This is always 0 no metter what selects
-        }
+       // function someFunc(){
+           // var myindex  = dropdown.selectedIndex;// This prints correctly
+           // alert("Index : "+document.getElementById("pc").selectedIndex);// This is always 0 no metter what selects
+       // }
     </script>
 
 </head>
@@ -119,7 +124,7 @@ include ("clsProducts.php");
 
                 //prepare statement
 
-                echo  "<select name='proClass'id='pc' onchange='someFunc();' class='input username'>";
+                echo  "<select name='proClass'id='pc' class='input username'>";
                 //$placeholdergender='Choose Gender';
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
 
@@ -162,7 +167,7 @@ include ("clsProducts.php");
                     $result = $stmt->get_result();
                 }
                 // echo "<select name='title'>";
-                echo  "<select name='origin' class='input username'>";
+                echo  "<select name='origin'id='origin1' class='input username'>";
                 //$placeholdergender='Choose Gender';
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
                 while($row=$result->fetch_row())
@@ -178,6 +183,7 @@ include ("clsProducts.php");
                 echo '</select>';
 
                 ?>
+                <Select name="originID"id="originID" > </select>
                 <br>
 
                 <label>Part Position:</label><br>
