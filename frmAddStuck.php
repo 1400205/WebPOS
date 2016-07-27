@@ -48,6 +48,12 @@ include ("clsAddSuppliedStuck.php");
             });
            // $("#shelfID").hide();
 
+            $("#taxfName").change(function() {
+                $("#taxID1").load("clsGetTaxID.php?tax=" + $("#taxfName").val());
+
+            });
+            // $("#taxID1").hide();
+
         });
     </script>
 
@@ -193,11 +199,55 @@ include ("clsAddSuppliedStuck.php");
 
                 </Select>
                 <br>
-                <br>
+
                 <label>Quantity:</label><br>
                 <input type="number" name="qty"  min="0" step="any" class="input username" placeholder="Enter Quantity"/>  <br>
                 <label>Unit Cost Price:</label><br>
                 <input type="number" min="0" step="any" name="costPrice" class="input username" placeholder="Enter Unit Cost Price"/>  <br>
+                <label>Unit Selling Price:</label><br>
+                <input type="number" min="0" step="any" name="sellPrice" class="input username" placeholder="Enter Unit Cost Price"/>  <br>
+
+                <br>
+                <label> Shelf Number:</label><br>
+                <?php
+
+                $locationID=0;
+
+                //prepare statement
+                if($stmt=$sqlcon->prepare("SELECT taxName FROM Tax")){
+
+                    $stmt->execute();
+                    //get result
+                    $result = $stmt->get_result();
+                }
+
+                echo  "<select name='taxName' id='taxName' class='input username'>"."<br>";
+
+
+                echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
+                while($row=$result->fetch_row())
+                {
+
+                    $section=$row['0'];
+
+                    echo '<option value="'.$section.'">'.trim($section).'</option>';
+                }
+
+                echo '</select>'
+
+
+                ?>
+
+
+
+                <Select name="taxID1"id="taxID1" >
+
+                <pre>
+             <option value="base">Please choose from above</option>
+                </pre>
+
+                </Select>
+                <br>
                 <label>Currency:</label><br>
                 <?php
 
