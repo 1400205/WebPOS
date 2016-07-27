@@ -66,7 +66,7 @@ while ($row1 = $result->fetch_row()) {
     $line=$row1[0];
 
     $resultText =$resultText.$line;
-   // echo "<option>" . $row1[0] . "</option>";
+    echo "<option>" . $resultText . "</option>";
 
     // $line = "<p><a href='frmAddShelf.php?id=" . $row[0] . "'>". "Click Here To Add Shelf to a Rack ". $row[1]." of Capacity ".$row[2]
     // . "</a></p>"."<br>";
