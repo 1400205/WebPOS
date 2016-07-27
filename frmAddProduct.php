@@ -55,7 +55,12 @@ include ("clsProducts.php");
         });
     </script>
 
-
+    <script>
+        function someFunc(){
+            //var myindex  = dropdown.selectedIndex;// This prints correctly
+            alert("Index : "+document.getElementById("pc").selectedIndex);// This is always 0 no metter what selects
+        }
+    </script>
 
 </head>
 
@@ -114,7 +119,7 @@ include ("clsProducts.php");
 
                 //prepare statement
 
-                echo  "<select name='proClass'id='pc' class='input username'>";
+                echo  "<select name='proClass'id='pc' onchange='someFunc();' class='input username'>";
                 //$placeholdergender='Choose Gender';
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
 
