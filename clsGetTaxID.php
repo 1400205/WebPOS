@@ -28,7 +28,7 @@ session_start();
 include ("connect.php");
 include ("myglobal.php");
 
-$tax="%{$_GET['tax']}%";
+$tax="%{$_GET['tax1']}%";
 
 $tax = stripslashes( $tax );
 $tax=mysqli_real_escape_string($db,$tax);

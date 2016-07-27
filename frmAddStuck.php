@@ -48,8 +48,8 @@ include ("clsAddSuppliedStuck.php");
             });
            // $("#shelfID").hide();
 
-            $("#taxfName").change(function() {
-                $("#taxID1").load("clsGetTaxID.php?tax=" + $("#taxfName").val());
+            $("#taxName").change(function() {
+                $("#taxID1").load("clsGetTaxID.php?tax1=" + $("#taxName").val());
 
             });
             // $("#taxID1").hide();
@@ -208,7 +208,7 @@ include ("clsAddSuppliedStuck.php");
                 <input type="number" min="0" step="any" name="sellPrice" class="input username" placeholder="Enter Unit Cost Price"/>  <br>
 
                 <br>
-                <label> Shelf Number:</label><br>
+                <label> Tax #1:</label><br>
                 <?php
 
                 $locationID=0;
