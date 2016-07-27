@@ -97,11 +97,7 @@ if(isset($_POST['submit']))
         $productID=mysqli_real_escape_string($db,$productID);
         $productID = htmlspecialchars($productID);
         $productID = trim($productID);
-        //clean input user first name
-        $currencyID = stripslashes( $currencyID );
-        $currencyID=mysqli_real_escape_string($db,$currencyID);
-        $currencyID = htmlspecialchars($currencyID);
-        $currencyID = trim($currencyID);
+
 
         //clean input user surname
         $sellPrice = stripslashes( $sellPrice );
@@ -170,7 +166,7 @@ if(isset($_POST['submit']))
                 $discountID,$markupID,$invoiceNumber
                 ,$suppliedDate, $userid);
             if( $stmt->execute()){
-                $error="SUCCESS!"."Record Added Successfully.";
+                $error="SUCCESS! "."Record Added Successfully.";
             }else{
                 $error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
