@@ -162,7 +162,7 @@ if(isset($_POST['submit']))
 
 
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO suppliedStuck (supplierID, productID,qty,sellPrice,costPrice,shelfID,
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO suppliedStuck (supplierID, productID,stuckqty,sellPrice,costPrice,shelfID,
                                                     taxID1,taxID2,discount,markup,invoiceNumber,
                                                     suppliedDate,userid) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)"))){
             //bind parameter

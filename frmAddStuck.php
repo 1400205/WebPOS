@@ -212,7 +212,7 @@ include ("clsAddSuppliedStuck.php");
                 <label>Unit Cost Price:</label><br>
                 <input type="number" min="0" step="any" name="costPrice" class="input username" placeholder="Enter Unit Cost Price"/>  <br>
                 <label>Unit Selling Price:</label><br>
-                <input type="number" min="0" step="any" name="sellPrice" class="input username" placeholder="Enter Unit Cost Price"/>  <br>
+                <input type="number" min="0" step="any" name="sellPrice" class="input username" placeholder="Enter Selling Cost Price"/>  <br>
 
                 <br>
                 <label> Tax #1:</label><br>
@@ -359,6 +359,10 @@ include ("clsAddSuppliedStuck.php");
 
                 <label>Date Supplied:</label><br>
                 <input type="date" name="dateSupplied" class="input username" placeholder="Enter Date Supplied"/>  <br>
+                <br>
+
+                <label>Invoice Number:</label><br>
+                <input type="text" name="invoiceNumber" class="input username" placeholder="Enter Invoice Number"/>  <br>
 
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>
