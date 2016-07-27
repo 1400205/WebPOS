@@ -38,7 +38,7 @@ include ("clsProducts.php");
 
            // });
 
-            $("#pc").click(function() {
+            $("#pc").enter(function() {
                 $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
 
               //  $("#pc").load("textdata/" + $(this).val() + ".txt");
@@ -113,7 +113,7 @@ include ("clsProducts.php");
                 // echo '<select name="title">'; // Open your drop down box
 
                 //prepare statement
-               
+
                 echo  "<select name='proClass'id='pc' class='input username'>";
                 //$placeholdergender='Choose Gender';
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
