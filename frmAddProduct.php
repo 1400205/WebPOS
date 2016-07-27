@@ -138,14 +138,9 @@ include ("clsProducts.php");
 
 
                 echo '</select>';
-
                 ?>
 
-                <Select name="proClassID"id="pcID">
-
-
-
-                </Select>
+                <Select name="proClassID"id="pcID"> </Select>
 
                 <br>
 
