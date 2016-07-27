@@ -30,6 +30,7 @@ include ("clsProducts.php");
                 $("#ptID").load("clsGetProductTypeID.php?choice=" + $("#pt").val());
 
             });
+
            // $("#ptID").hide();
 
            // $("#pt").change(function() {
@@ -40,8 +41,14 @@ include ("clsProducts.php");
             $("#pc").click(function() {
                 $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
 
-                $("#pc").load("textdata/" + $(this).val() + ".txt");
+              //  $("#pc").load("textdata/" + $(this).val() + ".txt");
 
+
+            });
+
+
+            $("#pc").change(function() {
+                $("#pcID").load("clsGetProductClassID.php?choiceClass=" + $("#pc").val());
 
             });
 
@@ -103,6 +110,12 @@ include ("clsProducts.php");
                 <Select name="proClass"id="pc" class="input username">
 
                     <?php echo '<option value="'.$row1.'">'.$row1.'</option>';?>
+
+                </Select>
+
+                <Select name="proClassID"id="pcID" class="input username">
+
+
 
                 </Select>
 
