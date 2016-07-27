@@ -77,7 +77,7 @@ if(isset($_POST['submit']))
         $error = "Second Tax is Required.";
         exit;
     }
-    elseif ( empty($_POST["$markupID"]) ){
+    elseif ( empty($_POST["$markup"]) ){
         echo "<script>alert('Please Select Markup.');window.history.go(-1);</script>";
         $error = "Markup is Required.";
         exit;
