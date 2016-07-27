@@ -57,6 +57,11 @@ include ("clsProducts.php");
 
             });
 
+            $("#partPosition").change(function() {
+                $("#positionID").load("frmGetPositionID.php?country=" + $("#partPosition").val());
+
+            });
+
         });
     </script>
 
@@ -201,7 +206,7 @@ include ("clsProducts.php");
                     $result = $stmt->get_result();
                 }
                 // echo "<select name='title'>";
-                echo  "<select name='partPosition' class='input username'>";
+                echo  "<select name='partPosition' id='partPosition' class='input username'>";
                 //$placeholdergender='Choose Gender';
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
                 while($row=$result->fetch_row())
@@ -217,6 +222,7 @@ include ("clsProducts.php");
                 echo '</select>';
 
                 ?>
+                <Select name="positionID"id="positionID" > </select>
                 <br>
 
                 <label>Product Description:</label><br>
