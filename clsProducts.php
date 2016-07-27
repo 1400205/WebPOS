@@ -30,13 +30,13 @@ if(isset($_POST['submit']))
    // $productID=$_GET["id"];
     $productType = $_POST["proTypeID"];
     $partname=$_POST["partName"];
-    $proClassID=$_POST["pcID"];
+    $proClassID=$_POST["proClassID"];
     $partnumber=$_POST["partNumber"];
     $barcode=$_POST["barcode"];
     $OEM=$_POST["OEM"];
-    $origin=$_POST["origin"];
-    $position=$_POST["partPosition"];
-    $discription=$_POST["proDiscription"];
+    $origin=$_POST["originID"];
+    $position=$_POST["PositionID"];
+    $discription=$_POST["proDescription"];
 
     $remark=$_POST["remark"];
 

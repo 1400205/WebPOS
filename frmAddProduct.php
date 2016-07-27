@@ -141,7 +141,7 @@ include ("clsProducts.php");
 
                 ?>
 
-                <Select name="proClassID"id="pcID" class="input username">
+                <Select name="proClassID"id="pcID">
 
 
 
@@ -226,7 +226,7 @@ include ("clsProducts.php");
                 <br>
 
                 <label>Product Description:</label><br>
-                <textarea cols="56" rows="3" name="proDiscription" class="input username" placeholder="Enter Product Description">  </textarea><br>
+                <textarea cols="56" rows="3" name="proDescription" class="input username" placeholder="Enter Product Description">  </textarea><br>
 
                 <br>
 
