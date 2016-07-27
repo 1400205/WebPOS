@@ -42,11 +42,11 @@ include ("clsAddSuppliedStuck.php");
             //  $("#second-choice").value=+ $("#first-choice").val());
             // });
 
-            $("#first-choice1").change(function() {
-                $("#second-choice1").load("clsGetCurrencyID.php?choice=" + $("#first-choice1").val());
+            $("#shelfName").change(function() {
+                $("#shelfID").load("clsGetShelfID.php?shelfName=" + $("#shelfName").val());
 
             });
-            $("#second-choice1").hide();
+           // $("#shelfID").hide();
 
         });
     </script>
@@ -161,7 +161,7 @@ include ("clsAddSuppliedStuck.php");
                     $result = $stmt->get_result();
                 }
 
-                echo  "<select name='shalfName' id='shelfName' class='input username'>"."<br>";
+                echo  "<select name='shelfName' id='shelfName' class='input username'>"."<br>";
 
 
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
@@ -185,7 +185,7 @@ include ("clsAddSuppliedStuck.php");
 
 
 
-                <Select name="suppliedID"id="second-choice" >
+                <Select name="shelfID"id="shelfID" >
 
                 <pre>
              <option value="base">Please choose from above</option>
