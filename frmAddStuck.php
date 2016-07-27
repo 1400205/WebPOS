@@ -60,6 +60,12 @@ include ("clsAddSuppliedStuck.php");
             });
             // $("#taxID2").hide();
 
+            $("#discount").change(function() {
+                $("#discountID").load("clsGetDiscountID.php?discount=" + $("#discount").val());
+
+            });
+            // $("#taxID2").hide();
+
         });
     </script>
 
@@ -294,22 +300,18 @@ include ("clsAddSuppliedStuck.php");
 
                 </Select>
                 <br>
-                <label>Currency:</label><br>
+                <label>Discount:</label><br>
                 <?php
 
-                // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-                // echo '<select name="title">'; // Open your drop down box
-                $locationID=0;
-
                 //prepare statement
-                if($stmt=$sqlcon->prepare("SELECT currency FROM TradeCurrency WHERE  status=1")){
+                if($stmt=$sqlcon->prepare("SELECT MAX(percentDiscountRate) FROM discount WHERE  status=1")){
 
                     $stmt->execute();
                     //get result
                     $result = $stmt->get_result();
                 }
 
-                echo  "<select name='currencyID1' id='first-choice1' class='input username'>"."<br>";
+                echo  "<select name='discount' id='discount' class='input username'>"."<br>";
 
 
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
@@ -330,7 +332,7 @@ include ("clsAddSuppliedStuck.php");
 
 
                 ?>
-                <Select name="currencyID2"id="second-choice1" >
+                <Select name="discountID"id="discountID" >
 
 
                 </Select>
