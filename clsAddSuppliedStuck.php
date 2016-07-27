@@ -35,8 +35,8 @@ if(isset($_POST['submit']))
     $shelfID=$_POST["shelfID"];
     $taxID1=$_POST["taxID1"];
     $taxID2=$_POST["taxID2"];
-    $discountID=$_POST["discountID"];
-    $markupID=$_POST["markupID"];
+    $discountID=$_POST["discount"];
+    $markupID=$_POST["markup"];
     $suppliedDate = $_POST["dateSupplied"];
     $invoiceNumber=$_POST["invoiceNumber"];
 
