@@ -43,7 +43,7 @@ $msg="";
 
 //prepare statement
 if ($stmt = $sqlcon->prepare("SELECT classID FROM proClassification where choiceClass = ?")) {
-    $stmt->bind_param('i', $choice);
+    $stmt->bind_param('s', $choice);
 
     $stmt->execute();
     //get result
