@@ -163,10 +163,10 @@ if(isset($_POST['submit']))
 
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO suppliedStuck (supplierID, productID,qty,sellPrice,costPrice,shelfID,
-                                                    taxID1,taxID2,discountID,markupID,invoiceNumber,
+                                                    taxID1,taxID2,discount,markup,invoiceNumber,
                                                     suppliedDate,userid) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('iidddiiiiissi',$supplierID, $productID, $qty,$sellPrice,$costPrice,$shelfID,$taxID1,$taxID2,
+            $stmt->bind_param('iidddiiiddssi',$supplierID, $productID, $qty,$sellPrice,$costPrice,$shelfID,$taxID1,$taxID2,
                 $discountID,$markupID,$invoiceNumber
                 ,$suppliedDate, $userid);
             if( $stmt->execute()){
