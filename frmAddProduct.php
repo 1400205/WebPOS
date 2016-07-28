@@ -36,9 +36,12 @@ include ("clsProducts.php");
 
             $("#pt").change(function() {
                 $("#ptID").load("clsGetProductTypeID.php?choice=" + $("#pt").val());
-                $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
+
             });
 
+            $("#ptID").change(function() {
+                $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
+            });
            // $("#ptID").hide();
 
            // $("#pt").change(function() {
