@@ -57,7 +57,7 @@ include ("clsGetSupplier.php");
 
                 <br>
                 <label>First Name:</label><br>
-                <input type="text" name="pName" id="first-choice" class="input username" placeholder="Enter Product To search" />  <br>
+                <input type="text" name="supplierName" id="first-choice" class="input username" placeholder="Enter Supplier Name To search" />  <br>
 
 
 

@@ -7,7 +7,7 @@ include ("myglobal.php");
 if(isset($_POST["submit"])) {
 
     // $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-    $productName="%{$_POST["pName"]}%";
+    $supplierName="%{$_POST["supplierName"]}%";
     //$surname=$_POST["surname"];
 
 
@@ -16,7 +16,7 @@ if(isset($_POST["submit"])) {
 
 //prepare statement
     if ($stmt = $sqlcon->prepare("SELECT supplierID,supplierName FROM supplier WHERE status=1 && supplierName LIKE ?")) {
-        $stmt->bind_param('s', $productName);
+        $stmt->bind_param('s', $supplierName);
 
         $stmt->execute();
         //get result
