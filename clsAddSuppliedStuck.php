@@ -27,8 +27,8 @@ $date = date('Y-m-d H:i:s');
 if(isset($_POST['submit']))
 {
     //get user inputs
-    $productID=$_GET["id"];
-    $supplierID = $_POST["suppliedID"];
+    $supplierID=$_GET["id"];
+    $productID = $_POST["productID"];
     $qty = $_POST["qty"];
     $sellPrice = $_POST["sellPrice"];
     $costPrice = $_POST["costPrice"];
@@ -47,8 +47,8 @@ if(isset($_POST['submit']))
 
     if( empty($_POST["clocation"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
-        echo "<script>alert('Please Select Supplier.');window.history.go(-1);</script>";
-        $error = "Supplier is Required.";
+        echo "<script>alert('Please Select Product.');window.history.go(-1);</script>";
+        $error = "Product is Required.";
         exit;
     }
 
