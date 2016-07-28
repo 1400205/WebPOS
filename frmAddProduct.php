@@ -36,7 +36,7 @@ include ("clsProducts.php");
 
             $("#pt").change(function() {
                 $("#ptID").load("clsGetProductTypeID.php?choice=" + $("#pt").val());
-
+                $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
             });
 
            // $("#ptID").hide();
@@ -47,13 +47,13 @@ include ("clsProducts.php");
            // });
 
 
-            $("#pc").click(function() {
-                $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
+            //$("#pc").click(function() {
+
 
                 //$("#pc").load("textdata/" + $(this).val() + ".txt");
 
 
-            });
+            //});
 
             $("#pc").change(function() {
                 $("#pcID").load("clsGetProductClassID.php?choiceClass=" + $("#pc").val());
