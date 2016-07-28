@@ -33,16 +33,16 @@ include ("myglobal.php");
 $choice=$_GET['choiceClass'];
 
 $choice = stripslashes( $choice );
-$choice=mysqli_real_escape_string($db,$choice);
-$choice = htmlspecialchars($choice);
-$choice = trim($choice);
+//$choice=mysqli_real_escape_string($db,$choice);
+//$choice = htmlspecialchars($choice);
+//$choice = trim($choice);
 
 $msg="";
 
 
 
 //prepare statement
-if ($stmt = $sqlcon->prepare("SELECT classID FROM proClassification where proClass LIKE ?")) {
+if ($stmt = $sqlcon->prepare("SELECT classID FROM proClassification where proClass = ?")) {
     $stmt->bind_param('s', $choice);
 
     $stmt->execute();
