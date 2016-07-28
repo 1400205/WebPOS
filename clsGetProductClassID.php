@@ -42,7 +42,7 @@ $msg="";
 
 
 //prepare statement
-if ($stmt = $sqlcon->prepare("SELECT classID FROM proClassification where proClass = ?")) {
+if ($stmt = $sqlcon->prepare("SELECT classID FROM proClassification where proClass LIKE ?")) {
     $stmt->bind_param('s', $choice);
 
     $stmt->execute();
