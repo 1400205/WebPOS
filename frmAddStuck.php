@@ -145,7 +145,7 @@ include ("clsAddSuppliedStuck.php");
 
 
 
-                <Select name="suppliedID"id="second-choice" >
+                <Select name="productID"id="second-choice" >
 
                 <pre>
              <option value="base">Please choose from above</option>
