@@ -134,7 +134,7 @@ include ("clsProducts.php");
                 echo '<option placeholder="'.$placeholdergender.'">'.$placeholdergender.'</option>';
 
 
-                    echo '<option value="'.$resultText.'">'.$resultText.'</option>';
+                    echo '<option selected="selected" value="'.$resultText.'">'.$resultText.'</option>';
 
 
                 echo '</select>';
