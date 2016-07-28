@@ -22,6 +22,12 @@ include ("clsProducts.php");
     <link rel="stylesheet" href="css/style-forms.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+    <link href="dist/css/select2.min.css" rel="stylesheet" />
+
+
+    <script src="dist/js/select2.min.js"></script>
     <script>
         $(document).ready(function(){
 
