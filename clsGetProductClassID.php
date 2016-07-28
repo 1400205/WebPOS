@@ -33,9 +33,9 @@ include ("myglobal.php");
 $choice=$_GET['choiceClass'];
 
 $choice = stripslashes( $choice );
-//$choice=mysqli_real_escape_string($db,$choice);
-//$choice = htmlspecialchars($choice);
-//$choice = trim($choice);
+$choice=mysqli_real_escape_string($db,$choice);
+$choice = htmlspecialchars($choice);
+$choice = trim($choice);
 
 $msg="";
 

@@ -146,6 +146,7 @@ include ("clsProducts.php");
 
 
                     echo '<option selected="selected" value="'.$resultText.'">'.$resultText.'</option>';
+               echo '<pre>'.'<option value="base">Please choose from above</option>' .'</pre>';
 
 
                 echo '</select>';
