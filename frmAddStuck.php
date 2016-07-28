@@ -33,7 +33,7 @@ include ("clsAddSuppliedStuck.php");
 
 
             $("#first-choice").change(function() {
-                $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
+                $("#second-choice").load("clsGetProductID.php?choice=" + $("#first-choice").val());
 
             });
            // $("#second-choice").hide();
@@ -75,14 +75,12 @@ include ("clsAddSuppliedStuck.php");
 
     <?php
 
-    // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-    // echo '<select name="title">'; // Open your drop down box
-    $productID=$_GET['id'];
+    $supID=$_GET['id'];
 
     //prepare statement
-    if($stmt=$sqlcon->prepare("SELECT partName FROM product WHERE productID=?")){
+    if($stmt=$sqlcon->prepare("SELECT supplierName FROM supplier WHERE supplierID=?")){
         //bind parameter
-        $stmt->bind_param('i',$productID);
+        $stmt->bind_param('i',$supID);
 
         $stmt->execute();
         //get result
@@ -106,21 +104,17 @@ include ("clsAddSuppliedStuck.php");
     <form class="login-form" method="post" action="">
         <div class="content">
             <div class="header">
-                <h1>Add Supplied Details for Product: <?php echo $resultText;?></h1>
-                <span>This is to Enter Products Supplied: </span>
+                <h1>Add Supplied Details for Supplier: <?php echo $resultText;?></h1>
+                <span>This is to Enter Products  by :  <?php echo $resultText;?> </span>
             </div>
             <fieldset>
 
 
-                <label> Supplier Name:</label><br>
+                <label> Product Name:</label><br>
                 <?php
 
-                // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-                // echo '<select name="title">'; // Open your drop down box
-                $locationID=0;
-
                 //prepare statement
-                if($stmt=$sqlcon->prepare("SELECT supplierName FROM supplier")){
+                if($stmt=$sqlcon->prepare("SELECT partName FROM product")){
 
                     $stmt->execute();
                     //get result
