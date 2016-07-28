@@ -15,7 +15,7 @@ if(isset($_POST["submit"])) {
 // echo '<select name="title">'; // Open your drop down box
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT supplierID,supplierName FROM supplier WHERE status=1 && supplierName LIKE ?")) {
+    if ($stmt = $sqlcon->prepare("SELECT supplierID,supplierName FROM supplier WHERE status=1 AND supplierName LIKE ?")) {
         $stmt->bind_param('s', $supplierName);
 
         $stmt->execute();
