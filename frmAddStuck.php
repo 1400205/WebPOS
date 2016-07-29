@@ -359,7 +359,7 @@ include ("clsAddSuppliedStuck.php");
                 <input type="text" name="invoiceNumber" class="input username" placeholder="Enter Invoice Number"/>  <br>
 
                 <label>Reorder Level:</label><br>
-                <input type="number" min="0"  name="reorderLevel" class="input username" placeholder="Enter Selling Cost Price"/>  <br>
+                <input type="number" min="0"  name="reorderLevel" class="input username" placeholder="Enter Reorder Level"/>  <br>
 
 
                 <div class="footer">
