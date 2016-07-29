@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html class="english"><head>
+<html class="english">
+
+<head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8"> <title>WebPOS | Easy to use Online POS Software</title>
     <link rel="icon" href="https://demo.phppointofsale.com/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> <!--320-->
+    <script src="jq/jquery-3.1.0.js"/>
+<!--    <script type="text/javascript" src="js/script.js"></script>-->
     <!-- base href="https://demo.phppointofsale.com/" -->
 
+
+
     <link rel="icon" href="https://demo.phppointofsale.com/favicon.ico" type="image/x-icon">
+
+
+    <script>
+        $(document).ready(function(){
+
+
+            function autocomplet() {
+                var min_length = 0; // min caracters to display the autocomplete
+                var keyword = $('#item').val();
+                if (keyword.length >= min_length) {
+                    $.ajax({
+                        url: 'clsGetProductForSale.php',
+                        type: 'POST',
+                        data: {keyword:keyword},
+                        success:function(data){
+                            $('#country_list_id').show();
+                            $('#country_list_id').html(data);
+                        }
+                    });
+                } else {
+                    $('#country_list_id').hide();
+                }
+            }
+
+            // set_item : this function will be executed when we select an item
+            function set_item(item) {
+                // change input value
+                $('#item').val(item);
+                // hide proposition list
+                $('#country_list_id').hide();
+            }
+        });
+    </script>
+
     <script type="text/javascript">
         var SITE_URL= "https://demo.phppointofsale.com/index.php";
         var BASE_URL= "https://demo.phppointofsale.com/";
@@ -107,7 +147,7 @@
                 var language_id = $(this).data('language-id');
                 $.ajax({
                     type: 'POST',
-                    url: 'https://demo.phppointofsale.com/index.php/employees/set_language',
+                    url: '#',
                     data: {
                         'employee_language_id': language_id,
                     },
@@ -360,7 +400,12 @@
 
 						<span class="input-group-addon">
 							<a href="https://demo.phppointofsale.com/index.php/items/view/-1/1/sale" class="none add-new-item" title="New Item" id="new-item" tabindex="-1"><i class="icon ti-pencil-alt"></i></a>						</span>
-                                            <span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" id="item" name="item" class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
+                                            <span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span>
+
+
+
+                                            <input autocomplete="off" id="item" name="item" onkeyup="autocomplet()"class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
+                                            <ul id="country_list_id"></ul>
 
                                             <div class="input-group-addon register-mode sale-mode dropdown">
                                                 <a href="https://demo.phppointofsale.com/index.php/#" class="none active" tabindex="-1" title="Sale" id="select-mode-2" data-target="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"><i class="icon ti-shopping-cart"></i>Sale</a>					        <ul class="dropdown-menu sales-dropdown">
@@ -665,7 +710,7 @@
                                 {
                                     if(response.success)
                                     {
-                                        window.location.href = 'https://demo.phppointofsale.com/index.php/sales/receipt/'+$("#sale_id").val();
+                                        window.location.href = 'http://webpos-project.azurewebsites.net/index.php/sales/receipt/'+$("#sale_id").val();
                                     }
                                     else
                                     {
@@ -681,7 +726,7 @@
                             e.preventDefault();
 
                             $('.selected-tier').html($(this).text());
-                            $.post('https://demo.phppointofsale.com/index.php/sales/set_tier_id', {tier_id: $(this).data('value')}, function(response)
+                            $.post('http://webpos-project.azurewebsites.net/index.php/sales/set_tier_id', {tier_id: $(this).data('value')}, function(response)
                             {
                                 $('.item-tiers').slideToggle("fast", function()
                                 {
