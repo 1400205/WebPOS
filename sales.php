@@ -21,7 +21,7 @@
 
             function autocomplet() {
                 var min_length = 0; // min caracters to display the autocomplete
-                var keyword = $('#item').val();
+                var keyword = $('#country_id').val();
                 if (keyword.length >= min_length) {
                     $.ajax({
                         url: 'clsGetProductForSale.php',
@@ -40,7 +40,7 @@
             // set_item : this function will be executed when we select an item
             function set_item(item) {
                 // change input value
-                $('#item').val(item);
+                $('#country_id').val(item);
                 // hide proposition list
                 $('#country_list_id').hide();
             }
@@ -404,7 +404,7 @@
 
 
 
-                                            <input autocomplete="off" id="item" name="item" onkeyup="autocomplet()"class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
+                                            <input autocomplete="off" id="country_id" name="item" onkeyup="autocomplet()"class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
                                             <ul id="country_list_id"></ul>
 
                                             <div class="input-group-addon register-mode sale-mode dropdown">
