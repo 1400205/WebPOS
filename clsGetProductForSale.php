@@ -22,10 +22,7 @@ include ("connect.php");
 
 $keyword = '%'.$_POST['keyword'].'%';
 
-$stmt = $sqlcon->prepare("SELECT s.productID,p.partName,p.partNumber,p.barcode,s.stuckqty,s.sellPrice,s.discount
-                               
-                                FROM product p 
-                                INNER JOIN suppliedStuck s on p.productID=s.productID  WHERE  p.partName=? ORDER BY s.productID ASC LIMIT 0, 10");
+$stmt = $sqlcon->prepare("SELECT partName FROM product WHERE partName=? ORDER BY productID ASC LIMIT 0, 10");
      $stmt->bind_param('s', $keyword);
 
     $stmt->execute();
@@ -38,15 +35,6 @@ foreach ($result as $rs) {
     // add new option
     echo '<li onclick="set_item(\''.str_replace("'", "\'", $rs['partName']).'\')">'.$partName.'</li>';
 }
-
-
-
-    // $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-    $partName="%{$_GET["partName"]}%";
-    //$surname=$_POST["surname"];
-
-
-
 
 
 ?>
