@@ -188,7 +188,9 @@ include ("clsAddSuppliedProducts.php");
                 <br>
                 <label>Date Supplied:</label><br>
                 <input type="date" name="dateSupplied" class="input username" placeholder="Enter Date Supplied"/>  <br>
-
+                <br>
+                <input type="number" min="0" step="any" name="reorderLevel" class="input username" placeholder="Enter Reorder Level"/>  <br>
+                <label>Currency:</label><br>
                 <div class="footer">
                     <input type="submit" class="button" name="submit" value="Submit" /><br>
 

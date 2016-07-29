@@ -39,6 +39,7 @@ if(isset($_POST['submit']))
     $markupID=$_POST["markup"];
     $suppliedDate = $_POST["dateSupplied"];
     $invoiceNumber=$_POST["invoiceNumber"];
+    $reorderLevel=$_POST["reorderLevel"];
 
 
 
@@ -155,15 +156,20 @@ if(isset($_POST['submit']))
         $invoiceNumber=mysqli_real_escape_string($db,$invoiceNumber);
         $invoiceNumber = htmlspecialchars($invoiceNumber);
         $invoiceNumber = trim($invoiceNumber);
+//clean input
+        $reorderLevel = stripslashes( $reorderLevel );
+        $reorderLevel=mysqli_real_escape_string($db,$reorderLevel);
+        $reorderLevel = htmlspecialchars($reorderLevel);
+        $reorderLevel = trim($reorderLevel);
 
 
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO suppliedStuck (supplierID, productID,stuckqty,sellPrice,costPrice,shelfID,
-                                                    taxID1,taxID2,discount,markup,invoiceNumber,
-                                                    suppliedDate,userid) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)"))){
+                                                    taxID1,taxID2,discount,markup,invoiceNumber,reorderLevel,
+                                                    suppliedDate,userid) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('iidddiiiddssi',$supplierID, $productID, $qty,$sellPrice,$costPrice,$shelfID,$taxID1,$taxID2,
-                $discountID,$markupID,$invoiceNumber
+            $stmt->bind_param('iidddiiiddsisi',$supplierID, $productID, $qty,$sellPrice,$costPrice,$shelfID,$taxID1,$taxID2,
+                $discountID,$markupID,$invoiceNumber,$reorderLevel
                 ,$suppliedDate, $userid);
             if( $stmt->execute()){
                 $error="SUCCESS! "."Record Added Successfully.";
