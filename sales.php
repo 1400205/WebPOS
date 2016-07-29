@@ -14,12 +14,13 @@
 
     <link rel="icon" href="https://demo.phppointofsale.com/favicon.ico" type="image/x-icon">
 
-
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     <script>
         $(document).ready(function(){
 
 
-            function autocomplet() {
+            /*function autocomplet() {
                 var min_length = 0; // min caracters to display the autocomplete
                 var keyword = $('#country_id').val();
                 if (keyword.length >= min_length) {
@@ -43,7 +44,9 @@
                 $('#country_id').val(item);
                 // hide proposition list
                 $('#country_list_id').hide();
-            }
+            }*/
+
+          
         });
     </script>
 
@@ -404,7 +407,7 @@
 
 
 
-                                            <input autocomplete="off" id="country_id" name="item" onkeyup="autocomplet()"class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
+                                            <input autocomplete="off" id="country_id" name="keyword" onkeyup="autocomplet()"class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
                                             <ul id="country_list_id"></ul>
 
                                             <div class="input-group-addon register-mode sale-mode dropdown">
