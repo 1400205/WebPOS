@@ -4,7 +4,7 @@ function autocomplet() {
 	var keyword = $('#country_id').val();
 	if (keyword.length >= min_length) {
 		$.ajax({
-			url: 'ajax_refresh.php',
+			url: 'clsGetProductForSale.php',
 			type: 'POST',
 			data: {keyword:keyword},
 			success:function(data){
