@@ -22,7 +22,7 @@ include ("connect.php");
 
 $keyword = '%'.$_POST['keyword'].'%';
 
-$stmt = $sqlcon->prepare("SELECT p.partName,s.sellPrice FROM product p INNER JOIN stucksupplied s on p.productID=s.productID WHERE p.partName LIKE ? ORDER BY productID ASC LIMIT 0, 10");
+$stmt = $sqlcon->prepare("SELECT p.partName,s.sellPrice FROM product p INNER JOIN suppliedstuck s on p.productID=s.productID WHERE p.partName LIKE ? ORDER BY productID ASC LIMIT 0, 10");
      $stmt->bind_param('s', $keyword);
 
     $stmt->execute();
