@@ -396,7 +396,7 @@ include ("clsGetCustomerID.php");
                                             <label>QUANTITY:</label> <br>
                                             <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
 
-                                            <input autocomplete="off" id="customerID" name="customerID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
+                                            <input autocomplete="off" id="customerID" name="customerID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" ><br>
 
                                             <button type="button" id="getCustomer" class="btn btn-block btn-primary" onclick="alert('Hello world!')">Sell All</button>
 
