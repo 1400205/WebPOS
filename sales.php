@@ -2,7 +2,7 @@
 include ("myglobal.php");
 //include ("clsGetProduct.php");
 include ("clsGetCustomerID.php");
-include ("clsAddCart.php");
+
 ?>
 <!DOCTYPE html>
 <html class="english">
