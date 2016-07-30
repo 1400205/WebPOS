@@ -32,10 +32,11 @@ $stmt = $sqlcon->prepare("SELECT p.partName,s.sellPrice FROM product p INNER JOI
 foreach ($result as $rs) {
     // put in bold the written text
     $partName = str_replace($_POST['keyword'], '<b>'.$_POST['keyword'].'</b>', $rs['partName']);
+    $price=$rs['s.sellPrice'];
     // add new option
-    echo '<br>';
-    echo '<li onclick="set_item(\''.str_replace("'", "\'", $rs['partName']).'\')">'.$partName.'</li>';
-    echo '<br>';
+
+    echo '<li onclick="set_item(\''.str_replace("'", "\'", $rs['partName']).'\')">'.$partName.' '.$price.'</li>';
+
 }
 
 
