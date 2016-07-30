@@ -28,14 +28,17 @@ include ("clsGetCustomerID.php");
 
 
             $("#item_id").change(function() {
-                var customerID = '<?php echo $resultText; ?>';
-               $("#customerID").val(customerID));
+               // var customerID = '<?php echo $resultText; ?>';
+               //$("#customerID").val(customerID));
+                $("#customerID").load("clsGetShelfID.php");
+                $("#customerID").val(<?php echo $resultText; ?>)
+
 
             });
-        $("#shelfName").change(function() {
+       /* $("#shelfName").change(function() {
             $("#shelfID").load("clsGetShelfID.php?shelfName=" + $("#shelfName").val());
 
-        });
+        });*/
         });
     </script>
 
@@ -403,7 +406,7 @@ include ("clsGetCustomerID.php");
 
                                             <Select name="customerID"id="customerID" >
 
-            
+
 
                                             </Select>
 
