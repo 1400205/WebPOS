@@ -29,13 +29,14 @@ $stmt = $sqlcon->prepare("SELECT p.partName,s.sellPrice FROM product p INNER JOI
     //get result
     $result = $stmt->get_result();
 
-foreach ($result as $rs) {
+//foreach ($result as $rs) {
+while ($row = $result->fetch_row()) {
     // put in bold the written text
-    $partName = str_replace($_POST['keyword'], '<b>'.$_POST['keyword'].'</b>', $rs['partName']);
+    $partName = str_replace($_POST['keyword'], '<b>'.$_POST['keyword'].'</b>', $row['partName']);
 
     // add new option
 
-    echo '<li onclick="set_item(\''.str_replace("'", "\'", $rs['partName']).'\')">'.$partName.' '.$rs[1].'</li>';
+    echo '<li onclick="set_item(\''.str_replace("'", "\'", $row['partName']).'\')">'.$partName.' '.$row[1].'</li>';
 
 }
 
