@@ -28,6 +28,7 @@ $userid= $_SESSION["userid"];
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/jscart.js"></script>
     <script>
         $(document).ready(function(){
 
@@ -413,7 +414,7 @@ $userid= $_SESSION["userid"];
 
 
 
-                                            <button type="submit" id="getCustomer" class="btn btn-block btn-primary" onclick="alert('Hello world!')">Add Item</button>
+                                            <button type="button" id="getCustomer" class="btn btn-block btn-primary" onclick="alert('Hello world!')">Add Item</button>
 
 
 

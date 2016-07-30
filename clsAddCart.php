@@ -25,10 +25,10 @@ include ("myglobal.php");
 $username= $_SESSION["uname"];
 $userid= $_SESSION["userid"];
 
+$choice = '%'.$_POST['keyword'].'%';
 
-$choice="%{$_GET['choice']}%";
 $qty=$_POST['myqty'];
-$shoppingID=$_POST['shoppingID'];
+$shoppingID=$_POST['customerID'];
 
 $choice = stripslashes( $choice );
 $choice=mysqli_real_escape_string($db,$choice);
