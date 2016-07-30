@@ -410,7 +410,7 @@ include ("clsGetCustomerID.php");
 
 
 
-                                            <button type="button" id="getCustomer" class="btn btn-block btn-primary" onclick="alert('Hello world!')">Sell All</button>
+                                            <button type="button" id="getCustomer" class="btn btn-block btn-primary" onclick="addRecord()">Sell All</button>
 
 
 

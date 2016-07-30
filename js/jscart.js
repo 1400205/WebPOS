@@ -6,7 +6,7 @@ function addRecord() {
    // var min_length = 0; // min caracters to display the autocomplete
     var keyword = $('#item_id').val();
     if (keyword.length >= min_length) {
-       $("#button").click(function(){
+       $("#getCustomer").click(function(){
 
            $.ajax({
                url: 'clsAddCart.php',
