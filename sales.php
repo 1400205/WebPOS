@@ -2,6 +2,11 @@
 include ("myglobal.php");
 //include ("clsGetProduct.php");
 include ("clsGetCustomerID.php");
+include ("clsAddCart.php");
+
+//get user session name and id
+$username= $_SESSION["uname"];
+$userid= $_SESSION["userid"];
 ?>
 <!DOCTYPE html>
 <html class="english">
@@ -369,7 +374,7 @@ include ("clsGetCustomerID.php");
                                 <div class="item-form">
                                     <!-- Item adding form -->
 
-                                    <form action="https://demo.phppointofsale.com/index.php/sales/add" id="add_item_form" class="form-inline" autocomplete="off" method="post" accept-charset="utf-8">
+                                    <form action="" id="add_item_form" class="form-inline" autocomplete="off" method="post" accept-charset="utf-8">
                                         <div class="input-group input-group-mobile contacts">
 						<span class="input-group-addon">
 							<a href="https://demo.phppointofsale.com/index.php/items/view/-1/1/sale" class="none add-new-item" title="New Item" id="new-item-mobile" tabindex="-1"><i class="icon ti-pencil-alt"></i> <span class="register-btn-text">New Item</span></a>						</span>
@@ -404,7 +409,7 @@ include ("clsGetCustomerID.php");
                                             <label>QUANTITY:</label> <br>
                                             <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
 
-                                            <input autocomplete="off" id="customerID" name="customerID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value=<?php echo $resultText; ?> >
+                                            <input autocomplete="off" id="customerID" name="customerID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value="10001" >
 
 
 
