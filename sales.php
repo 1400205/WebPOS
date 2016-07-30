@@ -3,10 +3,6 @@ include ("myglobal.php");
 //include ("clsGetProduct.php");
 include ("clsGetCustomerID.php");
 include ("clsAddCart.php");
-
-//get user session name and id
-$username= $_SESSION["uname"];
-$userid= $_SESSION["userid"];
 ?>
 <!DOCTYPE html>
 <html class="english">
@@ -28,7 +24,6 @@ $userid= $_SESSION["userid"];
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-   // <script type="text/javascript" src="js/jscart.js"></script>
     <script>
         $(document).ready(function(){
 
@@ -375,7 +370,7 @@ $userid= $_SESSION["userid"];
                                 <div class="item-form">
                                     <!-- Item adding form -->
 
-                                    <form action="" id="add_item_form" class="form-inline" autocomplete="off" method="post" accept-charset="utf-8">
+                                    <form action="https://demo.phppointofsale.com/index.php/sales/add" id="add_item_form" class="form-inline" autocomplete="off" method="post" accept-charset="utf-8">
                                         <div class="input-group input-group-mobile contacts">
 						<span class="input-group-addon">
 							<a href="https://demo.phppointofsale.com/index.php/items/view/-1/1/sale" class="none add-new-item" title="New Item" id="new-item-mobile" tabindex="-1"><i class="icon ti-pencil-alt"></i> <span class="register-btn-text">New Item</span></a>						</span>
@@ -414,7 +409,7 @@ $userid= $_SESSION["userid"];
 
 
 
-                                            <button type="button" id="getCustomer" class="btn btn-block btn-primary" onclick="alert('Hello world!')">Add Item</button>
+                                            <button type="button" id="getCustomer" class="btn btn-block btn-primary" onclick="alert('Hello world!')">Sell All</button>
 
 
 
