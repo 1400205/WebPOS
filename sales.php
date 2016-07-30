@@ -28,7 +28,7 @@ $userid= $_SESSION["userid"];
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/jscart.js"></script>
+   // <script type="text/javascript" src="js/jscart.js"></script>
     <script>
         $(document).ready(function(){
 
