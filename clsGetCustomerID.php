@@ -46,7 +46,9 @@ if ($stmt = $sqlcon->prepare("SELECT MAX(customerID) FROM customer")) {
 
 if ($row = $result->fetch_row()) {
 
-    $resultText =$row[0] ;
+//    $resultText =$row[0] ;
+
+    echo "<option>" . $row[0] . "</option>";
 
 }
 

@@ -12,6 +12,8 @@ include ("clsGetCustomerID.php");
     <link rel="icon" href="https://demo.phppointofsale.com/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> <!--320-->
     <script src="jq/jquery-3.1.0.js"/>
+
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
 <!--    <script type="text/javascript" src="js/script.js"></script>-->
     <!-- base href="https://demo.phppointofsale.com/" -->
 
@@ -30,7 +32,10 @@ include ("clsGetCustomerID.php");
                $("#customerID").val(customerID));
 
             });
-          
+        $("#shelfName").change(function() {
+            $("#shelfID").load("clsGetShelfID.php?shelfName=" + $("#shelfName").val());
+
+        });
         });
     </script>
 
@@ -396,7 +401,11 @@ include ("clsGetCustomerID.php");
                                             <label>QUANTITY:</label> <br>
                                             <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
 
-                                            <input autocomplete="off" id="customerID" name="customerID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" ><br>
+                                            <Select name="customerID"id="customerID" >
+
+            
+
+                                            </Select>
 
                                             <button type="button" id="getCustomer" class="btn btn-block btn-primary" onclick="alert('Hello world!')">Sell All</button>
 
