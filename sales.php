@@ -413,7 +413,7 @@ $userid= $_SESSION["userid"];
 
 
 
-                                            <button type="button" id="getCustomer" class="btn btn-block btn-primary" onclick="alert('Hello world!')">Sell All</button>
+                                            <button type="submit" id="getCustomer" class="btn btn-block btn-primary" onclick="alert('Hello world!')">Add Item</button>
 
 
 
