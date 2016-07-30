@@ -1,3 +1,8 @@
+<?php
+include ("myglobal.php");
+//include ("clsGetProduct.php");
+include ("clsGetCustomerID.php");
+?>
 <!DOCTYPE html>
 <html class="english">
 
@@ -20,32 +25,11 @@
         $(document).ready(function(){
 
 
-            /*function autocomplet() {
-                var min_length = 0; // min caracters to display the autocomplete
-                var keyword = $('#country_id').val();
-                if (keyword.length >= min_length) {
-                    $.ajax({
-                        url: 'clsGetProductForSale.php',
-                        type: 'POST',
-                        data: {keyword:keyword},
-                        success:function(data){
-                            $('#country_list_id').show();
-                            $('#country_list_id').html(data);
-                        }
-                    });
-                } else {
-                    $('#country_list_id').hide();
-                }
-            }
+            $("#item_id").change(function() {
+                var customerID = '<?php echo $resultText; ?>';
+               $("#customerID").val(customerID));
 
-            // set_item : this function will be executed when we select an item
-            function set_item(item) {
-                // change input value
-                $('#country_id').val(item);
-                // hide proposition list
-                $('#country_list_id').hide();
-            }*/
-
+            });
           
         });
     </script>
@@ -411,6 +395,8 @@
                                             <ul id="item_list_id"></ul>
                                             <label>QUANTITY:</label> <br>
                                             <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
+
+                                            <input autocomplete="off" id="customerID" name="customerID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
 
                                             <button type="button" id="getCustomer" class="btn btn-block btn-primary" onclick="alert('Hello world!')">Sell All</button>
 

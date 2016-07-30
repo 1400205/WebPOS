@@ -67,9 +67,7 @@ if ($row = $result->fetch_row()) {
     $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,shoppingID,userID) VALUES (?,?,?,?)");
     //bind parameter
     $stmt->bind_param('idsi',$row[0], $qty,$userid,$shoppingID,$userid);
-
-   
-
+    
 }
 
 
