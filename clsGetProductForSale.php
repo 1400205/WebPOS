@@ -36,7 +36,7 @@ while ($row = $result->fetch_row()) {
 
     // add new option
 
-    echo '<li onclick="set_item(\''.str_replace("'", "\'", $row[0]).'\')">'.$partName.'</li>';
+    echo '<li onclick="set_item(\''.str_replace("'", "\'", $row[0]).'\')">'.$partName.'GHS'.$row[1].'</li>';
 
 }
 
