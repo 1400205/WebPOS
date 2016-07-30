@@ -407,8 +407,8 @@
 
 
 
-                                            <input autocomplete="off" id="country_id" name="keyword" onkeyup="autocomplet()"class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
-                                            <ul id="country_list_id"></ul>
+                                            <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet()"class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
+                                            <ul id="item_list_id"></ul>
                                             <label>QUANTITY:</label>
                                             <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1">
 
