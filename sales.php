@@ -412,7 +412,7 @@
                                             <label>QUANTITY:</label> <br>
                                             <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
 
-                                            <button type="button" id="getCustomer" onclick="alert('Hello world!')">Click Me!</button>
+                                            <button type="button" id="getCustomer" class="btn btn-block btn-primary" onclick="alert('Hello world!')">Sell All</button>
 
 
 
