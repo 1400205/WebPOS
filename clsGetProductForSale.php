@@ -33,9 +33,9 @@ foreach ($result as $rs) {
     // put in bold the written text
     $partName = str_replace($_POST['keyword'], '<b>'.$_POST['keyword'].'</b>', $rs['partName']);
     // add new option
-    echo '<ol>';
+    echo '<br>';
     echo '<li onclick="set_item(\''.str_replace("'", "\'", $rs['partName']).'\')">'.$partName.'</li>';
-    echo '</ol>';
+    echo '<br>';
 }
 
 
