@@ -409,6 +409,9 @@
 
                                             <input autocomplete="off" id="country_id" name="keyword" onkeyup="autocomplet()"class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
                                             <ul id="country_list_id"></ul>
+                                            <label>QUANTITY:</label>
+                                            <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1">
+
 
                                             <div class="input-group-addon register-mode sale-mode dropdown">
                                                 <a href="https://demo.phppointofsale.com/index.php/#" class="none active" tabindex="-1" title="Sale" id="select-mode-2" data-target="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"><i class="icon ti-shopping-cart"></i>Sale</a>					        <ul class="dropdown-menu sales-dropdown">
