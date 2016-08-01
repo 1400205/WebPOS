@@ -47,7 +47,8 @@ include ("clsAddCart.php");
             function $("#button").click(function()
             {
 
-                var myItem=document.getElementById( "item_id" );
+                var myItem=$('#item_id').val();
+                   // document.getElementById( "item_id" );
 
                 if(myItem)
                 {
@@ -71,6 +72,11 @@ include ("clsAddCart.php");
                 {
                     $( '#display_info' ).html("Record not found");
                 }
+
+                $("#button").click(function() {
+                    $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
+
+                });
 
             }
 
