@@ -28,11 +28,11 @@ include ("login.php");
         }
     </script>-->
 
-    <script type="text/javascript">
+   <!-- <script type="text/javascript">
         if (top.location != location) {
             top.location.href = document.location.href ;
         }
-    </script>
+    </script>-->
 </head>
 
 <body>
