@@ -42,7 +42,41 @@ include ("clsAddCart.php");
             $("#shelfID").load("clsGetShelfID.php?shelfName=" + $("#shelfName").val());
 
         });*/
-        });
+
+
+            function loaddata()
+            {
+
+                var myItem=document.getElementById( "item_id" );
+
+                if(myItem)
+                {
+                    $.ajax({
+                        type: 'post',
+                        url: 'clsAddCart.php',
+                        data: {
+                            keyword:myItem,
+                        },
+                        success: function (response) {
+
+                            // We get the element having id of display_info and put the response inside it
+                            $( '#display_info' ).html(response);
+
+                        }
+                    });
+
+                }
+
+                else
+                {
+                    $( '#display_info' ).html("Record not found");
+                }
+
+            }
+
+
+
+    });
     </script>
 
     <script type="text/javascript">
@@ -405,12 +439,16 @@ include ("clsAddCart.php");
 
 
 
-                                            <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet()"class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
+                                            <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet();loaddata();"class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
                                             <ul id="item_list_id"></ul>
                                             <label>QUANTITY:</label> <br>
                                                 <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
 
                                             <input autocomplete="off" id="customerID" name="customerID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value="10001" >
+
+                                            <div id="display_info" >
+
+                                            </div>
 
 
 

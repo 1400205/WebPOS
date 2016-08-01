@@ -25,52 +25,52 @@ include ("myglobal.php");
 $username= $_SESSION["uname"];
 $userid= $_SESSION["userid"];
 
-$choice = '%'.$_POST['keyword'].'%';
+if( isset( $_POST['keyword'] ) ) {
+    $choice = $_POST['keyword'];
 
-$qty=$_POST['myqty'];
-$shoppingID=$_POST['customerID'];
+//$qty=$_POST['myqty'];
+//$shoppingID=$_POST['customerID'];
 
-$choice = stripslashes( $choice );
-$choice=mysqli_real_escape_string($db,$choice);
-$choice = htmlspecialchars($choice);
-$choice = trim($choice);
+    $choice = stripslashes($choice);
+    $choice = mysqli_real_escape_string($db, $choice);
+    $choice = htmlspecialchars($choice);
+    $choice = trim($choice);
 
-$qty = stripslashes( $qty );
-$qty=mysqli_real_escape_string($db,$qty);
-$qty = htmlspecialchars($qty);
-$qty = trim($qty);
-
-
-$shoppingID = stripslashes( $shoppingID );
-$shoppingID=mysqli_real_escape_string($db,$shoppingID);
-$shoppingID = htmlspecialchars($shoppingID);
-$shoppingID = trim($shoppingID);
+    $qty = stripslashes($qty);
+    $qty = mysqli_real_escape_string($db, $qty);
+    $qty = htmlspecialchars($qty);
+    $qty = trim($qty);
 
 
-$msg="";
+    $shoppingID = stripslashes($shoppingID);
+    $shoppingID = mysqli_real_escape_string($db, $shoppingID);
+    $shoppingID = htmlspecialchars($shoppingID);
+    $shoppingID = trim($shoppingID);
 
+
+    $msg = "";
 
 
 //prepare statement
-if ($stmt = $sqlcon->prepare("SELECT productID FROM product where partName LIKE ?")) {
-    $stmt->bind_param('s', $choice);
+    if ($stmt = $sqlcon->prepare("SELECT productID FROM product where partName LIKE ?")) {
+        $stmt->bind_param('s', $choice);
 
-    $stmt->execute();
-    //get result
-    $result = $stmt->get_result();
-}else{
-    $msg = "SELECTION FAIL: Contact System Admin";
+        $stmt->execute();
+        //get result
+        $result = $stmt->get_result();
+    } else {
+        $msg = "SELECTION FAIL: Contact System Admin";
+    }
+
+    if ($row = $result->fetch_row()) {
+
+        /* $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,shoppingID,userID) VALUES (?,?,?,?)");
+         //bind parameter
+         $stmt->bind_param('idsi',$row[0], $qty,$shoppingID,$userid);*/
+
+        echo '<p>' . $row[0] . '</p>';
+
+    }
+
 }
-
-if ($row = $result->fetch_row()) {
-
-   /* $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,shoppingID,userID) VALUES (?,?,?,?)");
-    //bind parameter
-    $stmt->bind_param('idsi',$row[0], $qty,$shoppingID,$userid);*/
-
-       $selectedProduct =$row;
-
-}
-
-
 
