@@ -25,6 +25,7 @@ try{
             $error= "Both fields are required.";
         }else {
 
+
             $username = $_POST['username'];
             $password = $_POST['password'];
             $result=0;
@@ -35,14 +36,23 @@ try{
             $username=mysqli_real_escape_string($db,$username);
             $username = htmlspecialchars($username);
             $username = trim($username);
-            
+
             // $password=md5($password);
             $_SESSION["uname"] = $username;
 
             if (!($sqlcon->connect_errno)){
-                $error="Connection Failed, Incorrect User Name Or Password";
+
+                $stmt=$sqlcon->prepare("UPDATE WebPOS_user SET loginAttempt=loginAttempt+1");
+                $stmt->execute();
+                $error=" Incorrect User Name Or Password";
             }
 
+
+
+
+            // $sql="SELECT userID,typeAdmin,userStatus FROM WebPOS_user WHERE username='$username' and password='$password'";
+
+            //prepare statement
             if($stmt=$sqlcon->prepare("SELECT userID,typeAdmin,userStatus FROM WebPOS_user WHERE username=? and password=?")){
                 //bind parameter
                 $stmt->bind_param('ss',$username,$password);
