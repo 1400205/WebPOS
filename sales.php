@@ -57,10 +57,10 @@ include ("clsAddCart.php");
                         data: {
                             keyword:myItem,
                         },
-                        success: function (response) {
+                        success: function (data) {
 
                             // We get the element having id of display_info and put the response inside it
-                            $( '#display_info' ).html(response);
+                            $( '#display_info' ).html(data);
 
                         }
                     });
@@ -447,7 +447,7 @@ include ("clsAddCart.php");
                                             <input autocomplete="off" id="customerID" name="customerID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value="10001" >
 
                                             <div id="display_info" >
-                                                
+
 
                                             </div>
 
