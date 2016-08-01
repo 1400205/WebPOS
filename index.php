@@ -19,12 +19,18 @@ include ("login.php");
 
     <style id="antiClickjack">body{display:none !important;}</style>
 
-    <script type="text/javascript">
+   <!-- <script type="text/javascript">
         if (self === top) {
             var antiClickjack = document.getElementById("antiClickjack");
             antiClickjack.parentNode.removeChild(antiClickjack);
         } else {
             top.location = self.location;
+        }
+    </script>-->
+
+    <script type="text/javascript">
+        if (top.location != location) {
+            top.location.href = document.location.href ;
         }
     </script>
 </head>
