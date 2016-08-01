@@ -42,7 +42,8 @@ try{
 
             if (!($sqlcon->connect_errno)){
 
-                $stmt=$sqlcon->prepare("UPDATE WebPOS_user SET loginAttempt=loginAttempt+1");
+                $stmt=$sqlcon->prepare("UPDATE WebPOS_user SET loginAttempt=loginAttempt+1 WHERE username=?  ");
+                $stmt->bind_param('s',$username);
                 $stmt->execute();
                 $error=" Incorrect User Name Or Password";
             }
