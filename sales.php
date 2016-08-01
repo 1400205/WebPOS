@@ -414,7 +414,7 @@ include ("clsAddCart.php");
 
 
 
-                                            <button type="button" onkeydown="getSelectedProduct()" id="getCustomer" class="btn btn-block btn-primary" onclick="addRecord()">Sell All</button>
+                                            <button type="submit" onkeydown="getSelectedProduct()" id="getCustomer" class="btn btn-block btn-primary" onclick="addRecord()">Sell All</button>
 
 
 
