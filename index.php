@@ -17,7 +17,7 @@ include ("login.php");
 
     <link rel="stylesheet" href="css/style-login.css">
 
-    <style id="antiClickjack">body{display:none !important;}</style>
+<!--    <style id="antiClickjack">body{display:none !important;}</style>-->
 
    <!-- <script type="text/javascript">
         if (self === top) {
