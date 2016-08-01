@@ -25,16 +25,16 @@ include ("myglobal.php");
 $username= $_SESSION["uname"];
 $userid= $_SESSION["userid"];
 
-if( isset( $_POST['keyword'] ) ) {
+
     $choice = $_POST['keyword'];
 
 //$qty=$_POST['myqty'];
 //$shoppingID=$_POST['customerID'];
 
-    $choice = stripslashes($choice);
+    /*$choice = stripslashes($choice);
     $choice = mysqli_real_escape_string($db, $choice);
     $choice = htmlspecialchars($choice);
-    $choice = trim($choice);
+    $choice = trim($choice);*/
 
     $qty = stripslashes($qty);
     $qty = mysqli_real_escape_string($db, $qty);
@@ -52,7 +52,7 @@ if( isset( $_POST['keyword'] ) ) {
 
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT productID FROM product where partName LIKE ?")) {
+    if ($stmt = $sqlcon->prepare("SELECT productID FROM product where partName = ?")) {
         $stmt->bind_param('s', $choice);
 
         $stmt->execute();
@@ -72,5 +72,5 @@ if( isset( $_POST['keyword'] ) ) {
 
     }
 
-}
+
 

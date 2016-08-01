@@ -453,7 +453,7 @@ include ("clsAddCart.php");
 
 
 
-                                            <button type="button"  id="button" class="btn btn-block btn-primary"> All Item To Cart</button>
+                                            <button type="button"  id="button" class="btn btn-block btn-primary"> Add Item To Cart</button>
 
 
 
