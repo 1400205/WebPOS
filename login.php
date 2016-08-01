@@ -24,7 +24,16 @@ try{
         {
             $error= "Both fields are required.";
         }else {
+
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $result=0;
             if (!($sqlcon->connect_errno)){
+
+                $stmt=$sqlcon->prepare("UPDATE WebPOS_user SET loginAttempt=loginAttempt+1 WHERE username=?  ");
+                $stmt->bind_param('s',$username);
+                $stmt->execute();
+                $error=" Incorrect User Name Or Password";
                 $error="Connection Failed, Incorrect User Name Or Password";
             }
 
