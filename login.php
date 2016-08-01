@@ -127,7 +127,7 @@ try{
                 }
                 elseif ( $userstatus==0 )
                 {
-                    $error= "Your user account is pending approval";
+                    $error= "Account Disabled! Contact System Admin";
                 }
                 else
                 {
