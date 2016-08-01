@@ -64,9 +64,11 @@ if ($stmt = $sqlcon->prepare("SELECT productID FROM product where partName LIKE 
 
 if ($row = $result->fetch_row()) {
 
-    $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,shoppingID,userID) VALUES (?,?,?,?)");
+   /* $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,shoppingID,userID) VALUES (?,?,?,?)");
     //bind parameter
-    $stmt->bind_param('idsi',$row[0], $qty,$shoppingID,$userid);
+    $stmt->bind_param('idsi',$row[0], $qty,$shoppingID,$userid);*/
+
+       $resultText =&$row;
 
 }
 
