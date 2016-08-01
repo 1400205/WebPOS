@@ -630,12 +630,13 @@ include ("clsGetCustomerID.php");
                                 <h4 class="modal-title" id="lookUpReceipt">Lookup Receipt</h4>
                             </div>
                             <div class="modal-body">
-                                <form action="https://demo.phppointofsale.com/index.php/sales/receipt_validate" class="look-up-receipt-form" autocomplete="off" method="post" accept-charset="utf-8">
+                              <!--  <form action="https://demo.phppointofsale.com/index.php/sales/receipt_validate" class="look-up-receipt-form" autocomplete="off" method="post" accept-charset="utf-8">
 
                                     <span class="text-danger text-center has-error look-up-receipt-error"></span>
                                     <input class="form-control text-center" name="sale_id" id="sale_id" placeholder="Sale ID" type="text">
                                     <input name="submit_look_up_receipt_form" value="Lookup Receipt" class="btn btn-block btn-primary" type="submit">
-                                </form>	        </div>
+                                </form>	  -->
+                            </div>
                         </div><!-- /.modal-content -->
                     </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
