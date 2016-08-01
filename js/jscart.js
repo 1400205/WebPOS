@@ -32,11 +32,9 @@ function getSelectedProduct() {
             type: 'POST',
             data: {keyword:keyword},
             success:function(data){
-                $('#item_list_id').show();
-                $('#item_list_id').html(data);
+                // $('#item_list_id').show();
+                //  $('#item_list_id').html(data);
             }
         });
-    } else {
-        $('#item_list_id').hide();
     }
 }
