@@ -44,7 +44,7 @@ include ("clsAddCart.php");
         });*/
 
 
-            function loaddata()
+            function $("#button").click(function()
             {
 
                 var myItem=document.getElementById( "item_id" );
@@ -57,10 +57,10 @@ include ("clsAddCart.php");
                         data: {
                             keyword:myItem,
                         },
-                        success: function (data) {
+                        success: function (response) {
 
                             // We get the element having id of display_info and put the response inside it
-                            $( '#display_info' ).html(data);
+                            $( '#display_info' ).html(response);
 
                         }
                     });
@@ -453,7 +453,7 @@ include ("clsAddCart.php");
 
 
 
-                                            <button type="button" onclick="loaddata()" id="getCustomer" class="btn btn-block btn-primary">Sell All</button>
+                                            <button type="button"  id="button" class="btn btn-block btn-primary"> All Item To Cart</button>
 
 
 
