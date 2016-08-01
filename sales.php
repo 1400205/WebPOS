@@ -453,7 +453,7 @@ include ("clsAddCart.php");
                                             <input autocomplete="off" id="customerID" name="customerID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value="10001" >
 
                                             <div id="display_info" >
-                                              <?php  echo $selctedProduct; ?>
+<!--                                              --><?php // echo $selctedProduct; ?>
 
                                             </div>
 
