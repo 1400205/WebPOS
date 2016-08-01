@@ -439,7 +439,7 @@ include ("clsAddCart.php");
 
 
 
-                                            <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet();loaddata();"class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
+                                            <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet();"class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
                                             <ul id="item_list_id"></ul>
                                             <label>QUANTITY:</label> <br>
                                                 <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
@@ -452,7 +452,7 @@ include ("clsAddCart.php");
 
 
 
-                                            <button type="button" onclick="getSelectedProduct()" "getSelectedProduct()" id="getCustomer" class="btn btn-block btn-primary" onclick="addRecord()">Sell All</button>
+                                            <button type="button" onclick="loaddata()" id="getCustomer" class="btn btn-block btn-primary">Sell All</button>
 
 
 
