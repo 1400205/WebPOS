@@ -24,9 +24,9 @@ try{
         {
             $error= "Both fields are required.";
         }else {
-            if (!($sqlcon->connect_errno)){
-                $error="Connection Failed, Incorrect User Name Or Password";
-            }
+           // if (!($sqlcon->connect_errno)){
+            //    $error="Connection Failed, Incorrect User Name Or Password";
+            //}
 
 
             $username = $_POST['username'];
@@ -47,7 +47,10 @@ try{
             // $sql="SELECT userID,typeAdmin,userStatus FROM WebPOS_user WHERE username='$username' and password='$password'";
 
             //prepare statement
-            if($stmt=$sqlcon->prepare("SELECT userID,typeAdmin,userStatus FROM WebPOS_user WHERE username=? and password=?")){
+            if(!($stmt=$sqlcon->prepare("SELECT userID,typeAdmin,userStatus FROM WebPOS_user WHERE username=? and password=?"))){
+
+                $error="Connection Failed, Incorrect User Name Or Password";}
+                else{
                 //bind parameter
                 $stmt->bind_param('ss',$username,$password);
                 $stmt->execute();
