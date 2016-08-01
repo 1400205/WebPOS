@@ -39,19 +39,16 @@ try{
             // $password=md5($password);
             $_SESSION["uname"] = $username;
 
-           /* if (!($sqlcon->connect_errno)){
+            if (!($sqlcon->connect_errno)){
                 $error="Connection Failed, Incorrect User Name Or Password";
-            }*/
+            }
 
             if($stmt=$sqlcon->prepare("SELECT userID,typeAdmin,userStatus FROM WebPOS_user WHERE username=? and password=?")){
                 //bind parameter
                 $stmt->bind_param('ss',$username,$password);
-               if(!( $stmt->execute())){
-                    $error="Connection Failed, Incorrect User Name Or Password";
-                }else {
-                   //get result
-                   $result = $stmt->get_result();
-               }
+                $stmt->execute();
+                //get result
+                $result = $stmt->get_result();
             }
             // $result=mysqli_query($db,$sql);
 
