@@ -25,5 +25,6 @@ $companylogo="";
 
 $locationID=0;
 $productName="";
+$selctedProduct=0;
 
 

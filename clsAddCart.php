@@ -68,7 +68,7 @@ if ($row = $result->fetch_row()) {
     //bind parameter
     $stmt->bind_param('idsi',$row[0], $qty,$shoppingID,$userid);*/
 
-       $resultText =&$row;
+       $selectedProduct =$row;
 
 }
 

@@ -3,6 +3,7 @@ include ("myglobal.php");
 include ("clsGetCustomerID.php");
 include ("clsAddCart.php");
 
+
 ?>
 <!DOCTYPE html>
 <html class="english">
@@ -94,7 +95,7 @@ include ("clsAddCart.php");
         }
 
         $.fn.editableform.buttons =
-            '<button tabindex="-1" type="submit" class="btn btn-primary btn-sm editable-submit">'+
+            '<button tabindex="-1" type="submit"  class="btn btn-primary btn-sm editable-submit">'+
             '<i class="icon ti-check"></i>'+
             '</button>'+
             '<button tabindex="-1" type="button" class="btn btn-default btn-sm editable-cancel">'+
@@ -378,6 +379,9 @@ include ("clsAddCart.php");
                                             <div class="input-group-addon register-mode sale-mode dropdown">
                                                 <a href="https://demo.phppointofsale.com/index.php/#" class="none active" tabindex="-1" title="Sale" id="select-mode-1" data-target="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"><i class="icon ti-shopping-cart"></i> <span class="register-btn-text">Sale</span></a>					        <ul class="dropdown-menu sales-dropdown">
                                                     <li><a tabindex="-1" href="#" data-mode="return" class="change-mode">Return</a></li>
+                                                    <li><a tabindex="-1" href="#" data-mode="return" class="change-mode"><?php echo $selectedProduct ?></a></li>
+
+
                                                     <li><a tabindex="-1" href="#" data-mode="store_account_payment" class="change-mode">Store Account Payment</a></li>
                                                 </ul>
                                             </div>
@@ -404,13 +408,13 @@ include ("clsAddCart.php");
                                             <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet()"class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
                                             <ul id="item_list_id"></ul>
                                             <label>QUANTITY:</label> <br>
-                                            <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
+                                                <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
 
                                             <input autocomplete="off" id="customerID" name="customerID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value="10001" >
 
 
 
-                                            <button type="submit" id="getCustomer" class="btn btn-block btn-primary" onclick="addRecord()">Sell All</button>
+                                            <button type="button" onkeydown="getSelectedProduct()" id="getCustomer" class="btn btn-block btn-primary" onclick="addRecord()">Sell All</button>
 
 
 
