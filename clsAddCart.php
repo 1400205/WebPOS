@@ -67,6 +67,7 @@ $userid= $_SESSION["userid"];
         /* $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,shoppingID,userID) VALUES (?,?,?,?)");
          //bind parameter
          $stmt->bind_param('idsi',$row[0], $qty,$shoppingID,$userid);*/
+        $selctedProduct=$row[0] ;
 
         echo '<p>' . $row[0] . '</p>';
 
