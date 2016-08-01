@@ -61,6 +61,10 @@ try{
                     $attempt = $row[0];
                 }
              if ($attempt >3)   {
+
+                 $stmt=$sqlcon->prepare("UPDATE WebPOS_user SET userStatus=0 WHERE username=?  ");
+                 $stmt->bind_param('s',$username);
+                 $stmt->execute();
                  $error= "Your user account is disabled! Contact Admin";
 
              }
