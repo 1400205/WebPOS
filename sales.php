@@ -704,7 +704,7 @@ include ("clsGetCustomerID.php");
                             $( "#keyboardhelp" ).toggle();
                         });
 
-                        $.fn.editable.defaults.mode = 'popup';
+                        //$.fn.editable.defaults.mode = 'popup';
 
                         $('.fullscreen').on('click',function (e) {
                             e.preventDefault();
@@ -1299,14 +1299,14 @@ include ("clsGetCustomerID.php");
             $(document).ready(function()
             {
 
-                $(window).load(function()
+               /* $(window).load(function()
                 {
                     setTimeout(function()
                     {
                         $('.dismissfullscreen').click();
 
                     }, 0);
-                });
+                });*/
 
                 var current_category_id = null;
                 var current_tag_id = null;
