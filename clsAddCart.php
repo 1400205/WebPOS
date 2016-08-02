@@ -28,13 +28,13 @@ $userid= $_SESSION["userid"];
 
     $choice = $_POST['keyword'];
 
-//$qty=$_POST['myqty'];
-//$shoppingID=$_POST['customerID'];
+$qty=$_POST['myqty'];
+$tranID=$_POST['transID'];
 
-    /*$choice = stripslashes($choice);
+    $choice = stripslashes($choice);
     $choice = mysqli_real_escape_string($db, $choice);
     $choice = htmlspecialchars($choice);
-    $choice = trim($choice);*/
+    $choice = trim($choice);
 
     $qty = stripslashes($qty);
     $qty = mysqli_real_escape_string($db, $qty);
@@ -42,10 +42,10 @@ $userid= $_SESSION["userid"];
     $qty = trim($qty);
 
 
-    $shoppingID = stripslashes($shoppingID);
-    $shoppingID = mysqli_real_escape_string($db, $shoppingID);
-    $shoppingID = htmlspecialchars($shoppingID);
-    $shoppingID = trim($shoppingID);
+$tranID = stripslashes($tranID);
+$tranID = mysqli_real_escape_string($db, $tranID);
+$tranID = htmlspecialchars($tranID);
+$tranID = trim($tranID);
 
 
     $msg = "";
@@ -65,22 +65,25 @@ $userid= $_SESSION["userid"];
 
     if ($row = $result->fetch_row()) {
 
-        /* $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,shoppingID,userID) VALUES (?,?,?,?)");
-         //bind parameter
-         $stmt->bind_param('idsi',$row[0], $qty,$shoppingID,$userid);*/
-        $selctedProduct=$row[0] ;
-
         echo '<p>' . $row[0] . '</p>';
 
-        echo
+         $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID,userID) VALUES (?,?,?,?)");
+         //bind parameter
+         $stmt->bind_param('idsi',$row[0], $qty,$shoppingID,$userid);
+       // $selctedProduct=$row[0] ;
+        $stmt->execute();
 
-            "<script> 
+
+
+       /* echo
+
+            "<script>
         var proid =  " . $row[0] . ";
         var partname = ".$row[1]. ";
         var sprice =  " . $row[2] . ";
         var sqty =  " . $row[3] . ";
-        var disc =  " . $row[4] . ";  
-        </script>";
+        var disc =  " . $row[4] . ";
+        </script>";*/
 
     }
 
