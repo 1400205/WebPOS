@@ -46,7 +46,7 @@ include ("clsAddCart.php");
         });*/
 
 
-            $("#button").click(function()
+            $("#addCart").click(function()
             {
 
                 var myItem=$('#item_id').val();
@@ -475,7 +475,7 @@ include ("clsAddCart.php");
 
 
 
-                                            <button type="button"  id="button" class="btn btn-block btn-primary"> Add Item To Cart</button>
+                                            <input type="submit"  id="addCart" name="addCart" class="btn btn-block btn-primary"> Add Item To Cart</input>
 
 
 
