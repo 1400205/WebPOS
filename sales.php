@@ -13,9 +13,9 @@ include ("clsGetCustomerID.php");
     <meta charset="UTF-8"> <title>WebPOS | Easy to use Online POS Software</title>
     <link rel="icon" href="https://demo.phppointofsale.com/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> <!--320-->
-    <script src="jq/jquery-3.1.0.js"/>
+    <!--<script src="jq/jquery-3.1.0.js"/> -->
 
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!--    <script type="text/javascript" src="js/script.js"></script>-->
     <!-- base href="https://demo.phppointofsale.com/" -->
 
