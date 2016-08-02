@@ -718,7 +718,7 @@ include ("clsGetCustomerID.php");
                             $.get('https://demo.phppointofsale.com/index.php/home/set_fullscreen/0');
                         });
 
-                        $('.xeditable').editable({
+                    /*    $('.xeditable').editable({
                             validate: function(value) {
                                 if ($.isNumeric(value) == '' && $(this).data('validate-number')) {
                                     return "Only numbers are allowed";
@@ -728,7 +728,7 @@ include ("clsGetCustomerID.php");
                                 last_focused_id = $(this).attr('id');
                                 $("#register_container").html(response);
                             }
-                        });
+                        });*/
 
                         $('.xeditable').on('shown', function(e, editable) {
 
@@ -1645,7 +1645,7 @@ include ("clsGetCustomerID.php");
 
                     if ($tabbed_to.hasClass('xeditable'))
                     {
-                        $tabbed_to.trigger('click').editable('show');
+                        //$tabbed_to.trigger('click').editable('show');
                     }
                 }
 
