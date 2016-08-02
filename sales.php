@@ -31,7 +31,7 @@ include ("myglobal.php");
     <script>
         $(document).ready(function(){
 
-            $("#transID").val(transid);
+
            /* $("#item_id").click(function() {
                // var customerID = '';
                $("#customerID").val(customerID));
@@ -67,6 +67,8 @@ include ("myglobal.php");
 
                         }
                     });
+
+                    $("#transID").val(transid);
 
                 }
 
