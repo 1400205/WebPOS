@@ -475,7 +475,7 @@ include ("clsAddCart.php");
 
 
 
-                                            <input type="submit"  id="addCart" name="addCart" class="btn btn-block btn-primary"> Add Item To Cart</input>
+                                            <button type="submit"  id="addCart" name="addCart" class="btn btn-block btn-primary"> Add Item To Cart</button>
 
 
 
