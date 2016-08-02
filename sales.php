@@ -73,10 +73,10 @@ include ("clsGetCustomerID.php");
                     $( '#display_info' ).html("Record not found");
                 }
 
-               /* $("#button").click(function() {
-                    $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
+                //$("#button").click(function() {
+                  //  $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
-                });*/
+                //});
 
             });
 
@@ -85,7 +85,7 @@ include ("clsGetCustomerID.php");
     });
     </script>
 
-   <!-- <script type="text/javascript">
+    <script type="text/javascript">
         var SITE_URL= "https://demo.phppointofsale.com/index.php";
         var BASE_URL= "https://demo.phppointofsale.com/";
         var ENABLE_SOUNDS = false;
@@ -200,7 +200,7 @@ include ("clsGetCustomerID.php");
             setInterval(function(){$.get('https://demo.phppointofsale.com/index.php/home/keep_alive');}, 300000);
         });
     </script>
--->
+
 </head>
 <body>
 <div class="modal fade hidden-print" id="myModal" tabindex="-1" role="dialog" aria-hidden="true"></div>
@@ -693,7 +693,7 @@ include ("clsGetCustomerID.php");
                 <script type="text/javascript">
                 </script>
 
-               <!-- <script type="text/javascript" language="javascript">
+                <script type="text/javascript" language="javascript">
 
                     var submitting = false;
 
@@ -1292,7 +1292,7 @@ include ("clsGetCustomerID.php");
 
                     }
                 </script></div>
--->
+
         </div>
 
         <script type="text/javascript">
