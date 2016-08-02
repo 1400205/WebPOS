@@ -68,11 +68,11 @@ $userid= $_SESSION["userid"];
         echo '<p>' . $row[0] . '</p>';
         $selctedProduct=$row[0] ;
 
-       /* $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID,userID) VALUES (?,?,?,?)");
+       $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID,userID) VALUES (?,?,?,?)");
          //bind parameter
          $stmt->bind_param('idsi',$selctedProduct, $qty,$tranID,$userid);
 
-        $stmt->execute();*/
+        $stmt->execute();
 
 
 
