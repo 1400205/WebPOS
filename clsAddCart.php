@@ -52,7 +52,7 @@ $userid= $_SESSION["userid"];
 
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT p.productID,p.partname,s.sellPrice,s.stuckqty FROM product P INNER JOIN suppliedstuck s ON p.productID=s.productID where partName = ?")) {
+    if ($stmt = $sqlcon->prepare("SELECT p.productID,p.partname,s.sellPrice,s.stuckqty,discount FROM product P INNER JOIN suppliedstuck s ON p.productID=s.productID where s.status=1 AND partName = ?")) {
        // SELECT p.productID,p.partName,s.stuckqty,s.sellPrice FROM product p INNER JOIN stucksupplied s on p.productID=s.productID WHERE partName=?
         $stmt->bind_param('s', $choice);
 
