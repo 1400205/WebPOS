@@ -73,19 +73,19 @@ include ("clsGetCustomerID.php");
                     $( '#display_info' ).html("Record not found");
                 }
 
-                $("#button").click(function() {
+               /* $("#button").click(function() {
                     $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
-                });
+                });*/
 
-            }
+            });
 
 
 
     });
     </script>
 
-    <script type="text/javascript">
+   <!-- <script type="text/javascript">
         var SITE_URL= "https://demo.phppointofsale.com/index.php";
         var BASE_URL= "https://demo.phppointofsale.com/";
         var ENABLE_SOUNDS = false;
@@ -200,7 +200,7 @@ include ("clsGetCustomerID.php");
             setInterval(function(){$.get('https://demo.phppointofsale.com/index.php/home/keep_alive');}, 300000);
         });
     </script>
-
+-->
 </head>
 <body>
 <div class="modal fade hidden-print" id="myModal" tabindex="-1" role="dialog" aria-hidden="true"></div>
