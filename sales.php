@@ -100,7 +100,7 @@ include ("clsGetCustomerID.php");
         COMMON_SUCCESS = "Success";
         COMMON_ERROR = "Error";
 
-        bootbox.addLocale('ar', {
+      /*  bootbox.addLocale('ar', {
             OK : 'OK',
             CANCEL : 'CANCEL',
             CONFIRM : 'CONFIRM'
@@ -115,7 +115,7 @@ include ("clsGetCustomerID.php");
         $.ajaxSetup ({
             cache: false,
             headers: { "cache-control": "no-cache" }
-        });
+        });*/
         toastr.options = {
             "closeButton": true,
             "debug": false,
