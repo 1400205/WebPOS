@@ -44,7 +44,7 @@ include ("clsGetCustomerID.php");
         });*/
 
 
-            function $("#button").click(function()
+            $("#button").click(function()
             {
 
                 var myItem=$('#item_id').val();
