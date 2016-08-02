@@ -1,6 +1,6 @@
 <?php
 include ("myglobal.php");
-include ("clsGetCustomerID.php");
+
 //include ("clsAddCart.php");
 
 
@@ -26,13 +26,15 @@ include ("clsGetCustomerID.php");
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/jscart.js"></script>
+
+    <?php include ("clsGetCustomerID.php"); ?>
     <script>
         $(document).ready(function(){
 
-
+            $("#customerID").val(transid);
            /* $("#item_id").click(function() {
                // var customerID = '';
-               //$("#customerID").val(customerID));
+               $("#customerID").val(customerID));
                 $("#customerID").load("clsGetShelfID.php");
                 $("#customerID").val()
 
@@ -450,7 +452,7 @@ include ("clsGetCustomerID.php");
                                             <label>QUANTITY:</label> <br>
                                                 <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
 
-                                            <input autocomplete="off" id="customerID" name="customerID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value="10001" >
+                                            <input autocomplete="off" id="customerID" name="customerID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value="0" >
 
                                             <div id="display_info" >
 <!--                                              --><?php // echo $selctedProduct; ?>

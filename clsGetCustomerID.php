@@ -48,7 +48,7 @@ if ($row = $result->fetch_row()) {
 
 //    $resultText =$row[0] ;
 
-    echo "<option>" . $row[0] . "</option>";
+    echo "<script> var transid =  " . $row[0] . ";</script>";
 
 }
 
