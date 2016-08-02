@@ -489,7 +489,7 @@ include ("clsAddCart.php");
 						<span class="input-group-addon grid-buttons ">
 							<a href="https://demo.phppointofsale.com/index.php/#" class="none show-grid" tabindex="-1" title="Show Grid"><i class="icon ti-layout"></i> Show Grid</a>							<a href="https://demo.phppointofsale.com/index.php/#" class="none hide-grid hidden" tabindex="-1" title="Hide Grid"><i class="icon ti-layout"></i> Hide Grid</a>						</span>
                                         </div>
-
+                                        <input type="submit" value="Submit " />
 
                                     </form>
                                 </div>
