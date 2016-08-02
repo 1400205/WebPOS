@@ -69,7 +69,7 @@ $tranID = trim($tranID);
 
          $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID,userID) VALUES (?,?,?,?)");
          //bind parameter
-         $stmt->bind_param('idsi',$row[0], $qty,$shoppingID,$userid);
+         $stmt->bind_param('idsi',$row[0], $qty,$tranID,$userid);
        // $selctedProduct=$row[0] ;
         $stmt->execute();
 
