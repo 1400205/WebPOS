@@ -693,7 +693,7 @@ include ("clsGetCustomerID.php");
                 <script type="text/javascript">
                 </script>
 
-                <script type="text/javascript" language="javascript">
+               <!-- <script type="text/javascript" language="javascript">
 
                     var submitting = false;
 
@@ -1292,7 +1292,7 @@ include ("clsGetCustomerID.php");
 
                     }
                 </script></div>
-
+-->
         </div>
 
         <script type="text/javascript">
