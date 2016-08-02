@@ -134,7 +134,7 @@ include ("clsGetCustomerID.php");
             "hideMethod": "fadeOut"
         }*/
 
-        $.fn.editableform.buttons =
+        /*$.fn.editableform.buttons =
             '<button tabindex="-1" type="submit"  class="btn btn-primary btn-sm editable-submit">'+
             '<i class="icon ti-check"></i>'+
             '</button>'+
@@ -142,7 +142,7 @@ include ("clsGetCustomerID.php");
             '<i class="icon ti-close"></i>'+
             '</button>';
 
-        $.fn.editable.defaults.emptytext = "Empty";
+        $.fn.editable.defaults.emptytext = "Empty";*/
 
         $(document).ready(function()
         {
