@@ -50,6 +50,9 @@ include ("myglobal.php");
             {
 
                 var myItem=$('#item_id').val();
+                var qty=$('#myqty').val();
+                var myTransID=$('#transID').val();
+                
                    // document.getElementById( "item_id" );
 
                 if(myItem)
@@ -59,6 +62,8 @@ include ("myglobal.php");
                         url: 'clsAddCart.php',
                         data: {
                             keyword:myItem,
+                            myqty:qty,
+                            transID=myTransID,
                         },
                         success: function (response) {
 
