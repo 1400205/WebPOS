@@ -52,7 +52,7 @@ $userid= $_SESSION["userid"];
 
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT productID FROM product where partName = ?")) {
+    if ($stmt = $sqlcon->prepare("SELECT p.productID,p.partName FROM product p INNER JOIN suppliedStuck s where p.partName = ?")) {
         $stmt->bind_param('s', $choice);
 
         $stmt->execute();
