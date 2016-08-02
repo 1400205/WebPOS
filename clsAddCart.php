@@ -72,6 +72,16 @@ $userid= $_SESSION["userid"];
 
         echo '<p>' . $row[0] . '</p>';
 
+        echo
+
+            "<script> 
+        var proid =  " . $row[0] . ";
+        var partname = ".$row[1]. ";
+        var sprice =  " . $row[2] . ";
+        var sqty =  " . $row[3] . ";
+        var disc =  " . $row[4] . ";  
+        </script>";
+
     }
 
 
