@@ -116,7 +116,7 @@ include ("clsGetCustomerID.php");
             cache: false,
             headers: { "cache-control": "no-cache" }
         });*/
-        toastr.options = {
+        /*toastr.options = {
             "closeButton": true,
             "debug": false,
             "newestOnTop": false,
@@ -132,7 +132,7 @@ include ("clsGetCustomerID.php");
             "hideEasing": "linear",
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
-        }
+        }*/
 
         $.fn.editableform.buttons =
             '<button tabindex="-1" type="submit"  class="btn btn-primary btn-sm editable-submit">'+
