@@ -27,11 +27,11 @@ include ("myglobal.php");
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/jscart.js"></script>
 
-    <?php include ("clsGetCustomerID.php"); ?>
+    <?php include ("clsgetTransID.php"); ?>
     <script>
         $(document).ready(function(){
 
-            $("#customerID").val(transid);
+            $("#transID").val(transid);
            /* $("#item_id").click(function() {
                // var customerID = '';
                $("#customerID").val(customerID));
@@ -452,7 +452,7 @@ include ("myglobal.php");
                                             <label>QUANTITY:</label> <br>
                                                 <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
 
-                                            <input autocomplete="off" id="customerID" name="customerID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value="0" >
+                                            <input autocomplete="off" id="transID" name="transID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value="0" >
 
                                             <div id="display_info" >
 <!--                                              --><?php // echo $selctedProduct; ?>
