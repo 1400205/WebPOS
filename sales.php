@@ -77,9 +77,9 @@ include ("clsAddCart.php");
 
                     //add chart item
                     // bind 'myForm' and provide a simple callback function
-                    $('#select_customer_form').ajaxForm(function() {
+                   /* $('#select_customer_form').ajaxForm(function() {
                         alert("Thank you, Item Added!");
-                    });
+                    });*/
 
                 }
 
