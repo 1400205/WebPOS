@@ -1,7 +1,7 @@
 <?php
 include ("myglobal.php");
 
-//include ("clsAddCart.php");
+include ("clsAddCart.php");
 
 
 ?>
@@ -50,8 +50,8 @@ include ("myglobal.php");
             {
 
                 var myItem=$('#item_id').val();
-                var qty=$('#myqty').val();
-                var myTransID=$('#transID').val();
+               // var qty=$('#myqty').val();
+               // var myTransID=$('#transID').val();
                 
                    // document.getElementById( "item_id" );
 
@@ -62,8 +62,8 @@ include ("myglobal.php");
                         url: 'clsAddCart.php',
                         data: {
                             keyword:myItem,
-                            myqty:qty,
-                            transID=myTransID,
+                           // myqty:qty,
+                            //transID=myTransID,
                         },
                         success: function (response) {
 
@@ -421,7 +421,8 @@ include ("myglobal.php");
                                 <div class="item-form">
                                     <!-- Item adding form -->
 
-                                    <form action="https://demo.phppointofsale.com/index.php/sales/add" id="add_item_form" class="form-inline" autocomplete="off" method="post" accept-charset="utf-8">
+                                    <form action="" id="add_item_form" class="form-inline" autocomplete="off" method="post" accept-charset="utf-8">
+<!--                                        https://demo.phppointofsale.com/index.php/sales/add-->
                                         <div class="input-group input-group-mobile contacts">
 						<span class="input-group-addon">
 							<a href="https://demo.phppointofsale.com/index.php/items/view/-1/1/sale" class="none add-new-item" title="New Item" id="new-item-mobile" tabindex="-1"><i class="icon ti-pencil-alt"></i> <span class="register-btn-text">New Item</span></a>						</span>
