@@ -46,7 +46,8 @@ include ("myglobal.php");
             {
 
                 var myItem=$('#item_id').val();
-                // var qty=$('#myqty').val();
+                var selectedID=$('#display_info').val();
+
                 // var myTransID=$('#transID').val();
 
                 // document.getElementById( "item_id" );
@@ -65,6 +66,8 @@ include ("myglobal.php");
 
                             // We get the element having id of display_info and put the response inside it
                             $( '#display_info' ).html(response);
+
+                            $("proID").val(selectedID);
 
                         }
                     });
