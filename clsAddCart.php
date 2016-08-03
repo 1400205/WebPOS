@@ -17,7 +17,7 @@ error_reporting(E_ALL);
 
 
 //get connection string
-//include ("connect.php");
+include ("connect.php");
 //get global variable file
 include ("myglobal.php");
 //get user session name and id
@@ -38,7 +38,7 @@ if(isset($_POST['submit']))
 
 
 
-   // $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+    $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
 
     if( empty($_POST["display_info"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
