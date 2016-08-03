@@ -89,24 +89,24 @@ include ("myglobal.php");
                     $( '#display_info' ).html("Record not found");
                 }
 
-                //$("#button").click(function() {
+                $("#submit").click(function() {
                 //  $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
                 //});
 
 
-                // var display_info=$("#display_info").val();
-                // var myqty=$("#myqty").val();
-                //  var transID=$("#transID");
-                //  var dataString = 'display_info=' + display_info + '&myqty=' + myqty + '&transID=' + transID;
+                var myID=$("#proID").val();
+                var myqty=$("#myqty").val();
+                 var transID=$("#transID");
+                 var dataString = 'display_info=' + display_info + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
-                    /*type:"post",
+                    type:"post",
                      url:"clsAddCart.php",
                      data:dataString,
                      cache: false,
                      success:function(data){
-                     $("#display_info").html("Item Added Succesfully");*/
-                    // }
+                     $("#display_info").html("Item Added Succesfully");
+                    }
                 });
 
 
@@ -151,7 +151,7 @@ include ("myglobal.php");
                 
                 <div class="footer">
                     <button type="button"  id="addCart" name="addCart" class="button"> Add Item To Cart</button><br><br><br>
-                    <button type="submit"  id="addCart" name="addCart" class="button"> Add Item </button><br>
+                    <button type="button"  id="submit" name="submit" class="button"> Add Item </button><br>
 
 
                 </div>
