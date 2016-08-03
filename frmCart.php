@@ -145,7 +145,8 @@ include ("myglobal.php");
                 </div>
                 
                 <div class="footer">
-                    <input type="submit" id= "submit" class="button" name="submit" value="Submit" /><br>
+                    <button type="button"  id="addCart" name="addCart" class="button"> Add Item To Cart</button><br><br><br>
+                    <button type="submit"  id="addCart" name="addCart" class="button"> Add Item </button><br>
 
 
                 </div>
