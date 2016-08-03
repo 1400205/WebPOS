@@ -26,25 +26,31 @@ $userid= $_SESSION["userid"];
 //get connection
 if(isset($_POST['submit']))
 {
-    //get user inputs
-    $sectionID=$_GET["id"];
-    $rackName = $_POST["rack"];
-    $shelveNo = $_POST["shelveNo"];
+    $productID=$_POST['display_info'];
+
+    $qty=$_POST['myqty'];
+    $tranID=$_POST['transID'];
+
+
+
+
+
+
 
 
     $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
 
-    if( empty($_POST["rack"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
+    if( empty($_POST["display_info"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
-        echo "<script>alert('Please enter Rack Name.');window.history.go(-1);</script>";
-        $error = "Rack Name is Required.";
+        echo "<script>alert('Please select Item.');window.history.go(-1);</script>";
+        $error = "Item Selection is Required.";
         exit;
     }
 
-    elseif ( empty($_POST["shelveNo"])){
-        echo "<script>alert('Please enter Number of Shelves.');window.history.go(-1);</script>";
-        $error = "Number of Shelves is Required.";
+    elseif ( empty($_POST["myqty"])){
+        echo "<script>alert('Please enter Quantity.');window.history.go(-1);</script>";
+        $error = "Quantity is Required.";
         exit;
     }
     elseif ($userid<1){
@@ -57,27 +63,28 @@ if(isset($_POST['submit']))
         //clean usser input
 
         //clean input user title
-        $sectionID = stripslashes( $sectionID );
-        $sectionID=mysqli_real_escape_string($db,$sectionID);
-        $sectionID = htmlspecialchars($sectionID);
-        $sectionID = trim($sectionID);
-        //clean input user first name
-        $rackName = stripslashes( $rackName );
-        $rackName=mysqli_real_escape_string($db,$rackName);
-        $rackName = htmlspecialchars($rackName);
-        $rackName = trim($rackName);
-
-        //clean input user surname
-        $shelveNo = stripslashes( $shelveNo );
-        $shelveNo=mysqli_real_escape_string($db,$shelveNo);
-        $shelveNo = htmlspecialchars($shelveNo);
-        $shelveNo = trim($shelveNo);
+        $productID = stripslashes( $productID );
+        $productID=mysqli_real_escape_string($db,$productID);
+        $productID = htmlspecialchars($productID);
+        $productID = trim($productID);
 
 
+        $qty = stripslashes($qty);
+        $qty = mysqli_real_escape_string($db, $qty);
+        $qty = htmlspecialchars($qty);
+        $qty = trim($qty);
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO rack (rackName, numberOfShelves, sectionID,userid) VALUES (?,?,?,?)"))){
+
+        $tranID = stripslashes($tranID);
+        $tranID = mysqli_real_escape_string($db, $tranID);
+        $tranID = htmlspecialchars($tranID);
+        $tranID = trim($tranID);
+
+
+
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID,userID) VALUES (?,?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('siii',$rackName, $shelveNo, $sectionID,$userid);
+            $stmt->bind_param('idsi',$selctedProduct, $qty,$tranID,$userid);
             if( $stmt->execute()){
                 $error="SUCCESS! "."Record Added Successfully.";
             }else{
