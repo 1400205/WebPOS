@@ -89,7 +89,7 @@ include ("myglobal.php");
                     $( '#display_info' ).html("Record not found");
                 }
 
-                $("#button").click(function() {
+                //$("#button").click(function() {
                 //  $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
                 //});
