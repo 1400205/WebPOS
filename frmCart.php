@@ -106,7 +106,7 @@ include ("myglobal.php");
                             cache: false,
                             success:function(data){
                                 $( '#display_info' ).html("Record Added");
-                            }
+                            })
                         });
 
 
