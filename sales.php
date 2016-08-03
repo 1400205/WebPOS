@@ -95,7 +95,17 @@ include ("myglobal.php");
                 var selectedItemID=$('#display_info').val();
 
                // val selectedItemID=
-                
+
+
+                $.ajax({
+                    type:"post",
+                    url:"clsAddCart.php",
+                    data:"display_info="+display_info+"&myqty="+myqty+"&transID="+transID,
+                    success:function(data){
+                        $("#display_info").html(data);
+                    }
+                });
+
 
             });
 
