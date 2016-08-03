@@ -105,7 +105,7 @@ include ("myglobal.php");
                      data:dataString,
                      cache: false,
                      success:function(html){
-                    alert(html);
+                    //alert(html);
                     }
                 });
 
