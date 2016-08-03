@@ -62,10 +62,10 @@ include ("myglobal.php");
                             // myqty:qty,
                             //transID=myTransID,
                         },
-                        success: function (response) {
+                        success: function (data) {
 
                             // We get the element having id of display_info and put the response inside it
-                            $( '#proID' ).val(response);
+                            $( '#proID' ).val(data);
 
                             //$("proID").val(selectedID);
 
