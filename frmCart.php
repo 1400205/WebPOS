@@ -128,8 +128,7 @@ include ("myglobal.php");
             <fieldset>
 
                 <label>Product:</label><br>
-                <input type="text" name="keyword" id="item_id" class="input username"/>  <br>
-
+                <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet();"class="input username" placeholder="Enter item name or scan barcode" type="text">   <br>
                 <ul id="item_list_id"></ul>
                 <br>
                 <label>Quantity:</label><br>
@@ -140,7 +139,10 @@ include ("myglobal.php");
                 <label>Other Name(s):</label><br>
                 <input type="NUMBER" name="proID" id="proID" class="input username" />  <br>
 
-                <div id="display_info"> </div>
+                <div id="display_info" >
+                    <!--                                            --><?php // echo $selctedProduct; ?>
+
+                </div>
                 
                 <div class="footer">
                     <input type="submit" id= "submit" class="button" name="submit" value="Submit" /><br>
