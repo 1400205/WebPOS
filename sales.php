@@ -59,7 +59,7 @@ include ("myglobal.php");
                 {
                     $.ajax({
                         type: 'post',
-                        url: 'clsAddCart.php',
+                        url: 'clsGetCustomerSelectedProductID.php',
                         data: {
                             keyword:myItem,
                            // myqty:qty,
