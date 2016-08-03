@@ -100,14 +100,14 @@ include ("clsAddCart.php");
                // var myqty=$("#myqty").val();
               //  var transID=$("#transID");
               //  var dataString = 'display_info=' + display_info + '&myqty=' + myqty + '&transID=' + transID;
-              //  $.ajax({
+                $.ajax({
                     /*type:"post",
                     url:"clsAddCart.php",
                     data:dataString,
                     cache: false,
                     success:function(data){
                         $("#display_info").html("Item Added Succesfully");*/
-                  //  }
+                   // }
                 });
 
 
