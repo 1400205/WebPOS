@@ -14,7 +14,7 @@
  * Time: 17:16
  */
 
-session_start();
+//session_start();
 ?>
 
 
