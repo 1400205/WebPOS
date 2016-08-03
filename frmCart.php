@@ -139,8 +139,8 @@ include ("myglobal.php");
 
                 <label>Transaction ID:</label><br>
                 <input type="number" name="transID" id="transID" class="input username"  /><br>
-                <label>Other Name(s):</label><br>
-                <input type="NUMBER" name="proID" id="proID" class="input username" />  <br>
+                <label>Product ID:</label><br>
+                <input type="text" name="proID" id="proID" class="input username" />  <br>
 
                 <div id="display_info" >
                     <!--                                            --><?php // echo $selctedProduct; ?>
