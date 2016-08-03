@@ -2,69 +2,95 @@
 /**
  * Created by IntelliJ IDEA.
  * User: prosper
- * Date: 25/07/2016
- * Time: 14:06
+ * Date: 21/07/2016
+ * Time: 04:29
  */
 
+// Start the session
 session_start();
 ?>
-
-
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+//get connection string
 include ("connect.php");
+//get global variable file
 include ("myglobal.php");
-    //get user session name and id
-    $username= $_SESSION["uname"];
-    $userid= $_SESSION["userid"];
-    $productID=$_POST['display_info'];
-    
-
-  //  $choice = $_POST['keyword'];
-
-    $qty=$_POST['myqty'];
-    $tranID=$_POST['transID'];
-
-    $choice = stripslashes($choice);
-    $choice = mysqli_real_escape_string($db, $choice);
-    $choice = htmlspecialchars($choice);
-    $choice = trim($choice);
-
-    $qty = stripslashes($qty);
-    $qty = mysqli_real_escape_string($db, $qty);
-    $qty = htmlspecialchars($qty);
-    $qty = trim($qty);
+//get user session name and id
+$username= $_SESSION["uname"];
+$userid= $_SESSION["userid"];
+//get connection
+if(isset($_POST['submit']))
+{
+    //get user inputs
+    $sectionID=$_GET["id"];
+    $rackName = $_POST["rack"];
+    $shelveNo = $_POST["shelveNo"];
 
 
-    $tranID = stripslashes($tranID);
-    $tranID = mysqli_real_escape_string($db, $tranID);
-    $tranID = htmlspecialchars($tranID);
-    $tranID = trim($tranID);
+    $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+    //check empty fields
+
+    if( empty($_POST["rack"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
+    {
+        echo "<script>alert('Please enter Rack Name.');window.history.go(-1);</script>";
+        $error = "Rack Name is Required.";
+        exit;
+    }
+
+    elseif ( empty($_POST["shelveNo"])){
+        echo "<script>alert('Please enter Number of Shelves.');window.history.go(-1);</script>";
+        $error = "Number of Shelves is Required.";
+        exit;
+    }
+    elseif ($userid<1){
+
+        $error = "<a href='index.php'>"."Please login before proceeding". "</a>";
+    }
+
+    else{
+
+        //clean usser input
+
+        //clean input user title
+        $sectionID = stripslashes( $sectionID );
+        $sectionID=mysqli_real_escape_string($db,$sectionID);
+        $sectionID = htmlspecialchars($sectionID);
+        $sectionID = trim($sectionID);
+        //clean input user first name
+        $rackName = stripslashes( $rackName );
+        $rackName=mysqli_real_escape_string($db,$rackName);
+        $rackName = htmlspecialchars($rackName);
+        $rackName = trim($rackName);
+
+        //clean input user surname
+        $shelveNo = stripslashes( $shelveNo );
+        $shelveNo=mysqli_real_escape_string($db,$shelveNo);
+        $shelveNo = htmlspecialchars($shelveNo);
+        $shelveNo = trim($shelveNo);
 
 
-    $msg = "";
 
-
-//prepare statement
-
-    if ($stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID,userID) VALUES (?,?,?,?)")){
-         //bind parameter
-         $stmt->bind_param('idsi',$selctedProduct, $qty,$tranID,$userid);
-
-        $stmt->execute();
-
-
-
-       /* echo
-
-            "<script>
-        var proid =  " . $row[0] . ";
-        var partname = ".$row[1]. ";
-        var sprice =  " . $row[2] . ";
-        var sqty =  " . $row[3] . ";
-        var disc =  " . $row[4] . ";
-        </script>";*/
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO rack (rackName, numberOfShelves, sectionID,userid) VALUES (?,?,?,?)"))){
+            //bind parameter
+            $stmt->bind_param('siii',$rackName, $shelveNo, $sectionID,$userid);
+            if( $stmt->execute()){
+                $error="SUCCESS! "."Record Added Successfully.";
+            }else{
+                $error="FAILURE! "."Record Did Not Add. System Does Not Allow Duplicate Records";
+            }
+        }else{$error= "CALL Record Addition Failed: Contact Admin";}
 
     }
+
+
+
+
+}
 
 
 
