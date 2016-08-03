@@ -24,10 +24,10 @@ include ("myglobal.php");
     //get user session name and id
     $username= $_SESSION["uname"];
     $userid= $_SESSION["userid"];
-    $productID=$_POST[''];
+    $productID=$_POST['display_info'];
     
 
-    $choice = $_POST['keyword'];
+  //  $choice = $_POST['keyword'];
 
     $qty=$_POST['myqty'];
     $tranID=$_POST['transID'];
@@ -53,27 +53,12 @@ include ("myglobal.php");
 
 
 //prepare statement
-    if ($stmt = $sqlcon->prepare("SELECT p.productID,p.partname,s.sellPrice,s.stuckqty,discount FROM product P INNER JOIN suppliedstuck s ON p.productID=s.productID where s.status=1 AND partName = ?")) {
-       // SELECT p.productID,p.partName,s.stuckqty,s.sellPrice FROM product p INNER JOIN stucksupplied s on p.productID=s.productID WHERE partName=?
-        $stmt->bind_param('s', $choice);
 
-        $stmt->execute();
-        //get result
-        $result = $stmt->get_result();
-    } else {
-        $msg = "SELECTION FAIL: Contact System Admin";
-    }
-
-    if ($row = $result->fetch_row()) {
-
-        echo '<p>' . $row[0] . '</p>';
-        $selctedProduct=$row[0] ;
-
-      /* $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID,userID) VALUES (?,?,?,?)");
+    if ($stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID,userID) VALUES (?,?,?,?)")){
          //bind parameter
          $stmt->bind_param('idsi',$selctedProduct, $qty,$tranID,$userid);
 
-        $stmt->execute();*/
+        $stmt->execute();
 
 
 
