@@ -11,7 +11,7 @@
 //session_start();
 include ("myglobal.php");
 include ("clsGetPersonForSupplier.php");
-include ("clsAddCart.php");
+//include ("clsAddCart.php");
 
 ?>
 
