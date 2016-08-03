@@ -92,17 +92,19 @@ include ("myglobal.php");
                   //  $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
                 //});
+
+
                 var display_info=$("#display_info").val();
                 var myqty=$("#myqty").val();
                 var transID=$("#transID");
-
-
+                var dataString = 'display_info=' + display_info + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
                     type:"post",
                     url:"clsAddCart.php",
-                    data:"display_info="+display_info+"&myqty="+myqty+"&transID="+transID,
+                    data:dataString,
+                    cache: false,
                     success:function(data){
-                        $("#display_info").html(data);
+                        $("#display_info").html("Item Added Succesfully");
                     }
                 });
 
