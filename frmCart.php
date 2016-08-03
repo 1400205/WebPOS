@@ -89,35 +89,25 @@ include ("myglobal.php");
                     $( '#display_info' ).html("Record not found");
                 }
 
-                $("#submit").click(function() {
+                $("#button").click(function() {
                 //  $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
                 //});
-                    if(proID){
-
-                        var myID=$("#proID").val();
-                        var myqty=$("#myqty").val();
-                        var transID=$("#transID").val();
-                        var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
-                        $.ajax({
-                            type:"post",
-                            url:"clsAddCart.php",
-                            data:dataString,
-                            cache: false,
-                            success:function(data){
-                                $( '#display_info' ).html("Record Added");
-                            })
-                        });
 
 
-                    }
-                    else
-                    {
-                        $( '#display_info' ).html("Record not found");
-                    }
-                }
-
-
+                var myID=$("#display_info").val();
+                // var myqty=$("#myqty").val();
+                //  var transID=$("#transID");
+                //  var dataString = 'display_info=' + display_info + '&myqty=' + myqty + '&transID=' + transID;
+                $.ajax({
+                    /*type:"post",
+                     url:"clsAddCart.php",
+                     data:dataString,
+                     cache: false,
+                     success:function(data){
+                     $("#display_info").html("Item Added Succesfully");*/
+                    // }
+                });
 
 
             });
