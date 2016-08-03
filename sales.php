@@ -92,9 +92,9 @@ include ("myglobal.php");
                   //  $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
                 //});
-                var selectedItemID=$('#display_info').val();
-
-               // val selectedItemID=
+                var display_info=$("#display_info").val();
+                var myqty=$("#myqty").val();
+                var transID=$("#transID");
 
 
                 $.ajax({
