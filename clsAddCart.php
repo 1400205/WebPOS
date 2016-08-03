@@ -21,10 +21,11 @@ session_start();
 <?php
 include ("connect.php");
 include ("myglobal.php");
-//get user session name and id
-$username= $_SESSION["uname"];
-$userid= $_SESSION["userid"];
-
+    //get user session name and id
+    $username= $_SESSION["uname"];
+    $userid= $_SESSION["userid"];
+    $productID=$_POST[''];
+    
 
     $choice = $_POST['keyword'];
 
