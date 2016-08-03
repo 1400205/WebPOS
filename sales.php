@@ -469,7 +469,7 @@ include ("myglobal.php");
                                             <input autocomplete="off" id="transID" name="transID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value="0" >
 
                                             <div id="display_info" >
-<!--                                              --><?php // echo $selctedProduct; ?>
+<!--                                            --><?php // echo $selctedProduct; ?>
 
                                             </div>
 
