@@ -98,7 +98,7 @@ include ("myglobal.php");
                 var myID=$("#proID").val();
                 var myqty=$("#myqty").val();
                  var transID=$("#transID");
-                 var dataString = 'display_info=' + display_info + '&myqty=' + myqty + '&transID=' + transID;
+                 var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
                     type:"post",
                      url:"clsAddCart.php",
