@@ -107,7 +107,7 @@ include ("myglobal.php");
                             success:function(data){
                                 $( '#display_info' ).html("Record Added");
                             }
-                        }));
+                        });
 
 
                     }
