@@ -65,7 +65,7 @@ if ($stmt = $sqlcon->prepare("SELECT p.productID,p.partname,s.sellPrice,s.stuckq
 
 if ($row = $result->fetch_row()) {
 
-    echo '<p>' . $row[0] . '</p>';
+    echo  $row[0] ;
     $selctedProduct=$row[0] ;
 
     /* $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID,userID) VALUES (?,?,?,?)");
