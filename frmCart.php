@@ -65,7 +65,7 @@ include ("myglobal.php");
                         success: function (response) {
 
                             // We get the element having id of display_info and put the response inside it
-                            $( '#proID' ).html(response);
+                            $( '#proID' ).val(response);
 
                             //$("proID").val(selectedID);
 
