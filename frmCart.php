@@ -104,8 +104,8 @@ include ("myglobal.php");
                      url:"clsAddCart.php",
                      data:dataString,
                      cache: false,
-                     success:function(response){
-                     $("#display_info").html("Item Added Succesfully");
+                     success:function(html){
+                    alert(html);
                     }
                 });
 
