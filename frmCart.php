@@ -93,21 +93,31 @@ include ("myglobal.php");
                 //  $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
                 //});
+                    if(proID){
+
+                        var myID=$("#proID").val();
+                        var myqty=$("#myqty").val();
+                        var transID=$("#transID");
+                        var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
+                        $.ajax({
+                            type:"post",
+                            url:"clsAddCart.php",
+                            data:dataString,
+                            cache: false,
+                            success:function(data){
+                                $( '#display_info' ).html("Record Added");
+                            }
+                        });
 
 
-                var myID=$("#proID").val();
-                var myqty=$("#myqty").val();
-                 var transID=$("#transID");
-                 var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
-                $.ajax({
-                    type:"post",
-                     url:"clsAddCart.php",
-                     data:dataString,
-                     cache: false,
-                     success:function(html){
-                    //alert(html);
                     }
-                });
+                    else
+                    {
+                        $( '#display_info' ).html("Record not found");
+                    }
+                }
+
+
 
 
             });
