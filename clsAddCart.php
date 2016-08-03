@@ -6,14 +6,6 @@
  * Time: 14:06
  */
 
-
-/**
- * Created by IntelliJ IDEA.
- * User: prosper
- * Date: 21/07/2016
- * Time: 17:16
- */
-
 session_start();
 ?>
 
