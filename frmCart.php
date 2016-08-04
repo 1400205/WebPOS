@@ -40,7 +40,7 @@ include ("myglobal.php");
              $("#shelfID").load("clsGetShelfID.php?shelfName=" + $("#shelfName").val());
 
              });*/
-            $("#item_id").onblur(function () {
+         /*   $("#item_id").onblur(function () {
 
                 var myItem=$('#item_id').val();
                 // var selectedID=$('#display_info').val();
@@ -75,9 +75,9 @@ include ("myglobal.php");
 
                     //add chart item
                     // bind 'myForm' and provide a simple callback function
-                    /* $('#select_customer_form').ajaxForm(function() {
+                    /!* $('#select_customer_form').ajaxForm(function() {
                      alert("Thank you, Item Added!");
-                     });*/
+                     });*!/
 
                 }
 
@@ -87,7 +87,7 @@ include ("myglobal.php");
                 }
 
 
-            });
+            });*/
 
 
 
