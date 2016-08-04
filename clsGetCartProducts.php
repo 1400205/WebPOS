@@ -32,7 +32,7 @@ include ("myglobal.php");
 echo '<table border="1" style="width:60%">'.'<col width="60">'.'<col width="60">.<col width="60">.<col width="60">'.'<col width="60">'.'<col width="60">'.'<th>'.'ProID'.
     '</th>'.'<th>'.'Name'.'</th>'.'<th>'.'Qty'.
 
-    '</th>'.'<th>'.'Unit Price'.'</th>'.'<th>'.'Unit Price'.'</th>'.'Remove From Chart'.'</th>'.'</table>';
+    '</th>'.'<th>'.'Unit Price'.'</th>'.'<th>'.'Total Price'.'</th>'.'Remove From Chart'.'</th>'.'</table>';
 
     while ($row = $result->fetch_row()) {
         $resultText =   '<table border="1" style="width:60%">'.'<col width="60">'. '<col width="60">'.'<col width="60">'.'<col width="60">'.'<col width="60">'.'<col width="60">'.'<tr>'.
