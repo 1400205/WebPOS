@@ -4,7 +4,7 @@
 
 //session_start();
 include ("myglobal.php");
-//include ("clsCart.php");
+include ("clsCart.php");
 //include ("clsTitle.php");
 
 ?>
@@ -23,7 +23,7 @@ include ("myglobal.php");
     <script type="text/javascript" src="js/script.js"></script>
 <!--    <script type="text/javascript" src="js/jscart.js"></script>-->
 
-    <?php include ("clsgetTransID.php"); ?>
+<!--    --><?php //include ("clsgetTransID.php"); ?>
     <script>
         $(document).ready(function(){
 
@@ -99,7 +99,7 @@ include ("myglobal.php");
 
         if(proID) {
 
-                var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
+               /* var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
                     type:"post",
                      url:"clsCart.php",
@@ -109,7 +109,7 @@ include ("myglobal.php");
                     success:function(data){
                      $("#display_info").html("Item Added Succesfully");
                     }
-                });
+                });*/
         }
 
             });
