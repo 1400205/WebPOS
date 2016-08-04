@@ -40,12 +40,61 @@ include ("myglobal.php");
              $("#shelfID").load("clsGetShelfID.php?shelfName=" + $("#shelfName").val());
 
              });*/
+            $("#item_id").onblur(function () {
+
+                var myItem=$('#item_id').val();
+                // var selectedID=$('#display_info').val();
+
+                // var myTransID=$('#transID').val();
+
+                // document.getElementById( "item_id" );
+
+                if(myItem)
+                {
+                    $.ajax({
+                        type: 'post',
+                        url: 'clsGetCustomerSelectedProductID.php',
+                        data: {
+                            keyword:myItem,
+                            // myqty:qty,
+                            //transID=myTransID,
+                        },
+                        success: function (data) {
+
+                            // We get the element having id of display_info and put the response inside it
+
+                            // var myID=parseInt(data.data);
+                            $( '#proID' ).val(data);
+
+                            //$("proID").val(selectedID);
+
+                        }
+                    });
+                    //get transaction ID
+                    $("#transID").val(transid);
+
+                    //add chart item
+                    // bind 'myForm' and provide a simple callback function
+                    /* $('#select_customer_form').ajaxForm(function() {
+                     alert("Thank you, Item Added!");
+                     });*/
+
+                }
+
+                else
+                {
+                    $( '#display_info' ).html("Record not found");
+                }
+
+
+            });
+
 
 
             $("#addCart").click(function()
             {
 
-                var myItem=$('#item_id').val();
+               /* var myItem=$('#item_id').val();
                // var selectedID=$('#display_info').val();
 
                 // var myTransID=$('#transID').val();
@@ -78,9 +127,9 @@ include ("myglobal.php");
 
                     //add chart item
                     // bind 'myForm' and provide a simple callback function
-                    /* $('#select_customer_form').ajaxForm(function() {
+                    /!* $('#select_customer_form').ajaxForm(function() {
                      alert("Thank you, Item Added!");
-                     });*/
+                     });*!/
 
                 }
 
@@ -88,7 +137,7 @@ include ("myglobal.php");
                 {
                     $( '#display_info' ).html("Record not found");
                 }
-
+*/
                 //$("#button").click(function() {
                 //  $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
