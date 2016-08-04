@@ -56,6 +56,8 @@ function getSelectedItemID() {
 
 			}
 		});
+
+		$( '#proID' ).val(data);
 		//get transaction ID
 		$("#transID").val(transid);
 
