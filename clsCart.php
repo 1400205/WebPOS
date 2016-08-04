@@ -25,8 +25,7 @@ $userid= $_SESSION["userid"];
 $data=$_POST['serialize'];
 
 //get connection
-if(isset($data['proID']))
-{
+
     //get user inputs
 
     $proID = $data['proID'];
@@ -37,25 +36,7 @@ if(isset($data['proID']))
     $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
 
-    if( empty($data["proID"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
-    {
-        echo "<script>alert('Please enter product ID.');window.history.go(-1);</script>";
-        $error = "Product ID is Required.";
-        exit;
-    }
 
-    elseif ( empty($data["transID"])){
-        echo "<script>alert('Please enter first transaction ID.');window.history.go(-1);</script>";
-        $error = "Transaction ID Required.";
-        exit;
-    }
-    elseif ( empty($data["myqty"])){
-        echo "<script>alert('Please enter QTY.');window.history.go(-1);</script>";
-        $error = "QTY is Required.";
-        exit;
-    }
-
-    else{
 
         //clean usser input
 
@@ -79,7 +60,7 @@ if(isset($data['proID']))
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO cart (productID,qty,transactionID,userid) VALUES (?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('idii',$proID, $qty, $transID);
+            $stmt->bind_param('idi',$proID, $qty, $transID);
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
             }else{
@@ -87,12 +68,12 @@ if(isset($data['proID']))
             }
         }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}
 
-    }
 
 
 
 
-}
+
+
 
 
 
