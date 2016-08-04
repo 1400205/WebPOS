@@ -4,7 +4,7 @@
 
 //session_start();
 include ("myglobal.php");
-include ("clsCart.php");
+//include ("clsCart.php");
 //include ("clsTitle.php");
 
 ?>
@@ -99,7 +99,7 @@ include ("clsCart.php");
 
         if(proID) {
 
-               /* var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
+                var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
                     type:"post",
                      url:"clsCart.php",
@@ -109,7 +109,7 @@ include ("clsCart.php");
                     success:function(data){
                      $("#display_info").html("Item Added Succesfully");
                     }
-                });*/
+                });
         }
 
             });
