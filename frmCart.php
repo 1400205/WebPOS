@@ -101,13 +101,13 @@ include ("myglobal.php");
 
                 var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
-                    /*type:"post",
-                     url:"clsAddCart.php",
+                    type:"post",
+                     url:"clsCart.php",
                      data:dataString,
-                     cache: false,
-                     success:function(data){
-                     $("#display_info").html("Item Added Succesfully");*/
-                    // }
+                     //cache: false,
+                    success:function(data){
+                     $("#display_info").html("Item Added Succesfully");
+                    }
                 });
         }
 
