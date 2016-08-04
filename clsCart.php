@@ -25,7 +25,7 @@ $userid= $_SESSION["userid"];
 $data=$_POST['serialize'];
 
 //get connection
-if(isset($_POST['proID']))
+if(isset($data['proID']))
 {
     //get user inputs
 
