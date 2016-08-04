@@ -10,8 +10,7 @@ function autocomplet() {
 			success:function(data){
 				$('#item_list_id').show();
 				$('#item_list_id').html(data);
-				$('#item_id').select();
-				$('#item_id').focus();
+
 			}
 		});
 	} else {
@@ -26,6 +25,8 @@ function set_item(item) {
 	$('#item_id').val(item);
 	// hide proposition list
 	$('#item_list_id').hide();
+	$('#item_id').select();
+	$('#item_id').focus();
 }
 
 function getSelectedItemID() {
