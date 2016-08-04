@@ -42,7 +42,7 @@ include ("clsGetCartProducts.php");
 
                 <br>
                 <label>First Name:</label><br>
-                <input type="text" name="supplierName" id="first-choice" class="input username" placeholder="Enter Supplier Name To search" />  <br>
+                <input type="text" name="transID" id="transID" class="input username" placeholder="Enter Supplier Name To search" />  <br>
 
 
 
