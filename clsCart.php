@@ -58,7 +58,7 @@ $data=$_POST['serialize'];
         $qty = trim($qty);
 
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO cart (productID,qty,transactionID,userid) VALUES (?,?,?)"))){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO cart (productID,qty,transactionID) VALUES (?,?,?)"))){
             //bind parameter
             $stmt->bind_param('idi',$proID, $qty, $transID);
             if( $stmt->execute()){
