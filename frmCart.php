@@ -103,7 +103,7 @@ include ("myglobal.php");
                 $.ajax({
                     type:"post",
                      url:"clsCart.php",
-                     //data:dataString,
+                     data:dataString,
                    // data: $('#cart').serialize(),
                      //cache: false,
                     success:function(data){
