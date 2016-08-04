@@ -10,6 +10,7 @@ function autocomplet() {
 			success:function(data){
 				$('#item_list_id').show();
 				$('#item_list_id').html(data);
+				$('#item_id').focus();
 			}
 		});
 	} else {
@@ -57,7 +58,7 @@ function getSelectedItemID() {
 			}
 		});
 
-		$( '#proID' ).val(data);
+
 		//get transaction ID
 		$("#transID").val(transid);
 
