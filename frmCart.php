@@ -191,7 +191,7 @@ include ("myglobal.php");
             <fieldset>
 
                 <label>Product:</label><br>
-                <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet();"class="input username" placeholder="Enter item name or scan barcode" type="text">   <br>
+                <input autocomplete="off" id="item_id" name="keyword" onblur="getSelectedItemID();" onkeyup="autocomplet();"class="input username" placeholder="Enter item name or scan barcode" type="text">   <br>
                 <ul id="item_list_id"></ul>
                 <br>
                 <label>Quantity:</label><br>
@@ -200,7 +200,7 @@ include ("myglobal.php");
                 <label>Transaction ID:</label><br>
                 <input type="number" name="transID" id="transID" class="input username"  /><br>
                 <label>Product ID:</label><br>
-                <input type="text" name="proID" id="proID" class="input username"  value=0  <br>
+                <input type="text" name="proID" id="proID"  class="input username"  value=0  <br>
 
                 <div id="display_info" >
                     <!--                                            --><?php // echo $selctedProduct; ?>
