@@ -99,12 +99,19 @@ include ("myglobal.php");
 
         if(proID) {
 
-               var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
+             //  var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
                     type:"post",
                      url:"clsCart.php",
-                     data:dataString,
+                     //data:dataString,
                    // data: $('#cart').serialize(),
+                    data: {
+                        proID:proID,
+                        myqty:myqty,
+                        mytransID:transID,
+                        // myqty:qty,
+                        //transID=myTransID,
+                    },
                      //cache: false,
                     success:function(data){
                      $("#display_info").html("Item Added Succesfully");
