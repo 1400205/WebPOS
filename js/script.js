@@ -10,6 +10,7 @@ function autocomplet() {
 			success:function(data){
 				$('#item_list_id').show();
 				$('#item_list_id').html(data);
+				$('#item_id').select();
 				$('#item_id').focus();
 			}
 		});
