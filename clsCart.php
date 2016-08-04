@@ -22,7 +22,7 @@ include ("myglobal.php");
 $username= $_SESSION["uname"];
 $userid= $_SESSION["userid"];
 //get connection
-if(isset($_POST['submit']))
+if(isset($_POST['addCart']))
 {
     //get user inputs
 

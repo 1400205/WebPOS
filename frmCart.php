@@ -125,7 +125,7 @@ include ("myglobal.php");
 
 <br><br>
 <section>
-    <form class="login-form" method="post" action="">
+    <form class="login-form" method="post" action="" id="cart">
         <div class="content">
             <div class="header">
                 <h1>Add Person Details:</h1>
@@ -152,7 +152,7 @@ include ("myglobal.php");
                 
                 <div class="footer">
                     <button type="button"  id="addCart" name="addCart" class="button"> Add Item To Cart</button><br><br><br>
-                    <button type="submit"  id="addCart" name="addCart" class="button"> Add Item </button><br>
+<!--                    <button type="submit"  id="addCart" name="addCart" class="button"> Add Item </button><br>-->
 
 
                 </div>
