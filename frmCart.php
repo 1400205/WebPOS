@@ -108,7 +108,7 @@ include ("myglobal.php");
                     data: {
                         proID:proID,
                         myqty:myqty,
-                        mytransID:transID
+                        transID:transID
                         // myqty:qty,
                         //transID=myTransID,
                     },
