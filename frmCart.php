@@ -99,7 +99,7 @@ include ("myglobal.php");
 
         if(proID) {
 
-                var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
+               // var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
                     type:"post",
                      url:"clsCart.php",
