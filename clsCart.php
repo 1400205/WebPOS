@@ -37,19 +37,19 @@ if(isset($_POST['addCart']))
     $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
 
-    if( empty($_POST["proID"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
+    if( empty($data["proID"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
         echo "<script>alert('Please enter product ID.');window.history.go(-1);</script>";
         $error = "Product ID is Required.";
         exit;
     }
 
-    elseif ( empty($_POST["transID"])){
+    elseif ( empty($data["transID"])){
         echo "<script>alert('Please enter first transaction ID.');window.history.go(-1);</script>";
         $error = "Transaction ID Required.";
         exit;
     }
-    elseif ( empty($_POST["myqty"])){
+    elseif ( empty($data["myqty"])){
         echo "<script>alert('Please enter QTY.');window.history.go(-1);</script>";
         $error = "QTY is Required.";
         exit;
