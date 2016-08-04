@@ -77,9 +77,9 @@ if(isset($_POST['proID']))
         $qty = trim($qty);
 
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO cart (productID,qty,transactionID,userid) VALUES (?,?,?,?)"))){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO cart (productID,qty,transactionID,userid) VALUES (?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('idii',$proID, $qty, $transID,$userid);
+            $stmt->bind_param('idii',$proID, $qty, $transID);
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
             }else{
