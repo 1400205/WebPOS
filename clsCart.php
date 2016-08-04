@@ -22,15 +22,15 @@ include ("myglobal.php");
 $username= $_SESSION["uname"];
 $userid= $_SESSION["userid"];
 
-$data=$_POST['serialize'];
+//$data=$_POST['serialize'];
 
 //get connection
 
     //get user inputs
 
-    $proID = $data['proID'];
-    $transID = $data['transID'];
-    $qty = $data['myqty'];
+    $proID = $_POST['proID'];
+    $transID = $_POST['transID'];
+    $qty = $_POST['myqty'];
 
 
     $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
