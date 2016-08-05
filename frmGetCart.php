@@ -52,14 +52,14 @@ include ("clsGetCartProducts.php");
                 </div>
 
             </fieldset>
-            <div id="photolist">
-                <?php
-               
+            <div id="currentCart" name="currentCart">
+               <!-- --><?php
+/*
                 include ("myglobal.php");
                 include ("clsGetCartProducts.php");
 
 
-                ?>
+                */?>
 
                 <div class="error"><span><a href="allPersons.html"> Click here to Exit this Task</a></a></span></div>
 

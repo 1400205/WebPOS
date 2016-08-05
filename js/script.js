@@ -79,3 +79,54 @@ function getSelectedItemID() {
 
 
 }
+
+function getTransactions() {
+
+	var myTransID=$('#transID').val();
+	// var selectedID=$('#display_info').val();
+
+	// var myTransID=$('#transID').val();
+
+	// document.getElementById( "item_id" );
+
+	if(myTransID)
+	{
+		$.ajax({
+			type: 'post',
+			url: 'clsGetCartProducts.php',
+			data: {
+				transID:myTransID,
+				// myqty:qty,
+				//transID=myTransID,
+			},
+			success: function (data) {
+
+				// We get the element having id of display_info and put the response inside it
+
+				// var myID=parseInt(data.data);
+				$( '#currentCart' ).val(data);
+
+				//$("proID").val(selectedID);
+
+			}
+		});
+
+
+		//get transaction ID
+		$("#transID").val(transid);
+
+		//add chart item
+		// bind 'myForm' and provide a simple callback function
+		/* $('#select_customer_form').ajaxForm(function() {
+		 alert("Thank you, Item Added!");
+		 });*/
+
+	}
+
+	else
+	{
+		$( '#display_info' ).html("Record not found");
+	}
+
+
+}
