@@ -84,7 +84,7 @@ include ("tryGetCart.php");
 
 
                 <div class="footer">
-                    <input type="submit" class="button" name="submit" id="submit" value="Submit" /><br>
+                    <input type="button" class="button" name="submit" id="submit" value="Submit" /><br>
 
                 </div>
 
