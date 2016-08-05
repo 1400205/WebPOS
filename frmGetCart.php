@@ -10,7 +10,7 @@
 
 //session_start();
 include ("myglobal.php");
-include ("clsGetCartProducts.php");
+include ("tryGetCart.php");
 
 
 ?>
@@ -20,7 +20,7 @@ include ("clsGetCartProducts.php");
 <html>
 <head>
     <meta charset="utf-8">
-    <title> Search For Supplier</title>
+    <title> Get Cart</title>
 
 
     <link rel="stylesheet" href="css/style-forms.css">
@@ -35,8 +35,8 @@ include ("clsGetCartProducts.php");
     <form class="login-form" method="post" action="">
         <div class="content">
             <div class="header">
-                <h1>Search for Supplier:</h1>
-                <span>Enter Supplier  Name  to search Supplier.</span>
+                <h1>Get Cart:</h1>
+                <span>Try getting cart data .</span>
             </div>
             <fieldset>
 
