@@ -24,6 +24,43 @@ include ("tryGetCart.php");
 
 
     <link rel="stylesheet" href="css/style-forms.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    
+    
+<!--    --><?php //  include ("tryGetCart.php");   ?>
+    <script>
+        
+        $(document).ready(function () {
+            
+            $('#submit').click(function () {
+
+                $("#currentCart").val(cartdata);
+              //  var transID = $("#transID").val();
+
+
+             /*   if (transID) {
+                    $.ajax({
+                        url: 'tryGetCart.php',
+                        type: 'POST',
+                        data: {transID:transID},
+                        success:function(data){
+                            $('#item_list_id').show();
+                            $('#item_list_id').html(data);
+
+                        }
+                    });
+                } else {
+                    $('#item_list_id').hide();
+                }
+                */
+            });
+            
+        });
+        
+        
+        
+    </script>
 
 </head>
 
@@ -47,20 +84,20 @@ include ("tryGetCart.php");
 
 
                 <div class="footer">
-                    <input type="submit" class="button" name="submit" value="Submit" /><br>
+                    <input type="button" class="button" name="submit" id="submit" value="Submit" /><br>
 
                 </div>
 
             </fieldset>
             <div id="currentCart" name="currentCart">
-               <?php
-             // include ("myglobal.php");
+              <!-- --><?php
+/*             // include ("myglobal.php");
                // include ("clsGetCartProducts.php");
                echo $resultText;
 
 
 
-                ?>
+                */?>
                 </div>
 
                 <div class="error"><span><a href="allPersons.html"> Click here to Exit this Task</a></a></span></div>
