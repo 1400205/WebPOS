@@ -41,7 +41,9 @@ while ($row = $result->fetch_row()) {
         '</td>'.'</a>'.'<br>'.'</tr>'.'</table>';
     $resultText =$resultText.$line;
 
-    echo "<script> var cartdata =  " . $resultText. ";</script>";
+    //echo "<script> var cartdata =  " . $resultText. ";</script>";
+
+    echo   $resultText;
 
 }
 if(empty($row)){

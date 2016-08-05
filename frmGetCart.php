@@ -103,7 +103,7 @@ include ("tryGetCart.php");
                 <div class="error"><span><a href="allPersons.html"> Click here to Exit this Task</a></a></span></div>
 
             </div>
-            <div class="error"><span><?php echo $msg;?></span></div>
+            <div class="error"><span><?php echo $resultText;?></span></div>
 
         </div>
     </form>
