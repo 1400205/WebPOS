@@ -169,7 +169,7 @@ include ("myglobal.php");
 
                 });
 
-            getTransactions();
+           // getTransactions();
 
         }
 

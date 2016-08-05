@@ -6,6 +6,7 @@
  * Time: 01:45
  */
 $error="";
+$msg="";
 $personid =0;
 $gettilte="";
 $result="";
