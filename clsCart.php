@@ -60,7 +60,7 @@ $userid= $_SESSION["userid"];
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO cart (productID,qty,transactionID) VALUES (?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('idi',$proID, $qty, $transID);
+            $stmt->bind_param('iii',$proID, $qty, $transID);
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
             }else{
