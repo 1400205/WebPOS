@@ -104,9 +104,13 @@ function getTransactions() {
 				// We get the element having id of display_info and put the response inside it
 
 				// var myID=parseInt(data.data);
-				$( '#currentCart' ).val(data);
+				//( '#currentCart' ).val(data);
 
-				//$("proID").val(selectedID);
+
+					$('#display_info').show();
+					$('#display_info').html(data);
+
+
 
 			}
 		});
