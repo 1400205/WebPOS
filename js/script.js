@@ -82,7 +82,7 @@ function getSelectedItemID() {
 
 function getTransactions() {
 
-	var myTransID=$('#transID').val();
+	var myTransID=$('#transID').val(transid);
 	// var selectedID=$('#display_info').val();
 
 	// var myTransID=$('#transID').val();
