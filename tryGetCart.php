@@ -35,10 +35,11 @@ echo '<table border="1" style="width:60%">'.'<col width="60">'.'<col width="60">
     '</th>'.'<th>'.'Unit Price'.'</th>'.'<th>'.'Total Price'.'</th>'.'Remove From Chart'.'</th>'.'</table>';
 
 while ($row = $result->fetch_row()) {
-    $msg.=    '<table border="1" style="width:60%">'.'<col width="60">'. '<col width="60">'.'<col width="60">'.'<col width="60">'.'<col width="60">'.'<col width="60">'.'<tr>'.
+ $line=   '<table border="1" style="width:60%">'.'<col width="60">'. '<col width="60">'.'<col width="60">'.'<col width="60">'.'<col width="60">'.'<col width="60">'.'<tr>'.
         '<a href="changeBugStatus.php?uid="'.$row[0].'>'.'<tr>'.'<td>'.$row[0].'</td>'.'<td>' . $row[1].'</td>'.'<td>'.
         $row[2].'</td>'.'<td>'.$row[3].'<td>'.$row[4].'</td>'.'</td>'.'<td>'. "<input type='checkbox' name='cartID[]' value = '$row[5]'>".
         '</td>'.'</a>'.'<br>'.'</tr>'.'</table>';
+    $resultText =$resultText.$line;
 
 }
 if(empty($row)){

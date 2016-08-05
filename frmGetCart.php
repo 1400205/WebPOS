@@ -56,7 +56,7 @@ include ("tryGetCart.php");
                <?php
              // include ("myglobal.php");
                // include ("clsGetCartProducts.php");
-               echo $msg;
+               echo $resultText;
 
 
 
