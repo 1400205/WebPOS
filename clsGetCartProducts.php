@@ -17,7 +17,7 @@ include ("myglobal.php");
         $transID = trim($transID);
 
 
-    if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,s.stuckqty*s.Sellprice,c.cartID AS Total
+    if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,c.qty*s.Sellprice,c.cartID AS Total
     FROM product p INNER JOIN suppliedstuck s on p.productID=s.productID INNER JOIN
      cart c ON s.productID= c.productID WHERE c.transactionID=?")) {
         $stmt->bind_param('s', $transID);
