@@ -53,8 +53,13 @@ include ("clsGetCartProducts.php");
 
             </fieldset>
             <div id="photolist">
+                <?php
+               
+                include ("myglobal.php");
+                include ("clsGetCartProducts.php");
 
-                <?php echo $resultText;?><br>
+
+                ?>
 
                 <div class="error"><span><a href="allPersons.html"> Click here to Exit this Task</a></a></span></div>
 
