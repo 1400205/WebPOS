@@ -19,8 +19,8 @@ $transID = trim($transID);
 
 if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,c.qty*s.Sellprice,c.cartID AS Total
     FROM product p INNER JOIN suppliedstuck s on p.productID=s.productID INNER JOIN
-     cart c ON s.productID= c.productID WHERE c.transactionID=?")) {
-    $stmt->bind_param('s', $transID);
+     cart c ON s.productID= c.productID WHERE c.transactionID='0'")) {
+   // $stmt->bind_param('s', $transID);
 
     $stmt->execute();
     //get result
