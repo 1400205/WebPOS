@@ -170,6 +170,7 @@ include ("myglobal.php");
                 });
 
            // getTransactions();
+            generate_table();
 
         }
 
