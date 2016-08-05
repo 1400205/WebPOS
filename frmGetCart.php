@@ -41,7 +41,7 @@ include ("tryGetCart.php");
             <fieldset>
 
                 <br>
-                <label>First Name:</label><br>
+                <label>Trans ID:</label><br>
                 <input type="text" name="transID" id="transID" class="input username" placeholder="Enter Supplier Name To search" />  <br>
 
 

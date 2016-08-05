@@ -7,7 +7,7 @@ include ("myglobal.php");
 
 
 $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-$transID=$_POST["submit"];
+$transID=$_POST["transID"];
 
 
 //clean input user first name
