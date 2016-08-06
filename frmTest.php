@@ -9,7 +9,7 @@
 //start session
 
 //session_start();
-include ("myglobal.php");
+//include ("myglobal.php");
 //include ("clsGetProduct.php");
 
 
