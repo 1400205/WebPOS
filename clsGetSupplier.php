@@ -26,7 +26,7 @@ if(isset($_POST["submit"])) {
     }
 
     while ($row = $result->fetch_row()) {
-        $line = "<p><a href='frmAddStuck.php?id=" . $row[0] . "'>".$row[0]. " Click Here to Select Supplier: ". $row[1]." </a></p>"."<br>";
+        $line = "<p><a href='frmAddStuck.php?id=" . $row[0] . "'>".$row[0]. " Click Here to Add Items Supplied By: ". $row[1]." </a></p>"."<br>";
 
         $resultText =$resultText.$line;
     }
