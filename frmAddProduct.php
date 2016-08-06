@@ -42,7 +42,7 @@ include ("clsProducts.php");
 
             });
             
-           // $("#ptID").hide();
+            $("#ptID").hide();
 
            // $("#pt").change(function() {
             //    $("#pc").load("clsGetProductClass.php?id=" + $("#ptID").val());
@@ -62,6 +62,7 @@ include ("clsProducts.php");
                 $("#pcID").load("clsGetProductClassID.php?choiceClass=" + $("#pc").val());
 
             });
+            $("#pcID").hide();
 
             $("#origin1").change(function() {
                 $("#originID").load("getCountryID.php?country=" + $("#origin1").val());
@@ -72,7 +73,7 @@ include ("clsProducts.php");
                 $("#positionID").load("clsGetPositionID.php?position=" + $("#partPosition").val());
 
             });
-
+            $("#positionID").hide();
         });
     </script>
 

@@ -51,7 +51,7 @@
                 </a>
             </li>
             <li>
-                <a tabindex="-1" href="#" class="waves-effect waves-light">
+                <a tabindex="-1" href="frmAddProduct.php" class="waves-effect waves-light">
                     <i class="icon ti-harddrive"></i>
                     <span class="text">Items</span>
                 </a>
