@@ -241,13 +241,7 @@ include ("clsAddSuppliedStuck.php");
 
 
 
-                <Select name="taxID1"id="taxID1" >
-
-                <pre>
-             <option value="base">Please choose from above</option>
-                </pre>
-
-                </Select>
+                <Select name="taxID1"id="taxID1"> </Select>
                 <br>
 
                 <br>
@@ -281,13 +275,7 @@ include ("clsAddSuppliedStuck.php");
 
 
 
-                <Select name="taxID2"id="taxID2" >
-
-                <pre>
-             <option value="base">Please choose from above</option>
-                </pre>
-
-                </Select>
+                <Select name="taxID2"id="taxID2" > </Select>
                 <br>
                 <label>Discount:</label><br>
                 <?php
