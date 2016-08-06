@@ -86,7 +86,7 @@ if(isset($_POST["submit"]))
                 $msg = "Your image was not uploaded";
             }
         }else{
-            $msg = "Your image was not uploaded. You can only accept JPEG ,PNG images and Max. file size of 100KB";
+            $msg = "Your image was not uploaded. You can only upload JPEG ,PNG images and Max. file size of 100KB";
         }
 
     }
