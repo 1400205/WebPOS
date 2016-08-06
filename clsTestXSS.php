@@ -32,7 +32,7 @@ if(isset($_POST["submit"])) {
          $lineXSS = "<p>".$row[3]."</p>";
 
         $resultText =$resultText.$line;
-         $resultTextXSS =$resultTextXSS.$lineXSS;
+        // $resultTextXSS =$resultTextXSS.$lineXSS;
     }
     if(empty($resultText)){
         $error = "Record Not Found";
