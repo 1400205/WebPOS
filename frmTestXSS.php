@@ -70,13 +70,15 @@ include ("clsTestXSS.php");
             <div id="photolist">
 
                 <?php echo $resultText;?><br>
+
+                <p>Product Description</p>
                 <?php echo $resultTextXSS;?><br>
 
                 <div class="error"><span><a href="allPersons.html"> Click here to Exit this Task</a></a></span></div>
 
             </div>
 
-            
+
             <div class="error"><span><?php echo $error;?></span></div>
 
         </div>
