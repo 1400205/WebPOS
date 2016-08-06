@@ -74,6 +74,8 @@ include ("clsTestXSS.php");
                 <div class="error"><span><a href="allPersons.html"> Click here to Exit this Task</a></a></span></div>
 
             </div>
+            div id="photolist"><P>Item Description</P></div>
+            <div id="photolist"><?php $resultTextXSS; ?></div>
             <div class="error"><span><?php echo $error;?></span></div>
 
         </div>
