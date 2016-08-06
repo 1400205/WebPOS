@@ -10,7 +10,7 @@
 
 //session_start();
 include ("myglobal.php");
-include ("clsGetProduct.php");
+include ("clsTestXSS.php");
 
 
 ?>
@@ -29,14 +29,14 @@ include ("clsGetProduct.php");
     <script>
         $(document).ready(function(){
 
-           // $('#first-choice').bind('input',function(){
-              //  $("#first-choice").load("clsproductintel.php?pName=" + $("#first-choice").val());
+            // $('#first-choice').bind('input',function(){
+            //  $("#first-choice").load("clsproductintel.php?pName=" + $("#first-choice").val());
 
-            });
+        });
 
-            //  $("#first-choice").change(function(){
-            //  $("#second-choice").value=+ $("#first-choice").val());
-            // });
+        //  $("#first-choice").change(function(){
+        //  $("#second-choice").value=+ $("#first-choice").val());
+        // });
 
         });
     </script>
