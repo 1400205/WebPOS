@@ -51,7 +51,7 @@ include ("clsAddSupplier.php");
             <fieldset>
 
                 <br>
-                <label>Supplier Name:</label><br>
+                <label>Supplier's Company Name:</label><br>
                 <input type="text" name="supplier" class="input username" placeholder="Enter Supplier Name"/>  <br>
 
                 <div class="footer">
