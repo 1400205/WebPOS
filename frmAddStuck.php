@@ -36,7 +36,7 @@ include ("clsAddSuppliedStuck.php");
                 $("#second-choice").load("clsGetProductID.php?choice=" + $("#first-choice").val());
 
             });
-           // $("#second-choice").hide();
+            $("#second-choice").hide();
 
             //  $("#first-choice").change(function(){
             //  $("#second-choice").value=+ $("#first-choice").val());
@@ -46,19 +46,19 @@ include ("clsAddSuppliedStuck.php");
                 $("#shelfID").load("clsGetShelfID.php?shelfName=" + $("#shelfName").val());
 
             });
-           // $("#shelfID").hide();
+            $("#shelfID").hide();
 
             $("#taxName").change(function() {
                 $("#taxID1").load("clsGetTaxID.php?tax1=" + $("#taxName").val());
 
             });
-            // $("#taxID1").hide();
+             $("#taxID1").hide();
 
             $("#taxName2").change(function() {
                 $("#taxID2").load("clsGetTaxID.php?tax1=" + $("#taxName2").val());
 
             });
-            // $("#taxID2").hide();
+            $("#taxID2").hide();
 
 
         });
