@@ -106,7 +106,7 @@ include ("clsPerson.php");
                 <input type="date" name="dob" class="input username" placeholder="Date Of Birth" max=" 2000-01-01" />  <br><br>
 
                 <div class="footer">
-                    <input type="submit" id= "submit" class="button" name="submit" value="Login" /><br>
+                    <input type="submit" id= "submit" class="button" name="submit" value="Submit" /><br>
 
 
                 </div>
