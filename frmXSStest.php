@@ -10,7 +10,7 @@
 
 //session_start();
 include ("myglobal.php");
-include ("clsTestXSS.php");
+include ("clsGetProduct.php");
 
 
 ?>
