@@ -71,7 +71,7 @@ include ("clsTestXSS.php");
 
                 <?php echo $resultText;?><br>
 
-                <p>Product Description: </p> <br><br>
+                <h3> <p>Product Description: </p> </h3> <br><br>
                 <?php echo $resultTextXSS;?><br>
 
                 <div class="error"><span><a href="allPersons.html"> Click here to Exit this Task</a></a></span></div>
