@@ -69,6 +69,8 @@ include ("clsProducts.php");
 
             });
 
+            $("#originID").hide();
+
             $("#partPosition").change(function() {
                 $("#positionID").load("clsGetPositionID.php?position=" + $("#partPosition").val());
 
