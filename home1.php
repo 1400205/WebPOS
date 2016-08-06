@@ -58,7 +58,7 @@
             </li>
 
             <li>
-                <a tabindex="-1" href="#" class="waves-effect waves-light">
+                <a tabindex="-1" href="frmGetSupplier.php" class="waves-effect waves-light">
                     <i class="icon ti-download"></i>
                     <span class="text">Suppliers</span>
                 </a>
