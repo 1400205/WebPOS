@@ -69,7 +69,7 @@ include ("clsGetProduct.php");
             </fieldset>
             <div id="photolist">
 
-                <?php echo $resultText;?><br>
+                <?php echo $resultText;?><br><br>
 
                 <div class="error"><span><a href="allPersons.html"> Click here to Exit this Task</a></a></span></div>
 
