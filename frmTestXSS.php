@@ -10,7 +10,7 @@
 
 //session_start();
 include ("myglobal.php");
-include ("clsTestXSS.php");
+include ("clsGetProduct.php");
 
 
 ?>
@@ -71,14 +71,9 @@ include ("clsTestXSS.php");
 
                 <?php echo $resultText;?><br>
 
-                
-
                 <div class="error"><span><a href="allPersons.html"> Click here to Exit this Task</a></a></span></div>
 
             </div>
-
-
-
             <div class="error"><span><?php echo $error;?></span></div>
 
         </div>
