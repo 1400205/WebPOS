@@ -3,7 +3,7 @@
 session_start();
 ?>
 <?php
-try{
+
 
     /**
      * Created by PhpStorm.
@@ -23,6 +23,7 @@ try{
         $attempt=0;
         $dpassword="";
         $dusername="";
+        $ip="";
 
         //strip variables of all sql injections
         //clean input user othername
@@ -108,6 +109,7 @@ try{
                 $_SESSION["userid"] = $userid;//user id assigned to session global variable
                 $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
                 $_SESSION ["timeout"]=time();//get login time
+                $ip= $_SESSION["ip"];
 
                 if( $userstatus==1 and $usertype==1){
                     header("location: home1.php"); // Redirecting To another Page
@@ -120,6 +122,7 @@ try{
                     $_SESSION["userid"] = $userid;//user id assigned to session global variable
                     $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
                     $_SESSION ["timeout"]=time();//get login time
+                    $ip= $_SESSION["ip"];
 
 
                 }
@@ -133,6 +136,7 @@ try{
                     $_SESSION["userid"] = $userid;//user id assigned to session global variable
                     $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
                     $_SESSION ["timeout"]=time();//get login time
+                    $ip= $_SESSION["ip"];
 
                 }
                 elseif ( $userstatus==0 )
@@ -150,7 +154,7 @@ try{
                 $stmt=$sqlcon->prepare("UPDATE WebPOS_user SET loginAttempt=loginAttempt+1 WHERE username=?  ");
                 $stmt->bind_param('s',$username);
                 $stmt->execute();
-                $error=" Incorrect User Name Or Password";
+                $error=" Incorrect User Name Or Password".$ip;
                 // $error="Connection Failed, Incorrect User Name Or Password";
 
                 //$error= "Incorrect username or password.";
@@ -168,7 +172,7 @@ try{
                     $stmt=$sqlcon->prepare("UPDATE WebPOS_user SET userStatus=0 WHERE username=?  ");
                     $stmt->bind_param('s',$username);
                     $stmt->execute();
-                    $error= "Your user account is disabled! Contact Admin";
+                    $error= "Your user account is disabled! Contact Admin".$ip;
 
                 }
 
@@ -182,7 +186,4 @@ try{
     }
 
 
-}catch(Exception $e){
-$error=$e->getMessage();
-}
 ?>
