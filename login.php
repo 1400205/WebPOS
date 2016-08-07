@@ -140,15 +140,15 @@ try{
                     $error= "Incorrect username or password.";
 
                 }
-            }else{
-
-                $error= "Incorrect username or password.";
+            }elseif (!($row=$result->fetch_row())){
 
                 $stmt=$sqlcon->prepare("UPDATE WebPOS_user SET loginAttempt=loginAttempt+1 WHERE username=?  ");
                 $stmt->bind_param('s',$username);
                 $stmt->execute();
                 $error=" Incorrect User Name Or Password";
                 // $error="Connection Failed, Incorrect User Name Or Password";
+
+                //$error= "Incorrect username or password.";
 
 
                 $stmt=$sqlcon->prepare("SELECT loginAttempt FROM WebPOS_user  WHERE username=?");
