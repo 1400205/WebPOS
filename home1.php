@@ -89,7 +89,7 @@
             </li>
 
             <li>
-                <a tabindex="-1" href="allPersons.html" class="waves-effect waves-light">
+                <a tabindex="-1" href="allPersons.php" class="waves-effect waves-light">
                     <i class="icon ti-id-badge"></i>
                     <span class="text">Add All Persons</span>
                 </a>

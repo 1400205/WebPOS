@@ -7,7 +7,7 @@ if (!($ip==$_SERVER['REMOTE_ADDR'])){
     header("location: logout.php"); // Redirecting To Other Page
 }
 
-if($_SESSION ["timeout"]+60 < time()){
+if($_SESSION ["timeout"]+10 < time()){
 
     //session timed out
     header("location: logout.php"); // Redirecting To Other Page
@@ -43,17 +43,17 @@ if($_SESSION ["timeout"]+60 < time()){
             <div id="photolist">
                 <ul class="list-unstyled menu-parent" id="mainMenu">
                     <div>
-                <a  href="personForm.php" class="waves-effect waves-light">
-                    <i class="icon ti-id-badge"></i>
-                    <span class="text">Add Person</span>
-                </a>
+                        <a  href="personForm.php" class="waves-effect waves-light">
+                            <i class="icon ti-id-badge"></i>
+                            <span class="text">Add Person</span>
+                        </a>
                     </div>
-                 <br>
+                    <br>
                     <div>
-                    <a  href="searchPersonForm.php" class="waves-effect waves-light">
-                        <i class="icon ti-id-badge"></i>
-                        <span class="text">Add Other Details of Person</span>
-                    </a>
+                        <a  href="searchPersonForm.php" class="waves-effect waves-light">
+                            <i class="icon ti-id-badge"></i>
+                            <span class="text">Add Other Details of Person</span>
+                        </a>
                     </div>
 
                     <br>
@@ -79,7 +79,7 @@ if($_SESSION ["timeout"]+60 < time()){
                         </a>
                     </div>
 
-                    </ul>
+                </ul>
             </div>
 
         </div>
