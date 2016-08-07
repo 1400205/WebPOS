@@ -23,7 +23,7 @@ session_start();
         $attempt=0;
         $dpassword="";
         $dusername="";
-        $ip="";
+        $ip= get_client_ip();
 
         //strip variables of all sql injections
         //clean input user othername
@@ -45,6 +45,7 @@ session_start();
             $username = $_POST['username'];
             $password = $_POST['password'];
             $result=0;
+
             if (($sqlcon->connect_errno)){
 
 
@@ -107,9 +108,9 @@ session_start();
                 $_SESSION["usertype"] = $usertype;//user type assigned to session global variable
                 $_SESSION["userstatus"] = $userstatus;//user stautus assigned to session global variable
                 $_SESSION["userid"] = $userid;//user id assigned to session global variable
-                $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
-                $_SESSION ["timeout"]=time();//get login time
-                $ip= $_SESSION["ip"];
+               // $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
+               // $_SESSION ["timeout"]=time();//get login time
+               // get_client_ip();
 
                 if( $userstatus==1 and $usertype==1){
                     header("location: home1.php"); // Redirecting To another Page
@@ -120,9 +121,9 @@ session_start();
                     $_SESSION["usertype"] = $usertype;//user type assigned to session global variable
                     $_SESSION["userstatus"] = $userstatus;//user stautus assigned to session global variable
                     $_SESSION["userid"] = $userid;//user id assigned to session global variable
-                    $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
-                    $_SESSION ["timeout"]=time();//get login time
-                    $ip= $_SESSION["ip"];
+                   // $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
+                    //$_SESSION ["timeout"]=time();//get login time
+                   // $ip= $_SESSION["ip"];
 
 
                 }
@@ -134,9 +135,9 @@ session_start();
                     $_SESSION["usertype"] = $usertype;//user type assigned to session global variable
                     $_SESSION["userstatus"] = $userstatus;//user stautus assigned to session global variable
                     $_SESSION["userid"] = $userid;//user id assigned to session global variable
-                    $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
-                    $_SESSION ["timeout"]=time();//get login time
-                    $ip= $_SESSION["ip"];
+                  //  $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
+                   // $_SESSION ["timeout"]=time();//get login time
+                    //$ip= $_SESSION["ip"];
 
                 }
                 elseif ( $userstatus==0 )
@@ -154,7 +155,7 @@ session_start();
                 $stmt=$sqlcon->prepare("UPDATE WebPOS_user SET loginAttempt=loginAttempt+1 WHERE username=?  ");
                 $stmt->bind_param('s',$username);
                 $stmt->execute();
-                $error=" Incorrect User Name Or Password".$ip;
+                $error=" Incorrect User Name Or Password ".$ip;
                 // $error="Connection Failed, Incorrect User Name Or Password";
 
                 //$error= "Incorrect username or password.";
