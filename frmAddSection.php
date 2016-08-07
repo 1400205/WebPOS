@@ -1,4 +1,15 @@
 <?php
+
+//start session
+
+//session_start();
+//include ("clsAddBranch.php");
+include ("myglobal.php");
+
+include ("clsAddSection.php");
+
+?>
+<?php
 session_start();
 
 $ip=$_SESSION["ip"];
@@ -17,17 +28,7 @@ if($_SESSION ["timeout"]+1800 < time()){
 }
 ?>
 
-<?php
 
-//start session
-
-//session_start();
-//include ("clsAddBranch.php");
-include ("myglobal.php");
-
-include ("clsAddSection.php");
-
-?>
 
 
 <!doctype html>

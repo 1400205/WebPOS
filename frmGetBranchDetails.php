@@ -1,3 +1,14 @@
+<?php
+
+//start session
+
+//session_start();
+include ("myglobal.php");
+include ("clsgetBranchDetails.php");
+
+//include ("clsTitle.php");
+
+?>
 
 <?php
 session_start();
@@ -17,17 +28,7 @@ if($_SESSION ["timeout"]+1800 < time()){
     $_SESSION['timeout']=time();
 }
 ?>
-<?php
 
-//start session
-
-//session_start();
-include ("myglobal.php");
-include ("clsgetBranchDetails.php");
-
-//include ("clsTitle.php");
-
-?>
 
 
 <!doctype html>

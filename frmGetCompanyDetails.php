@@ -1,5 +1,17 @@
+
 <?php
-session_start();
+
+//start session
+
+//session_start();
+//include ("myglobal.php");
+include ("getCompany.php");
+
+//include ("clsTitle.php");
+
+?>
+<?php
+//session_start();
 
 $ip=$_SESSION["ip"];
 $timeout=$_SESSION ["timeout"];
@@ -17,17 +29,7 @@ if($_SESSION ["timeout"]+1800 < time()){
 }
 ?>
 
-<?php
 
-//start session
-
-//session_start();
-//include ("myglobal.php");
-include ("getCompany.php");
-
-//include ("clsTitle.php");
-
-?>
 
 
 <!doctype html>

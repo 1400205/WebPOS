@@ -1,5 +1,19 @@
 <?php
-session_start();
+/**
+ * Created by IntelliJ IDEA.
+ * User: prosper
+ * Date: 25/07/2016
+ * Time: 20:10
+ */
+//session_start();
+//include ("clsAddBranch.php");
+include ("myglobal.php");
+
+include ("clsAddMarkUp.php");
+
+?>
+<?php
+//session_start();
 
 $ip=$_SESSION["ip"];
 $timeout=$_SESSION ["timeout"];
@@ -17,20 +31,7 @@ if($_SESSION ["timeout"]+60 < time()){
 }
 ?>
 
-<?php
-/**
- * Created by IntelliJ IDEA.
- * User: prosper
- * Date: 25/07/2016
- * Time: 20:10
- */
-//session_start();
-//include ("clsAddBranch.php");
-include ("myglobal.php");
 
-include ("clsAddMarkUp.php");
-
-?>
 
 
 <!doctype html>

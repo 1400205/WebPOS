@@ -1,3 +1,14 @@
+<?php
+
+//start session
+
+//session_start();
+include ("myglobal.php");
+include ("clsCompany.php");
+
+//include ("clsTitle.php");
+
+?>
 
 <?php
 //session_start();
@@ -16,17 +27,6 @@ if (!($ip==$_SERVER['REMOTE_ADDR'])){
     //reset session time
     $_SESSION['timeout']=time();
 }*/
-?>
-<?php
-
-//start session
-
-//session_start();
-include ("myglobal.php");
-include ("clsCompany.php");
-
-//include ("clsTitle.php");
-
 ?>
 
 

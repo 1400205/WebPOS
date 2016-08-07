@@ -1,6 +1,17 @@
+<?php
+
+//start session
+
+//session_start();
+//include ("clsAddBranch.php");
+include ("myglobal.php");
+
+include ("clsBranch.php");
+
+?>
 
 <?php
-session_start();
+//session_start();
 
 $ip=$_SESSION["ip"];
 $timeout=$_SESSION ["timeout"];
@@ -16,17 +27,6 @@ if($_SESSION ["timeout"]+60 < time()){
     //reset session time
     $_SESSION['timeout']=time();
 }
-?>
-<?php
-
-//start session
-
-//session_start();
-//include ("clsAddBranch.php");
-include ("myglobal.php");
-
-include ("clsBranch.php");
-
 ?>
 
 

@@ -1,23 +1,4 @@
 <?php
-session_start();
-
-$ip=$_SESSION["ip"];
-$timeout=$_SESSION ["timeout"];
-if (!($ip==$_SERVER['REMOTE_ADDR'])){
-    header("location: logout.php"); // Redirecting To Other Page
-}
-
-if($_SESSION ["timeout"]+1800 < time()){
-
-    //session timed out
-    header("location: logout.php"); // Redirecting To Other Page
-}else{
-    //reset session time
-    $_SESSION['timeout']=time();
-}
-?>
-
-<?php
 /**
  * Created by IntelliJ IDEA.
  * User: prosper
@@ -42,6 +23,27 @@ include ("myglobal.php");
 include ("clsAddSupplier.php");
 
 ?>
+
+
+<?php
+//session_start();
+
+$ip=$_SESSION["ip"];
+$timeout=$_SESSION ["timeout"];
+if (!($ip==$_SERVER['REMOTE_ADDR'])){
+    header("location: logout.php"); // Redirecting To Other Page
+}
+
+if($_SESSION ["timeout"]+1800 < time()){
+
+    //session timed out
+    header("location: logout.php"); // Redirecting To Other Page
+}else{
+    //reset session time
+    $_SESSION['timeout']=time();
+}
+?>
+
 
 
 <!doctype html>
