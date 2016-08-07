@@ -144,7 +144,8 @@ try{
                     $error= "Incorrect username or password.";
 
                 }
-            }elseif (($dusername==$username)&&($dpassword<>$password)){
+            }
+            if ((trim($dusername)==trim($username))&&(trim($dpassword)<>trim($password))){
 
                 $stmt=$sqlcon->prepare("UPDATE WebPOS_user SET loginAttempt=loginAttempt+1 WHERE username=?  ");
                 $stmt->bind_param('s',$username);
