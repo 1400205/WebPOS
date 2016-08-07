@@ -97,7 +97,7 @@
             </li>
 
             <li>
-                <a tabindex="-1" href="AllSettings.html" class="waves-effect waves-light">
+                <a tabindex="-1" href="frmAllSettings.php" class="waves-effect waves-light">
                     <i class="icon ti-settings"></i>
                     <span class="text">Store Config</span>
                 </a>
