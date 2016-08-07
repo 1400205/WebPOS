@@ -7,7 +7,7 @@ if (!($ip==$_SERVER['REMOTE_ADDR'])){
     header("location: logout.php"); // Redirecting To Other Page
 }
 
-if($_SESSION ["timeout"]+60 < time()){
+if($_SESSION ["timeout"]+10 < time()){
 
     //session timed out
     header("location: logout.php"); // Redirecting To Other Page

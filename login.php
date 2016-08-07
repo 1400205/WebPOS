@@ -23,7 +23,7 @@ session_start();
         $attempt=0;
         $dpassword="";
         $dusername="";
-        if(!empty($_SERVER["HTTP_CLIENT_IP"])){
+        /*if(!empty($_SERVER["HTTP_CLIENT_IP"])){
             $_SESSION["ip"]=$_SERVER["HTTP_CLIENT_IP"];
         }
         elseif (!empty($_SERVER["HTTP_X_FORWARDED_FOR"])){
@@ -32,7 +32,7 @@ session_start();
         {
             $_SESSION["ip"]=$_SERVER["REMOTE_ADDR"];
 
-        }
+        }*/
 
         //strip variables of all sql injections
         //clean input user othername
@@ -117,8 +117,8 @@ session_start();
                 $_SESSION["usertype"] = $usertype;//user type assigned to session global variable
                 $_SESSION["userstatus"] = $userstatus;//user stautus assigned to session global variable
                 $_SESSION["userid"] = $userid;//user id assigned to session global variable
-               // $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
-               // $_SESSION ["timeout"]=time();//get login time
+                $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
+                $_SESSION ["timeout"]=time();//get login time
                // get_client_ip();
 
                 if( $userstatus==1 and $usertype==1){
@@ -130,8 +130,8 @@ session_start();
                     $_SESSION["usertype"] = $usertype;//user type assigned to session global variable
                     $_SESSION["userstatus"] = $userstatus;//user stautus assigned to session global variable
                     $_SESSION["userid"] = $userid;//user id assigned to session global variable
-                   // $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
-                    //$_SESSION ["timeout"]=time();//get login time
+                   $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
+                    $_SESSION ["timeout"]=time();//get login time
                    // $ip= $_SESSION["ip"];
 
 
@@ -144,8 +144,8 @@ session_start();
                     $_SESSION["usertype"] = $usertype;//user type assigned to session global variable
                     $_SESSION["userstatus"] = $userstatus;//user stautus assigned to session global variable
                     $_SESSION["userid"] = $userid;//user id assigned to session global variable
-                  //  $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
-                   // $_SESSION ["timeout"]=time();//get login time
+                   $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
+                   $_SESSION ["timeout"]=time();//get login time
                     //$ip= $_SESSION["ip"];
 
                 }
