@@ -23,7 +23,16 @@ session_start();
         $attempt=0;
         $dpassword="";
         $dusername="";
-        $ip= get_client_ip();
+        if(!empty($_SERVER["HTTP_CLIENT_IP"])){
+            $_SESSION["ip"]=$_SERVER["HTTP_CLIENT_IP"];
+        }
+        elseif (!empty($_SERVER["HTTP_X_FORWARDED_FOR"])){
+            $_SESSION["ip"]=$_SERVER["HTTP_X_FORWARDED_FOR"];
+        }else
+        {
+            $_SESSION["ip"]=$_SERVER["REMOTE_ADDR"];
+
+        }
 
         //strip variables of all sql injections
         //clean input user othername

@@ -7,7 +7,7 @@
  */
 
 $ip="";
-if(!empty($_SERVER["HTTP_CLIENT_IP"])){
+/*if(!empty($_SERVER["HTTP_CLIENT_IP"])){
     $_SESSION["ip"]=$_SERVER["HTTP_CLIENT_IP"];
 }
 elseif (!empty($_SERVER["HTTP_X_FORWARDED_FOR"])){
@@ -16,5 +16,7 @@ elseif (!empty($_SERVER["HTTP_X_FORWARDED_FOR"])){
 {
     $_SESSION["ip"]=$_SERVER["REMOTE_ADDR"];
 
-}
-echo $_SESSION["ip"];
+}*/
+
+$_SESSION ["timeout"]=time();
+echo $_SESSION["timeout"];
