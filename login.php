@@ -46,7 +46,7 @@ try{
 
 
 
-                $stmt=$sqlcon->prepare("UPDATE WebPOS_user SET loginAttempt=loginAttempt+1 WHERE username=?  ");
+                /*$stmt=$sqlcon->prepare("UPDATE WebPOS_user SET loginAttempt=loginAttempt+1 WHERE username=?  ");
                 $stmt->bind_param('s',$username);
                 $stmt->execute();
                 $error=" Incorrect User Name Or Password";
@@ -67,7 +67,7 @@ try{
                  $stmt->execute();
                  $error= "Your user account is disabled! Contact Admin";
 
-             }
+             }*/
 
             }
 
@@ -143,6 +143,30 @@ try{
             }else{
 
                 $error= "Incorrect username or password.";
+
+                $stmt=$sqlcon->prepare("UPDATE WebPOS_user SET loginAttempt=loginAttempt+1 WHERE username=?  ");
+                $stmt->bind_param('s',$username);
+                $stmt->execute();
+                $error=" Incorrect User Name Or Password";
+                // $error="Connection Failed, Incorrect User Name Or Password";
+
+
+                $stmt=$sqlcon->prepare("SELECT loginAttempt FROM WebPOS_user  WHERE username=?");
+                $stmt->bind_param('s',$username);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                if($row=$result->fetch_row()) {
+                    $attempt = $row[0];
+                }
+                if ($attempt >3)   {
+
+                    $stmt=$sqlcon->prepare("UPDATE WebPOS_user SET userStatus=0 WHERE username=?  ");
+                    $stmt->bind_param('s',$username);
+                    $stmt->execute();
+                    $error= "Your user account is disabled! Contact Admin";
+
+                }
+
 
             }
 
