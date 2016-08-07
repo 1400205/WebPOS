@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $ip=$_SESSION["ip"];
 $timeout=$_SESSION ["timeout"];
 if (!($ip==$_SERVER['REMOTE_ADDR'])){

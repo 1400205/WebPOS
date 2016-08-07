@@ -102,6 +102,8 @@ try{
                 $_SESSION["usertype"] = $usertype;//user type assigned to session global variable
                 $_SESSION["userstatus"] = $userstatus;//user stautus assigned to session global variable
                 $_SESSION["userid"] = $userid;//user id assigned to session global variable
+                $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
+                $_SESSION ["timeout"]=time();//get login time
 
                 if( $userstatus==1 and $usertype==1){
                     header("location: home1.php"); // Redirecting To another Page
@@ -112,6 +114,8 @@ try{
                     $_SESSION["usertype"] = $usertype;//user type assigned to session global variable
                     $_SESSION["userstatus"] = $userstatus;//user stautus assigned to session global variable
                     $_SESSION["userid"] = $userid;//user id assigned to session global variable
+                    $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
+                    $_SESSION ["timeout"]=time();//get login time
 
 
                 }
@@ -123,6 +127,8 @@ try{
                     $_SESSION["usertype"] = $usertype;//user type assigned to session global variable
                     $_SESSION["userstatus"] = $userstatus;//user stautus assigned to session global variable
                     $_SESSION["userid"] = $userid;//user id assigned to session global variable
+                    $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
+                    $_SESSION ["timeout"]=time();//get login time
 
                 }
                 elseif ( $userstatus==0 )
