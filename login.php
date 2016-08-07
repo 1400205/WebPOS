@@ -21,6 +21,8 @@ try{
         $password = $_POST['password'];
         $result=0;
         $attempt=0;
+        $dpassword="";
+        $dusername="";
 
         //strip variables of all sql injections
         //clean input user othername
@@ -79,7 +81,7 @@ try{
             // $sql="SELECT userID,typeAdmin,userStatus FROM WebPOS_user WHERE username='$username' and password='$password'";
 
             //prepare statement
-            if($stmt=$sqlcon->prepare("SELECT userID,typeAdmin,userStatus FROM WebPOS_user WHERE username=? and password=?")){
+            if($stmt=$sqlcon->prepare("SELECT userID,typeAdmin,userStatus,password,userName FROM WebPOS_user WHERE username=? and password=?")){
                 //bind parameter
                 $stmt->bind_param('ss',$username,$password);
                 $stmt->execute();
@@ -95,6 +97,8 @@ try{
                 $usertype = $row[1];//get user type
                 $userstatus = $row[2];//get user status
                 $userid = $row[0];//get user id
+                $dpassword=$row[3];
+                $dusername=$row[4];
 
                 $_SESSION["uname"] = $username;
                 $_SESSION["pwd"] = $password;
@@ -140,7 +144,7 @@ try{
                     $error= "Incorrect username or password.";
 
                 }
-            }elseif (!($row=$result->fetch_row())){
+            }elseif (($dusername==$username)&&($dpassword<>$password)){
 
                 $stmt=$sqlcon->prepare("UPDATE WebPOS_user SET loginAttempt=loginAttempt+1 WHERE username=?  ");
                 $stmt->bind_param('s',$username);
