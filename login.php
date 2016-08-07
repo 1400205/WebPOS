@@ -131,8 +131,9 @@ session_start();
                     $_SESSION["userstatus"] = $userstatus;//user stautus assigned to session global variable
                     $_SESSION["userid"] = $userid;//user id assigned to session global variable
                    $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
-                    $_SESSION ["timeout"]=time();//get login time
+                   // $_SESSION ["timeout"]=time();//get login time
                    // $ip= $_SESSION["ip"];
+                    $time = $_SERVER['REQUEST_TIME'];
 
 
                 }
@@ -145,7 +146,8 @@ session_start();
                     $_SESSION["userstatus"] = $userstatus;//user stautus assigned to session global variable
                     $_SESSION["userid"] = $userid;//user id assigned to session global variable
                    $_SESSION["ip"] = $_SERVER['REMOTE_ADDR'];//get client IP address
-                   $_SESSION ["timeout"]=time();//get login time
+                  // $_SESSION ["timeout"]=time();//get login time
+                    $time = $_SERVER['REQUEST_TIME'];
                     //$ip= $_SESSION["ip"];
 
                 }
