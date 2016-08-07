@@ -42,7 +42,7 @@ try{
             $username = $_POST['username'];
             $password = $_POST['password'];
             $result=0;
-            if (!($sqlcon->connect_errno)){
+            if (($sqlcon->connect_errno)){
 
 
 
