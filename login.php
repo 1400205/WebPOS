@@ -140,6 +140,10 @@ try{
                     $error= "Incorrect username or password.";
 
                 }
+            }else{
+
+                $error= "Incorrect username or password.";
+
             }
 
 
