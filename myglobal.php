@@ -29,7 +29,7 @@ $productName="";
 $selctedProduct=0;
 $resultTextXSS="";
 
-function get_client_ip() {
+/*function get_client_ip() {
     $ipaddress = '';
     if (getenv('HTTP_CLIENT_IP'))
         $ipaddress = getenv('HTTP_CLIENT_IP');
@@ -46,7 +46,7 @@ function get_client_ip() {
     else
         $ipaddress = 'UNKNOWN';
     return $ipaddress;
-}
+}*/
 
 
 
