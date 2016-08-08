@@ -78,7 +78,7 @@ if(isset($_POST["submit"]))
 				   if( $stmt->execute()){
                        $msg = "Thank You! The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded. click <a href='searchPersonForm.php'>here</a> to go back";
                     }
-                else{$msg= "Execute failed: (" . $mysqli->errno . ") " . $mysqli->error;}
+                else{$msg= "Execute failed: Duplicate Entry is Not Allowed";}
 				
                 }
             }
@@ -86,7 +86,7 @@ if(isset($_POST["submit"]))
                 $msg = "Your image was not uploaded";
             }
         }else{
-            $msg = "Your image was not uploaded. You can only accept JPEG ,PNG images and Max. file size of 100KB";
+            $msg = "Your image was not uploaded. You can only upload JPEG ,PNG images and Max. file size of 100KB";
         }
 
     }

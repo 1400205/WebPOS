@@ -53,6 +53,7 @@ include ("searchEmployeeToAddUser.php");
 
                 <?php echo $resultText;?><br>
                 <?php echo $resultTextPhoto;?><br>
+                <div class="error"><span><a href="allPersons.html"> Click here to Exit this Task</a></a></span></div>
 
             </div>
 

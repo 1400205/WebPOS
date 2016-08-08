@@ -29,7 +29,7 @@ if(isset($_POST["submit"])) {
                                 r.addressline1,r.addressline2,r.postBox,r.town,r.region,r.country,pp.targetfile 
                                 FROM person p 
                                 INNER JOIN personaddress r on p.personID=r.personID INNER JOIN personphoto pp on p.personID=pp.personID
-                                WHERE p.firstName=? AND p.surname=?")) {
+                                WHERE p.personID NOT IN (SELECT personID FROM employee) AND p.firstName=? AND p.surname=?")) {
         $stmt->bind_param('ss', $firstname,$surname);
 
         $stmt->execute();
@@ -38,7 +38,7 @@ if(isset($_POST["submit"])) {
     }
 
     while ($row = $result->fetch_row()) {
-        $line = "<p><a href='addEmployeeForm.php?id=" . $row[2] . "'>". "Click Here To Add Employee Of ". $row[1]
+        $line = "<p><a href='addEmployeeForm.php?id=" . $row[0] . "'>". "Click Here To Add Employee Of ". $row[1]
             . " " . $row[3] . "," . $row[2] ." "."Born on ".$row[7]. "</a></p>"."<br>";
 
         $linePhoto = "<p><img src='".$row[14]."' style='width:100px;height:100px;'></p>";
@@ -46,7 +46,9 @@ if(isset($_POST["submit"])) {
         $resultText =$resultText.$line;
         $resultTextPhoto =$resultTextPhoto.$linePhoto;
     }
-
+    if(empty($row)){
+        $msg = "Record Not Found";
+    }
 
 }
 ?>

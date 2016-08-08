@@ -41,7 +41,7 @@ include ("addphoto.php");
 
             </fieldset>
             <div id="photolist">
-                <?php echo $resultText;?>
+              <?php echo  $resultText;?>
             </div>
 
 
@@ -50,7 +50,7 @@ include ("addphoto.php");
 
 
             </div>
-            <div class="error"><span><?php echo $msg;?></span></div>
+            <div class="error"><span> <a href="index.php"> <?php echo $msg;?></a></span></div>
         </div>
     </form>
 

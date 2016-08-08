@@ -1,3 +1,21 @@
+<?php
+session_start();
+
+$ip=$_SESSION["ip"];
+$timeout=$_SESSION ["timeout"];
+if (!($ip==$_SERVER['REMOTE_ADDR'])){
+    header("location: logout.php"); // Redirecting To Other Page
+}
+
+if($_SESSION ["timeout"]+60 < time()){
+
+    //session timed out
+    header("location: logout.php"); // Redirecting To Other Page
+}else{
+    //reset session time
+    $_SESSION['timeout']=time();
+}
+?>
 
 
 <!doctype html>
@@ -51,6 +69,13 @@
                         <a  href="searchForPotentialUserForm.php" class="waves-effect waves-light">
                             <i class="icon ti-id-badge"></i>
                             <span class="text">Add Users</span>
+                        </a>
+                    </div>
+                    <br>
+                    <div>
+                        <a  href="home1.php" class="waves-effect waves-light">
+                            <i class="icon ti-id-badge"></i>
+                            <span class="text">Click here to go back to home page</span>
                         </a>
                     </div>
 

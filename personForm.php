@@ -2,10 +2,25 @@
 
 //start session
 
-//session_start();
+session_start();
 include ("myglobal.php");
 include ("clsPerson.php");
 //include ("clsTitle.php");
+
+$ip=$_SESSION["ip"];
+$timeout=$_SESSION ["timeout"];
+if (!($ip==$_SERVER['REMOTE_ADDR'])){
+    header("location: logout.php"); // Redirecting To Other Page
+}
+
+if($_SESSION ["timeout"]+60 < time()){
+
+    //session timed out
+    header("location: logout.php"); // Redirecting To Other Page
+}else{
+    //reset session time
+    $_SESSION['timeout']=time();
+}
 
 ?>
 
@@ -106,13 +121,15 @@ include ("clsPerson.php");
                 <input type="date" name="dob" class="input username" placeholder="Date Of Birth" max=" 2000-01-01" />  <br><br>
 
                 <div class="footer">
-                    <input type="submit" id= "submit" class="button" name="submit" value="Login" /><br>
+                    <input type="submit" id= "submit" class="button" name="submit" value="Submit" /><br>
 
 
                 </div>
 
             </fieldset>
             <div class="error"><span><?php echo $error;?></span></div>
+            <div class="error"><span><a href="allPersons.html">Click to Exit this Task</a></a></span></div>
+
         </div>
     </form>
 

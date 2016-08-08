@@ -1,12 +1,121 @@
+<?php
+include ("myglobal.php");
+
+//include ("clsAddCart.php");
+
+
+?>
 <!DOCTYPE html>
-<html class="english"><head>
+<html class="english">
+
+<head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8"> <title>WebPOS | Easy to use Online POS Software</title>
     <link rel="icon" href="https://demo.phppointofsale.com/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"> <!--320-->
+    <!--<script src="jq/jquery-3.1.0.js"/> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--    <script type="text/javascript" src="js/script.js"></script>-->
     <!-- base href="https://demo.phppointofsale.com/" -->
 
+
+
     <link rel="icon" href="https://demo.phppointofsale.com/favicon.ico" type="image/x-icon">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/jscart.js"></script>
+
+    <?php include ("clsgetTransID.php"); ?>
+    <script>
+        $(document).ready(function(){
+
+
+           /* $("#item_id").click(function() {
+               // var customerID = '';
+               $("#customerID").val(customerID));
+                $("#customerID").load("clsGetShelfID.php");
+                $("#customerID").val()
+
+
+            });*/
+       /* $("#shelfName").change(function() {
+            $("#shelfID").load("clsGetShelfID.php?shelfName=" + $("#shelfName").val());
+
+        });*/
+
+
+            $("#addCart").click(function()
+            {
+
+                var myItem=$('#item_id').val();
+               // var qty=$('#myqty').val();
+               // var myTransID=$('#transID').val();
+                
+                   // document.getElementById( "item_id" );
+
+                if(myItem)
+                {
+                    $.ajax({
+                        type: 'post',
+                        url: 'clsGetCustomerSelectedProductID.php',
+                        data: {
+                            keyword:myItem,
+                           // myqty:qty,
+                            //transID=myTransID,
+                        },
+                        success: function (response) {
+
+                            // We get the element having id of display_info and put the response inside it
+                            $( '#display_info' ).html(response);
+
+                        }
+                    });
+                    //get transaction ID
+                    $("#transID").val(transid);
+
+                    //add chart item
+                    // bind 'myForm' and provide a simple callback function
+                   /* $('#select_customer_form').ajaxForm(function() {
+                        alert("Thank you, Item Added!");
+                    });*/
+
+                }
+
+                else
+                {
+                    $( '#display_info' ).html("Record not found");
+                }
+
+                //$("#button").click(function() {
+                  //  $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
+
+                //});
+
+
+                var display_info=$("#display_info").val();
+                var myqty=$("#myqty").val();
+                var transID=$("#transID");
+                var dataString = 'display_info=' + display_info + '&myqty=' + myqty + '&transID=' + transID;
+                $.ajax({
+                    type:"post",
+                    url:"clsAddCart.php",
+                    data:dataString,
+                    cache: false,
+                    success:function(data){
+                        $("#display_info").html("Item Added Succesfully");
+                    }
+                });
+
+
+            });
+
+
+
+    });
+    </script>
+
     <script type="text/javascript">
         var SITE_URL= "https://demo.phppointofsale.com/index.php";
         var BASE_URL= "https://demo.phppointofsale.com/";
@@ -22,7 +131,7 @@
         COMMON_SUCCESS = "Success";
         COMMON_ERROR = "Error";
 
-        bootbox.addLocale('ar', {
+      /*  bootbox.addLocale('ar', {
             OK : 'OK',
             CANCEL : 'CANCEL',
             CONFIRM : 'CONFIRM'
@@ -37,8 +146,8 @@
         $.ajaxSetup ({
             cache: false,
             headers: { "cache-control": "no-cache" }
-        });
-        toastr.options = {
+        });*/
+        /*toastr.options = {
             "closeButton": true,
             "debug": false,
             "newestOnTop": false,
@@ -54,17 +163,17 @@
             "hideEasing": "linear",
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
-        }
+        }*/
 
-        $.fn.editableform.buttons =
-            '<button tabindex="-1" type="submit" class="btn btn-primary btn-sm editable-submit">'+
+        /*$.fn.editableform.buttons =
+            '<button tabindex="-1" type="submit"  class="btn btn-primary btn-sm editable-submit">'+
             '<i class="icon ti-check"></i>'+
             '</button>'+
             '<button tabindex="-1" type="button" class="btn btn-default btn-sm editable-cancel">'+
             '<i class="icon ti-close"></i>'+
             '</button>';
 
-        $.fn.editable.defaults.emptytext = "Empty";
+        $.fn.editable.defaults.emptytext = "Empty";*/
 
         $(document).ready(function()
         {
@@ -107,7 +216,7 @@
                 var language_id = $(this).data('language-id');
                 $.ajax({
                     type: 'POST',
-                    url: 'https://demo.phppointofsale.com/index.php/employees/set_language',
+                    url: '#',
                     data: {
                         'employee_language_id': language_id,
                     },
@@ -334,13 +443,17 @@
                                 <div class="item-form">
                                     <!-- Item adding form -->
 
-                                    <form action="https://demo.phppointofsale.com/index.php/sales/add" id="add_item_form" class="form-inline" autocomplete="off" method="post" accept-charset="utf-8">
+                                    <form action="" id="add_item_form" class="form-inline" autocomplete="off" method="post" accept-charset="utf-8">
+<!--                                        https://demo.phppointofsale.com/index.php/sales/add-->
                                         <div class="input-group input-group-mobile contacts">
 						<span class="input-group-addon">
 							<a href="https://demo.phppointofsale.com/index.php/items/view/-1/1/sale" class="none add-new-item" title="New Item" id="new-item-mobile" tabindex="-1"><i class="icon ti-pencil-alt"></i> <span class="register-btn-text">New Item</span></a>						</span>
                                             <div class="input-group-addon register-mode sale-mode dropdown">
                                                 <a href="https://demo.phppointofsale.com/index.php/#" class="none active" tabindex="-1" title="Sale" id="select-mode-1" data-target="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"><i class="icon ti-shopping-cart"></i> <span class="register-btn-text">Sale</span></a>					        <ul class="dropdown-menu sales-dropdown">
                                                     <li><a tabindex="-1" href="#" data-mode="return" class="change-mode">Return</a></li>
+                                                    <li><a tabindex="-1" href="#" data-mode="return" class="change-mode"><?php echo $selectedProduct ?></a></li>
+
+
                                                     <li><a tabindex="-1" href="#" data-mode="store_account_payment" class="change-mode">Store Account Payment</a></li>
                                                 </ul>
                                             </div>
@@ -360,7 +473,27 @@
 
 						<span class="input-group-addon">
 							<a href="https://demo.phppointofsale.com/index.php/items/view/-1/1/sale" class="none add-new-item" title="New Item" id="new-item" tabindex="-1"><i class="icon ti-pencil-alt"></i></a>						</span>
-                                            <span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span><input autocomplete="off" id="item" name="item" class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
+                                            <span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span>
+
+
+
+                                            <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet();"class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
+                                            <ul id="item_list_id"></ul>
+                                            <label>QUANTITY:</label> <br>
+                                                <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
+
+                                            <input autocomplete="off" id="transID" name="transID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value="0" >
+
+                                            <div id="display_info" >
+<!--                                            --><?php // echo $selctedProduct; ?>
+
+                                            </div>
+
+
+
+                                            <button type="button"  id="addCart" name="addCart" class="btn btn-block btn-primary"> Add Item To Cart</button>
+
+
 
                                             <div class="input-group-addon register-mode sale-mode dropdown">
                                                 <a href="https://demo.phppointofsale.com/index.php/#" class="none active" tabindex="-1" title="Sale" id="select-mode-2" data-target="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"><i class="icon ti-shopping-cart"></i>Sale</a>					        <ul class="dropdown-menu sales-dropdown">
@@ -372,7 +505,7 @@
 						<span class="input-group-addon grid-buttons ">
 							<a href="https://demo.phppointofsale.com/index.php/#" class="none show-grid" tabindex="-1" title="Show Grid"><i class="icon ti-layout"></i> Show Grid</a>							<a href="https://demo.phppointofsale.com/index.php/#" class="none hide-grid hidden" tabindex="-1" title="Hide Grid"><i class="icon ti-layout"></i> Hide Grid</a>						</span>
                                         </div>
-
+                                        
 
                                     </form>
                                 </div>
@@ -578,12 +711,13 @@
                                 <h4 class="modal-title" id="lookUpReceipt">Lookup Receipt</h4>
                             </div>
                             <div class="modal-body">
-                                <form action="https://demo.phppointofsale.com/index.php/sales/receipt_validate" class="look-up-receipt-form" autocomplete="off" method="post" accept-charset="utf-8">
+                              <!--  <form action="https://demo.phppointofsale.com/index.php/sales/receipt_validate" class="look-up-receipt-form" autocomplete="off" method="post" accept-charset="utf-8">
 
                                     <span class="text-danger text-center has-error look-up-receipt-error"></span>
                                     <input class="form-control text-center" name="sale_id" id="sale_id" placeholder="Sale ID" type="text">
                                     <input name="submit_look_up_receipt_form" value="Lookup Receipt" class="btn btn-block btn-primary" type="submit">
-                                </form>	        </div>
+                                </form>	  -->
+                            </div>
                         </div><!-- /.modal-content -->
                     </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
@@ -602,7 +736,7 @@
                             $( "#keyboardhelp" ).toggle();
                         });
 
-                        $.fn.editable.defaults.mode = 'popup';
+                        //$.fn.editable.defaults.mode = 'popup';
 
                         $('.fullscreen').on('click',function (e) {
                             e.preventDefault();
@@ -616,7 +750,7 @@
                             $.get('https://demo.phppointofsale.com/index.php/home/set_fullscreen/0');
                         });
 
-                        $('.xeditable').editable({
+                    /*    $('.xeditable').editable({
                             validate: function(value) {
                                 if ($.isNumeric(value) == '' && $(this).data('validate-number')) {
                                     return "Only numbers are allowed";
@@ -626,7 +760,7 @@
                                 last_focused_id = $(this).attr('id');
                                 $("#register_container").html(response);
                             }
-                        });
+                        });*/
 
                         $('.xeditable').on('shown', function(e, editable) {
 
@@ -665,7 +799,7 @@
                                 {
                                     if(response.success)
                                     {
-                                        window.location.href = 'https://demo.phppointofsale.com/index.php/sales/receipt/'+$("#sale_id").val();
+                                        window.location.href = 'http://webpos-project.azurewebsites.net/index.php/sales/receipt/'+$("#sale_id").val();
                                     }
                                     else
                                     {
@@ -681,7 +815,7 @@
                             e.preventDefault();
 
                             $('.selected-tier').html($(this).text());
-                            $.post('https://demo.phppointofsale.com/index.php/sales/set_tier_id', {tier_id: $(this).data('value')}, function(response)
+                            $.post('http://webpos-project.azurewebsites.net/index.php/sales/set_tier_id', {tier_id: $(this).data('value')}, function(response)
                             {
                                 $('.item-tiers').slideToggle("fast", function()
                                 {
@@ -1197,14 +1331,14 @@
             $(document).ready(function()
             {
 
-                $(window).load(function()
+               /* $(window).load(function()
                 {
                     setTimeout(function()
                     {
                         $('.dismissfullscreen').click();
 
                     }, 0);
-                });
+                });*/
 
                 var current_category_id = null;
                 var current_tag_id = null;
@@ -1543,7 +1677,7 @@
 
                     if ($tabbed_to.hasClass('xeditable'))
                     {
-                        $tabbed_to.trigger('click').editable('show');
+                        //$tabbed_to.trigger('click').editable('show');
                     }
                 }
 

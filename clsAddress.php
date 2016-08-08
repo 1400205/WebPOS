@@ -85,7 +85,10 @@ if(isset($_POST['submit']))
         echo "<script>alert('Please enter Email Address of person.');window.history.go(-1);</script>";
         $error = "Email Address is Required.";
         exit;}
+    elseif ($userid<1){
 
+        $error = "<a href='index.php'>"."Please login before proceeding". "</a>";
+    }
     else{
 
         //clean usser input person id

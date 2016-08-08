@@ -6,6 +6,7 @@
  * Time: 01:45
  */
 $error="";
+$msg="";
 $personid =0;
 $gettilte="";
 $result="";
@@ -19,5 +20,44 @@ $uploaded_ext = "";
 $uploaded_size = "";
 $uploaded_tmp = "";
 $userID=0;
+$getcompanyID=1;
+$getcompayName="";
+$companylogo="";
+
+$locationID=0;
+$productName="";
+$selctedProduct=0;
+$resultTextXSS="";
+
+/*function get_client_ip() {
+    $ipaddress = '';
+    if (getenv('HTTP_CLIENT_IP'))
+        $ipaddress = getenv('HTTP_CLIENT_IP');
+    else if(getenv('HTTP_X_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+    else if(getenv('HTTP_X_FORWARDED'))
+        $ipaddress = getenv('HTTP_X_FORWARDED');
+    else if(getenv('HTTP_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_FORWARDED_FOR');
+    else if(getenv('HTTP_FORWARDED'))
+        $ipaddress = getenv('HTTP_FORWARDED');
+    else if(getenv('REMOTE_ADDR'))
+        $ipaddress = getenv('REMOTE_ADDR');
+    else
+        $ipaddress = 'UNKNOWN';
+    return $ipaddress;
+}*/
 
 
+
+/*if($_SERVER['REQUEST_METHOD']=='POST'){
+
+    if (!isset($_POST['_token']) || $_POST['_token']!==$_SESSION['_token']){
+        //die( $error='Invalid CSRF token');;
+        echo $error='Invalid CSRF token';
+    }
+}
+
+$_SESSION['_token']=bin2hex(random_bytes(16));
+
+*/

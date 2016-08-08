@@ -51,14 +51,14 @@
                 </a>
             </li>
             <li>
-                <a tabindex="-1" href="#" class="waves-effect waves-light">
+                <a tabindex="-1" href="frmAddProduct.php" class="waves-effect waves-light">
                     <i class="icon ti-harddrive"></i>
                     <span class="text">Items</span>
                 </a>
             </li>
 
             <li>
-                <a tabindex="-1" href="#" class="waves-effect waves-light">
+                <a tabindex="-1" href="frmGetSupplier.php" class="waves-effect waves-light">
                     <i class="icon ti-download"></i>
                     <span class="text">Suppliers</span>
                 </a>
@@ -89,7 +89,7 @@
             </li>
 
             <li>
-                <a tabindex="-1" href="allPersons.html" class="waves-effect waves-light">
+                <a tabindex="-1" href="allPersons.php" class="waves-effect waves-light">
                     <i class="icon ti-id-badge"></i>
                     <span class="text">Add All Persons</span>
                 </a>
@@ -97,7 +97,7 @@
             </li>
 
             <li>
-                <a tabindex="-1" href="#" class="waves-effect waves-light">
+                <a tabindex="-1" href="frmAllSettings.php" class="waves-effect waves-light">
                     <i class="icon ti-settings"></i>
                     <span class="text">Store Config</span>
                 </a>
