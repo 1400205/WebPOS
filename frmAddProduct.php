@@ -24,9 +24,10 @@ if($_SESSION ["timeout"]+1800 < time()){
  * Date: 22/07/2016
  * Time: 11:08
  */
-include ("myglobal.php");
+
 
 include ("clsProducts.php");
+include ("myglobal.php");
 
 
 $ip=$_SESSION["ip"];
@@ -135,6 +136,7 @@ if($_SESSION ["timeout"]+1800 < time()){
                 <span>This is to Enter Product Details: </span>
             </div>
             <fieldset>
+                <input hidden="text" name="_token" value=<?php echo  $_SESSION['_token'];?> class="input username" placeholder="Enter OEM Reference"/>  <br>
 
                 <br>
                 <label> Product Type:</label><br>
