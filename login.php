@@ -15,14 +15,23 @@ session_start();
     include ("connect.php");//Establishing connection with our database
     include ("myglobal.php");
 //declare instance of connection
-
+$token=$_POST["_token"];
     if((isset($_POST['username'])) && (isset($_POST['password']))){
+
+
+        if (!isset($_POST['_token'])&&( $_POST['_token']!==$_SESSION['_token']))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
+        {
+            echo "<script>alert('Invalid AntiCSRF');window.history.go(-1);</script>";
+            $error = "Invalid AntiCSRF.";
+            exit;
+        }
         $username = $_POST['username'];
         $password = $_POST['password'];
         $result=0;
         $attempt=0;
         $dpassword="";
         $dusername="";
+        $token=$_POST["_token"];
         /*if(!empty($_SERVER["HTTP_CLIENT_IP"])){
             $_SESSION["ip"]=$_SERVER["HTTP_CLIENT_IP"];
         }

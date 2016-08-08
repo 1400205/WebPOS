@@ -74,7 +74,7 @@ if(isset($_POST['submit']))
         $error = "Part Position is Required.";
         exit;
     }
-    elseif (!isset($_POST['_token'])||( $_POST['_token']!==$_SESSION['_token']))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
+    elseif (!isset($_POST['_token'])&&( $_POST['_token']!==$_SESSION['_token']))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
         echo "<script>alert('Invalid AntiCSRF');window.history.go(-1);</script>";
        echo $error = "Invalid AntiCSRF.";
