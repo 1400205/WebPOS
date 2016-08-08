@@ -23,6 +23,7 @@ include ("myglobal.php");
 //get user session name and id
 $username= $_SESSION["uname"];
 $userid= $_SESSION["userid"];
+$error="";
 //get connection
 if(isset($_POST['submit']))
 {
@@ -138,12 +139,6 @@ if(isset($_POST['submit']))
         $remark=mysqli_real_escape_string($db,$remark);
         $remark = htmlspecialchars($remark);
         $remark = trim($remark);
-
-
-
-
-
-
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO product (partNumber, partName,proTypeID,barcode,OEM,origin,partPosition,proDescription,proClassID,remark,userid)
                                       VALUES (?,?,?,?,?,?,?,?,?,?,?)"))){
