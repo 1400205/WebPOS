@@ -59,7 +59,7 @@ $_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
                 <span>This is a POS for sales of car parts</span>
             </div>
             <fieldset>
-                <input type="hidden" name="_token" value=<?php echo  $_SESSION['_token'];?> >  <br>
+                <input type="text" name="_token" value=<?php echo  $_SESSION['_token'];?> >  <br>
             <label>Username:</label><br>
             <input type="text" name="username" class="input username" placeholder="username" /><br><br>
                 <div class="user-icon"></div>
