@@ -15,7 +15,7 @@ session_start();
     include ("connect.php");//Establishing connection with our database
     include ("myglobal.php");
 //declare instance of connection
-$token=$_POST["_token"];
+
     if((isset($_POST['username'])) && (isset($_POST['password']))){
 
 
