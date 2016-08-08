@@ -5,7 +5,7 @@
 //session_start();
 include ("myglobal.php");
 include ("login.php");
-$_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
+//$_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
 
 ?>
 
