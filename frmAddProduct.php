@@ -136,7 +136,7 @@ if($_SESSION ["timeout"]+1800 < time()){
                 <span>This is to Enter Product Details: </span>
             </div>
             <fieldset>
-                <input type="hidden" name="_token" value=<?php echo  $_SESSION['_token'];?> class="input username" placeholder="Enter OEM Reference"/>  <br>
+                <input type="hidden" name="_token" value=<?php echo  $_SESSION['_token'];?> >  <br>
 
                 <br>
                 <label> Product Type:</label><br>
