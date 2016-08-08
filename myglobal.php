@@ -50,7 +50,7 @@ $resultTextXSS="";
 
 
 
-if($_SERVER['REQUEST_METHOD']=='POST'){
+/*if($_SERVER['REQUEST_METHOD']=='POST'){
 
     if (!isset($_POST['_token']) || $_POST['_token']!==$_SESSION['_token']){
         //die( $error='Invalid CSRF token');;
@@ -60,4 +60,4 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 $_SESSION['_token']=bin2hex(random_bytes(16));
 
-
+*/
