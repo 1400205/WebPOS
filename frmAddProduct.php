@@ -30,7 +30,7 @@ include ("clsProducts.php");
 include ("myglobal.php");
 
 
-$_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
+//$_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
 $ip=$_SESSION["ip"];
 $timeout=$_SESSION ["timeout"];
 if (!($ip==$_SERVER['REMOTE_ADDR'])){
@@ -147,7 +147,7 @@ if($_SESSION ["timeout"]+1800 < time()){
                 <span>This is to Enter Product Details: </span>
             </div>
             <fieldset>
-                <input type="hidden" name="_token" value=<?php echo  $_SESSION['_token'];?> >  <br>
+<!--                <input type="hidden" name="_token" value=--><?php //echo  $_SESSION['_token'];?><!-- >  <br>-->
 
                 <br>
                 <label> Product Type:</label><br>
