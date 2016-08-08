@@ -131,10 +131,10 @@ if($_SESSION ["timeout"]+1800 < time()){
 
         }*/
 
-       if(top.location!=self.locaton) {
+     /*  if(top.location!=self.locaton) {
            parent.location = self.location;
        }
-
+*/
     </script>
 
 </head>
