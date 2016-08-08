@@ -12,7 +12,7 @@ session_start();
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
 
-    if (!isset($_POST['_token']) || $_POST['_token']!==$_SESSION['_token']){
+    if (!isset($_POST['_token']) ){
         //die( $error='Invalid CSRF token');
         echo $error='Invalid CSRF token';
     }
