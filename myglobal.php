@@ -47,7 +47,7 @@ $resultTextXSS="";
         $ipaddress = 'UNKNOWN';
     return $ipaddress;
 }*/
-$_SESSION['_token']=bin2hex(random_bytes(16));
+
 
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -58,6 +58,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     }
 }
 
-    
+$_SESSION['_token']=bin2hex(random_bytes(16));
 
 
