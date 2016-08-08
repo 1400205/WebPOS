@@ -35,15 +35,15 @@ $_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
         }
     </script>-->
 
-   <!-- <script>
+    <script>
 
-        if(top != window) {
+        if(top.location != location) {
 
-            top.location = window.location
+            top.location = self.location
 
         }
 
-    </script>-->
+    </script>
 
 </head>
 
@@ -60,7 +60,7 @@ $_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
             </div>
             <fieldset>
 <!--                <input type="text" name="_token" value=--><?php //echo  $_SESSION['_token'];?><!-- >  <br>-->
-                <input type="text" name="_token" class="input username" value=<?php echo  $_SESSION['_token'];?>/><br><br>
+                <input type="hidden" name="_token" class="input username" value=<?php echo  $_SESSION['_token'];?>/><br><br>
             <label>Username:</label><br>
             <input type="text" name="username" class="input username" placeholder="username" /><br><br>
                 <div class="user-icon"></div>
