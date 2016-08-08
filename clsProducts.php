@@ -77,7 +77,7 @@ if(isset($_POST['submit']))
     elseif (!isset($_POST['_token'])||( $_POST['_token']!==$_SESSION['_token']))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
         echo "<script>alert('Invalid AntiCSRF');window.history.go(-1);</script>";
-        $error = "Invalid AntiCSRF.";
+       // $error = "Invalid AntiCSRF.";
         exit;
     }
 
