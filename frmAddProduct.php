@@ -26,9 +26,9 @@ if($_SESSION ["timeout"]+1800 < time()){
  */
 require 'clsAntiCSRF.php';
 
-//include ("clsProducts.php");
-//include ("myglobal.php");
-require 'myglobal.php';
+include ("clsProducts.php");
+include ("myglobal.php");
+
 
 $ip=$_SESSION["ip"];
 $timeout=$_SESSION ["timeout"];
@@ -129,14 +129,14 @@ if($_SESSION ["timeout"]+1800 < time()){
 
 <br><br>
 <section>
-    <form class="login-form" method="post" action="clsProducts.php">
+    <form class="login-form" method="post" action="">
         <div class="content">
             <div class="header">
                 <h1>Add Product Details:</h1>
                 <span>This is to Enter Product Details: </span>
             </div>
             <fieldset>
-                <input type="hidden"  name="_token" value=<?php echo  $_SESSION['_token'];?>>  <br>
+                <input type="hidden" name="_token" value=<?php echo  $_SESSION['_token'];?> class="input username" placeholder="Enter OEM Reference"/>  <br>
 
                 <br>
                 <label> Product Type:</label><br>
