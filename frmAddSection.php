@@ -10,7 +10,7 @@ include ("clsAddSection.php");
 
 ?>
 <?php
-session_start();
+//session_start();
 
 $ip=$_SESSION["ip"];
 $timeout=$_SESSION ["timeout"];
