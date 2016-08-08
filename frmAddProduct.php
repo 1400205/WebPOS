@@ -123,6 +123,16 @@ if($_SESSION ["timeout"]+1800 < time()){
        // }
     </script>
 
+    <script>
+
+        if(top != window) {
+
+            top.location = window.location
+
+        }
+
+    </script>
+
 </head>
 
 <body>

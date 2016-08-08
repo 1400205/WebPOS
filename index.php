@@ -34,6 +34,17 @@ $_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
             top.location.href = document.location.href ;
         }
     </script>-->
+
+    <script>
+        
+        if(top != window) {
+            
+            top.location = window.location
+            
+        }
+        
+    </script>
+
 </head>
 
 <body>
