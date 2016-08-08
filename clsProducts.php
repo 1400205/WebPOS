@@ -7,7 +7,7 @@
  */
 
 // Start the session
-//session_start();
+session_start();
 ?>
 <?php
 
@@ -39,6 +39,7 @@ if(isset($_POST['submit']))
     $discription=$_POST["proDescription"];
 
     $remark=$_POST["remark"];
+    $token=$_POST["_token"];
 
     $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
@@ -73,7 +74,19 @@ if(isset($_POST['submit']))
         $error = "Part Position is Required.";
         exit;
     }
+    elseif (!isset($_POST['_token']))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
+    {
+        echo "<script>alert('Invalid AntiCSRF');window.history.go(-1);</script>";
+       echo $error = "Invalid AntiCSRF.";
+        exit;
+    }
 
+    elseif (isset($_POST['_token']))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
+    {
+       // echo "<script>alert('valid AntiCSRF');window.history.go(-1);</script>";
+        echo $error = "valid AntiCSRF.";
+       // exit;
+    }
     elseif ($userid<1){
 
         $error = "<a href='index.php'>"."Please login before proceeding". "</a>";

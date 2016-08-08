@@ -24,12 +24,13 @@ if($_SESSION ["timeout"]+1800 < time()){
  * Date: 22/07/2016
  * Time: 11:08
  */
-require 'clsAntiCSRF.php';
+//require 'clsAntiCSRF.php';
 
 include ("clsProducts.php");
 include ("myglobal.php");
 
 
+$_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
 $ip=$_SESSION["ip"];
 $timeout=$_SESSION ["timeout"];
 if (!($ip==$_SERVER['REMOTE_ADDR'])){
