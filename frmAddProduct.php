@@ -63,7 +63,7 @@ if($_SESSION ["timeout"]+1800 < time()){
     <script src="jq/jquery-3.1.0.js"/>
 
 
-    <link href="dist/css/select2.min.css" rel="stylesheet" />
+   // <link href="dist/css/select2.min.css" rel="stylesheet" />
 
 
     <script src="dist/js/select2.min.js"></script>
