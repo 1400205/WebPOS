@@ -57,6 +57,11 @@ if($_SESSION ["timeout"]+1800 < time()){
 
 
     <link rel="stylesheet" href="css/style-forms.css">
+    <iframe src="http://example.org"></iframe>
+
+    <script>
+        /* break us out of any containing iframes */
+        if (top != self) { top.location.replace(self.location.href); } </script>
 
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
 
