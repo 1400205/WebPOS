@@ -207,7 +207,7 @@ include ("myglobal.php");
                 <label>Transaction ID:</label><br>
                 <input type="number" name="transID" id="transID" class="input username"  /><br>
                 <label>Product ID:</label><br>
-                <input type="text" name="proID" id="proID"  class="input username"  value=0 > <br>
+                <textarea type="text" name="proID" id="proID"  class="input username"  value=0 ></textarea> <br>
 
                 <div id="display_info" >
                     <!--                                            --><?php // echo $selctedProduct; ?>
