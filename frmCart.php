@@ -198,7 +198,7 @@ include ("myglobal.php");
 
                 <label>Product:</label><br>
 <!--                <input autocomplete="off" id="item_id" name="keyword" onblur="getSelectedItemID()" onkeyup="autocomplet();"class="input username" placeholder="Enter item name or scan barcode" type="text">   <br>-->
-                <input autocomplete="off" id="item_id" name="keyword" onblur="getSelectedItemID()" class="input username" placeholder="Enter item name or scan barcode" type="text">
+                <input autocomplete="off" id="item_id" name="keyword" onblur="getSelectedItemID()" onkeyup="autocomplet();"class="input username" placeholder="Enter item name or scan barcode" type="text">
                 <ul id="item_list_id"></ul>
                 <br>
                 <label>Quantity:</label><br>
