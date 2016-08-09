@@ -19,7 +19,7 @@
 
 
 <?php
-//include ("connect.php");
+include ("connect.php");
 include ("myglobal.php");
 
 /*$choice="%{$_GET['choice']}%";
