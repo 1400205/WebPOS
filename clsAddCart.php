@@ -30,6 +30,7 @@ if(isset($_POST['submit']))
 
     $qty=$_POST['myqty'];
     $tranID=$_POST['transID'];
+    $productID=$_POST['proID'];
 
 
 
@@ -53,9 +54,10 @@ if(isset($_POST['submit']))
         $error = "Quantity is Required.";
         exit;
     }
-    elseif ($userid<1){
-
-        $error = "<a href='index.php'>"."Please login before proceeding". "</a>";
+    elseif ( empty($_POST["proID"])){
+        echo "<script>alert('Please Select Product.');window.history.go(-1);</script>";
+        $error = "Product is Required.";
+        exit;
     }
 
     else{
@@ -82,9 +84,9 @@ if(isset($_POST['submit']))
 
 
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID,userID) VALUES (?,?,?,?)"))){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID) VALUES (?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('idsi',$selctedProduct, $qty,$tranID,$userid);
+            $stmt->bind_param('iis',$selctedProduct, $qty,$tranID);
             if( $stmt->execute()){
                 $error="SUCCESS! "."Record Added Successfully.";
             }else{
