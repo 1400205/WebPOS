@@ -64,6 +64,7 @@ $error="";
             $stmt->bind_param('iis',$proID, $qty, $transID);
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
+
             }else{
                 $error="FAILURE!"."Record Did Not Add. System Does Not Allow Duplicate Records";
             }
@@ -71,7 +72,7 @@ $error="";
         }else
             {$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}
 
-
+echo $error;
 
 
 
