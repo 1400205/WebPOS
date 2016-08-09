@@ -17,7 +17,7 @@ error_reporting(E_ALL);
 
 
 //get connection string
-//include ("connect.php");
+include ("connect.php");
 //get global variable file
 include ("myglobal.php");
 //get user session name and id
