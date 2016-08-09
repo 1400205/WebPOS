@@ -10,7 +10,7 @@
 include ("connect.php");
 include ("myglobal.php");
 
-include ("connect.php");
+//include ("connect.php");
 
 $keyword = '%'.$_POST['keyword'].'%';
 
