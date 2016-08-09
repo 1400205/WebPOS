@@ -200,7 +200,7 @@ include ("clsCart.php");
                 <ul id="item_list_id"></ul>
                 <br>
                 <label>Quantity:</label><br>
-                <input type="number" name="myqty" id="myqty" class="input username" value="0" min="0"/>  <br>
+                <input type="number" name="myqty" id="myqty" class="input username" value="1" min="0"/>  <br>
 
                 <label>Transaction ID:</label><br>
                 <input type="number" name="transID" id="transID" class="input username"  /><br>
