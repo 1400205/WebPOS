@@ -5,8 +5,6 @@
 //session_start();
 include ("myglobal.php");
 include ("clsCart.php");
-//include ("clsTitle.php");
-
 ?>
 
 
