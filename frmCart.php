@@ -4,7 +4,7 @@
 
 //session_start();
 include ("myglobal.php");
-//include ("clsCart.php");
+include ("clsCart.php");
 //include ("clsTitle.php");
 
 ?>
@@ -216,7 +216,7 @@ include ("myglobal.php");
                 
                 <div class="footer">
                     <button type="button"  id="addCart" name="addCart" class="button"> Add Item To Cart</button><br><br><br>
-<!--                    <button type="submit"  id="addCart" name="addCart" class="button"> Add Item </button><br>-->
+                <button type="submit"  id="addCart" name="addCart" class="button"> Add Item </button><br>
 
 
                 </div>
