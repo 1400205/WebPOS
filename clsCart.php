@@ -61,7 +61,7 @@ $error="";
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO cart (productID,qty,transactionID) VALUES (?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('iii',$proID, $qty, $transID);
+            $stmt->bind_param('iis',$proID, $qty, $transID);
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
             }else{
