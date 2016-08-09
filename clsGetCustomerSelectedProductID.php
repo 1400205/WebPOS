@@ -28,24 +28,24 @@ $userid= $_SESSION["userid"];
 
 $choice = $_POST['keyword'];
 
-$qty=$_POST['myqty'];
-$tranID=$_POST['transID'];
+//$qty=$_POST['myqty'];
+//$tranID=$_POST['transID'];
 
 $choice = stripslashes($choice);
 $choice = mysqli_real_escape_string($db, $choice);
 $choice = htmlspecialchars($choice);
 $choice = trim($choice);
 
-$qty = stripslashes($qty);
-$qty = mysqli_real_escape_string($db, $qty);
-$qty = htmlspecialchars($qty);
-$qty = trim($qty);
-
-
-$tranID = stripslashes($tranID);
-$tranID = mysqli_real_escape_string($db, $tranID);
-$tranID = htmlspecialchars($tranID);
-$tranID = trim($tranID);
+//$qty = stripslashes($qty);
+//$qty = mysqli_real_escape_string($db, $qty);
+//$qty = htmlspecialchars($qty);
+//$qty = trim($qty);
+//
+//
+//$tranID = stripslashes($tranID);
+//$tranID = mysqli_real_escape_string($db, $tranID);
+//$tranID = htmlspecialchars($tranID);
+//$tranID = trim($tranID);
 
 
 $msg = "";
