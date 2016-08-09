@@ -33,7 +33,7 @@ $userid= $_SESSION["userid"];
     $qty = $_POST['myqty'];
 
 
-   $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+   //$mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
 
 
