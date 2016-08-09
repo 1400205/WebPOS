@@ -6,7 +6,7 @@ include ("myglobal.php");
 
 
 
-    $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+   // $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
     $transID=$_POST["transID"];
 
 
