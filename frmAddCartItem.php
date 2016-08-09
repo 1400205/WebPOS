@@ -21,6 +21,11 @@ include ("myglobal.php");
 
     <link rel="stylesheet" href="css/style-forms.css">
 
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <?php include ("clsgetTransID.php"); ?>
+
 
 
 
