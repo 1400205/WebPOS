@@ -21,6 +21,7 @@ include ("myglobal.php");
 //get user session name and id
 $username= $_SESSION["uname"];
 $userid= $_SESSION["userid"];
+$error="";
 
 //$data=$_POST['serialize'];
 
@@ -66,7 +67,9 @@ $userid= $_SESSION["userid"];
             }else{
                 $error="FAILURE!"."Record Did Not Add. System Does Not Allow Duplicate Records";
             }
-        }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}
+
+        }else
+            {$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}
 
 
 

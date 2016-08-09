@@ -6,6 +6,7 @@
  * Time: 19:08
  */
 include ("myglobal.php");
+include ("clsCart.php");
 ?>
 
 
