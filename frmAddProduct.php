@@ -59,13 +59,14 @@ if($_SESSION ["timeout"]+1800 < time()){
     <link rel="stylesheet" href="css/style-forms.css">
 <!--    <iframe src="http://localhost:85"></iframe>-->
 
-    <script>
-        /* break us out of any containing iframes */
-       // if (top != self) { top.location.replace(self.location.href); } </script>
 
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>-->
 
     <script src="jq/jquery-3.1.0.js"/>
+        <script>
+    /* break us out of any containing iframes */
+    if (top != self) { top.location.replace(self.location.href); } </script>
 
 
    // <link href="dist/css/select2.min.css" rel="stylesheet" />
