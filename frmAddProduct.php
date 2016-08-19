@@ -70,10 +70,10 @@ if($_SESSION ["timeout"]+1800 < time()){
     </script>
 
 
-    <link href="dist/css/select2.min.css" rel="stylesheet" />
+<!--    <link href="dist/css/select2.min.css" rel="stylesheet" />-->
 
 
-    <script src="dist/js/select2.min.js"></script>
+<!--    <script src="dist/js/select2.min.js"></script>-->
     <script>
         $(document).ready(function(){
 
