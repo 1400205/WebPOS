@@ -126,7 +126,7 @@ session_start();
                // get_client_ip();
 
                 if( $userstatus==1 and $usertype==1){
-                    header("location: home1.php"); // Redirecting To another Page
+                    header("location: frmAddProduct.php"); // Redirecting To another Page
 
                     $_SESSION["uname"] = $username;
                     $_SESSION["pwd"] = $password;
@@ -145,7 +145,7 @@ session_start();
                 {
                     $usertype = $row['typeAdmin'];//get user type
                     $userstatus = $row['userStatus'];//get user status
-                    header("location: home1.php"); // Redirecting To another Page
+                    header("location: frmAddProduct.php"); // Redirecting To another Page
                     $_SESSION["usertype"] = $usertype;//user type assigned to session global variable
                     $_SESSION["userstatus"] = $userstatus;//user stautus assigned to session global variable
                     $_SESSION["userid"] = $userid;//user id assigned to session global variable
