@@ -153,6 +153,7 @@ if($_SESSION ["timeout"]+1800 < time()){
                 <h1>Add Product Details:</h1>
                 <span>This is to Enter Product Details: </span>
             </div>
+            <div class="error"><span><?php echo $error;?></span></div>
             <fieldset>
                <input type="hidden" name="_token" value=<?php echo  $_SESSION['_token'];?>> <br>
 
