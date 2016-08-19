@@ -56,7 +56,7 @@ if($_SESSION ["timeout"]+1800 < time()){
     <title>Add Product Details></title>
 
 
-    <link rel="stylesheet" href="style-forms.css">
+    <link rel="stylesheet" href="css/style-forms.css">
 <!--    <iframe src="http://localhost:85"></iframe>-->
 
 
@@ -158,7 +158,7 @@ if($_SESSION ["timeout"]+1800 < time()){
                <input type="hidden" name="_token" value=<?php echo  $_SESSION['_token'];?>> <br>
 
                 <br>
-                <label> Product Type:</label><br>
+                <label class="label"> Product Type:</label><br>
                 <?php
 
                 // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
@@ -184,9 +184,9 @@ if($_SESSION ["timeout"]+1800 < time()){
                 echo '</select>';
 
                 ?>
-                < color="red">*</><Select name="proTypeID"id="ptID" > </Select>
+                <Select name="proTypeID"id="ptID" > </Select>
                 <br>
-                <label>Product Name:</label><br>
+                <label class="label">Product Name:</label><br>
                 <input type="text" name="partName" class="input username" required  placeholder="Enter Part Name"/>  <br>
 
                 <br>

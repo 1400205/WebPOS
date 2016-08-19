@@ -29,6 +29,7 @@ body {
     border-radius: 5px;
     padding: 5px;
 }
+
 #container article{
     background: #f3f3f3;
     border-radius: 5px;
@@ -163,6 +164,11 @@ CONTENT
     box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
     -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
     -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+}
+
+.label:before{
+    content:"*" ;
+    color:red
 }
 
 .user-icon, .pass-icon {
