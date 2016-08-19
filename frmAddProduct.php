@@ -185,9 +185,6 @@ if($_SESSION ["timeout"]+1800 < time()){
 
                 ?>
                 <Select name="proTypeID"id="ptID" > </Select>
-                <br>
-                <label class="label">Product Name:</label><br>
-                <input type="text" name="partName" class="input username" required  placeholder="Enter Part Name"/>  <br>
 
                 <br>
 
@@ -214,6 +211,11 @@ if($_SESSION ["timeout"]+1800 < time()){
                 <Select name="proClassID"id="pcID"> </Select>
 
                 <br>
+
+                <br>
+                <label class="label">Product Name:</label><br>
+                <input type="text" name="partName" class="input username" required  placeholder="Enter Part Name"/>  <br>
+
 
                 <label class="label">Part Number:</label><br>
                 <input type="text" name="partNumber" class="input username" placeholder="Enter Part Number"/>  <br>
