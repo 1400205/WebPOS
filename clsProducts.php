@@ -57,6 +57,12 @@ if(isset($_POST['submit']))
        // $error = "Part Name is Required.";
         exit;
     }
+    elseif( ($_POST["proClassID"])=="Select_From_List")//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
+    {
+        echo "<script>alert('Please Select Product Category From List.');window.history.go(-1);</script>";
+        // $error = "Part Name is Required.";
+        exit;
+    }
     elseif( empty($_POST["partNumber"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
         echo "<script>alert('Please enter Part Number.');window.history.go(-1);</script>";
