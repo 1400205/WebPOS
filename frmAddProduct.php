@@ -265,7 +265,7 @@ if($_SESSION ["timeout"]+1800 < time()){
                 // echo '<select name="title">'; // Open your drop down box
 
                 //prepare statement
-                if($stmt=$sqlcon->prepare("SELECT partPosition FROM positions ORDER BY partPosition")){
+                if($stmt=$sqlcon->prepare("SELECT partPosition FROM positions ORDER BY PositionID")){
 
                     $stmt->execute();
                     //get result
