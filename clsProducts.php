@@ -141,14 +141,15 @@ if(isset($_POST['submit']))
         $remark = trim($remark);
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO product (partNumber, partName,proTypeID,barcode,OEM,origin,partPosition,proDescription,proClassID,remark,userid)
-                                      VALUES (?,?,?,?,?,?,?,?,?,?,?)"))){
+                                      VALUES (?,?,?,?,?,?,?,?,?,?,?)")))
+        {
             //bind parameter
             $stmt->bind_param('ssissiisisi',$partnumber,$partname,$productType,$barcode,$OEM,$origin,$position,$discription,$proClassID,$remark,$userid);
-            if( $stmt->execute()){
+             $stmt->execute();
                 $error="SUCCESS! "."Record Added Successfully.";
-            }else{
-                $error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
-            }
+
+               // $error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
+
         }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}
 
     }
