@@ -191,7 +191,7 @@ if($_SESSION ["timeout"]+1800 < time()){
 
                 <br>
 
-                <label> Product Category:</label><br>
+                <label class="label"> Product Category:</label><br>
                 <?php
 
                 // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
@@ -215,16 +215,16 @@ if($_SESSION ["timeout"]+1800 < time()){
 
                 <br>
 
-                <label>Part Number:</label><br>
+                <label class="label">Part Number:</label><br>
                 <input type="text" name="partNumber" class="input username" placeholder="Enter Part Number"/>  <br>
 
                 <label>BarCode:</label><br>
                 <input type="text" name="barcode" class="input username" placeholder="Scan Barcode"/>  <br>
 
-                <label>OEM Reference:</label><br>
+                <label class="label">OEM Reference:</label><br>
                 <input type="text" name="OEM" class="input username" placeholder="Enter OEM Reference"/>  <br>
 
-                <label>Country Of Origin:</label><br>
+                <label class="label">Country Of Origin:</label><br>
                 <?php
 
                 // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
@@ -257,7 +257,7 @@ if($_SESSION ["timeout"]+1800 < time()){
                 <Select name="originID"id="originID" > </select>
                 <br>
 
-                <label>Part Position:</label><br>
+                <label class="label">Part Position:</label><br>
 
                 <?php
 
