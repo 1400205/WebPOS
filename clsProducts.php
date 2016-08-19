@@ -152,7 +152,7 @@ if(isset($_POST['submit']))
             //bind parameter
             $stmt->bind_param('ssissiisisi',$partnumber,$partname,$productType,$barcode,$OEM,$origin,$position,$discription,$proClassID,$remark,$userid);
              $stmt->execute();
-                $error="SUCCESS! "."Record Added Successfully.";
+                $error="<a href='logout.php'>"."SUCCESS! "."Record Added Successfully. You May Logout By clicking on this link " ."</a>>";
 
                // $error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
 
