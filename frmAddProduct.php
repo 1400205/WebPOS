@@ -27,7 +27,7 @@ if($_SESSION ["timeout"]+1800 < time()){
 //require 'clsAntiCSRF.php';
 
 include ("clsProducts.php");
-include ("myglobal.php");
+//include ("myglobal.php");
 
 
 $_SESSION['_token']=bin2hex(openssl_random_pseudo_bytes(16));
