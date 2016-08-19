@@ -56,7 +56,7 @@ if($_SESSION ["timeout"]+1800 < time()){
     <title>Add Product Details></title>
 
 
-    <link rel="stylesheet" href="css/style-forms.css">
+    <link rel="stylesheet" href="style-forms.css">
 <!--    <iframe src="http://localhost:85"></iframe>-->
 
 
