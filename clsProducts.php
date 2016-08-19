@@ -48,31 +48,31 @@ if(isset($_POST['submit']))
     if( empty($_POST["proTypeID"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
         echo "<script>alert('Please enter Type of Product.');window.history.go(-1);</script>";
-        $error = "Type Of Product is Required.";
+       // $error = "Type Of Product is Required.";
         exit;
     }
     elseif( empty($_POST["partName"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
         echo "<script>alert('Please enter Part Name.');window.history.go(-1);</script>";
-        $error = "Part Name is Required.";
+       // $error = "Part Name is Required.";
         exit;
     }
     elseif( empty($_POST["partNumber"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
         echo "<script>alert('Please enter Part Number.');window.history.go(-1);</script>";
-        $error = "Part Number is Required.";
+       // $error = "Part Number is Required.";
         exit;
     }
     elseif( empty($_POST["OEM"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
         echo "<script>alert('Please enter OEM.');window.history.go(-1);</script>";
-        $error = "OEM is Required.";
+       // $error = "OEM is Required.";
         exit;
     }
     elseif( empty($_POST["partPosition"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
         echo "<script>alert('Please enter Part Position.');window.history.go(-1);</script>";
-        $error = "Part Position is Required.";
+       // $error = "Part Position is Required.";
         exit;
     }
     elseif (!isset($_POST['_token'])||( $_POST['_token']!==$_SESSION['_token']))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
@@ -150,7 +150,8 @@ if(isset($_POST['submit']))
 
                // $error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
 
-        }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}
+        }else
+        {$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}
 
     }
 
