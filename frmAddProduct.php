@@ -190,7 +190,7 @@ if($_SESSION ["timeout"]+1800 < time()){
 
                 <br>
 
-                <label> Product Class:</label><br>
+                <label> Product Category:</label><br>
                 <?php
 
                 // $sqlcon=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
