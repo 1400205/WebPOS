@@ -75,7 +75,7 @@ if($_SESSION ["timeout"]+1800 < time()){
             <fieldset>
 
                 <br>
-                <label>First Name:</label><br>
+                <label>Supplier Name:</label><br>
                 <input type="text" name="supplierName" id="first-choice" class="input username" placeholder="Enter Supplier Name To search" />  <br>
 
 
