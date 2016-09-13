@@ -31,11 +31,11 @@ if($_SESSION ["timeout"]+1800 < time()){
 include ("myglobal.php");
 include ("clsGetSupplier.php");
 
-$ip=$_SESSION["ip"];
+/*$ip=$_SESSION["ip"];
 $timeout=$_SESSION ["timeout"];
 if (!($ip==$_SERVER['REMOTE_ADDR'])){
     header("location: logout.php"); // Redirecting To Other Page
-}
+}*/
 
 if($_SESSION ["timeout"]+1800 < time()){
 
