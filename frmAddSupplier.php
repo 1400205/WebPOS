@@ -28,7 +28,7 @@ include ("clsAddSupplier.php");
 <?php
 //session_start();
 
-$ip=$_SESSION["ip"];
+/*$ip=$_SESSION["ip"];
 $timeout=$_SESSION ["timeout"];
 if (!($ip==$_SERVER['REMOTE_ADDR'])){
     header("location: logout.php"); // Redirecting To Other Page
@@ -41,7 +41,7 @@ if($_SESSION ["timeout"]+1800 < time()){
 }else{
     //reset session time
     $_SESSION['timeout']=time();
-}
+}*/
 ?>
 
 
