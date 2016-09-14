@@ -116,6 +116,38 @@ include ("clsAddCart.php");
 
 
         });
+
+        $("#refresh").click(function()
+            {
+                var url="tryGetCart.php";
+                $.getJSON(url,
+                    function(result)
+                    {
+                        $("#answer tbody").empty();
+                        var patients=result["patients"];	//get the list of patients
+                        for( i in patients)
+                        {
+                            var patient=patients[i];	//get the i-the patient
+                            var fname=patient["firstName"];
+                            var lname=patient["lastName"];
+                            var patientId=patient["_id"]["$id"];
+                            var fullname=fname+" "+lname;
+                            var htmlCode="<tr id='"+patientId+"'>";
+                            htmlCode+="<td>"+fullname+"</td>";
+                            htmlCode+="</tr>";
+                            $("#answer tbody").append(htmlCode);
+                        } //end for loop
+
+                        $("#answer tr").click(function()
+                            {
+                                patientSelected($(this).attr("id"));
+                            }
+                        );
+
+                    } //end success callback function
+                ); //end method call to getJSON
+            } //end onclick handler of button
+        ); //end method call to click
     </script>
 </head>
 
@@ -170,6 +202,15 @@ include ("clsAddCart.php");
 
 </section>
 </div>
+
+<button id="refresh">Refresh patients</button>
+<table id="answer">
+    <thead>
+    </thead>
+    <tbody>
+    </tbody>
+    <tr>Love</tr>
+</table>
 
 </body>
 </html>

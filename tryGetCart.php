@@ -36,6 +36,8 @@ if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,c.
     '</th>'.'<th>'.'Unit Price'.'</th>'.'<th>'.'Total Price'.'</th>'.'Remove From Chart'.'</th>'.'</table>';*/
 $row = $result->fetch_row();
 
+$salesdata = array();
+
 while ($row = $result->fetch_row()) {
 
 
