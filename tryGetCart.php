@@ -49,20 +49,23 @@ while ($row = $result->fetch_row()) {
 
     //echo   $resultText;
 
-    echo "<script> var proid =  " . $row[0]. ";</script>";
+    /*echo "<script> var proid =  " . $row[0]. ";</script>";
     echo "<script> var partName =  " . $row[1]. ";</script>";
     echo "<script> var qty =  " . $row[2]. ";</script>";
     echo "<script> var sellPrice =  " . $row[3]. ";</script>";
-    echo "<script> var total =  " . $row[4]. ";</script>";
+    echo "<script> var total =  " . $row[4]. ";</script>";*/
 
-
+$salesdata[]=$row;
 }
-$num_rows = mysqli_num_rows($result);
+//$num_rows = mysqli_num_rows($result);
 
-echo "<script> var num_rows =  " . $num_rows. ";</script>";
-if(empty($row)){
+echo json_encode($salesdata);
+
+//echo "<script> var num_rows =  " . $num_rows. ";</script>";
+/*if(empty($row)){
     $msg = "Record Not Found";
-}
-
+}*/
+//close the db connection
+mysqli_close($sqlcon);
 
 ?>
