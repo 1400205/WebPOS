@@ -57,7 +57,7 @@ while ($row = $result->fetch_row()) {
     echo "<script> var sellPrice =  " . $row[3]. ";</script>";
     echo "<script> var total =  " . $row[4]. ";</script>";*/
 
-$salesdata[]=$row;
+$salesdata=$row;
 }
 //$num_rows = mysqli_num_rows($result);
 

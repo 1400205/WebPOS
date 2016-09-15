@@ -124,7 +124,7 @@ include ("clsAddCart.php");
                     function(result)
                     {
                         $("#answer tbody").empty();
-                        var patients=result["patients"];	//get the list of patients
+                        var alltrans=result["patients"];	//get the list of patients
                         for( i in patients)
                         {
                             var patient=patients[i];	//get the i-the patient
