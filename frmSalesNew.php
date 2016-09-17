@@ -189,7 +189,7 @@ include ("clsAddCart.php");
 
                 <div class="footer">
                     <button type="button"  id="addCart" name="addCart" class="button"> Add Item To Cart</button><br><br><br>
-                    <button type="button"  id="addCartRecord" name="addCartRecord" class="button"> Add Item </button><br>
+                    <button type="button"  id="refresh" name="addCartRecord" class="button"> Refresh patients </button><br>
                     <div class="error"><span><?php echo $error;?></span></div>
 
                 </div>
@@ -204,19 +204,21 @@ include ("clsAddCart.php");
             </div>
 
         </div>
+
+        <table id="answer">
+            <thead>
+            </thead>
+            <tbody>
+            </tbody>
+            <tr>Love</tr>
+        </table>
     </form>
 
 </section>
 </div>
 
-<button id="refresh">Refresh patients</button>
-<table id="answer">
-    <thead>
-    </thead>
-    <tbody>
-    </tbody>
-    <tr>Love</tr>
-</table>
+
+
 
 </body>
 </html>
