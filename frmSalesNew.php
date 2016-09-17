@@ -116,7 +116,10 @@ include ("clsAddCart.php");
 
 
         });
-        var url="tryGetCart.php";
+
+        $("#refresh").click(function()
+            {
+                var url="tryGetCart.php";
                 $.getJSON(url,
                     function(result)
                     {
@@ -145,7 +148,7 @@ include ("clsAddCart.php");
 
                     } //end success callback function
                 ); //end method call to getJSON
-            //end onclick handler of button
+            } //end onclick handler of button
         ); //end method call to click
 
         function dataSelected(whatever)
