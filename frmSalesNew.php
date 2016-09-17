@@ -124,23 +124,25 @@ include ("clsAddCart.php");
                     function(result)
                     {
                         $("#answer tbody").empty();
-                        var alltrans=result["patients"];	//get the list of patients
-                        for( i in patients)
+                        var alltrans=result["alldata"];	//get the list of patients
+                        for( i in alldata)
                         {
-                            var patient=patients[i];	//get the i-the patient
-                            var fname=patient["firstName"];
-                            var lname=patient["lastName"];
-                            var patientId=patient["_id"]["$id"];
-                            var fullname=fname+" "+lname;
-                            var htmlCode="<tr id='"+patientId+"'>";
-                            htmlCode+="<td>"+fullname+"</td>";
+                            var cartdata=alldata[i];	//get the i-the patient
+                            var partName=cartdata["partName"];
+                            var qty=cartdata["qty"];
+                            var productID=cartdata["productID"];
+                            var Sellprice=cartdata["Sellprice"];
+                            var htmlCode="<tr id='"+productID+"'>";
+                            htmlCode+="<td>"+partName+"</td>";
+                           /* htmlCode+="<td>"+qty+"</td>";
+                            htmlCode+="<td>"+Sellprice+"</td>";*/
                             htmlCode+="</tr>";
                             $("#answer tbody").append(htmlCode);
                         } //end for loop
 
                         $("#answer tr").click(function()
                             {
-                                patientSelected($(this).attr("id"));
+                                dataSelected($(this).attr("id"));
                             }
                         );
 
@@ -148,6 +150,10 @@ include ("clsAddCart.php");
                 ); //end method call to getJSON
             } //end onclick handler of button
         ); //end method call to click
+
+        function dataSelected(whatever)
+        {
+        }
     </script>
 </head>
 
