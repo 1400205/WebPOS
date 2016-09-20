@@ -119,7 +119,7 @@ include ("clsAddCart.php");
 
         $("#refresh").click(function()
             {
-                var url="tryGetCart.php";
+                var url="http://finalwebpos.azurewebsites.net/trygetcart.php";
                 $.getJSON(url,
                     function(result)
                     {
