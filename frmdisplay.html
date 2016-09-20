@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="assets/javascript/jquery-3.1.0.js"></script>
+    <script>
+        //document ready function
+        $(function()
+                {
+                    $("#refresh").click(function()
+                            {
+                                var url="http://finalwebpos.azurewebsites.net/trygetcart.php";
+                                $.getJSON(url,
+                                        function(result)
+                                        {
+                                            $("#answer tbody").empty();
+                                            var alltrans=result["alldata"];	//get the list
+                                            for( i in alldata)
+                                            {
+                                                var cartdata=alldata[i];	//get
+                                                var partName=cartdata["partName"];
+                                                var qty=cartdata["qty"];
+                                                var productID=cartdata["productID"];
+                                                var Sellprice=cartdata["Sellprice"];
+                                                var htmlCode="<tr id='"+productID+"'>";
+                                                htmlCode+="<td>"+partName+"</td>";
+                                                /* htmlCode+="<td>"+qty+"</td>";
+                                                 htmlCode+="<td>"+Sellprice+"</td>";*/
+                                                htmlCode+="</tr>";
+                                                $("#answer tbody").append(htmlCode);
+                                            } //end for loop
+
+                                            $("#answer tr").click(function()
+                                                    {
+                                                        dataSelected($(this).attr("id"));
+                                                    }
+                                            );
+
+                                        } //end success callback function
+                                ); //end method call to getJSON
+                            } //end onclick handler of button
+                    ); //end method call to click
+
+                } //end document ready function
+        );
+
+
+        function dataSelected(whatever)
+        {
+        }
+    </script>
+</head>
+<body>
+<button id="refresh">Refresh patients</button>
+<table id="answer">
+    <thead>
+    </thead>
+    <tbody>
+    </tbody>
+    <tr>Love</tr>
+</table>
+</body>
+</html>
