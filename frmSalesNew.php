@@ -130,7 +130,7 @@ include ("clsAddCart.php");
                             var cartdata=alldata[i];	//get
                             var partName=cartdata["partName"];
                             var qty=cartdata["qty"];
-                            var productID=cartdata["productID"]["$id"];
+                            var productID=cartdata["productID"];
                             var Sellprice=cartdata["Sellprice"];
                             var htmlCode="<tr id='"+productID+"'>";
                             htmlCode+="<td>"+partName+"</td>";
