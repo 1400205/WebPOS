@@ -124,13 +124,13 @@ include ("clsAddCart.php");
                     function(result)
                     {
                         $("#answer tbody").empty();
-                        var alltrans=result["alldata"];	//get the list of patients
+                        var alltrans=result["alldata"];	//get the list
                         for( i in alldata)
                         {
-                            var cartdata=alldata[i];	//get the i-the patient
+                            var cartdata=alldata[i];	//get
                             var partName=cartdata["partName"];
                             var qty=cartdata["qty"];
-                            var productID=cartdata["productID"];
+                            var productID=cartdata["productID"]["$id"];
                             var Sellprice=cartdata["Sellprice"];
                             var htmlCode="<tr id='"+productID+"'>";
                             htmlCode+="<td>"+partName+"</td>";
