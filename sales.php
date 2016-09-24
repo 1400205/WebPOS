@@ -32,18 +32,18 @@ include ("myglobal.php");
         $(document).ready(function(){
 
 
-           $("#item_id").click(function() {
+           /* $("#item_id").click(function() {
                // var customerID = '';
                $("#customerID").val(customerID));
                 $("#customerID").load("clsGetShelfID.php");
                 $("#customerID").val()
 
 
-            });
-       /$("#shelfName").change(function() {
+            });*/
+       /* $("#shelfName").change(function() {
             $("#shelfID").load("clsGetShelfID.php?shelfName=" + $("#shelfName").val());
 
-        });
+        });*/
 
 
             $("#addCart").click(function()
