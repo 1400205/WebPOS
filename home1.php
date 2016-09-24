@@ -76,7 +76,7 @@
                 </a>
             </li>
             <li>
-                <a tabindex="-1" href="sales.php" class="waves-effect waves-light">
+                <a tabindex="-1" href="frmSalesNew.php" class="waves-effect waves-light">
                     <i class="icon ti-shopping-cart"></i>
                     <span class="text">Sales</span>
                 </a>
