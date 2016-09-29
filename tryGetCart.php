@@ -7,7 +7,7 @@ include ("myglobal.php");
 $msg="";
 //$transID=0;
 $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-if (isset($_POST[button])){
+if (isset($_POST[transID])){
     $transID = $_POST["transID"];
 }
 
