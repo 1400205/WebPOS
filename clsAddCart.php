@@ -21,28 +21,20 @@ include ("connect.php");
 //get global variable file
 include ("myglobal.php");
 //get user session name and id
-$username= $_SESSION["uname"];
-$userid= $_SESSION["userid"];
+//$username= $_SESSION["uname"];
+//$userid= $_SESSION["userid"];
 //get connection
-if(isset($_POST['submit']))
+if(isset($_POST['button']))
 {
     $productID=$_POST['display_info'];
 
     $qty=$_POST['myqty'];
     $tranID=$_POST['transID'];
-    $productID=$_POST['proID'];
-
-
-
-
-
-
-
-
+    $productID=$_POST['display_itemID'];
    $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
 
-    if( empty($_POST["display_info"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
+   /* if( empty($_POST["display_info"]))//QUESTIONS MUST CONTAIN AT LEAST ONE CATEGORY
     {
         echo "<script>alert('Please select Item.');window.history.go(-1);</script>";
         $error = "Item Selection is Required.";
@@ -60,7 +52,7 @@ if(isset($_POST['submit']))
         exit;
     }
 
-    else{
+    else{*/
 
         //clean usser input
 
@@ -94,7 +86,7 @@ if(isset($_POST['submit']))
             }
         }else{$error= "CALL Record Addition Failed: Contact Admin";}
 
-    }
+   // }
 
 
 
