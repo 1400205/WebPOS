@@ -119,15 +119,15 @@ include ("clsAddCart.php");
 
         $("#refresh").click(function()
             {
-                var url="http://localhost:85/webpos/trygetcart.php";
+                var url="trygetcart.php";
                 $.getJSON(url,
                     function(result)
                     {
                         $("#answer tbody").empty();
                         var alltrans=result["alldata"];	//get the list
-                        for( i in alldata)
+                        for( i in alltrans)
                         {
-                            var cartdata=alldata[i];	//get
+                            var cartdata=alltrans[i];	//get
                             var partName=cartdata["partName"];
                             var qty=cartdata["qty"];
                             var productID=cartdata["productID"];
