@@ -63,7 +63,7 @@ include ("myglobal.php");
                         type: 'post',
                         url: 'clsGetCustomerSelectedProductID.php',
                         data: {
-                           // keyword:myItem,
+                            keyword:myItem,
                             // myqty:qty,
                             //transID=myTransID,
                         },
@@ -90,23 +90,23 @@ include ("myglobal.php");
                     $( '#display_info' ).html("Record not found");
                 }
 
-                //$("#button").click(function() {
+                $("#button").click(function() {
                 //  $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
                 //});
 
 
-               // var display_info=$("#display_info").val();
-               // var myqty=$("#myqty").val();
-              //  var transID=$("#transID");
-              //  var dataString = 'display_info=' + display_info + '&myqty=' + myqty + '&transID=' + transID;
+                var display_info=$("#display_info").val();
+               var myqty=$("#myqty").val();
+                var transID=$("#transID");
+               var dataString = 'display_info=' + display_info + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
-                    /*type:"post",
+                    type:"post",
                     url:"clsAddCart.php",
                     data:dataString,
                     cache: false,
                     success:function(data){
-                        $("#display_info").html("Item Added Succesfully");*/
+                        $("#display_info").html("Item Added Succesfully");
                    // }
                 });
 
