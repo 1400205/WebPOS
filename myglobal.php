@@ -28,6 +28,7 @@ $locationID=0;
 $productName="";
 $selctedProduct=0;
 $resultTextXSS="";
+$transid=0;
 
 /*function get_client_ip() {
     $ipaddress = '';
