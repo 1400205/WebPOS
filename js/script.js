@@ -44,7 +44,7 @@ function getSelectedItemID() {
 			type: 'post',
 			url: 'clsGetCustomerSelectedProductID.php',
 			data: {
-				//keyword:myItem,
+				keyword:myItem,
 				// myqty:qty,
 				//transID=myTransID,
 			},
