@@ -29,7 +29,7 @@ include ("clsAddCart.php");
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/jscart.js"></script>
 
-    <?php include ("clsgetTransID.php"); ?>
+<!--    --><?php //include ("clsgetTransID.php"); ?>
     <script>
         $(document).ready(function(){
 
