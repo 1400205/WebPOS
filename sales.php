@@ -902,8 +902,8 @@ include ("myglobal.php");
                         });
 
 
-                        $('#select_customer_form').ajaxForm({target: "#register_container", beforeSubmit: salesBeforeSubmit});
-                        $('#add_item_form').ajaxForm({target: "#register_container", beforeSubmit: salesBeforeSubmit, success: itemScannedSuccess});
+                      //$('#select_customer_form').ajaxForm({target: "#register_container", beforeSubmit: salesBeforeSubmit});
+                       // $('#add_item_form').ajaxForm({target: "#register_container", beforeSubmit: salesBeforeSubmit, success: itemScannedSuccess});
 
                         $( "#item" ).autocomplete({
                             source: 'https://demo.phppointofsale.com/index.php/sales/item_search',
