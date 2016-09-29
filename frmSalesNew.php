@@ -27,7 +27,7 @@ include ("myglobal.php");
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/jscart.js"></script>
+<!--    <script type="text/javascript" src="js/jscart.js"></script>-->
 
     <?php include ("clsgetTransID.php"); ?>
     <script>
