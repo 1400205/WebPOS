@@ -69,7 +69,6 @@ include ("myglobal.php");
 
                             // We get the element having id of display_info and put the response inside it
                             $( '#display_info' ).html(response);
-
                         }
                     });
                     //get transaction ID
@@ -80,7 +79,6 @@ include ("myglobal.php");
                    /* $('#select_customer_form').ajaxForm(function() {
                         alert("Thank you, Item Added!");
                     });*/
-
                 }
 
                 else
