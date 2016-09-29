@@ -5,10 +5,11 @@ include ("myglobal.php");
 
 
 $msg="";
-$transID=0;
+//$transID=0;
 $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-$transID=$_POST["transID"];
-
+if (isset($_POST[button])){
+    $transID = $_POST["transID"];
+}
 
 //clean input user first name
 $transID = stripslashes( $transID );
