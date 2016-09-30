@@ -181,7 +181,7 @@ include ("myglobal.php");
                 <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="input username"  type="number" min="1" value="1"><br>
 
                 <input autocomplete="off" id="transID" name="transID" onkeyup="#"class="input username"  type="text">
-                <input autocomplete="off" id="proID" name="proID" onkeyup="#"class="input username"  type="text"  >
+                <input autocomplete="off" id="proID" name="proID" onkeyup="#"class="input username"  value="itemID"  >
 
 
                 <div id="SelectedItemID" >
