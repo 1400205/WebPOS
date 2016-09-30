@@ -68,7 +68,7 @@ include ("myglobal.php");
                         success: function (response) {
 
                             // We get the element having id of display_info and put the response inside it
-                            $( '#display_itemID' ).html(response);
+                            $( '#itemID' ).html(response);
                         }
                     });
                     //get transaction ID
@@ -92,9 +92,9 @@ include ("myglobal.php");
                 //});
 
 
-                var display_itemID=$("#display_itemID").val();
+                var itemID=$("#itemID").val();
                 var myqty=$("#myqty").val();
-                var transID=$("#transID");
+                var transID=$("#transID").val();
                 var dataString = 'display_itemID=' + display_itemID + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
                     type:"post",
@@ -482,7 +482,7 @@ include ("myglobal.php");
 
                                             <input autocomplete="off" id="transID" name="transID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value="0" >
 
-                                            <div id="display_itemID" >
+                                            <div id="itemID" >
 
                                             </div>
                                             <div id="display_info" >
