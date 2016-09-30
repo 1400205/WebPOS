@@ -70,7 +70,7 @@ include ("myglobal.php");
                         success: function (response) {
 
                             // We get the element having id of display_info and put the response inside it
-                            $( '#display_itemID' ).html(response);
+                            $( '#display_info' ).html(response);
 
                         }
                     });
@@ -93,20 +93,20 @@ include ("myglobal.php");
                 //$("#button").click(function() {
                 //  $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
-                });
+                //});
 
 
-                var display_info=$("#display_info").val();
-                var myqty=$("#myqty").val();
-               var transID=$("#transID");
-                var dataString = 'display_info=' + display_info + '&myqty=' + myqty + '&transID=' + transID;
+               // var display_info=$("#display_info").val();
+               // var myqty=$("#myqty").val();
+              //  var transID=$("#transID");
+              //  var dataString = 'display_info=' + display_info + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
-                    type:"post",
+                    /*type:"post",
                     url:"clsAddCart.php",
                     data:dataString,
                     cache: false,
                     success:function(data){
-                        $("#display_info").html("Item Added Succesfully");
+                        $("#display_info").html("Item Added Succesfully");*/
                    // }
                 });
 
@@ -115,7 +115,7 @@ include ("myglobal.php");
 
 
 
-
+        });
 
         $("#refresh").click(function()
             {
@@ -180,10 +180,6 @@ include ("myglobal.php");
                 <input autocomplete="off" id="proID" name="proID" onkeyup="#"class="input username"  type="number"  >
 
                 <div id="display_info" >
-                    <!--                                            --><?php // echo $selctedProduct; ?>
-
-                </div>
-                <div id="display_itemID" >
                     <!--                                            --><?php // echo $selctedProduct; ?>
 
                 </div>
