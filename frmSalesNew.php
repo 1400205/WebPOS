@@ -96,7 +96,7 @@ include ("myglobal.php");
                 //});
 
 
-                var SelectedItemID=$("#SelectedItemID").val();
+                var SelectedItemID=$("#SelectedItemID").html().val();
                 var myqty=$("#myqty").val();
                var transID=$("#transID");
                var dataString = 'SelectedItemID=' + SelectedItemID  + '&myqty=' + myqty + '&transID=' + transID;
@@ -186,7 +186,7 @@ include ("myglobal.php");
                 </div>
 
                 <div id="display_info" >
-                 
+
                 </div>
 
 
