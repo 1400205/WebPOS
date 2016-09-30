@@ -57,7 +57,7 @@ if(isset($_POST['addCart']))
         //clean usser input
 
         //clean input user title
-        $productID = stripslashes( $productID );
+       /* $productID = stripslashes( $productID );
         $productID=mysqli_real_escape_string($db,$productID);
         $productID = htmlspecialchars($productID);
         $productID = trim($productID);
@@ -72,13 +72,13 @@ if(isset($_POST['addCart']))
         $tranID = stripslashes($tranID);
         $tranID = mysqli_real_escape_string($db, $tranID);
         $tranID = htmlspecialchars($tranID);
-        $tranID = trim($tranID);
+        $tranID = trim($tranID);*/
 
 
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID) VALUES (?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('iis',$selctedProduct, $qty,$tranID);
+            $stmt->bind_param('iis',$productID, $qty,$tranID);
             if( $stmt->execute()){
                 $error="SUCCESS! "."Record Added Successfully.";
             }else{
