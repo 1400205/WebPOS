@@ -95,7 +95,7 @@ include ("myglobal.php");
 
                 //});
 
-
+/*
                 var display_itemID=$("#display_itemID").val();
                 var myqty=$("#myqty").val();
                var transID=$("#transID");
@@ -111,7 +111,7 @@ include ("myglobal.php");
                 });
 
 
-            });
+            });*/
 
 
 
