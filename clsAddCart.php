@@ -30,7 +30,7 @@ if(isset($_POST['addCart']))
 
     $qty=$_POST['myqty'];
     $tranID=$_POST['transID'];
-    $productID=$_POST['display_info'];
+    $productID=$_POST['display_itemID'];
    $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
 
