@@ -96,9 +96,9 @@ include ("myglobal.php");
                 //});
 
 
-                var SelectedItemID=$("#SelectedItemID").html().val();
+                var SelectedItemID=$("#SelectedItemID").val();
                 var myqty=$("#myqty").val();
-               var transID=$("#transID");
+               var transID=$("#transID").val();
                var dataString = 'SelectedItemID=' + SelectedItemID  + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
                     type:"post",
