@@ -188,9 +188,9 @@ include ("myglobal.php");
 
                 </div>
 
-                <label id="itemID">
+                <div id="itemID">
 
-                </label>
+                </div>
 
                 <div id="display_info" >
 
