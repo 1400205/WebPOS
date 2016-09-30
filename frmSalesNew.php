@@ -70,14 +70,14 @@ include ("myglobal.php");
                         success: function (response) {
 
                             // We get the element having id of display_info and put the response inside it
-                            $( "#proID" ).html(response);
+                            $( "#itemID" ).html(response);
 
                         }
                     });
                     //get transaction ID
                     $("#transID").val(transid);
                     //get Item ID
-                   // $("#proID").val(itemID);
+                    $("#proID").val($( "#itemID" ).html(response));
 
                     //add chart item
                     // bind 'myForm' and provide a simple callback function
@@ -98,7 +98,7 @@ include ("myglobal.php");
                 //});
 
 
-                var SelectedItemID=$("#SelectedItemID").val();
+               
                 var myqty=$("#myqty").val();
                var transID=$("#transID").val();
                 var itemID=$("#itemID").val();
@@ -109,7 +109,7 @@ include ("myglobal.php");
                     data:dataString,
                     cache: false,
                     success:function(data){
-                        $("#display_info").html("Item Added Succesfully");
+                        $("#display_info").html("Item Added Successfully");
                     }
                    // }
                 });
