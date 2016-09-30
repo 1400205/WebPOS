@@ -30,7 +30,8 @@ include ("myglobal.php");
 
     $qty=$_POST['myqty'];
     $tranID=$_POST['transID'];
-    $productID=$_POST['itemID'];
+   // $itemID=$_POST['itemID'];
+    $itemID=1;
    $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
 
@@ -78,7 +79,7 @@ include ("myglobal.php");
 
         if ( ( $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID) VALUES (?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('iis',$productID, $qty,$tranID);
+            $stmt->bind_param('iis',$itemID, $qty,$tranID);
             if( $stmt->execute()){
                 $error="SUCCESS! "."Record Added Successfully.";
             }else{
