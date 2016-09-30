@@ -93,7 +93,7 @@ include ("myglobal.php");
                 //$("#button").click(function() {
                 //  $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
-                //});
+                });
 
 
                 var display_info=$("#display_info").val();
