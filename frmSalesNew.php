@@ -115,7 +115,7 @@ include ("myglobal.php");
 
 
 
-        });
+
 
         $("#refresh").click(function()
             {
