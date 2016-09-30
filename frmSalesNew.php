@@ -187,7 +187,8 @@ include ("myglobal.php");
                 <div id="SelectedItemID" >
 
                 </div>
-                <label id="itemID" >
+
+                <label id="itemID">
 
                 </label>
 
