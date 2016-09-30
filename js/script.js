@@ -55,7 +55,7 @@ function getSelectedItemID() {
 				// We get the element having id of display_info and put the response inside it
 
 				// var myID=parseInt(data.data);
-				
+
 				//$( '#proID' ).val(data);
 
 				$("#proID").val($("#itemID").html());
@@ -68,6 +68,7 @@ function getSelectedItemID() {
 
 		//get transaction ID
 		$("#transID").val(transid);
+		$("#proID").val($("#itemID").html());
 
 		//add chart item
 		// bind 'myForm' and provide a simple callback function
