@@ -77,7 +77,7 @@ include ("myglobal.php");
                     //get transaction ID
                     $("#transID").val(transid);
                     //get Item ID
-                    $("#proID").val($("#itemID").html());
+                  //  $("#proID").val($("#itemID").html());
                    // $("#proID").val(itemID);
 
                     //add chart item

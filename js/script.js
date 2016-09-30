@@ -16,6 +16,8 @@ function autocomplet() {
 	} else {
 		$('#item_list_id').hide();
 	}
+	
+	
 }
 
 
@@ -53,7 +55,10 @@ function getSelectedItemID() {
 				// We get the element having id of display_info and put the response inside it
 
 				// var myID=parseInt(data.data);
-				$( '#proID' ).val(data);
+				
+				//$( '#proID' ).val(data);
+
+				$("#proID").val($("#itemID").html());
 
 				//$("proID").val(selectedID);
 
