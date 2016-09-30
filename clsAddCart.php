@@ -24,9 +24,9 @@ include ("myglobal.php");
 //$username= $_SESSION["uname"];
 //$userid= $_SESSION["userid"];
 //get connection
-if(isset($_POST['button']))
+if(isset($_POST['addCart']))
 {
-    $productID=$_POST['display_info'];
+   // $productID=$_POST['display_info'];
 
     $qty=$_POST['myqty'];
     $tranID=$_POST['transID'];
