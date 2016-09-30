@@ -77,6 +77,7 @@ include ("myglobal.php");
                     //get transaction ID
                     $("#transID").val(transid);
                     //get Item ID
+                    $("#proID").val($("#itemID").html());
                    // $("#proID").val(itemID);
 
                     //add chart item
@@ -181,16 +182,16 @@ include ("myglobal.php");
                 <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="input username"  type="number" min="1" value="1"><br>
 
                 <input autocomplete="off" id="transID" name="transID" onkeyup="#"class="input username"  type="text">
-                <input autocomplete="off" id="proID" name="proID" onkeyup="#"class="input username"  value="itemID"  >
+                <input autocomplete="off" id="proID" name="proID" onkeyup="#"class="input username"    >
 
 
                 <div id="SelectedItemID" >
 
                 </div>
 
-                <div id="itemID">
+                <label id="itemID">
 
-                </div>
+                </label>
 
                 <div id="display_info" >
 
