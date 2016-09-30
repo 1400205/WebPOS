@@ -68,7 +68,7 @@ function getSelectedItemID() {
 
 		//get transaction ID
 		$("#transID").val(transid);
-		$("#proID").val($("#itemID").html());
+		//$("#proID").val($("#itemID").html());
 
 		//add chart item
 		// bind 'myForm' and provide a simple callback function
