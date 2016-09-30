@@ -70,14 +70,14 @@ include ("myglobal.php");
                         success: function (response) {
 
                             // We get the element having id of display_info and put the response inside it
-                            $( "#itemID" ).html(response);
+                            $( "#proID" ).html(response);
 
                         }
                     });
                     //get transaction ID
                     $("#transID").val(transid);
                     //get Item ID
-                    $("#proID").val(itemID);
+                   // $("#proID").val(itemID);
 
                     //add chart item
                     // bind 'myForm' and provide a simple callback function
@@ -181,7 +181,7 @@ include ("myglobal.php");
                 <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="input username"  type="number" min="1" value="1"><br>
 
                 <input autocomplete="off" id="transID" name="transID" onkeyup="#"class="input username"  type="text">
-                <input autocomplete="off" id="proID" name="proID" onkeyup="#"class="input username"  type="number"  >
+                <input autocomplete="off" id="proID" name="proID" onkeyup="#"class="input username"  type="text"  >
 
 
                 <div id="SelectedItemID" >
