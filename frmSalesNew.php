@@ -180,13 +180,15 @@ include ("myglobal.php");
                 <input autocomplete="off" id="transID" name="transID" onkeyup="#"class="input username"  type="text">
                 <input autocomplete="off" id="proID" name="proID" onkeyup="#"class="input username"  type="number"  >
 
-                <div id="display_info" >
-                    <!--                                            --><?php // echo $selctedProduct; ?>
 
-                </div>
                 <div id="SelectedItemID" >
 
                 </div>
+
+                <div id="display_info" >
+                 
+                </div>
+
 
 
 
