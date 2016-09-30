@@ -70,7 +70,7 @@ include ("myglobal.php");
                         success: function (response) {
 
                             // We get the element having id of display_info and put the response inside it
-                            $( '#display_itemID' ).html(response);
+                            $( '#display_info' ).html(response);
 
                         }
                     });
@@ -95,29 +95,29 @@ include ("myglobal.php");
 
                 //});
 
-/*
-                var display_itemID=$("#display_itemID").val();
-                var myqty=$("#myqty").val();
-               var transID=$("#transID");
-               var dataString = 'display_itemID=' + display_itemID + '&myqty=' + myqty + '&transID=' + transID;
+
+               // var display_info=$("#display_info").val();
+               // var myqty=$("#myqty").val();
+              //  var transID=$("#transID");
+              //  var dataString = 'display_info=' + display_info + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
-                    type:"post",
+                    /*type:"post",
                     url:"clsAddCart.php",
                     data:dataString,
                     cache: false,
                     success:function(data){
-                        $("#display_info").html("Item Added Succesfully");
+                        $("#display_info").html("Item Added Succesfully");*/
                    // }
                 });
 
 
-            });*/
+            });
 
 
 
         });
 
-      /*  $("#refresh").click(function()
+        $("#refresh").click(function()
             {
                 var url="trygetcart.php";
                 $.getJSON(url,
@@ -134,8 +134,8 @@ include ("myglobal.php");
                             var Sellprice=cartdata["Sellprice"];
                             var htmlCode="<tr id='"+productID+"'>";
                             htmlCode+="<td>"+partName+"</td>";
-                           /!* htmlCode+="<td>"+qty+"</td>";
-                            htmlCode+="<td>"+Sellprice+"</td>";*!/
+                           /* htmlCode+="<td>"+qty+"</td>";
+                            htmlCode+="<td>"+Sellprice+"</td>";*/
                             htmlCode+="</tr>";
                             $("#answer tbody").append(htmlCode);
                         } //end for loop
@@ -148,12 +148,12 @@ include ("myglobal.php");
 
                     } //end success callback function
                 ); //end method call to getJSON
-            } //end onclick handler of button*/
-       // ); //end method call to click
+            } //end onclick handler of button
+        ); //end method call to click
 
-       /* function dataSelected(whatever)
+        function dataSelected(whatever)
         {
-        }*/
+        }
     </script>
 </head>
 
@@ -183,9 +183,7 @@ include ("myglobal.php");
                     <!--                                            --><?php // echo $selctedProduct; ?>
 
                 </div>
-                <div id="display_itemID">
 
-                </div>
 
                 <br>
 
