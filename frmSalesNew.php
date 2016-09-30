@@ -149,11 +149,11 @@ include ("myglobal.php");
                     } //end success callback function
                 ); //end method call to getJSON
             } //end onclick handler of button*/
-        ); //end method call to click
+       // ); //end method call to click
 
-        function dataSelected(whatever)
+       /* function dataSelected(whatever)
         {
-        }
+        }*/
     </script>
 </head>
 
