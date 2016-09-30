@@ -96,10 +96,10 @@ include ("myglobal.php");
                 //});
 
 
-                var display_info=$("#display_info").val();
+                var display_itemID=$("#display_itemID").val();
                 var myqty=$("#myqty").val();
                var transID=$("#transID");
-               var dataString = 'display_info=' + display_info + '&myqty=' + myqty + '&transID=' + transID;
+               var dataString = 'display_itemID=' + display_itemID + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
                     type:"post",
                     url:"clsAddCart.php",
