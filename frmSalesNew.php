@@ -184,6 +184,10 @@ include ("myglobal.php");
                     <!--                                            --><?php // echo $selctedProduct; ?>
 
                 </div>
+                <div id="display_itemID" >
+
+                </div>
+
 
 
                 <br>
