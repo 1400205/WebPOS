@@ -70,7 +70,7 @@ include ("myglobal.php");
                         success: function (response) {
 
                             // We get the element having id of display_info and put the response inside it
-                            $( '#SelectedItemID' ).html(response);
+                            $( "#itemID" ).html(response);
 
                         }
                     });
@@ -99,7 +99,8 @@ include ("myglobal.php");
                 var SelectedItemID=$("#SelectedItemID").val();
                 var myqty=$("#myqty").val();
                var transID=$("#transID").val();
-               var dataString = 'SelectedItemID=' + SelectedItemID  + '&myqty=' + myqty + '&transID=' + transID;
+                var itemID=$("#itemID").val();
+               var dataString = 'itemID=' + itemID  + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
                     type:"post",
                     url:"clsAddCart.php",
@@ -182,6 +183,9 @@ include ("myglobal.php");
 
 
                 <div id="SelectedItemID" >
+
+                </div>
+                <div id="itemID" >
 
                 </div>
 
