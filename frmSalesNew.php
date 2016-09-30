@@ -70,7 +70,7 @@ include ("myglobal.php");
                         success: function (response) {
 
                             // We get the element having id of display_info and put the response inside it
-                            $( '#display_info' ).html(response);
+                            $( '#display_itemID' ).html(response);
 
                         }
                     });
@@ -107,7 +107,7 @@ include ("myglobal.php");
                     cache: false,
                     success:function(data){
                         $("#display_info").html("Item Added Succesfully");
-                    }
+                   // }
                 });
 
 
@@ -180,6 +180,10 @@ include ("myglobal.php");
                 <input autocomplete="off" id="proID" name="proID" onkeyup="#"class="input username"  type="number"  >
 
                 <div id="display_info" >
+                    <!--                                            --><?php // echo $selctedProduct; ?>
+
+                </div>
+                <div id="display_itemID" >
                     <!--                                            --><?php // echo $selctedProduct; ?>
 
                 </div>
