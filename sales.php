@@ -995,7 +995,7 @@ include ("myglobal.php");
                         });
 
 
-                        date_time_picker_field($("#change_sale_date"), JS_DATE_FORMAT + " "+JS_TIME_FORMAT);
+//                        date_time_picker_field($("#change_sale_date"), JS_DATE_FORMAT + " "+JS_TIME_FORMAT);
 
                         $("#change_sale_date").on("dp.change", function(e) {
                             $.post('https://demo.phppointofsale.com/index.php/sales/set_change_sale_date', {change_sale_date: $('#change_sale_date').val()});
