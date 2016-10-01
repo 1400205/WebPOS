@@ -917,7 +917,7 @@ include ("myglobal.php");
 
                             },
                         })
-                          */  .data("ui-autocomplete")._renderItem = function (ul, item) {
+                          *//*  .data("ui-autocomplete")._renderItem = function (ul, item) {
                             return $("<li class='item-suggestions'></li>")
                                 .data("item.autocomplete", item)
                                 .append('<a class="suggest-item"><div class="item-image">' +
@@ -932,7 +932,7 @@ include ("myglobal.php");
                                     '</span>' +
                                     '</div>')
                                 .appendTo(ul);
-                        };
+                        };*/
 
 
 
