@@ -938,7 +938,7 @@ include ("myglobal.php");
 
 
 
-                        $( "#customer" ).autocomplete({
+                   /*     $( "#customer" ).autocomplete({
                             source: 'https://demo.phppointofsale.com/index.php/sales/customer_search',
                             delay: 150,
                             autoFocus: false,
@@ -966,10 +966,10 @@ include ("myglobal.php");
                                     '</div></a>')
                                 .appendTo(ul);
                         };
+*/
 
 
-
-                        $('#customer').blur(function()
+                      /*  $('#customer').blur(function()
                         {
                             $(this).attr('value',"Type customer name...");
                         });
@@ -982,7 +982,7 @@ include ("myglobal.php");
                             } else {
                                 $("#change_sale_date_picker").hide();
                             }
-                        });
+                        });*/
 
                         $('#comment').change(function()
                         {
