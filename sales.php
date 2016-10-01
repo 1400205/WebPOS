@@ -105,6 +105,7 @@ include ("myglobal.php");
                     cache: false,
                     success:function(data){
                         $("#display_info").html("Item Added Successfully");
+                        $("#add_item_form")[0].reset();
                     }
                     // }
                 });
