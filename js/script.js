@@ -10,7 +10,7 @@ function autocomplet() {
 				success:function(data){
 					$('#item_list_id').show();
 					$('#item_list_id').html(data);
-					getCartItem();
+
 
 				}
 		});
@@ -30,6 +30,7 @@ function set_item(item) {
 	$('#item_list_id').hide();
 	$('#item_id').select();
 	$('#item_id').focus();
+	getCartItem();
 }
 
 
