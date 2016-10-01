@@ -94,18 +94,19 @@ include ("myglobal.php");
                 //});
 
 
-                var proID=$("#proID").val();
                 var myqty=$("#myqty").val();
                 var transID=$("#transID").val();
-                var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
+                var selectItemID=$("#selectItemID").val();
+                var dataString = 'selectItemID=' + selectItemID  + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
                     type:"post",
                     url:"clsAddCart.php",
                     data:dataString,
                     cache: false,
                     success:function(data){
-                        $("#display_info").html("Item Added Succesfully");
+                        $("#display_info").html("Item Added Successfully");
                     }
+                    // }
                 });
 
 

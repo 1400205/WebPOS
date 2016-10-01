@@ -31,7 +31,7 @@ include ("myglobal.php");
     $qty=$_POST['myqty'];
     $tranID=$_POST['transID'];
    // $itemID=$_POST['itemID'];
-    $itemID=$_POST['proID'];
+    $itemID=$_POST['selectItemID'];
    $mysqli = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
     //check empty fields
 
