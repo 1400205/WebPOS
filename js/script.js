@@ -10,6 +10,7 @@ function autocomplet() {
 				success:function(data){
 					$('#item_list_id').show();
 					$('#item_list_id').html(data);
+					getCartItem();
 
 				}
 		});
@@ -31,60 +32,6 @@ function set_item(item) {
 	$('#item_id').focus();
 }
 
-function getSelectedItemID() {
-
-	var myItem=$('#item_id').val();
-	// var selectedID=$('#display_info').val();
-
-	// var myTransID=$('#transID').val();
-
-	// document.getElementById( "item_id" );
-
-	if(myItem)
-	{
-		$.ajax({
-			type: 'post',
-			url: 'clsGetCustomerSelectedProductID.php',
-			data: {
-				keyword:myItem,
-				// myqty:qty,
-				//transID=myTransID,
-			},
-			success: function (data) {
-
-				// We get the element having id of display_info and put the response inside it
-
-				// var myID=parseInt(data.data);
-
-				//$( '#proID' ).val(data);
-
-				$("#proID").val($("#itemID").html());
-
-				//$("proID").val(selectedID);
-
-			}
-		});
-
-
-		//get transaction ID
-		$("#transID").val(transid);
-		//$("#proID").val($("#itemID").html());
-
-		//add chart item
-		// bind 'myForm' and provide a simple callback function
-		/* $('#select_customer_form').ajaxForm(function() {
-		 alert("Thank you, Item Added!");
-		 });*/
-
-	}
-
-	else
-	{
-		$( '#display_info' ).html("Record not found");
-	}
-
-
-}
 
 function generate_table() {
 	// get the reference for the body

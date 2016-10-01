@@ -496,7 +496,7 @@ include ("myglobal.php");
 
 
 
-                                            <button type="button"  id="addCart" name="addCart" class="btn btn-block btn-primary" onfocus="getCartItem()"> Add Item To Cart</button>
+                                            <button type="button"  id="addCart" name="addCart" class="btn btn-block btn-primary"> Add Item To Cart</button>
 
 
 
