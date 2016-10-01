@@ -69,6 +69,7 @@ include ("myglobal.php");
 
                             // We get the element having id of display_info and put the response inside it
                             $( '#itemID' ).html(response);
+                            $("#selectItemID").val($("#itemID").html());
                         }
                     });
                     //get transaction ID
@@ -86,16 +87,17 @@ include ("myglobal.php");
                     $( '#display_info' ).html("Record not found");
                 }
 
+
                 //$("#button").click(function() {
                   //  $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
 
                 //});
 
 
-                var itemID=$("#itemID").val();
+                var proID=$("#proID").val();
                 var myqty=$("#myqty").val();
                 var transID=$("#transID").val();
-                var dataString = 'display_itemID=' + display_itemID + '&myqty=' + myqty + '&transID=' + transID;
+                var dataString = 'proID=' + proID + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
                     type:"post",
                     url:"clsAddCart.php",
@@ -482,9 +484,11 @@ include ("myglobal.php");
 
                                             <input autocomplete="off" id="transID" name="transID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value="0" >
 
-                                            <div id="itemID" >
+                                            <input autocomplete="off" id="selectItemID" name="selectItemID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text"  >
 
-                                            </div>
+                                            <label id="itemID" >
+
+                                            </label>
                                             <div id="display_info" >
 
                                             </div>
