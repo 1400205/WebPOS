@@ -905,7 +905,7 @@ include ("myglobal.php");
                       //$('#select_customer_form').ajaxForm({target: "#register_container", beforeSubmit: salesBeforeSubmit});
                        // $('#add_item_form').ajaxForm({target: "#register_container", beforeSubmit: salesBeforeSubmit, success: itemScannedSuccess});
 
-                        $( "#item" ).autocomplete({
+                       /* $( "#item" ).autocomplete({
                             source: 'https://demo.phppointofsale.com/index.php/sales/item_search',
                             delay: 150,
                             autoFocus: false,
@@ -916,7 +916,8 @@ include ("myglobal.php");
                                 $('#add_item_form').ajaxSubmit({target: "#register_container", beforeSubmit: salesBeforeSubmit, success: itemScannedSuccess});
 
                             },
-                        }).data("ui-autocomplete")._renderItem = function (ul, item) {
+                        })
+                          */  .data("ui-autocomplete")._renderItem = function (ul, item) {
                             return $("<li class='item-suggestions'></li>")
                                 .data("item.autocomplete", item)
                                 .append('<a class="suggest-item"><div class="item-image">' +
