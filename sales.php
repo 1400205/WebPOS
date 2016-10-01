@@ -478,7 +478,7 @@ include ("myglobal.php");
 
 
 
-                                            <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet(); "class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text" onblur="getCartItem()">
+                                            <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet(); "class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
                                             <ul id="item_list_id"></ul>
                                             <label>QUANTITY:</label> <br>
                                                 <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
@@ -496,7 +496,7 @@ include ("myglobal.php");
 
 
 
-                                            <button type="button"  id="addCart" name="addCart" class="btn btn-block btn-primary"> Add Item To Cart</button>
+                                            <button type="button"  id="addCart" name="addCart" class="btn btn-block btn-primary" onfocus="getCartItem()"> Add Item To Cart</button>
 
 
 
