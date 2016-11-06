@@ -5,16 +5,12 @@
  * Date: 22/07/2016
  * Time: 04:47
  */
-
 //start session
-
 //session_start();
 include ("myglobal.php");
 //include ("clsGetPersonForSupplier.php");
 //include ("clsAddCart.php");
-
 ?>
-
 
 <!doctype html>
 <html>
@@ -66,12 +62,11 @@ include ("myglobal.php");
                             keyword:myItem,
                             // myqty:qty,
                             //transID=myTransID,
-                        },
+                        }//,
                         success: function (response) {
 
                             // We get the element having id of display_info and put the response inside it
                             $( "#itemID" ).html(response);
-
                         }
                     });
                     //get transaction ID
