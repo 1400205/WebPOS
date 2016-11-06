@@ -32,12 +32,6 @@ include ("myglobal.php");
     $tranID=$_POST['transID'];
    // $itemID=$_POST['itemID'];
     $itemID=$_POST['selectItemID'];
-
-
-
-
-
-
 if(isset($_POST)){
     if (empty($_POST['selectItemID'])) {
         $_SESSION ['errors']['selectItemID'] = 'Selected Item ID is not valid';
