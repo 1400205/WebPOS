@@ -31,10 +31,10 @@ include ("myglobal.php");
     $qty=$_POST['myqty'];
     $tranID=$_POST['transID'];
    // $itemID=$_POST['itemID'];
-    $itemID=$_POST['proID'];
+    $itemID=$_POST['selectItemID'];
 if(isset($_POST)){
-    if (empty($_POST['proID'])) {
-        $_SESSION ['errors']['proID'] = 'Selected Item ID is not valid';
+    if (empty($_POST['selectItemID'])) {
+        $_SESSION ['errors']['selectItemID'] = 'Selected Item ID is not valid';
         	}
 	if (empty($_POST['transID'])) {
 		$_SESSION['errors']['transID'] = 'Transaction ID is missing';
