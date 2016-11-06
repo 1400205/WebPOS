@@ -62,7 +62,7 @@ include ("myglobal.php");
                             keyword:myItem,
                             // myqty:qty,
                             //transID=myTransID,
-                        }//,
+                        },
                         success: function (response) {
 
                             // We get the element having id of display_info and put the response inside it
