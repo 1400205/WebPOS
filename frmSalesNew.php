@@ -171,7 +171,7 @@ include ("myglobal.php");
             <fieldset>
 
                 <label>Product:</label><br>
-                <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet();"class="input username" placeholder="Enter item name or scan barcode" type="text" onblur="getSelectedItemID()">   <br>
+                <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet();"class="input username" placeholder="Enter item name or scan barcode" type="text">   <br>
                 <ul id="item_list_id"></ul>
                 <label>QUANTITY:</label> <br>
                 <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="input username"  type="number" min="1" value="1"><br>
