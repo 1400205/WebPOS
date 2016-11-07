@@ -126,6 +126,7 @@ include ("myglobal.php");
                             for( i in alltrans)
                             {
                                 var cartdata=alltrans[i];	//get
+                                var cartID=cartdata["cartID"];
                                 var partName=cartdata["partName"];
                                 var qty=cartdata["qty"];
                                 var productID=cartdata["productID"];
@@ -133,6 +134,7 @@ include ("myglobal.php");
                                 var Discount=cartdata["Discount"];
                                 var Total=cartdata["Total"];
                                 var htmlCode="<tr id='"+productID+"'>";
+                                htmlCode+="<td>"+cartID+"</td>";
                                 htmlCode+="<td>"+partName+"</td>";
                                 htmlCode+="<td>"+Sellprice+"</td>";
                                 htmlCode+="<td>"+qty+"</td>";
