@@ -580,7 +580,7 @@ include ("myglobal.php");
                                         <thead>
                                         <tr class="register-items-header">
                                             <th></th>
-                                            <th class="item_name_heading">Cart Item ID</th>
+                                            <th class="item_name_heading" align="left">Cart Item ID</th>
                                             <th class="item_name_heading">Item Name</th>
                                             <th class="sales_price">Price</th>
                                             <th class="sales_quantity">Qty.</th>
@@ -591,7 +591,7 @@ include ("myglobal.php");
 
                                         <tbody class="register-item-content">
                                         <tr class="cart_content_area">
-                                            <td colspan="">
+                                            <td colspan="6">
                                                 <div class="text-center text-warning"> <h3>There are no items in the cart<span class="flatGreenc"> [Sales]</span></h3></div>
                                             </td>
                                         </tr>
