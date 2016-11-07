@@ -590,7 +590,7 @@ include ("myglobal.php");
                                         </thead>
 
                                         <tbody class="register-item-content">
-                                        <tr class="cart_content_area">
+                                        <tr class="register-items-header">
                                             <td colspan="6">
                                                 <div class="text-center text-warning"> <h3>There are no items in the cart<span class="flatGreenc"> [Sales]</span></h3></div>
                                             </td>
