@@ -134,7 +134,7 @@ include ("myglobal.php");
                                 var Discount=cartdata["Discount"];
                                 var Total=cartdata["Total"];
                                 var htmlCode="<tr id='"+productID+"'>";
-                                htmlCode+="<td class="item_name_heading">"+cartID+"</td>";
+                                htmlCode+="<td"+ "class="+"item_name_heading"+">"+cartID+"</td>";
                                 htmlCode+="<td>"+partName+"</td>";
                                 htmlCode+="<td>"+Sellprice+"</td>";
                                 htmlCode+="<td>"+qty+"</td>";
