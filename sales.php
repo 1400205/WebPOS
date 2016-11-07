@@ -540,7 +540,7 @@ include ("myglobal.php");
                                             <button type="button"  id="addCart" name="addCart" class="btn btn-block btn-primary"> Add Item To Cart</button>
                                             <button type="button"  id="refresh" name="addCartRecord" class="btn btn-block btn-primary"> Display Cart Record</button>
 
-                                            <table id="answer">
+                                            <table id="answe">
                                                 <thead>
                                                 </thead>
                                                 <tbody>
@@ -567,7 +567,7 @@ include ("myglobal.php");
                             <div class="register-box register-items paper-cut">
                                 <div class="register-items-holder">
 
-                                    <table id="register" class="table table-hover">
+                                    <table id="answer" class="table table-hover">
 
                                         <thead>
                                         <tr class="register-items-header">
