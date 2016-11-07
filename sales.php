@@ -580,6 +580,7 @@ include ("myglobal.php");
                                         <thead>
                                         <tr class="register-items-header">
                                             <th></th>
+                                            <th class="item_name_heading">Cart Item ID</th>
                                             <th class="item_name_heading">Item Name</th>
                                             <th class="sales_price">Price</th>
                                             <th class="sales_quantity">Qty.</th>
