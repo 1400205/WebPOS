@@ -16,7 +16,7 @@ $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 //$transID = trim($transID);
 
 
-if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,c.qty*s.Sellprice AS Total,c.cartID 
+if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,s.Discount,c.qty*s.Sellprice AS Total,c.cartID 
     FROM product p INNER JOIN suppliedstuck s on p.productID=s.productID INNER JOIN
      cart c ON s.productID= c.productID WHERE c.transactionID='10001'")) {
     //$stmt->bind_param('s', $transID);
@@ -53,6 +53,8 @@ if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,c.
             $mydata['partName'] = $row[1];
             $mydata['qty'] = $row[2];
             $mydata['Sellprice'] = $row[3];
+            $mydata['Discount'] = $row[4];
+            $mydata['Total'] = $row[5];
 
 
             /*echo "<script> var proid =  " . $row[0]. ";</script>";
