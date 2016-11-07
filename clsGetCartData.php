@@ -55,6 +55,7 @@ if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,s.
             $mydata['Sellprice'] = $row[3];
             $mydata['Discount'] = $row[4];
             $mydata['Total'] = $row[5];
+            $mydata['cartID'] = $row[6];
 
 
             /*echo "<script> var proid =  " . $row[0]. ";</script>";
