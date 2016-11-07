@@ -500,7 +500,7 @@ include ("myglobal.php");
 
 
                                             <button type="button"  id="addCart" name="addCart" class="btn btn-block btn-primary"> Add Item To Cart</button>
-
+                                            <button type="button"  id="refresh" name="addCartRecord" class="button"> Display Cart Record </button><br>
                                             <table id="answer">
                                                 <thead>
                                                 </thead>
