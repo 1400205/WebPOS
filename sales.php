@@ -133,6 +133,7 @@ include ("myglobal.php");
                                 var htmlCode="<tr id='"+productID+"'>";
                                 htmlCode+="<td>"+partName+"</td>";
                                 htmlCode+="<td>"+Sellprice+"</td>";
+                                htmlCode+="<td>"+qty+"</td>";
                                 /* htmlCode+="<td>"+qty+"</td>";
                                  htmlCode+="<td>"+Sellprice+"</td>";*/
                                 htmlCode+="</tr>";
