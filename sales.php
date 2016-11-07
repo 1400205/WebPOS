@@ -130,10 +130,12 @@ include ("myglobal.php");
                                 var qty=cartdata["qty"];
                                 var productID=cartdata["productID"];
                                 var Sellprice=cartdata["Sellprice"];
+                                var Discount=cartdata["Discount"];
                                 var htmlCode="<tr id='"+productID+"'>";
                                 htmlCode+="<td>"+partName+"</td>";
                                 htmlCode+="<td>"+Sellprice+"</td>";
                                 htmlCode+="<td>"+qty+"</td>";
+                                htmlCode+="<td>"+Discount+"</td>";
                                 /* htmlCode+="<td>"+qty+"</td>";
                                  htmlCode+="<td>"+Sellprice+"</td>";*/
                                 htmlCode+="</tr>";
