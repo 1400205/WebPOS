@@ -115,6 +115,44 @@ include ("myglobal.php");
 
             });
 
+            $("#refresh").click(function()
+                {
+                    var url="clsGetCartData.php";
+                    $.getJSON(url,
+                        function(result)
+                        {
+                            $("#answer tbody").empty();
+                            var alltrans=result["alldata"];	//get the list
+                            for( i in alltrans)
+                            {
+                                var cartdata=alltrans[i];	//get
+                                var partName=cartdata["partName"];
+                                var qty=cartdata["qty"];
+                                var productID=cartdata["productID"];
+                                var Sellprice=cartdata["Sellprice"];
+                                var htmlCode="<tr id='"+productID+"'>";
+                                htmlCode+="<td>"+partName+"</td>";
+                                /* htmlCode+="<td>"+qty+"</td>";
+                                 htmlCode+="<td>"+Sellprice+"</td>";*/
+                                htmlCode+="</tr>";
+                                $("#answer tbody").append(htmlCode);
+                            } //end for loop
+
+                            $("#answer tr").click(function()
+                                {
+                                    dataSelected($(this).attr("id"));
+                                }
+                            );
+
+                        } //end success callback function
+                    ); //end method call to getJSON
+                } //end onclick handler of button
+            ); //end method call to click
+
+            function dataSelected(whatever)
+            {
+            }
+
 
 
     });
@@ -501,7 +539,7 @@ include ("myglobal.php");
 
                                             <button type="button"  id="addCart" name="addCart" class="btn btn-block btn-primary"> Add Item To Cart</button>
                                             <button type="button"  id="refresh" name="addCartRecord" class="btn btn-block btn-primary"> Display Cart Record</button>
-                                            
+
                                             <table id="answer">
                                                 <thead>
                                                 </thead>
