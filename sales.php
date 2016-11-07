@@ -104,7 +104,7 @@ include ("myglobal.php");
                     data:dataString,
                     cache: false,
                     success:function(data){
-                        $("#display_info").html("Item Added Successfully");
+//                        $("#display_info").html("Item Added Successfully");
 
                         //resets form  after adding records
                         $("#add_item_form")[0].reset();
