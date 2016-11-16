@@ -10118,7 +10118,7 @@ button.toast-close-button {
     background-color: #f5f7f9;
 }
 .register .register-items .register-items-holder .register-item-content .register-item-bottom td {
-    border-top-width: 0px;
+    border-top-width: 100px;
 }
 .register .register-items .register-items-holder .register-item-content .delete-item {
     color: #FF7474;
@@ -10133,7 +10133,7 @@ button.toast-close-button {
 }
 .register .register-items .register-items-holder .register-item-content .register-item-name.count-items {
     font-size: 14px;
-    margin-left: 20px;
+    margin-left: 200px;
 }
 .register .register-items .register-items-holder .register-item-content .register-item-extra-details {
     padding-left: 5px;
@@ -10149,7 +10149,7 @@ button.toast-close-button {
     min-width: 50px !important;
 }
 .register .register-items .register-items-holder .register-item-content .register-item-extra-details dd {
-    margin-left: 0px;
+    margin-left: 100px;
     line-height: 20px;
 }
 .register .register-items .register-items-holder .register-item-content .register-item-extra-details a {
