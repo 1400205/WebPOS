@@ -10757,10 +10757,10 @@ button.toast-close-button {
     color: #67676C;
     font-size: 14px;
     font-weight: 300;
-    text-align: center;
+    text-align: left;
 }
 .register-items-header th {
-    text-align: center;
+    text-align: left;
 }
 .customer-recent-sales {
     max-width: 800px !important;
