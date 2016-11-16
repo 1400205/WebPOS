@@ -10143,7 +10143,7 @@ button.toast-close-button {
 }
 .register .register-items .register-items-holder .register-item-content .register-item-extra-details dt {
     color: #000000;
-    text-align: left;
+    text-align: right;
     width: 130px;
     line-height: 20px;
     min-width: 50px !important;
@@ -10160,7 +10160,7 @@ button.toast-close-button {
 }
 .register .register-right .sale-buttons {
     min-height: 78px;
-    text-align: center;
+    text-align: right;
     padding: 20px 10px;
     border-bottom: 1px solid #E9ECF2;
 }
