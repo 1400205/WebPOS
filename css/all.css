@@ -10149,7 +10149,7 @@ button.toast-close-button {
     min-width: 50px !important;
 }
 .register .register-items .register-items-holder .register-item-content .register-item-extra-details dd {
-    margin-left: 100px;
+    margin-left: 0px;
     line-height: 20px;
 }
 .register .register-items .register-items-holder .register-item-content .register-item-extra-details a {
