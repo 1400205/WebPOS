@@ -548,14 +548,6 @@ include ("myglobal.php");
                                             <button type="button"  id="addCart" name="addCart" class="btn btn-block btn-primary"> Add Item To Cart</button>
                                             <button type="button"  id="refresh" name="addCartRecord" class="btn btn-block btn-primary"> Display Cart Record</button>
 
-                                            <table id="answe">
-                                                <thead>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                                <tr>Love</tr>
-                                            </table>
-
                                             <div class="input-group-addon register-mode sale-mode dropdown">
                                                 <a href="https://demo.phppointofsale.com/index.php/#" class="none active" tabindex="-1" title="Sale" id="select-mode-2" data-target="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"><i class="icon ti-shopping-cart"></i>Sale</a>					        <ul class="dropdown-menu sales-dropdown">
                                                     <li><a tabindex="-1" href="#" data-mode="return" class="change-mode">Return</a></li>
