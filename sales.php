@@ -113,7 +113,8 @@ include ("myglobal.php");
                     }
                     // }
                 });
-
+                //display cart data
+                displayCartItems()
 
             });
 
