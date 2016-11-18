@@ -168,7 +168,7 @@ function getCartItem() {
 }
 
 function displayCartItems() {
-	{
+	
 		var url="clsGetCartData.php";
 		$.getJSON(url,
 			function(result)
@@ -207,4 +207,3 @@ function displayCartItems() {
 			} //end success callback function
 		); //end method call to getJSON
 	} //end onclick handler of button
-}
