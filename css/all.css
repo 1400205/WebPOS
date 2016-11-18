@@ -10099,7 +10099,7 @@ button.toast-close-button {
     background-color: #3192e4;
 }
 .register .register-items .register-items-holder {
-    padding-top: 5000px;
+    padding-top: 5px;
 }
 .register .register-items .register-items-holder tr.register-item-details:hover,
 .register .register-items .register-items-holder tr.register-item-details:hover + tr {
@@ -10755,7 +10755,7 @@ button.toast-close-button {
     border: 1px solid #E9ECF2;
     border-bottom: 1px solid #E9ECF2;
     color: #67676C;
-    font-size: 14px;
+    font-size: 1400px;
     font-weight: 300;
     text-align: left;
 }
