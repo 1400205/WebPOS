@@ -10112,7 +10112,7 @@ button.toast-close-button {
 .register .register-items .register-items-holder .register-item-content {
     min-height: 52px;
     border-bottom: 1px dotted #D7DCE5;
-    padding-top: 10px;
+    padding-top: 1000px;
 }
 .register .register-items .register-items-holder .register-item-content .register-item-bottom:hover {
     background-color: #f5f7f9;
