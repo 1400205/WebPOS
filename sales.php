@@ -106,8 +106,50 @@ include ("myglobal.php");
                     success:function(data){
                      // $("#display_info").html("Item Added Successfully");
 
+                        //display cart data
+
+                        var url="clsGetCartData.php";
+                        $.getJSON(url,
+                            function(result)
+                            {
+                                $("#answer tbody").empty();
+                                var alltrans=result["alldata"];	//get the list
+                                for( i in alltrans)
+                                {
+                                    var cartdata=alltrans[i];	//get
+                                    var cartID=cartdata["cartID"];
+                                    var partName=cartdata["partName"];
+                                    var qty=cartdata["qty"];
+                                    var productID=cartdata["productID"];
+                                    var Sellprice=cartdata["Sellprice"];
+                                    var Discount=cartdata["Discount"];
+                                    var Total=cartdata["Total"];
+                                    var htmlCode="<tr id='"+productID+"'>";
+                                    htmlCode+="<td>"+cartID+"</td>";
+                                    htmlCode+="<td>"+partName+"</td>";
+                                    htmlCode+="<td>"+Sellprice+"</td>";
+                                    htmlCode+="<td>"+qty+"</td>";
+                                    htmlCode+="<td>"+Discount+"</td>";
+                                    htmlCode+="<td>"+Total+"</td>";
+                                    /* htmlCode+="<td>"+qty+"</td>";
+                                     htmlCode+="<td>"+Sellprice+"</td>";*/
+                                    htmlCode+="</tr>";
+                                    $("#answer tbody").append(htmlCode);
+                                } //end for loop
+
+                                $("#answer tr").click(function()
+                                    {
+                                        dataSelected($(this).attr("id"));
+                                    }
+                                );
+
+                            } //end success callback function
+                        ); //end method call to getJSON
+
                         //resets form  after adding records
                         $("#add_item_form")[0].reset();
+
+
 
 
                     }
