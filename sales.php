@@ -113,14 +113,13 @@ include ("myglobal.php");
                     }
                     // }
                 });
-                //display cart data
-                displayCartItems();
+
 
             });
 
             $("#refresh").click(function()
                 {
-                    var url="clsGetCartData.php";
+                   /* var url="clsGetCartData.php";
                     $.getJSON(url,
                         function(result)
                         {
@@ -143,8 +142,8 @@ include ("myglobal.php");
                                 htmlCode+="<td>"+qty+"</td>";
                                 htmlCode+="<td>"+Discount+"</td>";
                                 htmlCode+="<td>"+Total+"</td>";
-                                /* htmlCode+="<td>"+qty+"</td>";
-                                 htmlCode+="<td>"+Sellprice+"</td>";*/
+                                /!* htmlCode+="<td>"+qty+"</td>";
+                                 htmlCode+="<td>"+Sellprice+"</td>";*!/
                                 htmlCode+="</tr>";
                                 $("#answer tbody").append(htmlCode);
                             } //end for loop
@@ -157,7 +156,10 @@ include ("myglobal.php");
 
                         } //end success callback function
                     ); //end method call to getJSON
-                } //end onclick handler of button
+                */} //end onclick handler of button
+
+            //display cart data
+            displayCartItems();
             ); //end method call to click
 
             function dataSelected(whatever)
