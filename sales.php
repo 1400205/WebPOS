@@ -156,10 +156,12 @@ include ("myglobal.php");
 
                         } //end success callback function
                     ); //end method call to getJSON
-                */} //end onclick handler of button
+                */
+                    //display cart data
+                    displayCartItems();
+                } //end onclick handler of button
 
-            //display cart data
-            displayCartItems();
+
             ); //end method call to click
 
             function dataSelected(whatever)
