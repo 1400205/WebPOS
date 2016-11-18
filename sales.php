@@ -30,69 +30,12 @@ include ("myglobal.php");
     <?php include ("clsgetTransID.php"); ?>
     <script>
         $(document).ready(function(){
-
-
-           /* $("#item_id").click(function() {
-               // var customerID = '';
-               $("#customerID").val(customerID));
-                $("#customerID").load("clsGetShelfID.php");
-                $("#customerID").val()
-
-
-            });*/
-       /* $("#shelfName").change(function() {
-            $("#shelfID").load("clsGetShelfID.php?shelfName=" + $("#shelfName").val());
-
-        });*/
-
+            
 
             $("#addCart").click(function()
             {
 
                 var myItem=$('#item_id').val();
-               // var qty=$('#myqty').val();
-               // var myTransID=$('#transID').val();
-                
-                   // document.getElementById( "item_id" );
-
-              /*  if(myItem)
-                {
-                    $.ajax({
-                        type: 'post',
-                        url: 'clsGetCustomerSelectedProductID.php',
-                        data: {
-                            keyword:myItem,
-                           // myqty:qty,
-                            //transID=myTransID,
-                        },
-                        success: function (response) {
-
-                            // We get the element having id of display_info and put the response inside it
-                            $( '#itemID' ).html(response);
-                            $("#selectItemID").val($("#itemID").html());
-                        }
-                    });
-                    //get transaction ID
-                    $("#transID").val(transid);
-
-                    //add chart item
-                    // bind 'myForm' and provide a simple callback function
-                   /!* $('#select_customer_form').ajaxForm(function() {
-                        alert("Thank you, Item Added!");
-                    });*!/
-                }
-
-                else
-                {
-                    $( '#display_info' ).html("Record not found");
-                }*/
-
-
-                //$("#button").click(function() {
-                  //  $("#second-choice").load("clsGetsupplierID.php?choice=" + $("#first-choice").val());
-
-                //});
-
 
                 var myqty=$("#myqty").val();
                 var transID=$("#transID").val();
