@@ -67,7 +67,7 @@ include ("myglobal.php");
                                     var Sellprice=cartdata["Sellprice"];
                                     var Discount=cartdata["Discount"];
                                     var Total=cartdata["Total"];
-                                    var myid;//=cartdata["myid"];
+                                    var myid="<input type='checkbox' name='uid[]' value = cartID>";//=cartdata["myid"];
                                     var htmlCode="<tr id='"+productID+"'>";
                                     htmlCode+="<td>"+myid+"</td>";
                                     htmlCode+="<td>"+cartID+"</td>";
