@@ -30,7 +30,7 @@ include ("myglobal.php");
     <?php include ("clsgetTransID.php"); ?>
     <script>
         $(document).ready(function(){
-            
+
 
             $("#addCart").click(function()
             {
@@ -67,7 +67,9 @@ include ("myglobal.php");
                                     var Sellprice=cartdata["Sellprice"];
                                     var Discount=cartdata["Discount"];
                                     var Total=cartdata["Total"];
+                                    var deldata=cartdata["tryme"];
                                     var htmlCode="<tr id='"+productID+"'>";
+                                    htmlCode+="<td>"+deldata+"</td>";
                                     htmlCode+="<td>"+cartID+"</td>";
                                     htmlCode+="<td>"+partName+"</td>";
                                     htmlCode+="<td>"+Sellprice+"</td>";
