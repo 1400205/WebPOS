@@ -56,7 +56,7 @@ if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,s.
             $mydata['Discount'] = $row[4];
             $mydata['Total'] = $row[5];
             $mydata['cartID'] = $row[6];
-
+            $mydata['tryme'] = "<input type='checkbox' name='uid[]' value = '$row[6]'>";
 
             /*echo "<script> var proid =  " . $row[0]. ";</script>";
             echo "<script> var partName =  " . $row[1]. ";</script>";
@@ -80,6 +80,5 @@ if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,s.
 }else{
     $msg = "SELECTION FAIL: Contact System Admin";
 }
-
 
 ?>
