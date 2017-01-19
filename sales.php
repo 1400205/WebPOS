@@ -1,7 +1,7 @@
 <?php
 include ("myglobal.php");
 
-//include ("clsAddCart.php");
+include ("clsAddCart.php");
 
 
 ?>
