@@ -36,7 +36,6 @@ include ("myglobal.php");
             {
 
                 var myItem=$('#item_id').val();
-
                 var myqty=$("#myqty").val();
                 var transID=$("#transID").val();
                 var selectItemID=$("#selectItemID").val();
@@ -67,9 +66,9 @@ include ("myglobal.php");
                                     var Sellprice=cartdata["Sellprice"];
                                     var Discount=cartdata["Discount"];
                                     var Total=cartdata["Total"];
-                                   // var myid="<input type='checkbox' name='uid[]' value = 1>";//=cartdata["myid"];
+                                    var myid="<input type='checkbox' name='uid[]' value = 1>";//=cartdata["myid"];
                                     var htmlCode="<tr id='"+productID+"'>";
-                                   // htmlCode+="<td>"+myid+"</td>";
+                                    htmlCode+="<td>"+myid+"</td>";
                                     htmlCode+="<td>"+cartID+"</td>";
                                     htmlCode+="<td>"+partName+"</td>";
                                     htmlCode+="<td>"+Sellprice+"</td>";
@@ -535,8 +534,9 @@ include ("myglobal.php");
 
 
                                             <button type="button"  id="addCart" name="addCart" class="btn btn-block btn-primary"> Add Item To Cart</button>
-                                            <button type="button"  id="refresh" name="addCartRecord" class="btn btn-block btn-primary"> Display Cart Record</button>
-
+                                            <button type="button"  id="addTrans" name="addTrans" class="btn btn-block btn-primary"> Add Transactions</button>
+                                           <!-- <button type="button"  id="refresh" name="addCartRecord" class="btn btn-block btn-primary"> Display Cart Record</button>
+-->
                                             <div class="input-group-addon register-mode sale-mode dropdown">
                                                 <a href="https://demo.phppointofsale.com/index.php/#" class="none active" tabindex="-1" title="Sale" id="select-mode-2" data-target="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"><i class="icon ti-shopping-cart"></i>Sale</a>					        <ul class="dropdown-menu sales-dropdown">
                                                     <li><a tabindex="-1" href="#" data-mode="return" class="change-mode">Return</a></li>
@@ -567,6 +567,7 @@ include ("myglobal.php");
                                             <th class="sales_quantity">Qty.</th>
                                             <th class="sales_discount">Disc %</th>
                                             <th>Total</th>
+
                                         </tr>
                                         </thead>
 
