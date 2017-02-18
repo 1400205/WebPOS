@@ -1,4 +1,8 @@
 <?php
+// Start the session
+session_start();
+?>
+<?php
 /**
  * Created by IntelliJ IDEA.
  * User: prosper
@@ -9,6 +13,9 @@
 
 include ("connect.php");
 include ("myglobal.php");
+//get user session name and id
+$username= $_SESSION["uname"];
+$userid= $_SESSION["userid"];
 
 //include ("connect.php");
 
@@ -29,7 +36,7 @@ while ($row = $result->fetch_row()) {
 
     if ( ( $stmt=$mysqli->prepare("INSERT INTO transations (transactionID,cartID, productID,qty,sellPrice,discount,userID) VALUES (?,?,?,?,?,?,?)"))){
         //bind parameter
-        $stmt->bind_param('iiiiddi',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5],$itemID, $qty,$tranID);
+        $stmt->bind_param('iiiiddi',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5],$userid);
         if( $stmt->execute()){
             $error="SUCCESS! "."Record Added Successfully.";
         }else{
