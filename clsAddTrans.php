@@ -23,9 +23,19 @@ $stmt = $sqlcon->prepare("SELECT c.transactionID,c.cartID, s.productID,c.qty,s.S
 $stmt->execute();
 //get result
 $result = $stmt->get_result();
-
 //foreach ($result as $rs) {
 while ($row = $result->fetch_row()) {
+
+
+    if ( ( $stmt=$mysqli->prepare("INSERT INTO transations (transactionID,cartID, productID,qty,sellPrice,discount,userID) VALUES (?,?,?,?,?,?,?)"))){
+        //bind parameter
+        $stmt->bind_param('iiiiddi',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5],$itemID, $qty,$tranID);
+        if( $stmt->execute()){
+            $error="SUCCESS! "."Record Added Successfully.";
+        }else{
+            $error="FAILURE! "."Record Did Not Add. System Does Not Allow Duplicate Records";
+        }
+    }else{$error= "CALL Record Addition Failed: Contact Admin";}
     // put in bold the written text
     ////$partName = str_replace($_POST['keyword'], '<b>'.$_POST['keyword'].'</b>', $row[0]);
 
