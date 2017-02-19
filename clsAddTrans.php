@@ -25,7 +25,7 @@ $stmt = $sqlcon->prepare("SELECT c.transactionID,c.cartID, s.productID,c.qty,s.S
     FROM product p INNER JOIN suppliedstuck s on p.productID=s.productID INNER JOIN
      cart c ON s.productID= c.productID WHERE c.transactionID = $transID");
 
-//$stmt->bind_param('s', $keyword);
+$stmt->bind_param('i', $transID);
 
 $stmt->execute();
 //get result
