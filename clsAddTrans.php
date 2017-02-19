@@ -19,11 +19,11 @@ $userid= $_SESSION["userid"];
 
 //include ("connect.php");
 
-//$keyword = '%'.$_POST['keyword'].'%';
+$transID = $_POST['transID'];
 
 $stmt = $sqlcon->prepare("SELECT c.transactionID,c.cartID, s.productID,c.qty,s.Sellprice,s.Discount
     FROM product p INNER JOIN suppliedstuck s on p.productID=s.productID INNER JOIN
-     cart c ON s.productID= c.productID WHERE c.transactionID='10001'");
+     cart c ON s.productID= c.productID WHERE c.transactionID = $transID");
 
 //$stmt->bind_param('s', $keyword);
 
