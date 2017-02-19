@@ -3,12 +3,9 @@
 session_start();
 ?>
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: prosper
- * Date: 29/07/2016
- * Time: 05:28
- */
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 
 include ("connect.php");
@@ -25,7 +22,7 @@ $stmt = $sqlcon->prepare("SELECT c.transactionID,c.cartID, s.productID,c.qty,s.S
     FROM product p INNER JOIN suppliedstuck s on p.productID=s.productID INNER JOIN
      cart c ON s.productID= c.productID WHERE c.transactionID = $transID");
 
-$stmt->bind_param('i', $transID);
+$stmt->bind_param('s', $transID);
 
 $stmt->execute();
 //get result
@@ -36,7 +33,7 @@ while ($row = $result->fetch_row()) {
 
     if ( ( $stmt=$mysqli->prepare("INSERT INTO transations (transactionID,cartID, productID,qty,sellPrice,discount,userID) VALUES (?,?,?,?,?,?,?)"))){
         //bind parameter
-        $stmt->bind_param('iiiiddi',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5],$userid);
+        $stmt->bind_param('siiiddi',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5],$userid);
         if( $stmt->execute()){
             $error="SUCCESS! "."Record Added Successfully.";
         }else{
