@@ -103,6 +103,36 @@ include ("myglobal.php");
 
             });
 
+            $("#addTrans").click(function()//begining on function to execute when the Transaction button is clicked
+            {
+
+
+                var transID=$("#transID").val();
+
+                var dataString = 'transID=' + transID;
+                $.ajax({
+                    type:"post",
+                    url:"clsAddTrans.php",
+                    data:dataString,
+                    cache: false,
+                    success:function(data){
+
+                        //resets form  after adding records
+                        $("#add_item_form")[0].reset();
+
+                        $("#display_info").html("Item Added Successfully");
+
+
+
+
+
+                    }
+                    // }
+                });
+
+
+            });
+
             $("#refresh").click(function()
                 {
                     var url="clsGetCartData.php";
