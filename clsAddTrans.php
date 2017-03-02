@@ -7,7 +7,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-
 include ("connect.php");
 include ("myglobal.php");
 //get user session name and id
@@ -28,7 +27,7 @@ $stmt->execute();
 //get result
 $result = $stmt->get_result();
 //foreach ($result as $rs) {
-while ($row = $result->fetch_row()) {
+/*while ($row = $result->fetch_row()) {
 
 
     if ( ( $stmt=$mysqli->prepare("INSERT INTO transations (transactionID,cartID, productID,qty,sellPrice,discount,userID) VALUES (?,?,?,?,?,?,?)"))){
@@ -46,6 +45,6 @@ while ($row = $result->fetch_row()) {
     // add new option
 
    //// echo '<li onclick="set_item(\''.str_replace("'", "\'", $row[0]).'\')">'.$partName.' GHS '.$row[1].'</li>';
-}
+}*/
 
 ?>
