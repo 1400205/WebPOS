@@ -91,7 +91,8 @@ include ("myglobal.php");
                         ); //end method call to getJSON
 
                         //resets form  after adding records
-                        $("#add_item_form")[0].reset();
+                       /// $("#add_item_form")[0].reset();
+                       /// $("#Id").val("")
 
 
 
