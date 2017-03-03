@@ -45,17 +45,17 @@ if ($stmt = $sqlcon->prepare("SELECT c.transactionID,c.cartID, s.productID,c.qty
             $mydata['cartID'] = $row[6]*/;
 
            // array_push($salesdata["alldata"],$mydata);
-           $stmt=$mysqli->prepare("INSERT INTO transactions (transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)");
+if($stmt=$mysqli->prepare("INSERT INTO transactions (transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)")) {
 
-                //bind parameter
-                $stmt->bind_param('siiddd',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5]);
-                $stmt->execute();
-                /*   if( $stmt->execute()){
-                       $error="SUCCESS! "."Record Added Successfully.";
-                   }else{
-                       $error="FAILURE! "."Record Did Not Add. System Does Not Allow Duplicate Records";
-                   }*/
-
+    //bind parameter
+    $stmt->bind_param('siiddd', $row[0], $row[1], $row[2], $row[3], $row[4], $row[5]);
+    $stmt->execute();
+    /*   if( $stmt->execute()){
+           $error="SUCCESS! "."Record Added Successfully.";
+       }else{
+           $error="FAILURE! "."Record Did Not Add. System Does Not Allow Duplicate Records";
+       }*/
+        }
 
         }
 //$num_rows = mysqli_num_rows($result);
