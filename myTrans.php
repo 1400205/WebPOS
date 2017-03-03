@@ -64,6 +64,17 @@ if(isset($_POST["submit"])) {
 
 
     }
+    foreach ($row as $row1){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO transactions(transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)"))){
+            //bind parameter
+            $stmt->bind_param('siiidd',$row1[0],$row1[1],$row1[2],$row1[3],$row1[4],$row1[5]);
+            if( $stmt->execute()){
+                $error="SUCCESS!"."Record Added Successfully.";
+            }else{
+                $error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
+            }
+        }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}
+    }
     if(empty($row)){
         $msg = "Record Not Found";
     }
