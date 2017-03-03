@@ -58,7 +58,7 @@ if(isset($_POST["submit"])) {
         $resultText =$resultText.$line;
        // $resultTextPhoto =$resultTextPhoto.$linePhoto;
         //insert records
-
+        $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
         if ( ( $stmt=$mysqli->prepare("INSERT INTO transactions(transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)"))){
             //bind parameter
             $stmt->bind_param('siiidd',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5]);
