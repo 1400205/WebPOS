@@ -1,7 +1,11 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include ("myglobal.php");
 
-//include ("clsAddCart.php");
+include ("clsAddTransaction.php.php");
 
 
 ?>
@@ -565,7 +569,7 @@ include ("myglobal.php");
 
 
                                             <button type="button"  id="addCart" name="addCart" class="btn btn-block btn-primary"> Add Item To Cart</button>
-                                            <button type="button"  id="addTrans" name="addTrans" class="btn btn-block btn-primary"> Add Transactions</button>
+                                            <button type="submit"  id="addTrans" name="addTrans" class="btn btn-block btn-primary"> Add Transactions</button>
                                            <!-- <button type="button"  id="refresh" name="addCartRecord" class="btn btn-block btn-primary"> Display Cart Record</button>
 -->
                                             <div class="input-group-addon register-mode sale-mode dropdown">
