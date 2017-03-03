@@ -40,8 +40,9 @@ if(isset($_POST["submit"])) {
         //get result
         $result = $stmt->get_result();
     }
-
-    while ($row = $result->fetch_row()) {
+        $row = $result->fetch_row();
+   // while ($row = $result->fetch_row()) {
+    foreach ($row as $rw) {
 
        /* if ( ( $stmt=$mysqli->prepare("INSERT INTO transactions(transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)"))){
             //bind parameter
@@ -64,7 +65,7 @@ if(isset($_POST["submit"])) {
 
 
     }
-    foreach ($row as $row1){
+   /* foreach ($row as $row1){
         if ( ( $stmt=$mysqli->prepare("INSERT INTO transactions(transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)"))){
             //bind parameter
             $stmt->bind_param('siiidd',$row1[0],$row1[1],$row1[2],$row1[3],$row1[4],$row1[5]);
@@ -74,7 +75,7 @@ if(isset($_POST["submit"])) {
                 $error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
         }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}
-    }
+    }*/
     if(empty($row)){
         $msg = "Record Not Found";
     }
