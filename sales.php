@@ -119,7 +119,7 @@ include ("myglobal.php");
                     success:function(data){
 
                         //resets form  after adding records
-                        $("#add_item_form")[0].reset();
+                       // $("#add_item_form")[0].reset();
 
                         $("#display_info").html("Item Added Successfully");
 
