@@ -44,7 +44,7 @@ if(isset($_POST["submit"])) {
    // while ($row = $result->fetch_row()) {
     foreach ($row as $rw) {
 
-       /* if ( ( $stmt=$mysqli->prepare("INSERT INTO transactions(transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)"))){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO transactions(transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)"))){
             //bind parameter
             $stmt->bind_param('siiidd',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5]);
             if( $stmt->execute()){
@@ -52,7 +52,7 @@ if(isset($_POST["submit"])) {
             }else{
                 $error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
-        }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}*/
+        }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}
         $line = "<p><a href='addEmployeeForm.php?id=" . $row[0] . "'>". "Click Here To Add Employee Of ". $row[1]
             . " " . $row[2] . "," . $row[3] ." "."Born on ".$row[4]. "</a></p>"."<br>";
 
