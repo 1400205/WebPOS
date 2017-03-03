@@ -34,6 +34,7 @@ if ($stmt = $sqlcon->prepare("SELECT c.transactionID,c.cartID, s.productID,c.qty
         while ($row = $result->fetch_row()) {
 
 
+
            /* $mydata = array();
             $mydata['productID'] = $row[0];
             $mydata['partName'] = $row[1];
@@ -44,7 +45,6 @@ if ($stmt = $sqlcon->prepare("SELECT c.transactionID,c.cartID, s.productID,c.qty
             $mydata['cartID'] = $row[6]*/;
 
            // array_push($salesdata["alldata"],$mydata);
-
            $stmt=$mysqli->prepare("INSERT INTO transactions (transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)");
 
                 //bind parameter
