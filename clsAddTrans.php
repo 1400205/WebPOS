@@ -15,13 +15,13 @@ $userid= $_SESSION["userid"];
 
 //include ("connect.php");
 
-$transID = $_POST['transID'];
+//$transID = $_POST['transID'];
 
 $stmt = $sqlcon->prepare("SELECT c.transactionID,c.cartID, s.productID,c.qty,s.Sellprice,s.Discount
     FROM product p INNER JOIN suppliedstuck s on p.productID=s.productID INNER JOIN
-     cart c ON s.productID= c.productID WHERE c.transactionID = $transID");
+     cart c ON s.productID= c.productID WHERE c.transactionID = '10001'");
 
-$stmt->bind_param('s', $transID);
+//$stmt->bind_param('s', $transID);
 
 $stmt->execute();
 //get result
