@@ -41,8 +41,8 @@ if(isset($_POST["submit"])) {
         $result = $stmt->get_result();
     }
         $row = $result->fetch_row();
-   // while ($row = $result->fetch_row()) {
-    foreach ($row as $rw) {
+    while ($row = $result->fetch_row()) {
+   // foreach ($row as $rw) {
 
         if ( ( $stmt=$sqlcon->prepare("INSERT INTO transactions(transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)"))){
             //bind parameter
@@ -50,9 +50,9 @@ if(isset($_POST["submit"])) {
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
             }else{
-                $error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
+                $error= "CALL failed: (" . $sqlcon->errno . ") " . $sqlcon->error;
             }
-        }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}
+        }else{$error= "CALL failed: (" . $sqlcon->errno . ") " . $sqlcon->error;}
         $line = "<p><a href='addEmployeeForm.php?id=" . $row[0] . "'>". "Click Here To Add Employee Of ". $row[1]
             . " " . $row[2] . "," . $row[3] ." "."Born on ".$row[4]. "</a></p>"."<br>";
 
