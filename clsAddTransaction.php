@@ -48,7 +48,7 @@ if ($stmt = $sqlcon->prepare("SELECT c.transactionID,c.cartID, s.productID,c.qty
             if ( ( $stmt=$mysqli->prepare("INSERT INTO transactions (transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)"))){
 
                 //bind parameter
-                $stmt->bind_param('siiidd',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5]);
+                $stmt->bind_param('siiddd',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5]);
                 $stmt->execute();
                 /*   if( $stmt->execute()){
                        $error="SUCCESS! "."Record Added Successfully.";
