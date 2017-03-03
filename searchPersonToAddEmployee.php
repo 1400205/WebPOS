@@ -2,11 +2,11 @@
 <?php
 include ("connect.php");
 include ("myglobal.php");
-$sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+
 
 if(isset($_POST["submit"])) {
 
-
+    $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
     $firstname=$_POST["firstname"];
     $surname=$_POST["surname"];
 
