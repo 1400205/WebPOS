@@ -44,7 +44,7 @@ if(isset($_POST["submit"])) {
     while ($row = $result->fetch_row()) {
    // foreach ($row as $rw) {
 
-        if ( ( $stmt=$sqlcon->prepare("INSERT INTO transactions(transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)"))){
+        if ( ( $stmt=$sqlcon->prepare("INSERT INTO transactions(transactionID,cartID, productID,qty,sellPrice,discountID) VALUES (?,?,?,?,?,?)"))){
             //bind parameter
             $stmt->bind_param('siiidd',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5]);
             if( $stmt->execute()){
