@@ -54,7 +54,7 @@ if(isset($_POST["submit"])) {
             }
         }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}*/
         $line = "<p><a href='addEmployeeForm.php?id=" . $rw[0] . "'>". "Click Here To Add Employee Of ". $rw[1]
-            . " " . $rw[2] . "," . $row[3] ." "."Born on ".$row[4]. "</a></p>"."<br>";
+            . " " . $rw[2] . "," . $rw[3] ." "."Born on ".$rw[4]. "</a></p>"."<br>";
 
        // $linePhoto = "<p><img src='".$row[14]."' style='width:100px;height:100px;'></p>";
 
