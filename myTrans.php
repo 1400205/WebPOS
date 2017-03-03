@@ -40,7 +40,7 @@ if(isset($_POST["submit"])) {
         //get result
         $result = $stmt->get_result();
     }
-        $row = $result->fetch_row();
+       // $row = $result->fetch_row();
     while ($row = $result->fetch_row()) {
    // foreach ($row as $rw) {
 
