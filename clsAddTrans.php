@@ -35,11 +35,11 @@ while ($row = $result->fetch_row()) {
         //bind parameter
         $stmt->bind_param('siiidd',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5]);
         $stmt->execute();
-        if( $stmt->execute()){
+     /*   if( $stmt->execute()){
             $error="SUCCESS! "."Record Added Successfully.";
         }else{
             $error="FAILURE! "."Record Did Not Add. System Does Not Allow Duplicate Records";
-        }
+        }*/
     }else{$error= "CALL Record Addition Failed: Contact Admin";}
     // put in bold the written text
     ////$partName = str_replace($_POST['keyword'], '<b>'.$_POST['keyword'].'</b>', $row[0]);
