@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 include ("myglobal.php");
 
-include ("clsAddTrans.php");
+//include ("clsAddTrans.php");
 
 
 ?>
@@ -516,7 +516,7 @@ include ("clsAddTrans.php");
                                 <div class="item-form">
                                     <!-- Item adding form -->
 
-                                    <form action="" id="add_item_form" class="form-inline" autocomplete="off" method="post" accept-charset="utf-8">
+                                    <form action="clsAddTransactions.php" id="add_item_form" class="form-inline" autocomplete="off" method="post" accept-charset="utf-8">
 <!--                                        https://demo.phppointofsale.com/index.php/sales/add-->
                                         <div class="input-group input-group-mobile contacts">
 						<span class="input-group-addon">
@@ -569,7 +569,7 @@ include ("clsAddTrans.php");
 
 
                                             <button type="button"  id="addCart" name="addCart" class="btn btn-block btn-primary"> Add Item To Cart</button>
-                                            <button type="submit"  id="addTrans" name="addTrans" class="btn btn-block btn-primary"> Add Transactions</button>
+                                            <button type="submit"  id="addTrans"  name="addTrans" class="btn btn-block btn-primary"> Add Transactions</button>
                                            <!-- <button type="button"  id="refresh" name="addCartRecord" class="btn btn-block btn-primary"> Display Cart Record</button>
 -->
                                             <div class="input-group-addon register-mode sale-mode dropdown">
