@@ -27,10 +27,10 @@ if ($stmt = $sqlcon->prepare("SELECT c.transactionID,c.cartID, s.productID,c.qty
 
     $row = $result->fetch_row();
 
-    $salesdata = array();
-    if ($row = $result->fetch_row()) {
+   // $salesdata = array();
+    //if ($row = $result->fetch_row()) {
 
-        $salesdata["alldata"]=array();
+        //$salesdata["alldata"]=array();
         while ($row = $result->fetch_row()) {
 
 
@@ -59,8 +59,8 @@ if ($stmt = $sqlcon->prepare("SELECT c.transactionID,c.cartID, s.productID,c.qty
 
         }
 //$num_rows = mysqli_num_rows($result);
-        $salesdata["success"]=1;
-        echo json_encode($salesdata);
+        ///$salesdata["success"]=1;
+       /// echo json_encode($salesdata);
 
 //echo "<script> var num_rows =  " . $num_rows. ";</script>";
         /*if(empty($row)){
@@ -68,7 +68,7 @@ if ($stmt = $sqlcon->prepare("SELECT c.transactionID,c.cartID, s.productID,c.qty
         }*/
 //close the db connection
         mysqli_close($sqlcon);
-    }
+    //}
 }else{
     $msg = "SELECTION FAIL: Contact System Admin";
 }
