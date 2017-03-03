@@ -113,7 +113,7 @@ include ("myglobal.php");
                 var dataString = 'transID=' + transID;
                 $.ajax({
                     type:"post",
-                    url:"clsAddTransaction.php",
+                    url:"clsAddTrans.php",
                     data:dataString,
                     cache: false,
                     success:function(data){
