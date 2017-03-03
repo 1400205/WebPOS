@@ -30,7 +30,7 @@ $result = $stmt->get_result();
 while ($row = $result->fetch_row()) {
 
 
-    if ( ( $stmt=$mysqli->prepare("INSERT INTO transactions (transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)"))){
+    if ( ( $stmt=$mysqli->prepare("INSERT INTO transactions(transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)"))){
 
         //bind parameter
         $stmt->bind_param('siiidd',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5]);
