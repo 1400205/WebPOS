@@ -31,8 +31,10 @@ while ($row = $result->fetch_row()) {
 
 
     if ( ( $stmt=$mysqli->prepare("INSERT INTO transations (transactionID,cartID, productID,qty,sellPrice,discount) VALUES (?,?,?,?,?,?)"))){
+
         //bind parameter
         $stmt->bind_param('siiidd',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5]);
+        $stmt->execute();
         if( $stmt->execute()){
             $error="SUCCESS! "."Record Added Successfully.";
         }else{
