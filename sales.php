@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 include ("myglobal.php");
 
-include ("clsAddTransaction.php.php");
+include ("clsAddTransaction.php");
 
 
 ?>
