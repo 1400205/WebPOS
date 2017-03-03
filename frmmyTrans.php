@@ -83,6 +83,7 @@ session_start();
 
                 </div>
                 <p>  <div class="error"><span><?php echo $error;?></span></div></p>
+                <p>  <div class="error"><span><?php echo $resultText;?></span></div></p>
 
             </fieldset>
 
