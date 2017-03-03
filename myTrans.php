@@ -53,8 +53,8 @@ if(isset($_POST["submit"])) {
                 $error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
             }
         }else{$error= "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;}*/
-        $line = "<p><a href='addEmployeeForm.php?id=" . $row[0] . "'>". "Click Here To Add Employee Of ". $row[1]
-            . " " . $row[2] . "," . $row[3] ." "."Born on ".$row[4]. "</a></p>"."<br>";
+        $line = "<p><a href='addEmployeeForm.php?id=" . $rw[0] . "'>". "Click Here To Add Employee Of ". $rw[1]
+            . " " . $rw[2] . "," . $row[3] ." "."Born on ".$row[4]. "</a></p>"."<br>";
 
        // $linePhoto = "<p><img src='".$row[14]."' style='width:100px;height:100px;'></p>";
 
