@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 
 include ("connect.php");
 include ("myglobal.php");
+global $sqlcon;
 $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
 
