@@ -30,10 +30,10 @@ if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,s.
         '</th>'.'<th>'.'Name'.'</th>'.'<th>'.'Qty'.
 
         '</th>'.'<th>'.'Unit Price'.'</th>'.'<th>'.'Total Price'.'</th>'.'Remove From Chart'.'</th>'.'</table>';*/
-    $row = $result->fetch_row();
+  ///  $row = $result->fetch_row();
 
     $salesdata = array();
-    if ($row = $result->fetch_row()) {
+  ///  if ($row = $result->fetch_row()) {
 
         $salesdata["alldata"]=array();
         while ($row = $result->fetch_row()) {
@@ -76,7 +76,7 @@ if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,s.
         }*/
 //close the db connection
         mysqli_close($sqlcon);
-    }
+   /// }
 }else{
     $msg = "SELECTION FAIL: Contact System Admin";
 }
