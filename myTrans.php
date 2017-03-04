@@ -1,3 +1,14 @@
+<?php
+/**
+ * Created by IntelliJ IDEA.
+ * User: prosper
+ * Date: 21/07/2016
+ * Time: 04:29
+ */
+
+// Start the session
+session_start();
+?>
 
 <?php
 
@@ -7,7 +18,9 @@ error_reporting(E_ALL);
 
 include ("connect.php");
 include ("myglobal.php");
-global $sqlcon;
+//get user session name and id
+$username= $_SESSION["uname"];
+$userid= $_SESSION["userid"];
 $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
 
@@ -44,9 +57,9 @@ $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
     while ($row = $result->fetch_row()) {
    // foreach ($row as $rw) {
 
-        if ( ( $stmt=$sqlcon->prepare("INSERT INTO transactions(transactionID,cartID, productID,qty,sellPrice,discountID) VALUES (?,?,?,?,?,?)"))){
+        if ( ( $stmt=$sqlcon->prepare("INSERT INTO transactions(transactionID,cartID, productID,qty,sellPrice,discountID,userID) VALUES (?,?,?,?,?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('siiidd',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5]);
+            $stmt->bind_param('siiiddi',$row[0],$row[1],$row[2],$row[3],$row[4],$row[5],$userid);
             if( $stmt->execute()){
                 $error="SUCCESS!"."Record Added Successfully.";
             }else{
