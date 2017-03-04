@@ -4,7 +4,7 @@ function autocomplet() {
 	var keyword = $('#item_id').val();
 	if (keyword.length >= min_length) {
 			$.ajax({
-				//url: 'clsGetProductForSale.php',
+				url: 'clsGetProductForSale.php',
 				type: 'POST',
 				data: {keyword:keyword},
 				success:function(data){
