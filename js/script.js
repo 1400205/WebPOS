@@ -146,7 +146,7 @@ function getCartItem() {
 
 				// We get the element having id of display_info and put the response inside it
 				$( '#itemID' ).html(response);
-				$("#selectItemID").val($("#itemID").html());
+				//$("#selectItemID").val($("#itemID").html());
 			}
 		});
 		//get transaction ID
