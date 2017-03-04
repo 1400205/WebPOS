@@ -445,10 +445,6 @@ include ("myglobal.php");
                         </ul>
                     </li>
 
-
-
-
-
                     <li class="dropdown">
                         <a tabindex="-1" href="#" class="dropdown-toggle avatar_width" data-toggle="dropdown" role="button" aria-expanded="false"><span class="avatar-holder">
 
