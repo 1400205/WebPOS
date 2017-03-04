@@ -39,15 +39,16 @@ include ("myglobal.php");
             $("#addCart").click(function()
             {
 
-                var myItem=$('#item_id').val();
-                var myqty=$("#myqty").val();
-                var stuckqty=$("#itemQTY").val();
-                var transID=$("#transID").val();
-                var selectItemID=$("#selectItemID").val();
-                var dataString = 'selectItemID=' + selectItemID  + '&myqty=' + myqty + '&transID=' + transID;
-               if(myqty>stuckqty){
+
+               if(($("#myqty").val())>($("#stuckQTY").val())){
                    alert('Please Stuck is Less Than Your Request.');
                }else {
+                   var myItem=$('#item_id').val();
+                   var myqty=$("#myqty").val();
+                   var stuckqty=$("#itemQTY").val();
+                   var transID=$("#transID").val();
+                   var selectItemID=$("#selectItemID").val();
+                   var dataString = 'selectItemID=' + selectItemID  + '&myqty=' + myqty + '&transID=' + transID;
                 $.ajax({
                     type:"post",
                     url:"clsAddCart.php",
