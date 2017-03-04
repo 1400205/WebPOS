@@ -516,7 +516,7 @@ include ("myglobal.php");
                                             <div class="input-group-addon register-mode sale-mode dropdown">
                                                 <a href="https://demo.phppointofsale.com/index.php/#" class="none active" tabindex="-1" title="Sale" id="select-mode-1" data-target="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false"><i class="icon ti-shopping-cart"></i> <span class="register-btn-text">Sale</span></a>					        <ul class="dropdown-menu sales-dropdown">
                                                     <li><a tabindex="-1" href="#" data-mode="return" class="change-mode">Return</a></li>
-<!--                                                    <li><a tabindex="-1" href="#" data-mode="return" class="change-mode">--><?php //echo $selectedProduct ?><!--</a></li>-->
+                                                  <li><a tabindex="-1" href="#" data-mode="return" class="change-mode">--><?php echo $selectedProduct ?><!--</a></li>-->
 <!--                                                    <li><a tabindex="-1" href="#" data-mode="return" class="change-mode">--><?php //echo $stuckQTY ?><!--</a></li>-->
 
 
