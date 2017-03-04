@@ -22,7 +22,7 @@ include ("connect.php");
 include ("myglobal.php");
 //get user session name and id
 //$username= $_SESSION["uname"];
-//$userid= $_SESSION["userid"];
+$userid= $_SESSION["userid"];
 //get connection
 //if(isset($_POST['addCart']))
 //{
@@ -100,9 +100,9 @@ if(isset($_POST)){
 
 
 
-        if ( ( $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID) VALUES (?,?,?)"))){
+        if ( ( $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID,userID) VALUES (?,?,?,?)"))){
             //bind parameter
-            $stmt->bind_param('iis',$itemID, $qty,$tranID);
+            $stmt->bind_param('iisi',$itemID, $qty,$tranID,$userid);
             if( $stmt->execute()){
                 $error="SUCCESS! "."Record Added Successfully.";
             }else{
