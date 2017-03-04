@@ -42,6 +42,7 @@ include ("myglobal.php");
 
                if(($("#myqty").val())>($("#stuckQTY").val())){
                    alert('Please Stuck is Less Than Your Request.');
+
                }else {
                    var myItem=$('#item_id').val();
                    var myqty=$("#myqty").val();
@@ -553,7 +554,9 @@ include ("myglobal.php");
                                             <span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span>
 
 
-
+                                            <label id="alertmsg" >
+                                                Please Stuck is Less Than Your Request
+                                            </label>
                                             <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet(); "class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
                                             <ul id="item_list_id"></ul>
                                             <label>QUANTITY:</label> <br>
