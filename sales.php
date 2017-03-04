@@ -112,12 +112,12 @@ include ("myglobal.php");
             {
 
 
-                var transID=$("#transID").val();
+                var transID=$('#transID').val();
 
                // var dataString = 'transID=' + transID;
                 $.ajax({
-                    url:"myTrans.php",
-                    type:"post",
+                    url:'myTrans.php',
+                    type:'post',
                     data: {transID:transID},
                     //cache: false,
                     success:function(data){
@@ -126,10 +126,6 @@ include ("myglobal.php");
                        // $("#add_item_form")[0].reset();
 
                         $("#display_info").html("Item Added Successfully");
-
-
-
-
 
                     }
                     // }
