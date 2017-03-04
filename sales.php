@@ -117,7 +117,7 @@ include ("myglobal.php");
                // var dataString = 'transID=' + transID;
                 $.ajax({
                     url:'myTrans.php',
-                    type:'post',
+                    type:'POST',
                     data: {transID:transID},
                     //cache: false,
                     success:function(data){

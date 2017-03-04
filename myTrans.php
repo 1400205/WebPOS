@@ -11,7 +11,7 @@ global $sqlcon;
 $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
 
-if(isset($_POST["submit"])) {
+///if(isset($_POST["submit"])) {
 
 
     $transID=$_POST['transID'];
@@ -80,5 +80,5 @@ if(isset($_POST["submit"])) {
         $msg = "Record Not Found";
     }
 
-}
+///}
 ?>
