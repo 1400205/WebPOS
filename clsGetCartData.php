@@ -7,7 +7,7 @@ include ("myglobal.php");
 $msg="";
 $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
-$transID=$_GET[transID];
+$transID=$_GET['transID'];
 
 //clean input user first name
 //$transID = stripslashes( $transID );
