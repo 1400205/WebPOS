@@ -14,7 +14,7 @@ $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 if(isset($_POST["submit"])) {
 
 
-    $transID=$_POST["transID"];
+    $transID=$_POST['transID'];
     /// $surname=$_POST["surname"];
 
     //clean input user first name

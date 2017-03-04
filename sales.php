@@ -114,11 +114,11 @@ include ("myglobal.php");
 
                 var transID=$("#transID").val();
 
-                var dataString = 'transID=' + transID;
+               // var dataString = 'transID=' + transID;
                 $.ajax({
                     type:"post",
                     url:"myTrans.php",
-                    data:dataString,
+                    data: {transID:transID},
                     cache: false,
                     success:function(data){
 
