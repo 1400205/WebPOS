@@ -31,6 +31,7 @@ function set_item(item) {
 	$('#item_id').select();
 	$('#item_id').focus();
 	getCartItem();
+	getStuckQTY();
 }
 
 
@@ -147,6 +148,51 @@ function getCartItem() {
 				// We get the element having id of display_info and put the response inside it
 				$( '#itemID' ).html(response);
 				$("#selectItemID").val($("#itemID").html());
+			}
+		});
+		//get transaction ID
+		$("#transID").val(transid);
+
+		//add chart item
+		// bind 'myForm' and provide a simple callback function
+		/* $('#select_customer_form').ajaxForm(function() {
+		 alert("Thank you, Item Added!");
+		 });*/
+	}
+
+	else
+	{
+		$( '#display_info' ).html("Record not found");
+	}
+
+
+}
+
+//function get stuck qty
+
+function getStuckQTY() {
+
+	var myItem=$('#item_id').val();
+	// var qty=$('#myqty').val();
+	// var myTransID=$('#transID').val();
+
+	// document.getElementById( "item_id" );
+
+	if(myItem)
+	{
+		$.ajax({
+			type: 'post',
+			url: 'clsGetStuckQTY.php',
+			data: {
+				keyword:myItem,
+				// myqty:qty,
+				//transID=myTransID,
+			},
+			success: function (response) {
+
+				// We get the element having id of display_info and put the response inside it
+				$( '#itemQTY' ).html(response);
+				$("#stuckQTY").val($("#itemQTY").html());
 			}
 		});
 		//get transaction ID
