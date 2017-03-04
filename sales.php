@@ -41,7 +41,10 @@ include ("myglobal.php");
 
 
                if(($("#myqty").val())>($("#stuckQTY").val())){
-                   alert('Please Stuck is Less Than Your Request.');
+                  // alert('Please Stuck is Less Than Your Request.');
+                  // document.getElementById("alertmsg").style.visibility=show();
+                   $('#alertmsg').visibility=show();
+
 
                }else {
                    var myItem=$('#item_id').val();
