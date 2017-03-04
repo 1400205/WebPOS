@@ -557,7 +557,12 @@ include ("myglobal.php");
 
                                             <input autocomplete="off" id="selectItemID" name="selectItemID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text"  >
 
+                                            <input autocomplete="off" id="stuckQTY" name="stuckQTY" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text"  >
+
                                             <label id="itemID" >
+
+                                            </label>
+                                            <label id="itemQTY" >
 
                                             </label>
                                             <div id="display_info" >
