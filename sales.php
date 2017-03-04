@@ -41,9 +41,13 @@ include ("myglobal.php");
 
                 var myItem=$('#item_id').val();
                 var myqty=$("#myqty").val();
+                var stuckqty=$("#itemQTY").val();
                 var transID=$("#transID").val();
                 var selectItemID=$("#selectItemID").val();
                 var dataString = 'selectItemID=' + selectItemID  + '&myqty=' + myqty + '&transID=' + transID;
+               if(myqty>stuckqty){
+                   alert('Please Stuck is Less Than Your Request.');
+               }else {
                 $.ajax({
                     type:"post",
                     url:"clsAddCart.php",
@@ -104,6 +108,7 @@ include ("myglobal.php");
                     }
                     // }
                 });
+               }
 
 
             });
