@@ -7,7 +7,7 @@ include ("myglobal.php");
 $msg="";
 $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
-//$transID=$_POST["transID"];
+$transID=$_GET[transID];
 
 //clean input user first name
 //$transID = stripslashes( $transID );
@@ -18,8 +18,8 @@ $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
 if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,s.Discount,ROUND(c.qty*s.Sellprice-c.qty*s.Sellprice*s.Discount/100,2) AS Total,c.cartID 
     FROM product p INNER JOIN suppliedstuck s on p.productID=s.productID INNER JOIN
-     cart c ON s.productID= c.productID WHERE c.transactionID='10001'")) {
-    //$stmt->bind_param('s', $transID);
+     cart c ON s.productID= c.productID WHERE c.transactionID=?")) {
+    $stmt->bind_param('s', $transID);
 
     $stmt->execute();
     //get result

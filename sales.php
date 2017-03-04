@@ -55,7 +55,7 @@ include ("myglobal.php");
                         //display cart data
 
                         var url="clsGetCartData.php";
-                        $.getJSON(url,
+                        $.getJSON(url,'transID='+$('#transID').val(),
                             function(result)
                             {
                                 $("#answer tbody").empty();
@@ -137,7 +137,7 @@ include ("myglobal.php");
             $("#refresh").click(function()
                 {
                     var url="clsGetCartData.php";
-                    $.getJSON(url,
+                    $.getJSON(url,'transID='+$('#transID').val(),
                         function(result)
                         {
                             $("#answer tbody").empty();
