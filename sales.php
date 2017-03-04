@@ -116,10 +116,10 @@ include ("myglobal.php");
 
                // var dataString = 'transID=' + transID;
                 $.ajax({
-                    type:"post",
                     url:"myTrans.php",
+                    type:"post",
                     data: {transID:transID},
-                    cache: false,
+                    //cache: false,
                     success:function(data){
 
                         //resets form  after adding records
@@ -516,7 +516,7 @@ include ("myglobal.php");
                                 <div class="item-form">
                                     <!-- Item adding form -->
 
-                                    <form action="clsAddTransactions.php" id="add_item_form" class="form-inline" autocomplete="off" method="post" accept-charset="utf-8">
+                                    <form action="" id="add_item_form" class="form-inline" autocomplete="off" method="post" accept-charset="utf-8">
 <!--                                        https://demo.phppointofsale.com/index.php/sales/add-->
                                         <div class="input-group input-group-mobile contacts">
 						<span class="input-group-addon">
