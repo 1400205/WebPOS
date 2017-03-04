@@ -67,6 +67,7 @@ if ($row = $result->fetch_row()) {
 
     echo  $row[0] ;
     $selctedProduct=$row[0] ;
+    $stuckQTY=$row[3] ;
 
     /* $stmt=$mysqli->prepare("INSERT INTO cart (productID, qty,transactionID,userID) VALUES (?,?,?,?)");
        //bind parameter
