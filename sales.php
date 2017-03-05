@@ -41,10 +41,11 @@ include ("myglobal.php");
 
 
                if(($("#myqty").val())>($("#stuckQTY").val())){
-                  // alert('Please Stuck is Less Than Your Request.');
+                  alert('Please Stuck is Less Than Your Request.');
+                   window.history.go(-1);
                   // document.getElementById("alertmsg").style.visibility=show();
                    //$('#alertmsg').visibility=show();
-                   document.getElementById('errfn').innerHTML="Your Request is More Than Stock Quantity";
+                  // document.getElementById('errfn').innerHTML="Your Request is More Than Stock Quantity";
 
 
                }else {
