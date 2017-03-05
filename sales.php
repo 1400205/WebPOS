@@ -47,6 +47,7 @@ include ("myglobal.php");
                    //$('#alertmsg').visibility=show();
                   // document.getElementById('errfn').innerHTML="Your Request is More Than Stock Quantity";
                    e.preventDefault();
+                   return false;
 
 
                }else {
