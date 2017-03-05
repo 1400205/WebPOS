@@ -72,6 +72,20 @@ $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
        // $linePhoto = "<p><img src='".$row[14]."' style='width:100px;height:100px;'></p>";
 
         $resultText =$resultText.$line;
+
+        //update stuck quantity
+
+        if ( ( $stmt=$sqlcon->prepare("UPDATE SuppliedStuck SET stuckqty=stuckqty-? WHERE productID=?"))){
+            //bind parameter
+            $stmt->bind_param('di',$row[3],$row[2]);
+            if( $stmt->execute()){
+                $error="SUCCESS!"."Record Added Successfully.";
+            }else{
+                $error= "CALL failed: (" . $sqlcon->errno . ") " . $sqlcon->error;
+            }
+        }else{$error= "CALL failed: (" . $sqlcon->errno . ") " . $sqlcon->error;}
+
+
        // $resultTextPhoto =$resultTextPhoto.$linePhoto;
         //insert records
        // $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
