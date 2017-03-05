@@ -44,6 +44,7 @@ include ("myglobal.php");
                   // alert('Please Stuck is Less Than Your Request.');
                   // document.getElementById("alertmsg").style.visibility=show();
                    $('#alertmsg').visibility=show();
+                   document.getElementById('errfn').innerHTML="Your Request is More Than Stock Quantity";
 
 
                }else {
@@ -557,13 +558,11 @@ include ("myglobal.php");
                                             <span class="ui-helper-hidden-accessible" aria-live="polite" role="status"></span>
 
 
-                                            <label id="alertmsg" hidden>
-                                                Please Stuck is Less Than Your Request
-                                            </label>
+
                                             <input autocomplete="off" id="item_id" name="keyword" onkeyup="autocomplet(); "class="add-item-input pull-left ui-autocomplete-input" placeholder="Enter item name or scan barcode" type="text">
                                             <ul id="item_list_id"></ul>
                                             <label>QUANTITY:</label> <br>
-                                                <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"><br>
+                                                <input autocomplete="off" id="myqty" name="myqty" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="number" min="1" value="1"> <div id="errfn">   </div><br>
 
                                             <input autocomplete="off" id="transID" name="transID" onkeyup="#"class="add-item-input pull-left ui-autocomplete-input"  type="text" value="0" >
 
