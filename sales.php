@@ -174,7 +174,7 @@ include ("myglobal.php");
                                 htmlCode+="<td>"+qty+"</td>";
                                 htmlCode+="<td>"+Discount+"</td>";
                                 htmlCode+="<td>"+Total+"</td>";
-                               // htmlCode+="<td>"+myDel+"</td>";
+                                htmlCode+="<td>"+ <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>+"</td>";
 
                                 /* htmlCode+="<td>"+qty+"</td>";
                                  htmlCode+="<td>"+Sellprice+"</td>";*/
