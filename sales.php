@@ -99,6 +99,7 @@ include ("myglobal.php");
                                     htmlCode+="<td>"+qty+"</td>";
                                     htmlCode+="<td>"+Discount+"</td>";
                                     htmlCode+="<td>"+Total+"</td>";
+                                    htmlCode+="<td>"+myDiv.appendChild(checkbox)+"</td>";
                                     /* htmlCode+="<td>"+qty+"</td>";
                                      htmlCode+="<td>"+Sellprice+"</td>";*/
                                     htmlCode+="</tr>";
