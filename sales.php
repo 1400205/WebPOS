@@ -97,7 +97,7 @@ include ("myglobal.php");
                                     htmlCode+="<td>"+Discount+"</td>";
                                     htmlCode+="<td>"+Total+"</td>";
                                     //htmlCode+="<td>"+ document.body.appendChild(myDel);+"</td>";
-                                    htmlCode+="<td>"+ "<input"+ "type='checkbox'"+" name='partName'"+" value ="+cartID+">"+"</td>";
+                                   // htmlCode+="<td>"+ "<input"+ "type='checkbox'"+" name='partName'"+" value ="+cartID+">"+"</td>";
                                     /* htmlCode+="<td>"+qty+"</td>";
                                      htmlCode+="<td>"+Sellprice+"</td>";*/
                                     htmlCode+="</tr>";
