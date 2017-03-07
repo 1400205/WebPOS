@@ -84,7 +84,7 @@ include ("myglobal.php");
                                     var Discount=cartdata["Discount"];
                                     var Total=cartdata["Total"];
                                     var myid="<input type='checkbox' name='uid[]' value = 1>";//=cartdata["myid"];
-                                    var myDiv = $("#display_info");
+                                    var myDiv = document.getElementById("display_info");
                                     var checkbox = document.createElement("input");
                                     checkbox.setAttribute("type", "checkbox");
                                     checkbox.setAttribute("name", "dd");
