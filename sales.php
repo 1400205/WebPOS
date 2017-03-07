@@ -169,7 +169,7 @@ include ("myglobal.php");
                                 var myDel=Document.createElement("input");
                                 myDel.setAttribute('type','checkbox');
                                 myDel.setAttribute('name','DelItem');
-                                myDel.setAttribute('value',cartdata["car);
+                                myDel.setAttribute('value',cartdata["cartID"]);
                                // var myDel="<"+"input type=checkbox" +"name=myDelete" +"value ="+cartdata["cartID"]+">";
                                 var htmlCode="<tr id='"+productID+"'>";
                                 htmlCode+="<td>"+cartID+"</td>";
