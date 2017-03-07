@@ -88,7 +88,7 @@ include ("myglobal.php");
                                     var checkbox = document.createElement("input");
                                     checkbox.setAttribute("type", "checkbox");
                                     checkbox.setAttribute("name", "dd");
-                                    checkbox.setAttribute("value", cartdata["cartID"]);
+                                    checkbox.setAttribute("value", "ff");
                                     //checkbox.checked = true;
                                     //myDiv.appendChild(checkbox);
                                     var htmlCode="<tr id='"+productID+"'>";
