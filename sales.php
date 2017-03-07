@@ -84,11 +84,11 @@ include ("myglobal.php");
                                     var Discount=cartdata["Discount"];
                                     var Total=cartdata["Total"];
                                     var myid="<input type='checkbox' name='uid[]' value = 1>";//=cartdata["myid"];
-                                    //var myDiv = document.getElementById("answer tbody");
-                                   // var checkbox = document.createElement("input");
-//                                    checkbox.setAttribute("type", "checkbox");
-//                                    checkbox.setAttribute("name", "dd");
-//                                    checkbox.setAttribute("value","ff"]);
+                                    var myDiv = document.getElementById("display_info");
+                                    var checkbox = document.createElement("input");
+                                    checkbox.setAttribute("type", "checkbox");
+                                    checkbox.setAttribute("name", "dd");
+                                    checkbox.setAttribute("value", cartdata["cartID"]);
                                     //checkbox.checked = true;
                                     //myDiv.appendChild(checkbox);
                                     var htmlCode="<tr id='"+productID+"'>";
@@ -99,7 +99,7 @@ include ("myglobal.php");
                                     htmlCode+="<td>"+qty+"</td>";
                                     htmlCode+="<td>"+Discount+"</td>";
                                     htmlCode+="<td>"+Total+"</td>";
-                                   // htmlCode+="<td>"+myDiv.appendChild(checkbox)+"</td>";
+                                    htmlCode+="<td>"+myDiv.appendChild(checkbox)+"</td>";
                                  //   htmlCode+='<td><input type="checkbox" id="delete'+myid+'" name="delete'+myid+'" value=""></td>';
                                     /* htmlCode+="<td>"+qty+"</td>";
                                      htmlCode+="<td>"+Sellprice+"</td>";*/
@@ -157,7 +157,7 @@ include ("myglobal.php");
 
             });
 
-            /*$("#refresh").click(function()
+            $("#refresh").click(function()
                 {
                     var url="clsGetCartData.php";
                     $.getJSON(url,'transID='+$('#transID').val(),
@@ -178,7 +178,7 @@ include ("myglobal.php");
                                 var myDel=Document.createElement("input");
                                 myDel.setAttribute('type','checkbox');
                                 myDel.setAttribute('name','DelItem');
-                                myDel.setAttribute('value','ff');
+                                myDel.setAttribute('value',cartdata["cartID"]);
                                // var myDel="<"+"input type=checkbox" +"name=myDelete" +"value ="+cartdata["cartID"]+">";
                                 var htmlCode="<tr id='"+productID+"'>";
                                 htmlCode+="<td>"+cartID+"</td>";
@@ -192,8 +192,8 @@ include ("myglobal.php");
 
                                 // document.body.appendChild(x);
 
-                                /!* htmlCode+="<td>"+qty+"</td>";
-                                 htmlCode+="<td>"+Sellprice+"</td>";*!/
+                                /* htmlCode+="<td>"+qty+"</td>";
+                                 htmlCode+="<td>"+Sellprice+"</td>";*/
                                 htmlCode+="</tr>";
                                 $("#answer tbody").append(htmlCode);
                             } //end for loop
@@ -206,7 +206,7 @@ include ("myglobal.php");
 
                         } //end success callback function
                     ); //end method call to getJSON
-                } //end onclick handler of button*/
+                } //end onclick handler of button
             ); //end method call to click
 
             function dataSelected(whatever)
