@@ -166,7 +166,7 @@ include ("myglobal.php");
                                 var Sellprice=cartdata["Sellprice"];
                                 var Discount=cartdata["Discount"];
                                 var Total=cartdata["Total"];
-                                var myDel= "<input type="checkbox" name="vehicle" value=cartID> I have a bike<br>";
+                                var myDel="<"+"input type=checkbox" +"name=myDelete" +"value ="+cartdata["cartID"]+">";
                                 var htmlCode="<tr id='"+productID+"'>";
                                 htmlCode+="<td>"+cartID+"</td>";
                                 htmlCode+="<td>"+partName+"</td>";
