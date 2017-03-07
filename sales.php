@@ -166,7 +166,7 @@ include ("myglobal.php");
                                 var Sellprice=cartdata["Sellprice"];
                                 var Discount=cartdata["Discount"];
                                 var Total=cartdata["Total"];
-                                var myDel="<"+"input type=checkbox" +"name=myDelete" +"value ="+cartdata["cartID"]+">";
+                               // var myDel="<"+"input type=checkbox" +"name=myDelete" +"value ="+cartdata["cartID"]+">";
                                 var htmlCode="<tr id='"+productID+"'>";
                                 htmlCode+="<td>"+cartID+"</td>";
                                 htmlCode+="<td>"+partName+"</td>";
@@ -174,7 +174,7 @@ include ("myglobal.php");
                                 htmlCode+="<td>"+qty+"</td>";
                                 htmlCode+="<td>"+Discount+"</td>";
                                 htmlCode+="<td>"+Total+"</td>";
-                                htmlCode+="<td>"+ myDel+"</td>";
+                                htmlCode+="<td>"+ "<input type='checkbox' name='partName' value = cartdata["cartID"]>"+"</td>";
 
                                 /* htmlCode+="<td>"+qty+"</td>";
                                  htmlCode+="<td>"+Sellprice+"</td>";*/
