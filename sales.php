@@ -178,8 +178,10 @@ include ("myglobal.php");
                                 htmlCode+="<td>"+qty+"</td>";
                                 htmlCode+="<td>"+Discount+"</td>";
                                 htmlCode+="<td>"+Total+"</td>";
-                                htmlCode+="<td>"+myDel+"</td>";
+                                htmlCode+="<td>"+ document.body.appendChild(myDel);+"</td>";
                                 //htmlCode+="<td>"+ "<input"+ "type='checkbox'"+" name='partName'"+" value ="+cartID+">"+"</td>";
+
+                                // document.body.appendChild(x);
 
                                 /* htmlCode+="<td>"+qty+"</td>";
                                  htmlCode+="<td>"+Sellprice+"</td>";*/
