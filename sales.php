@@ -63,6 +63,7 @@ include ("myglobal.php");
                     data:dataString,
                     cache: false,
                     success:function(data){
+                        viewdata();
               /*       // Beginning of code block
 
                         //display cart data

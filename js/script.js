@@ -229,7 +229,7 @@ function viewdata() {
 			}
 		});
 	} else {
-		$('#item_list_id').hide();
+		//$('#item_list_id').hide();
 	}
 
 
