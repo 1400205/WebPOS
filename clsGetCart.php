@@ -7,7 +7,7 @@ include ("myglobal.php");
 $msg="";
 $sqlcon = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
-$transID=$_GET['transID'];
+$transID=$_POST['transID'];
 /*$page=isset($_GET['p'])?$_GET['p']:'';
 if ($page=='del'){
     $myid=$_POST['id'];
