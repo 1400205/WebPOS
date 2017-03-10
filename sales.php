@@ -33,7 +33,7 @@ include ("myglobal.php");
 
     <?php include ("clsgetTransID.php"); ?>
     <script>
-        $(document).on(function(){
+        $(document).ready(function(){
 
 
             $("#addCart").click(function(e)
