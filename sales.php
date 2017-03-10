@@ -67,7 +67,7 @@ include ("myglobal.php");
 
                         //display cart data
 
-                /*        var url="clsGetCartData.php";
+                        var url="clsGetCartData.php";
                         $.getJSON(url,'transID='+$('#transID').val(),
                             function(result)
                             {
@@ -103,8 +103,8 @@ include ("myglobal.php");
                                     htmlCode+="<td>"+myCheckBox+"</td>";
                                    // htmlCode+="<td>"+myDiv.appendChild(checkbox)+"</td>";
                                  //   htmlCode+='<td><input type="checkbox" id="delete'+myid+'" name="delete'+myid+'" value=""></td>';
-                                    /!* htmlCode+="<td>"+qty+"</td>";
-                                     htmlCode+="<td>"+Sellprice+"</td>";*!/
+                                    /* htmlCode+="<td>"+qty+"</td>";
+                                     htmlCode+="<td>"+Sellprice+"</td>";*/
                                     htmlCode+="</tr>";
                                     $("#answer tbody").append(htmlCode);
                                 } //end for loop
@@ -124,7 +124,7 @@ include ("myglobal.php");
 
 
 
-*/
+
                     }
                     // }
                 });
