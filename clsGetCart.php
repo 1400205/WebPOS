@@ -73,7 +73,7 @@ if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,s.
         echo "<script> var total =  " . $row[4]. ";</script>";*/
         /// array_push($salesdata["alldata"],$mydata);
         ?>
-        <tr id="<?php echo $row[6]; ?>" >
+        <tr  class="register-items-header" id="<?php echo $row[6]; ?>" >
             <td> <?php echo $row[0]; ?></td>
             <td> <?php echo $row[1]; ?></td>
             <td> <?php echo $row[2]; ?></td>
