@@ -71,7 +71,7 @@ include ("myglobal.php");
                         $.getJSON(url,'transID='+$('#transID').val(),
                             function(result)
                             {
-                                $("#answer tbody").empty();
+                             /*   $("#answer tbody").empty(); //Begining of comment block
                                 var alltrans=result["alldata"];	//get the list
                                 for( i in alltrans)
                                 {
@@ -103,8 +103,8 @@ include ("myglobal.php");
                                     htmlCode+="<td>"+myCheckBox+"</td>";
                                    // htmlCode+="<td>"+myDiv.appendChild(checkbox)+"</td>";
                                  //   htmlCode+='<td><input type="checkbox" id="delete'+myid+'" name="delete'+myid+'" value=""></td>';
-                                    /* htmlCode+="<td>"+qty+"</td>";
-                                     htmlCode+="<td>"+Sellprice+"</td>";*/
+                                    /!* htmlCode+="<td>"+qty+"</td>";
+                                     htmlCode+="<td>"+Sellprice+"</td>";*!/
                                     htmlCode+="</tr>";
                                     $("#answer tbody").append(htmlCode);
                                 } //end for loop
@@ -114,7 +114,7 @@ include ("myglobal.php");
                                         dataSelected($(this).attr("id"));
                                     }
                                 );
-
+*/ //End of comment block
                             } //end success callback function
                         ); //end method call to getJSON
 
