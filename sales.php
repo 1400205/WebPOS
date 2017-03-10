@@ -63,7 +63,7 @@ include ("myglobal.php");
                     data:dataString,
                     cache: false,
                     success:function(data){
-                     // $("#display_info").html("Item Added Successfully");
+              /*       // Beginning of code block
 
                         //display cart data
 
@@ -103,8 +103,8 @@ include ("myglobal.php");
                                     htmlCode+="<td>"+myCheckBox+"</td>";
                                    // htmlCode+="<td>"+myDiv.appendChild(checkbox)+"</td>";
                                  //   htmlCode+='<td><input type="checkbox" id="delete'+myid+'" name="delete'+myid+'" value=""></td>';
-                                    /* htmlCode+="<td>"+qty+"</td>";
-                                     htmlCode+="<td>"+Sellprice+"</td>";*/
+                                    /!* htmlCode+="<td>"+qty+"</td>";
+                                     htmlCode+="<td>"+Sellprice+"</td>";*!/
                                     htmlCode+="</tr>";
                                     $("#answer tbody").append(htmlCode);
                                 } //end for loop
@@ -124,7 +124,7 @@ include ("myglobal.php");
 
 
 
-
+*/ //End of code block
                     }
                     // }
                 });
