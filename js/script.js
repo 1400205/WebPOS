@@ -213,6 +213,28 @@ function getStuckQTY() {
 
 }
 
+function viewdata() {
+	//var min_length = 0; // min caracters to display the autocomplete
+	var transID=$('#transID').val();
+	if (transID) {
+		$.ajax({
+			url: 'clsGetChartInfo.php',
+			type: 'POST',
+			data: {transID:transID},
+			success:function(data){
+
+				$('#answer tbody').html(data);
+
+
+			}
+		});
+	} else {
+		$('#item_list_id').hide();
+	}
+
+
+}
+
 function displayCartItems() {
 	
 		var url="clsGetCartData.php";
