@@ -218,7 +218,7 @@ function viewdata() {
 	var transID=$('#transID').val();
 	if (transID) {
 		$.ajax({
-			url: 'clsGetChartInfo.php',
+			url: 'clsGetCart.php',
 			type: 'POST',
 			data: {transID:transID},
 			success:function(data){
