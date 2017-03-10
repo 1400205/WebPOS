@@ -67,11 +67,11 @@ include ("myglobal.php");
 
                         //display cart data
 
-                        var url="clsGetCartData.php";
+                /*        var url="clsGetCartData.php";
                         $.getJSON(url,'transID='+$('#transID').val(),
                             function(result)
                             {
-                             /*   $("#answer tbody").empty(); //Begining of comment block
+                                $("#answer tbody").empty();
                                 var alltrans=result["alldata"];	//get the list
                                 for( i in alltrans)
                                 {
@@ -114,7 +114,7 @@ include ("myglobal.php");
                                         dataSelected($(this).attr("id"));
                                     }
                                 );
-*/ //End of comment block
+
                             } //end success callback function
                         ); //end method call to getJSON
 
@@ -124,7 +124,7 @@ include ("myglobal.php");
 
 
 
-
+*/
                     }
                     // }
                 });
