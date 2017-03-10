@@ -80,7 +80,7 @@ if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,s.
             <td> <?php echo $row[3]; ?></td>
             <td> <?php echo $row[4]; ?></td>
             <td> <?php echo $row[5]; ?></td>
-            <td> <input type="checkbox" name="cartid_[]" value="" <?php echo $row[6]; ?></td>
+            <td> <input type="checkbox" name="cartid_[]" value="<?php echo $row[6]; ?>"</td>
 
         </tr>
         <?php
