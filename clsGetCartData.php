@@ -49,6 +49,7 @@ if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,s.
 
             //echo   $resultText;
             $mydata = array();
+            $mydata['chkbox'] = "<input type='checkbox' name='$row[6]' id='$row[6]' value = '$row[6]'>";
             $mydata['productID'] = $row[0];
             $mydata['partName'] = $row[1];
             $mydata['qty'] = $row[2];
@@ -56,7 +57,7 @@ if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,s.
             $mydata['Discount'] = $row[4];
             $mydata['Total'] = $row[5];
             $mydata['cartID'] = $row[6];
-            $mydata['chkbox'] = "<input type='checkbox' name='$row[6]' id='$row[6]' value = '$row[6]'>";
+
 
             /*echo "<script> var proid =  " . $row[0]. ";</script>";
             echo "<script> var partName =  " . $row[1]. ";</script>";
