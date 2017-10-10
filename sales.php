@@ -185,6 +185,9 @@ include ("myglobal.php");
                                // var myDel="<"+"input type=checkbox" +"name=myDelete" +"value ="+cartdata["cartID"]+">";
                                 var htmlCode="<tr id='"+productID+"'>";
                                 htmlCode+="<td>"+cartID+"</td>";
+                                htmlCode+="<td>"+cartID+"</td>";
+
+                                htmlCode+="<td>"+cartID+"</td>";
                                 htmlCode+="<td>"+partName+"</td>";
                                 htmlCode+="<td>"+Sellprice+"</td>";
                                 htmlCode+="<td>"+qty+"</td>";
@@ -635,7 +638,6 @@ include ("myglobal.php");
                                         <thead>
                                         <tr class="register-items-header">
                                             <th></th>
-                                            <th class="item_name_heading" align="left">Cart Item ID</th>
                                             <th class="item_name_heading" align="left">Cart Item ID</th>
                                             <th class="item_name_heading">Item Name</th>
                                             <th class="sales_price">Price</th>
