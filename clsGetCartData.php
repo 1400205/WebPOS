@@ -51,6 +51,7 @@ if ($stmt = $sqlcon->prepare("SELECT s.productID,p.partName,c.qty,s.Sellprice,s.
             $mydata = array();
             $mydata['chkbox'] = "<input type='checkbox' name='$row[6]' id='$row[6]' value = '$row[6]'>";
             $mydata['productID'] = $row[0];
+            $mydata['productID'] = $row[0];
             $mydata['partName'] = $row[1];
             $mydata['qty'] = $row[2];
             $mydata['Sellprice'] = $row[3];
