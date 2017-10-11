@@ -161,7 +161,7 @@ include ("myglobal.php");
             });
 
             $("#refresh").click(function()
-                {
+ /*               {
                     var url="clsGetCartData.php";
                     $.getJSON(url,'transID='+$('#transID').val(),
                         function(result)
@@ -195,8 +195,8 @@ include ("myglobal.php");
 
                                 // document.body.appendChild(x);
 
-                                /* htmlCode+="<td>"+qty+"</td>";
-                                 htmlCode+="<td>"+Sellprice+"</td>";*/
+                                /!* htmlCode+="<td>"+qty+"</td>";
+                                 htmlCode+="<td>"+Sellprice+"</td>";*!/
                                 htmlCode+="</tr>";
                                 $("#answer tbody").append(htmlCode);
                             } //end for loop
@@ -209,7 +209,7 @@ include ("myglobal.php");
 
                         } //end success callback function
                     ); //end method call to getJSON
-                } //end onclick handler of button
+                } /*//end onclick handler of button
             ); //end method call to click
 
             function dataSelected(whatever)
