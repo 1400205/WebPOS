@@ -184,7 +184,7 @@ include ("myglobal.php");
                                 myDel.setAttribute('value',cartdata["cartID"]);
                                // var myDel="<"+"input type=checkbox" +"name=myDelete" +"value ="+cartdata["cartID"]+">";
                                 var htmlCode="<tr id='"+productID+"'>";
-                                htmlCode+="<td>"+cartID+"</td>";
+                               // htmlCode+="<td>"+cartID+"</td>";
                                 htmlCode+="<td>"+partName+"</td>";
                                 htmlCode+="<td>"+Sellprice+"</td>";
                                 htmlCode+="<td>"+qty+"</td>";
