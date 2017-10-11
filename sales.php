@@ -64,7 +64,7 @@ include ("myglobal.php");
                     cache: false,
                     success:function(data){
                         viewdata();
-              /*       // Beginning of code block
+                    // Beginning of code block
 
                         //display cart data
 
@@ -105,7 +105,7 @@ include ("myglobal.php");
                                    // htmlCode+="<td>"+myDiv.appendChild(checkbox)+"</td>";
                                  //   htmlCode+='<td><input type="checkbox" id="delete'+myid+'" name="delete'+myid+'" value=""></td>';
                                     /!* htmlCode+="<td>"+qty+"</td>";
-                                     htmlCode+="<td>"+Sellprice+"</td>";*!/
+                                     htmlCode+="<td>"+Sellprice+"</td>";
                                     htmlCode+="</tr>";
                                     $("#answer tbody").append(htmlCode);
                                 } //end for loop
@@ -161,7 +161,7 @@ include ("myglobal.php");
             });
 
             $("#refresh").click(function()
- /*               {
+                /**/{
                     var url="clsGetCartData.php";
                     $.getJSON(url,'transID='+$('#transID').val(),
                         function(result)
@@ -195,8 +195,8 @@ include ("myglobal.php");
 
                                 // document.body.appendChild(x);
 
-                                /!* htmlCode+="<td>"+qty+"</td>";
-                                 htmlCode+="<td>"+Sellprice+"</td>";*!/
+                                /* htmlCode+="<td>"+qty+"</td>";
+                                 htmlCode+="<td>"+Sellprice+"</td>";*/
                                 htmlCode+="</tr>";
                                 $("#answer tbody").append(htmlCode);
                             } //end for loop
@@ -209,7 +209,7 @@ include ("myglobal.php");
 
                         } //end success callback function
                     ); //end method call to getJSON
-                } /*//end onclick handler of button
+                } //end onclick handler of button
             ); //end method call to click
 
             function dataSelected(whatever)
