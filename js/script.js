@@ -246,8 +246,8 @@ function displayCartItems() {
 				for( i in alltrans)
 				{
 					var cartdata=alltrans[i];	//get
-					var cartID=cartdata["cartID"];
-					var partName=cartdata["partName"];
+					//var cartID=cartdata["cartID"];
+					//var partName=cartdata["partName"];
 					var qty=cartdata["qty"];
 					var productID=cartdata["productID"];
 					var Sellprice=cartdata["Sellprice"];
