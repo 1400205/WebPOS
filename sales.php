@@ -64,7 +64,7 @@ include ("myglobal.php");
                     cache: false,
                     success:function(data){
                         viewdata();
-                    // Beginning of code block
+              /*       // Beginning of code block
 
                         //display cart data
 
@@ -105,7 +105,7 @@ include ("myglobal.php");
                                    // htmlCode+="<td>"+myDiv.appendChild(checkbox)+"</td>";
                                  //   htmlCode+='<td><input type="checkbox" id="delete'+myid+'" name="delete'+myid+'" value=""></td>';
                                     /!* htmlCode+="<td>"+qty+"</td>";
-                                     htmlCode+="<td>"+Sellprice+"</td>";
+                                     htmlCode+="<td>"+Sellprice+"</td>";*!/
                                     htmlCode+="</tr>";
                                     $("#answer tbody").append(htmlCode);
                                 } //end for loop
@@ -161,7 +161,7 @@ include ("myglobal.php");
             });
 
             $("#refresh").click(function()
-                /**/{
+                {
                     var url="clsGetCartData.php";
                     $.getJSON(url,'transID='+$('#transID').val(),
                         function(result)
@@ -187,10 +187,10 @@ include ("myglobal.php");
                                // htmlCode+="<td>"+cartID+"</td>";
                                // htmlCode+="<td>"+partName+"</td>";
                                // htmlCode+="<td>"+Sellprice+"</td>";
-                                htmlCode+="<td>"+qty+"</td>";
-                                htmlCode+="<td>"+Discount+"</td>";
-                                htmlCode+="<td>"+Total+"</td>";
-                                htmlCode+="<td>"+ document.body.appendChild(myDel);+"</td>";
+                                //htmlCode+="<td>"+qty+"</td>";
+                                //htmlCode+="<td>"+Discount+"</td>";
+                               // htmlCode+="<td>"+Total+"</td>";
+                                //htmlCode+="<td>"+ document.body.appendChild(myDel);+"</td>";
                                 //htmlCode+="<td>"+ "<input"+ "type='checkbox'"+" name='partName'"+" value ="+cartID+">"+"</td>";
 
                                 // document.body.appendChild(x);
