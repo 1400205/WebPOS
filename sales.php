@@ -171,16 +171,16 @@ include ("myglobal.php");
                             for( i in alltrans)
                             {
                                 var cartdata=alltrans[i];	//get
-                                var cartID=cartdata["cartID"];
-                                var partName=cartdata["partName"];
-                                var qty=cartdata["qty"];
-                                var productID=cartdata["productID"];
-                                var Sellprice=cartdata["Sellprice"];
-                                var Discount=cartdata["Discount"];
-                                var Total=cartdata["Total"];
-                                var myDel=Document.createElement("input");
-                                myDel.setAttribute('type','checkbox');
-                                myDel.setAttribute('name','DelItem');
+//                                var cartID=cartdata["cartID"];
+//                                var partName=cartdata["partName"];
+//                                var qty=cartdata["qty"];
+//                                var productID=cartdata["productID"];
+//                                var Sellprice=cartdata["Sellprice"];
+//                                var Discount=cartdata["Discount"];
+//                                var Total=cartdata["Total"];
+//                                var myDel=Document.createElement("input");
+//                                myDel.setAttribute('type','checkbox');
+//                                myDel.setAttribute('name','DelItem');
                                 myDel.setAttribute('value',cartdata["cartID"]);
                                // var myDel="<"+"input type=checkbox" +"name=myDelete" +"value ="+cartdata["cartID"]+">";
                                 var htmlCode="<tr id='"+productID+"'>";
