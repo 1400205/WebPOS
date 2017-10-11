@@ -244,7 +244,7 @@ function displayCartItems() {
 				$("#answer tbody").empty();
 				var alltrans=result["alldata"];	//get the list
 				for( i in alltrans)
-				{
+				/*{
 					var cartdata=alltrans[i];	//get
 					//var cartID=cartdata["cartID"];
 					//var partName=cartdata["partName"];
@@ -260,12 +260,12 @@ function displayCartItems() {
 					htmlCode+="<td>"+qty+"</td>";
 					htmlCode+="<td>"+Discount+"</td>";
 					htmlCode+="<td>"+Total+"</td>";
-					/* htmlCode+="<td>"+qty+"</td>";
-					 htmlCode+="<td>"+Sellprice+"</td>";*/
+					/!* htmlCode+="<td>"+qty+"</td>";
+					 htmlCode+="<td>"+Sellprice+"</td>";*!/
 					htmlCode+="</tr>";
 					$("#answer tbody").append(htmlCode);
 				} //end for loop
-
+*/
 				$("#answer tr").click(function()
 					{
 						dataSelected($(this).attr("id"));
